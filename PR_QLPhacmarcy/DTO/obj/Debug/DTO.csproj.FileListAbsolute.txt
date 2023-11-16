@@ -1,0 +1,6 @@
+E:\CODE\Dự án 1\PR_QLPhacmarcy\DTO\bin\Debug\DTO.dll
+E:\CODE\Dự án 1\PR_QLPhacmarcy\DTO\bin\Debug\DTO.pdb
+E:\CODE\Dự án 1\PR_QLPhacmarcy\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+E:\CODE\Dự án 1\PR_QLPhacmarcy\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+E:\CODE\Dự án 1\PR_QLPhacmarcy\DTO\obj\Debug\DTO.dll
+E:\CODE\Dự án 1\PR_QLPhacmarcy\DTO\obj\Debug\DTO.pdb
