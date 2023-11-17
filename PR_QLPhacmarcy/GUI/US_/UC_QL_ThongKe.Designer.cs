@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_QL_ThongKe));
             this.guna2GradientTileButton6 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.uC_QL_TK_DoanhSo1 = new GUI.US_.UC_QL_TK_DoanhSo();
@@ -38,8 +37,6 @@
             this.btnSales = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnRevenue = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnSelling = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnSearch = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel2.SuspendLayout();
@@ -57,10 +54,10 @@
             this.guna2GradientTileButton6.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.guna2GradientTileButton6.Font = new System.Drawing.Font("Segoe UI Semibold", 20.2F, System.Drawing.FontStyle.Bold);
             this.guna2GradientTileButton6.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientTileButton6.Location = new System.Drawing.Point(13, 9);
+            this.guna2GradientTileButton6.Location = new System.Drawing.Point(3, 2);
             this.guna2GradientTileButton6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2GradientTileButton6.Name = "guna2GradientTileButton6";
-            this.guna2GradientTileButton6.Size = new System.Drawing.Size(1709, 86);
+            this.guna2GradientTileButton6.Size = new System.Drawing.Size(1756, 86);
             this.guna2GradientTileButton6.TabIndex = 10;
             this.guna2GradientTileButton6.Text = "Thống kê";
             this.guna2GradientTileButton6.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -77,39 +74,37 @@
             this.guna2Panel2.Controls.Add(this.btnSales);
             this.guna2Panel2.Controls.Add(this.btnRevenue);
             this.guna2Panel2.Controls.Add(this.btnSelling);
-            this.guna2Panel2.Controls.Add(this.btnSearch);
-            this.guna2Panel2.Controls.Add(this.txtSearch);
             this.guna2Panel2.Controls.Add(this.guna2GradientTileButton6);
             this.guna2Panel2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.guna2Panel2.Location = new System.Drawing.Point(0, 1);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1737, 877);
+            this.guna2Panel2.Size = new System.Drawing.Size(1762, 895);
             this.guna2Panel2.TabIndex = 152;
             this.guna2Panel2.UseWaitCursor = true;
             this.guna2Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
             // 
             // uC_QL_TK_DoanhSo1
             // 
-            this.uC_QL_TK_DoanhSo1.Location = new System.Drawing.Point(342, 104);
+            this.uC_QL_TK_DoanhSo1.Location = new System.Drawing.Point(365, 121);
             this.uC_QL_TK_DoanhSo1.Name = "uC_QL_TK_DoanhSo1";
-            this.uC_QL_TK_DoanhSo1.Size = new System.Drawing.Size(1359, 759);
+            this.uC_QL_TK_DoanhSo1.Size = new System.Drawing.Size(1380, 744);
             this.uC_QL_TK_DoanhSo1.TabIndex = 178;
             this.uC_QL_TK_DoanhSo1.UseWaitCursor = true;
             // 
             // uC_QL_TK_DoanhThu1
             // 
-            this.uC_QL_TK_DoanhThu1.Location = new System.Drawing.Point(342, 104);
+            this.uC_QL_TK_DoanhThu1.Location = new System.Drawing.Point(365, 121);
             this.uC_QL_TK_DoanhThu1.Name = "uC_QL_TK_DoanhThu1";
-            this.uC_QL_TK_DoanhThu1.Size = new System.Drawing.Size(1369, 759);
+            this.uC_QL_TK_DoanhThu1.Size = new System.Drawing.Size(1369, 744);
             this.uC_QL_TK_DoanhThu1.TabIndex = 177;
             this.uC_QL_TK_DoanhThu1.UseWaitCursor = true;
             // 
             // uC_QL_TK_BanChay1
             // 
-            this.uC_QL_TK_BanChay1.Location = new System.Drawing.Point(342, 104);
+            this.uC_QL_TK_BanChay1.Location = new System.Drawing.Point(365, 121);
             this.uC_QL_TK_BanChay1.Name = "uC_QL_TK_BanChay1";
-            this.uC_QL_TK_BanChay1.Size = new System.Drawing.Size(1380, 771);
+            this.uC_QL_TK_BanChay1.Size = new System.Drawing.Size(1380, 731);
             this.uC_QL_TK_BanChay1.TabIndex = 176;
             this.uC_QL_TK_BanChay1.UseWaitCursor = true;
             // 
@@ -127,7 +122,7 @@
             this.btnSales.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnSales.ForeColor = System.Drawing.Color.Black;
             this.btnSales.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnSales.Location = new System.Drawing.Point(13, 339);
+            this.btnSales.Location = new System.Drawing.Point(37, 339);
             this.btnSales.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSales.Name = "btnSales";
             this.btnSales.Size = new System.Drawing.Size(299, 57);
@@ -150,7 +145,7 @@
             this.btnRevenue.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnRevenue.ForeColor = System.Drawing.Color.Black;
             this.btnRevenue.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnRevenue.Location = new System.Drawing.Point(13, 230);
+            this.btnRevenue.Location = new System.Drawing.Point(37, 230);
             this.btnRevenue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRevenue.Name = "btnRevenue";
             this.btnRevenue.Size = new System.Drawing.Size(299, 57);
@@ -173,7 +168,7 @@
             this.btnSelling.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnSelling.ForeColor = System.Drawing.Color.Black;
             this.btnSelling.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnSelling.Location = new System.Drawing.Point(13, 121);
+            this.btnSelling.Location = new System.Drawing.Point(37, 121);
             this.btnSelling.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSelling.Name = "btnSelling";
             this.btnSelling.Size = new System.Drawing.Size(299, 57);
@@ -181,54 +176,6 @@
             this.btnSelling.Text = "Bán chạy";
             this.btnSelling.UseWaitCursor = true;
             this.btnSelling.Click += new System.EventHandler(this.btnSelling_Click);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
-            this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
-            this.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSearch.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSearch.FillColor = System.Drawing.Color.Transparent;
-            this.btnSearch.FillColor2 = System.Drawing.Color.Transparent;
-            this.btnSearch.FocusedColor = System.Drawing.Color.IndianRed;
-            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.btnSearch.ForeColor = System.Drawing.Color.Black;
-            this.btnSearch.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnSearch.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.btnSearch.HoverState.FillColor2 = System.Drawing.Color.Transparent;
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnSearch.Location = new System.Drawing.Point(1289, 24);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(61, 53);
-            this.btnSearch.TabIndex = 4;
-            this.btnSearch.UseTransparentBackground = true;
-            this.btnSearch.UseWaitCursor = true;
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.txtSearch.DefaultText = "";
-            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Location = new System.Drawing.Point(1356, 24);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PasswordChar = '\0';
-            this.txtSearch.PlaceholderText = "Tìm kiếm nhân viên";
-            this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(315, 53);
-            this.txtSearch.TabIndex = 0;
-            this.txtSearch.UseWaitCursor = true;
             // 
             // guna2Elipse1
             // 
@@ -252,7 +199,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2Panel2);
             this.Name = "UC_QL_ThongKe";
-            this.Size = new System.Drawing.Size(1740, 880);
+            this.Size = new System.Drawing.Size(1765, 895);
             this.Load += new System.EventHandler(this.UC_QL_ThongKe_Load);
             this.guna2Panel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -263,8 +210,6 @@
         private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton6;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2GradientTileButton btnSearch;
-        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2GradientButton btnSales;
         private Guna.UI2.WinForms.Guna2GradientButton btnRevenue;

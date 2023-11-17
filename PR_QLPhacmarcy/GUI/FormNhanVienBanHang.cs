@@ -34,7 +34,7 @@ namespace GUI
 
         void UCManagement(UserControl uC)
         {
-            controlArray = new UserControl[] { };
+            controlArray = new UserControl[] {uC_NVBH_CuaHang1,uC_NVBH_Order1 };
             Management.UCArrayVisible(controlArray, uC);
         }
         void BtnTasbalClickManagement(Guna2GradientTileButton btn)
@@ -55,7 +55,7 @@ namespace GUI
 
         private void btnTasbalOrder_Click(object sender, EventArgs e)
         {
-            UCManagement(uC_NVBH_CuaHang1);
+            UCManagement(uC_NVBH_Order1);
             BtnTasbalClickManagement(btnTasbalOrder);
         }
     }

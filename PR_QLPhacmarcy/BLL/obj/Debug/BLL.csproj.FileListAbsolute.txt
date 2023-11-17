@@ -12,3 +12,17 @@ E:\CODE\Dự án 1\PR_QLPhacmarcy\BLL\obj\Debug\BLL.pdb
 E:\CODE\Dự án 1\PR_QLPhacmarcy\BLL\bin\Debug\EntityFramework.dll
 E:\CODE\Dự án 1\PR_QLPhacmarcy\BLL\bin\Debug\DAL.dll.config
 E:\CODE\Dự án 1\PR_QLPhacmarcy\BLL\bin\Debug\EntityFramework.xml
+E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\BLL\bin\Debug\BLL.dll
+E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\BLL\bin\Debug\BLL.pdb
+E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\BLL\bin\Debug\DAL.dll
+E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\BLL\bin\Debug\DTO.dll
+E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\BLL\bin\Debug\EntityFramework.dll
+E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\BLL\bin\Debug\DAL.pdb
+E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\BLL\bin\Debug\DAL.dll.config
+E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\BLL\bin\Debug\DTO.pdb
+E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\BLL\bin\Debug\EntityFramework.xml
+E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\BLL\obj\Debug\BLL.csproj.CopyComplete
+E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\BLL\obj\Debug\BLL.dll
+E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\BLL\obj\Debug\BLL.pdb

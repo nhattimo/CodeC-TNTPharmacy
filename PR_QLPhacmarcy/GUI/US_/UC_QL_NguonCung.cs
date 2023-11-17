@@ -44,6 +44,9 @@ namespace GUI.US_
 
         }
 
-        
+        private void DataGridViewSupplier_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

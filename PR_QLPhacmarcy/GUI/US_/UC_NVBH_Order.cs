@@ -16,5 +16,10 @@ namespace GUI.US_
         {
             InitializeComponent();
         }
+
+        private void UC_NVBH_Order_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

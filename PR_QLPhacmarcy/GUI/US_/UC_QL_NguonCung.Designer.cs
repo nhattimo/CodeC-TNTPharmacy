@@ -29,122 +29,39 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_QL_NguonCung));
-            this.guna2GradientTileButton10 = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnSearch = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btnAdd = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientTileButton6 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.txtSupplierName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.errorUrseName = new System.Windows.Forms.Label();
+            this.errorSupplierName = new System.Windows.Forms.Label();
             this.btnUpdate = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnDelete = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
-            this.errorName = new System.Windows.Forms.Label();
+            this.errorAddress = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2GradientTileButton10 = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.flowLayoutPanelCustomers = new System.Windows.Forms.FlowLayoutPanel();
+            this.userControl51 = new GUI.US_.UserControl5();
+            this.userControl52 = new GUI.US_.UserControl5();
+            this.userControl53 = new GUI.US_.UserControl5();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2Panel1.SuspendLayout();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.DataGridViewSupplier = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.btnSearch = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2GradientTileButton2 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2Panel2.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
+            this.flowLayoutPanelCustomers.SuspendLayout();
+            this.guna2Panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewSupplier)).BeginInit();
             this.SuspendLayout();
-            // 
-            // guna2GradientTileButton10
-            // 
-            this.guna2GradientTileButton10.Checked = true;
-            this.guna2GradientTileButton10.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton10.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton10.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton10.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton10.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientTileButton10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.guna2GradientTileButton10.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.guna2GradientTileButton10.Font = new System.Drawing.Font("Segoe UI Semibold", 20.2F, System.Drawing.FontStyle.Bold);
-            this.guna2GradientTileButton10.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientTileButton10.Location = new System.Drawing.Point(10, 9);
-            this.guna2GradientTileButton10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2GradientTileButton10.Name = "guna2GradientTileButton10";
-            this.guna2GradientTileButton10.Size = new System.Drawing.Size(1081, 86);
-            this.guna2GradientTileButton10.TabIndex = 18;
-            this.guna2GradientTileButton10.Text = "Danh sách nhà cung cấp";
-            this.guna2GradientTileButton10.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2GradientTileButton10.UseWaitCursor = true;
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Panel1.BorderRadius = 1;
-            this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.guna2GradientTileButton10);
-            this.guna2Panel1.Controls.Add(this.flowLayoutPanel1);
-            this.guna2Panel1.Controls.Add(this.btnSearch);
-            this.guna2Panel1.Controls.Add(this.txtSearch);
-            this.guna2Panel1.Location = new System.Drawing.Point(634, 1);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1106, 878);
-            this.guna2Panel1.TabIndex = 153;
-            this.guna2Panel1.UseWaitCursor = true;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(5, 171);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(5);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1087, 709);
-            this.flowLayoutPanel1.TabIndex = 17;
-            this.flowLayoutPanel1.UseWaitCursor = true;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
-            this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
-            this.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSearch.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSearch.FillColor = System.Drawing.Color.Transparent;
-            this.btnSearch.FillColor2 = System.Drawing.Color.Transparent;
-            this.btnSearch.FocusedColor = System.Drawing.Color.IndianRed;
-            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.btnSearch.ForeColor = System.Drawing.Color.Black;
-            this.btnSearch.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnSearch.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.btnSearch.HoverState.FillColor2 = System.Drawing.Color.Transparent;
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnSearch.Location = new System.Drawing.Point(10, 109);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(61, 53);
-            this.btnSearch.TabIndex = 4;
-            this.btnSearch.UseTransparentBackground = true;
-            this.btnSearch.UseWaitCursor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.txtSearch.DefaultText = "";
-            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Location = new System.Drawing.Point(77, 109);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PasswordChar = '\0';
-            this.txtSearch.PlaceholderText = "Tìm kiếm nhà cung cấp";
-            this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(315, 53);
-            this.txtSearch.TabIndex = 0;
-            this.txtSearch.UseWaitCursor = true;
             // 
             // guna2Elipse1
             // 
@@ -186,10 +103,10 @@
             this.guna2GradientTileButton6.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.guna2GradientTileButton6.Font = new System.Drawing.Font("Segoe UI Semibold", 20.2F, System.Drawing.FontStyle.Bold);
             this.guna2GradientTileButton6.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientTileButton6.Location = new System.Drawing.Point(13, 9);
+            this.guna2GradientTileButton6.Location = new System.Drawing.Point(3, 9);
             this.guna2GradientTileButton6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2GradientTileButton6.Name = "guna2GradientTileButton6";
-            this.guna2GradientTileButton6.Size = new System.Drawing.Size(601, 86);
+            this.guna2GradientTileButton6.Size = new System.Drawing.Size(622, 86);
             this.guna2GradientTileButton6.TabIndex = 10;
             this.guna2GradientTileButton6.Text = "Nhà cung cấp";
             this.guna2GradientTileButton6.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -222,17 +139,17 @@
             this.txtSupplierName.TabIndex = 106;
             this.txtSupplierName.UseWaitCursor = true;
             // 
-            // errorUrseName
+            // errorSupplierName
             // 
-            this.errorUrseName.AutoSize = true;
-            this.errorUrseName.BackColor = System.Drawing.Color.Transparent;
-            this.errorUrseName.ForeColor = System.Drawing.Color.Red;
-            this.errorUrseName.Location = new System.Drawing.Point(27, 213);
-            this.errorUrseName.Name = "errorUrseName";
-            this.errorUrseName.Size = new System.Drawing.Size(25, 16);
-            this.errorUrseName.TabIndex = 108;
-            this.errorUrseName.Text = "Lỗi";
-            this.errorUrseName.UseWaitCursor = true;
+            this.errorSupplierName.AutoSize = true;
+            this.errorSupplierName.BackColor = System.Drawing.Color.Transparent;
+            this.errorSupplierName.ForeColor = System.Drawing.Color.Red;
+            this.errorSupplierName.Location = new System.Drawing.Point(27, 213);
+            this.errorSupplierName.Name = "errorSupplierName";
+            this.errorSupplierName.Size = new System.Drawing.Size(25, 16);
+            this.errorSupplierName.TabIndex = 108;
+            this.errorSupplierName.Text = "Lỗi";
+            this.errorSupplierName.UseWaitCursor = true;
             // 
             // btnUpdate
             // 
@@ -309,30 +226,31 @@
             this.txtAddress.TabIndex = 157;
             this.txtAddress.UseWaitCursor = true;
             // 
-            // errorName
+            // errorAddress
             // 
-            this.errorName.AutoSize = true;
-            this.errorName.BackColor = System.Drawing.Color.Transparent;
-            this.errorName.ForeColor = System.Drawing.Color.Red;
-            this.errorName.Location = new System.Drawing.Point(27, 316);
-            this.errorName.Name = "errorName";
-            this.errorName.Size = new System.Drawing.Size(25, 16);
-            this.errorName.TabIndex = 158;
-            this.errorName.Text = "Lỗi";
-            this.errorName.UseWaitCursor = true;
+            this.errorAddress.AutoSize = true;
+            this.errorAddress.BackColor = System.Drawing.Color.Transparent;
+            this.errorAddress.ForeColor = System.Drawing.Color.Red;
+            this.errorAddress.Location = new System.Drawing.Point(27, 316);
+            this.errorAddress.Name = "errorAddress";
+            this.errorAddress.Size = new System.Drawing.Size(25, 16);
+            this.errorAddress.TabIndex = 158;
+            this.errorAddress.Text = "Lỗi";
+            this.errorAddress.UseWaitCursor = true;
             // 
             // guna2Panel2
             // 
             this.guna2Panel2.BorderColor = System.Drawing.Color.Gray;
             this.guna2Panel2.BorderRadius = 1;
             this.guna2Panel2.BorderThickness = 1;
+            this.guna2Panel2.Controls.Add(this.guna2Panel1);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel3);
-            this.guna2Panel2.Controls.Add(this.errorName);
+            this.guna2Panel2.Controls.Add(this.errorAddress);
             this.guna2Panel2.Controls.Add(this.txtAddress);
             this.guna2Panel2.Controls.Add(this.btnDelete);
             this.guna2Panel2.Controls.Add(this.btnUpdate);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel1);
-            this.guna2Panel2.Controls.Add(this.errorUrseName);
+            this.guna2Panel2.Controls.Add(this.errorSupplierName);
             this.guna2Panel2.Controls.Add(this.txtSupplierName);
             this.guna2Panel2.Controls.Add(this.guna2GradientTileButton6);
             this.guna2Panel2.Controls.Add(this.btnAdd);
@@ -342,6 +260,80 @@
             this.guna2Panel2.Size = new System.Drawing.Size(628, 878);
             this.guna2Panel2.TabIndex = 152;
             this.guna2Panel2.UseWaitCursor = true;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1.BorderRadius = 1;
+            this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.guna2GradientTileButton10);
+            this.guna2Panel1.Controls.Add(this.flowLayoutPanelCustomers);
+            this.guna2Panel1.Location = new System.Drawing.Point(644, 1);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(1118, 885);
+            this.guna2Panel1.TabIndex = 160;
+            this.guna2Panel1.UseWaitCursor = true;
+            // 
+            // guna2GradientTileButton10
+            // 
+            this.guna2GradientTileButton10.Checked = true;
+            this.guna2GradientTileButton10.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientTileButton10.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientTileButton10.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientTileButton10.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientTileButton10.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientTileButton10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.guna2GradientTileButton10.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.guna2GradientTileButton10.Font = new System.Drawing.Font("Segoe UI Semibold", 20.2F, System.Drawing.FontStyle.Bold);
+            this.guna2GradientTileButton10.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientTileButton10.Location = new System.Drawing.Point(3, 9);
+            this.guna2GradientTileButton10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2GradientTileButton10.Name = "guna2GradientTileButton10";
+            this.guna2GradientTileButton10.Size = new System.Drawing.Size(1112, 86);
+            this.guna2GradientTileButton10.TabIndex = 18;
+            this.guna2GradientTileButton10.Text = "Danh sách khách hàng";
+            this.guna2GradientTileButton10.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2GradientTileButton10.UseWaitCursor = true;
+            // 
+            // flowLayoutPanelCustomers
+            // 
+            this.flowLayoutPanelCustomers.Controls.Add(this.userControl51);
+            this.flowLayoutPanelCustomers.Controls.Add(this.userControl52);
+            this.flowLayoutPanelCustomers.Controls.Add(this.userControl53);
+            this.flowLayoutPanelCustomers.Location = new System.Drawing.Point(27, 120);
+            this.flowLayoutPanelCustomers.Margin = new System.Windows.Forms.Padding(5);
+            this.flowLayoutPanelCustomers.Name = "flowLayoutPanelCustomers";
+            this.flowLayoutPanelCustomers.Size = new System.Drawing.Size(1064, 758);
+            this.flowLayoutPanelCustomers.TabIndex = 17;
+            this.flowLayoutPanelCustomers.UseWaitCursor = true;
+            // 
+            // userControl51
+            // 
+            this.userControl51.BackColor = System.Drawing.SystemColors.Info;
+            this.userControl51.Location = new System.Drawing.Point(3, 3);
+            this.userControl51.Name = "userControl51";
+            this.userControl51.Size = new System.Drawing.Size(524, 263);
+            this.userControl51.TabIndex = 0;
+            this.userControl51.UseWaitCursor = true;
+            // 
+            // userControl52
+            // 
+            this.userControl52.BackColor = System.Drawing.SystemColors.Info;
+            this.userControl52.Location = new System.Drawing.Point(533, 3);
+            this.userControl52.Name = "userControl52";
+            this.userControl52.Size = new System.Drawing.Size(524, 263);
+            this.userControl52.TabIndex = 1;
+            this.userControl52.UseWaitCursor = true;
+            // 
+            // userControl53
+            // 
+            this.userControl53.BackColor = System.Drawing.SystemColors.Info;
+            this.userControl53.Location = new System.Drawing.Point(3, 272);
+            this.userControl53.Name = "userControl53";
+            this.userControl53.Size = new System.Drawing.Size(524, 263);
+            this.userControl53.TabIndex = 2;
+            this.userControl53.UseWaitCursor = true;
             // 
             // guna2HtmlLabel3
             // 
@@ -367,39 +359,187 @@
             this.guna2HtmlLabel1.Text = "Tên nhà cung cấp";
             this.guna2HtmlLabel1.UseWaitCursor = true;
             // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2Panel3.BorderRadius = 1;
+            this.guna2Panel3.BorderThickness = 1;
+            this.guna2Panel3.Controls.Add(this.DataGridViewSupplier);
+            this.guna2Panel3.Controls.Add(this.btnSearch);
+            this.guna2Panel3.Controls.Add(this.txtSearch);
+            this.guna2Panel3.Controls.Add(this.guna2GradientTileButton2);
+            this.guna2Panel3.Location = new System.Drawing.Point(644, 1);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(1118, 885);
+            this.guna2Panel3.TabIndex = 153;
+            this.guna2Panel3.UseWaitCursor = true;
+            // 
+            // DataGridViewSupplier
+            // 
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.DataGridViewSupplier.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridViewSupplier.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.DataGridViewSupplier.ColumnHeadersHeight = 4;
+            this.DataGridViewSupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridViewSupplier.DefaultCellStyle = dataGridViewCellStyle6;
+            this.DataGridViewSupplier.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.DataGridViewSupplier.Location = new System.Drawing.Point(30, 128);
+            this.DataGridViewSupplier.Name = "DataGridViewSupplier";
+            this.DataGridViewSupplier.RowHeadersVisible = false;
+            this.DataGridViewSupplier.RowHeadersWidth = 51;
+            this.DataGridViewSupplier.RowTemplate.Height = 24;
+            this.DataGridViewSupplier.Size = new System.Drawing.Size(1054, 726);
+            this.DataGridViewSupplier.TabIndex = 21;
+            this.DataGridViewSupplier.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.DataGridViewSupplier.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.DataGridViewSupplier.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.DataGridViewSupplier.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.DataGridViewSupplier.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.DataGridViewSupplier.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.DataGridViewSupplier.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.DataGridViewSupplier.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.DataGridViewSupplier.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.DataGridViewSupplier.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.DataGridViewSupplier.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.DataGridViewSupplier.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.DataGridViewSupplier.ThemeStyle.HeaderStyle.Height = 4;
+            this.DataGridViewSupplier.ThemeStyle.ReadOnly = false;
+            this.DataGridViewSupplier.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.DataGridViewSupplier.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.DataGridViewSupplier.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.DataGridViewSupplier.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.DataGridViewSupplier.ThemeStyle.RowsStyle.Height = 24;
+            this.DataGridViewSupplier.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.DataGridViewSupplier.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.DataGridViewSupplier.UseWaitCursor = true;
+            this.DataGridViewSupplier.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewSupplier_CellContentClick);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
+            this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
+            this.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSearch.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSearch.FillColor = System.Drawing.Color.Transparent;
+            this.btnSearch.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnSearch.FocusedColor = System.Drawing.Color.IndianRed;
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.btnSearch.ForeColor = System.Drawing.Color.Black;
+            this.btnSearch.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnSearch.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnSearch.HoverState.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnSearch.Location = new System.Drawing.Point(1004, 25);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(61, 53);
+            this.btnSearch.TabIndex = 20;
+            this.btnSearch.UseTransparentBackground = true;
+            this.btnSearch.UseWaitCursor = true;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.txtSearch.DefaultText = "";
+            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.Location = new System.Drawing.Point(669, 25);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.PlaceholderText = "Tìm kiếm nguồn cung";
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.Size = new System.Drawing.Size(396, 53);
+            this.txtSearch.TabIndex = 19;
+            this.txtSearch.UseWaitCursor = true;
+            // 
+            // guna2GradientTileButton2
+            // 
+            this.guna2GradientTileButton2.Checked = true;
+            this.guna2GradientTileButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientTileButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientTileButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientTileButton2.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientTileButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientTileButton2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.guna2GradientTileButton2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.guna2GradientTileButton2.Font = new System.Drawing.Font("Segoe UI Semibold", 20.2F, System.Drawing.FontStyle.Bold);
+            this.guna2GradientTileButton2.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientTileButton2.Location = new System.Drawing.Point(3, 9);
+            this.guna2GradientTileButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2GradientTileButton2.Name = "guna2GradientTileButton2";
+            this.guna2GradientTileButton2.Size = new System.Drawing.Size(1112, 86);
+            this.guna2GradientTileButton2.TabIndex = 18;
+            this.guna2GradientTileButton2.Text = "Danh sách nguồn cung";
+            this.guna2GradientTileButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2GradientTileButton2.UseWaitCursor = true;
+            // 
             // UC_QL_NguonCung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.guna2Panel2);
             this.Name = "UC_QL_NguonCung";
-            this.Size = new System.Drawing.Size(1740, 880);
+            this.Size = new System.Drawing.Size(1765, 895);
             this.Load += new System.EventHandler(this.UC_QL_NguonCung_Load);
-            this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
+            this.guna2Panel1.ResumeLayout(false);
+            this.flowLayoutPanelCustomers.ResumeLayout(false);
+            this.guna2Panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewSupplier)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton10;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private Guna.UI2.WinForms.Guna2GradientTileButton btnSearch;
-        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private System.Windows.Forms.Label errorName;
+        private System.Windows.Forms.Label errorAddress;
         private Guna.UI2.WinForms.Guna2TextBox txtAddress;
         private Guna.UI2.WinForms.Guna2GradientButton btnDelete;
         private Guna.UI2.WinForms.Guna2GradientButton btnUpdate;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private System.Windows.Forms.Label errorUrseName;
+        private System.Windows.Forms.Label errorSupplierName;
         private Guna.UI2.WinForms.Guna2TextBox txtSupplierName;
         private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton6;
         private Guna.UI2.WinForms.Guna2GradientButton btnAdd;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton10;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelCustomers;
+        private UserControl5 userControl51;
+        private UserControl5 userControl52;
+        private UserControl5 userControl53;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btnSearch;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
+        private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton2;
+        private Guna.UI2.WinForms.Guna2DataGridView DataGridViewSupplier;
     }
 }

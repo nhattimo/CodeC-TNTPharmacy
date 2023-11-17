@@ -60,7 +60,10 @@ namespace GUI.US_
             BtnTasbalClickManagement(btnSales);
         }
 
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
 
+        }
 
 
 
@@ -70,5 +73,7 @@ namespace GUI.US_
         {
 
         }
+
+       
     }
 }

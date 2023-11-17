@@ -31,11 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_QL_Thuoc));
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnAddPicture = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.PictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.errorSupplier = new System.Windows.Forms.Label();
             this.btnDelete = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnUpdate = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.errorDiscount = new System.Windows.Forms.Label();
@@ -56,25 +56,22 @@
             this.txtProductName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientTileButton6 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnAdd = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnSearch = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GradientTileButton10 = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.flowLayoutPanelProducts = new System.Windows.Forms.FlowLayoutPanel();
             this.userControl11 = new GUI.US_.UserControl1();
             this.userControl12 = new GUI.US_.UserControl1();
-            this.userControl13 = new GUI.US_.UserControl1();
             this.userControl14 = new GUI.US_.UserControl1();
             this.userControl15 = new GUI.US_.UserControl1();
             this.userControl16 = new GUI.US_.UserControl1();
-            this.userControl17 = new GUI.US_.UserControl1();
-            this.userControl18 = new GUI.US_.UserControl1();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel2.SuspendLayout();
-            this.guna2Panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantity)).BeginInit();
             this.guna2Panel1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanelProducts.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel2
@@ -82,10 +79,11 @@
             this.guna2Panel2.BorderColor = System.Drawing.Color.Gray;
             this.guna2Panel2.BorderRadius = 1;
             this.guna2Panel2.BorderThickness = 1;
+            this.guna2Panel2.Controls.Add(this.btnAddPicture);
+            this.guna2Panel2.Controls.Add(this.PictureBox);
             this.guna2Panel2.Controls.Add(this.errorSupplier);
             this.guna2Panel2.Controls.Add(this.btnDelete);
             this.guna2Panel2.Controls.Add(this.btnUpdate);
-            this.guna2Panel2.Controls.Add(this.guna2Panel4);
             this.guna2Panel2.Controls.Add(this.label1);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel5);
             this.guna2Panel2.Controls.Add(this.errorDiscount);
@@ -112,6 +110,39 @@
             this.guna2Panel2.Size = new System.Drawing.Size(628, 878);
             this.guna2Panel2.TabIndex = 15;
             this.guna2Panel2.UseWaitCursor = true;
+            // 
+            // btnAddPicture
+            // 
+            this.btnAddPicture.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddPicture.BorderRadius = 10;
+            this.btnAddPicture.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.btnAddPicture.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddPicture.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddPicture.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddPicture.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddPicture.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddPicture.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddPicture.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnAddPicture.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAddPicture.ForeColor = System.Drawing.Color.Black;
+            this.btnAddPicture.Image = ((System.Drawing.Image)(resources.GetObject("btnAddPicture.Image")));
+            this.btnAddPicture.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnAddPicture.Location = new System.Drawing.Point(433, 363);
+            this.btnAddPicture.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddPicture.Name = "btnAddPicture";
+            this.btnAddPicture.Size = new System.Drawing.Size(63, 67);
+            this.btnAddPicture.TabIndex = 176;
+            this.btnAddPicture.UseWaitCursor = true;
+            // 
+            // PictureBox
+            // 
+            this.PictureBox.ImageRotate = 0F;
+            this.PictureBox.Location = new System.Drawing.Point(331, 272);
+            this.PictureBox.Name = "PictureBox";
+            this.PictureBox.Size = new System.Drawing.Size(266, 259);
+            this.PictureBox.TabIndex = 175;
+            this.PictureBox.TabStop = false;
+            this.PictureBox.UseWaitCursor = true;
             // 
             // errorSupplier
             // 
@@ -173,35 +204,12 @@
             this.btnUpdate.UseWaitCursor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // guna2Panel4
-            // 
-            this.guna2Panel4.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.guna2Panel4.Controls.Add(this.guna2HtmlLabel7);
-            this.guna2Panel4.Location = new System.Drawing.Point(291, 363);
-            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(316, 167);
-            this.guna2Panel4.TabIndex = 144;
-            this.guna2Panel4.UseWaitCursor = true;
-            // 
-            // guna2HtmlLabel7
-            // 
-            this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(140, 94);
-            this.guna2HtmlLabel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(55, 25);
-            this.guna2HtmlLabel7.TabIndex = 145;
-            this.guna2HtmlLabel7.Text = "Image";
-            this.guna2HtmlLabel7.UseWaitCursor = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(197, 491);
+            this.label1.Location = new System.Drawing.Point(238, 492);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 29);
             this.label1.TabIndex = 143;
@@ -255,7 +263,7 @@
             this.txtDiscount.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtDiscount.PlaceholderText = "VD: 299.000";
             this.txtDiscount.SelectedText = "";
-            this.txtDiscount.Size = new System.Drawing.Size(171, 53);
+            this.txtDiscount.Size = new System.Drawing.Size(215, 53);
             this.txtDiscount.TabIndex = 140;
             this.txtDiscount.UseWaitCursor = true;
             // 
@@ -276,7 +284,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(197, 376);
+            this.label3.Location = new System.Drawing.Point(238, 377);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 29);
             this.label3.TabIndex = 137;
@@ -348,7 +356,7 @@
             this.txtSupplier.Location = new System.Drawing.Point(21, 269);
             this.txtSupplier.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSupplier.Name = "txtSupplier";
-            this.txtSupplier.Size = new System.Drawing.Size(197, 36);
+            this.txtSupplier.Size = new System.Drawing.Size(215, 36);
             this.txtSupplier.TabIndex = 129;
             this.txtSupplier.UseWaitCursor = true;
             // 
@@ -452,7 +460,7 @@
             this.txtCost.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtCost.PlaceholderText = "VD: 300.000";
             this.txtCost.SelectedText = "";
-            this.txtCost.Size = new System.Drawing.Size(171, 53);
+            this.txtCost.Size = new System.Drawing.Size(215, 53);
             this.txtCost.TabIndex = 107;
             this.txtCost.UseWaitCursor = true;
             // 
@@ -495,10 +503,10 @@
             this.guna2GradientTileButton6.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.guna2GradientTileButton6.Font = new System.Drawing.Font("Segoe UI Semibold", 20.2F, System.Drawing.FontStyle.Bold);
             this.guna2GradientTileButton6.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientTileButton6.Location = new System.Drawing.Point(13, 9);
+            this.guna2GradientTileButton6.Location = new System.Drawing.Point(3, 9);
             this.guna2GradientTileButton6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2GradientTileButton6.Name = "guna2GradientTileButton6";
-            this.guna2GradientTileButton6.Size = new System.Drawing.Size(601, 86);
+            this.guna2GradientTileButton6.Size = new System.Drawing.Size(622, 86);
             this.guna2GradientTileButton6.TabIndex = 10;
             this.guna2GradientTileButton6.Text = "Sản phẩm";
             this.guna2GradientTileButton6.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -528,6 +536,22 @@
             this.btnAdd.UseWaitCursor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1.BorderRadius = 1;
+            this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.btnSearch);
+            this.guna2Panel1.Controls.Add(this.txtSearch);
+            this.guna2Panel1.Controls.Add(this.guna2GradientTileButton10);
+            this.guna2Panel1.Controls.Add(this.flowLayoutPanelProducts);
+            this.guna2Panel1.Location = new System.Drawing.Point(644, 1);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(1118, 885);
+            this.guna2Panel1.TabIndex = 147;
+            this.guna2Panel1.UseWaitCursor = true;
+            // 
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.Transparent;
@@ -547,14 +571,13 @@
             this.btnSearch.HoverState.FillColor2 = System.Drawing.Color.Transparent;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
             this.btnSearch.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnSearch.Location = new System.Drawing.Point(10, 109);
+            this.btnSearch.Location = new System.Drawing.Point(1004, 25);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(61, 53);
-            this.btnSearch.TabIndex = 4;
+            this.btnSearch.TabIndex = 20;
             this.btnSearch.UseTransparentBackground = true;
             this.btnSearch.UseWaitCursor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
             // 
@@ -567,31 +590,15 @@
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Location = new System.Drawing.Point(77, 109);
+            this.txtSearch.Location = new System.Drawing.Point(669, 25);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "Tìm kiếm sản phẩm";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(315, 53);
-            this.txtSearch.TabIndex = 0;
+            this.txtSearch.Size = new System.Drawing.Size(396, 53);
+            this.txtSearch.TabIndex = 19;
             this.txtSearch.UseWaitCursor = true;
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Panel1.BorderRadius = 1;
-            this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.guna2GradientTileButton10);
-            this.guna2Panel1.Controls.Add(this.flowLayoutPanel1);
-            this.guna2Panel1.Controls.Add(this.btnSearch);
-            this.guna2Panel1.Controls.Add(this.txtSearch);
-            this.guna2Panel1.Location = new System.Drawing.Point(634, 1);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1106, 878);
-            this.guna2Panel1.TabIndex = 147;
-            this.guna2Panel1.UseWaitCursor = true;
             // 
             // guna2GradientTileButton10
             // 
@@ -605,131 +612,92 @@
             this.guna2GradientTileButton10.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.guna2GradientTileButton10.Font = new System.Drawing.Font("Segoe UI Semibold", 20.2F, System.Drawing.FontStyle.Bold);
             this.guna2GradientTileButton10.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientTileButton10.Location = new System.Drawing.Point(10, 9);
+            this.guna2GradientTileButton10.Location = new System.Drawing.Point(3, 9);
             this.guna2GradientTileButton10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2GradientTileButton10.Name = "guna2GradientTileButton10";
-            this.guna2GradientTileButton10.Size = new System.Drawing.Size(1081, 86);
+            this.guna2GradientTileButton10.Size = new System.Drawing.Size(1112, 86);
             this.guna2GradientTileButton10.TabIndex = 18;
             this.guna2GradientTileButton10.Text = "Danh sách sản phẩm";
             this.guna2GradientTileButton10.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientTileButton10.UseWaitCursor = true;
             // 
-            // flowLayoutPanel1
+            // flowLayoutPanelProducts
             // 
-            this.flowLayoutPanel1.Controls.Add(this.userControl11);
-            this.flowLayoutPanel1.Controls.Add(this.userControl12);
-            this.flowLayoutPanel1.Controls.Add(this.userControl13);
-            this.flowLayoutPanel1.Controls.Add(this.userControl14);
-            this.flowLayoutPanel1.Controls.Add(this.userControl15);
-            this.flowLayoutPanel1.Controls.Add(this.userControl16);
-            this.flowLayoutPanel1.Controls.Add(this.userControl17);
-            this.flowLayoutPanel1.Controls.Add(this.userControl18);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(5, 171);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(5);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1087, 709);
-            this.flowLayoutPanel1.TabIndex = 17;
-            this.flowLayoutPanel1.UseWaitCursor = true;
+            this.flowLayoutPanelProducts.Controls.Add(this.userControl11);
+            this.flowLayoutPanelProducts.Controls.Add(this.userControl12);
+            this.flowLayoutPanelProducts.Controls.Add(this.userControl14);
+            this.flowLayoutPanelProducts.Controls.Add(this.userControl15);
+            this.flowLayoutPanelProducts.Controls.Add(this.userControl16);
+            this.flowLayoutPanelProducts.Location = new System.Drawing.Point(8, 120);
+            this.flowLayoutPanelProducts.Margin = new System.Windows.Forms.Padding(5);
+            this.flowLayoutPanelProducts.Name = "flowLayoutPanelProducts";
+            this.flowLayoutPanelProducts.Size = new System.Drawing.Size(1102, 758);
+            this.flowLayoutPanelProducts.TabIndex = 17;
+            this.flowLayoutPanelProducts.UseWaitCursor = true;
+            // 
+            // userControl11
+            // 
+            this.userControl11.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.userControl11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.userControl11.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.userControl11.Location = new System.Drawing.Point(10, 10);
+            this.userControl11.Margin = new System.Windows.Forms.Padding(10);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Size = new System.Drawing.Size(252, 315);
+            this.userControl11.TabIndex = 0;
+            this.userControl11.UseWaitCursor = true;
+            // 
+            // userControl12
+            // 
+            this.userControl12.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.userControl12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.userControl12.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.userControl12.Location = new System.Drawing.Point(282, 10);
+            this.userControl12.Margin = new System.Windows.Forms.Padding(10);
+            this.userControl12.Name = "userControl12";
+            this.userControl12.Size = new System.Drawing.Size(252, 315);
+            this.userControl12.TabIndex = 1;
+            this.userControl12.UseWaitCursor = true;
+            // 
+            // userControl14
+            // 
+            this.userControl14.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.userControl14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.userControl14.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.userControl14.Location = new System.Drawing.Point(554, 10);
+            this.userControl14.Margin = new System.Windows.Forms.Padding(10);
+            this.userControl14.Name = "userControl14";
+            this.userControl14.Size = new System.Drawing.Size(252, 315);
+            this.userControl14.TabIndex = 3;
+            this.userControl14.UseWaitCursor = true;
+            // 
+            // userControl15
+            // 
+            this.userControl15.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.userControl15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.userControl15.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.userControl15.Location = new System.Drawing.Point(826, 10);
+            this.userControl15.Margin = new System.Windows.Forms.Padding(10);
+            this.userControl15.Name = "userControl15";
+            this.userControl15.Size = new System.Drawing.Size(252, 315);
+            this.userControl15.TabIndex = 4;
+            this.userControl15.UseWaitCursor = true;
+            // 
+            // userControl16
+            // 
+            this.userControl16.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.userControl16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.userControl16.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.userControl16.Location = new System.Drawing.Point(10, 345);
+            this.userControl16.Margin = new System.Windows.Forms.Padding(10);
+            this.userControl16.Name = "userControl16";
+            this.userControl16.Size = new System.Drawing.Size(252, 315);
+            this.userControl16.TabIndex = 5;
+            this.userControl16.UseWaitCursor = true;
             // 
             // guna2Elipse1
             // 
             this.guna2Elipse1.TargetControl = this;
-            // 
-            // userControl11
-            // 
-            this.userControl11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControl11.BackgroundImage")));
-            this.userControl11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userControl11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.userControl11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.userControl11.Location = new System.Drawing.Point(5, 5);
-            this.userControl11.Margin = new System.Windows.Forms.Padding(5);
-            this.userControl11.Name = "userControl11";
-            this.userControl11.Size = new System.Drawing.Size(249, 300);
-            this.userControl11.TabIndex = 0;
-            // 
-            // userControl12
-            // 
-            this.userControl12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControl12.BackgroundImage")));
-            this.userControl12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userControl12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.userControl12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.userControl12.Location = new System.Drawing.Point(264, 5);
-            this.userControl12.Margin = new System.Windows.Forms.Padding(5);
-            this.userControl12.Name = "userControl12";
-            this.userControl12.Size = new System.Drawing.Size(249, 300);
-            this.userControl12.TabIndex = 1;
-            // 
-            // userControl13
-            // 
-            this.userControl13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControl13.BackgroundImage")));
-            this.userControl13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userControl13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.userControl13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.userControl13.Location = new System.Drawing.Point(523, 5);
-            this.userControl13.Margin = new System.Windows.Forms.Padding(5);
-            this.userControl13.Name = "userControl13";
-            this.userControl13.Size = new System.Drawing.Size(249, 300);
-            this.userControl13.TabIndex = 2;
-            // 
-            // userControl14
-            // 
-            this.userControl14.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControl14.BackgroundImage")));
-            this.userControl14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userControl14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.userControl14.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.userControl14.Location = new System.Drawing.Point(782, 5);
-            this.userControl14.Margin = new System.Windows.Forms.Padding(5);
-            this.userControl14.Name = "userControl14";
-            this.userControl14.Size = new System.Drawing.Size(249, 300);
-            this.userControl14.TabIndex = 3;
-            // 
-            // userControl15
-            // 
-            this.userControl15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControl15.BackgroundImage")));
-            this.userControl15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userControl15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.userControl15.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.userControl15.Location = new System.Drawing.Point(5, 315);
-            this.userControl15.Margin = new System.Windows.Forms.Padding(5);
-            this.userControl15.Name = "userControl15";
-            this.userControl15.Size = new System.Drawing.Size(249, 300);
-            this.userControl15.TabIndex = 4;
-            // 
-            // userControl16
-            // 
-            this.userControl16.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControl16.BackgroundImage")));
-            this.userControl16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userControl16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.userControl16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.userControl16.Location = new System.Drawing.Point(264, 315);
-            this.userControl16.Margin = new System.Windows.Forms.Padding(5);
-            this.userControl16.Name = "userControl16";
-            this.userControl16.Size = new System.Drawing.Size(249, 300);
-            this.userControl16.TabIndex = 5;
-            // 
-            // userControl17
-            // 
-            this.userControl17.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControl17.BackgroundImage")));
-            this.userControl17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userControl17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.userControl17.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.userControl17.Location = new System.Drawing.Point(523, 315);
-            this.userControl17.Margin = new System.Windows.Forms.Padding(5);
-            this.userControl17.Name = "userControl17";
-            this.userControl17.Size = new System.Drawing.Size(249, 300);
-            this.userControl17.TabIndex = 6;
-            // 
-            // userControl18
-            // 
-            this.userControl18.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControl18.BackgroundImage")));
-            this.userControl18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userControl18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.userControl18.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.userControl18.Location = new System.Drawing.Point(782, 315);
-            this.userControl18.Margin = new System.Windows.Forms.Padding(5);
-            this.userControl18.Name = "userControl18";
-            this.userControl18.Size = new System.Drawing.Size(249, 300);
-            this.userControl18.TabIndex = 7;
             // 
             // UC_QL_Thuoc
             // 
@@ -739,15 +707,14 @@
             this.Controls.Add(this.guna2Panel2);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_QL_Thuoc";
-            this.Size = new System.Drawing.Size(1740, 880);
+            this.Size = new System.Drawing.Size(1765, 895);
             this.Load += new System.EventHandler(this.UC_QL_Thuoc_Load);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
-            this.guna2Panel4.ResumeLayout(false);
-            this.guna2Panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantity)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanelProducts.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -757,11 +724,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2GradientButton btnDelete;
         private Guna.UI2.WinForms.Guna2GradientButton btnUpdate;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
-        private Guna.UI2.WinForms.Guna2GradientTileButton btnSearch;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private System.Windows.Forms.Label errorDiscount;
         private Guna.UI2.WinForms.Guna2TextBox txtDiscount;
@@ -783,16 +746,17 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnAdd;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton10;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelProducts;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Label errorSupplier;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btnSearch;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private UserControl1 userControl11;
         private UserControl1 userControl12;
-        private UserControl1 userControl13;
         private UserControl1 userControl14;
         private UserControl1 userControl15;
         private UserControl1 userControl16;
-        private UserControl1 userControl17;
-        private UserControl1 userControl18;
+        private Guna.UI2.WinForms.Guna2GradientButton btnAddPicture;
+        private Guna.UI2.WinForms.Guna2PictureBox PictureBox;
     }
 }

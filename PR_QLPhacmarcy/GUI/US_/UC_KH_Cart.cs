@@ -16,5 +16,17 @@ namespace GUI.US_
         {
             InitializeComponent();
         }
+
+        private void UC_KH_Cart_Load(object sender, EventArgs e)
+        {
+            uC_KH_OrderInformation1.Visible = false;
+        }
+
+        private void btnShoppingOnline_Click(object sender, EventArgs e)
+        {
+            uC_KH_OrderInformation1.Visible = true;
+        }
+
+        
     }
 }

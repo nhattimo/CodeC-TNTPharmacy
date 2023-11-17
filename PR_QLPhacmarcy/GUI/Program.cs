@@ -15,9 +15,9 @@ namespace GUI
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new FormDangNhap());
             //Application.Run(new FormDangKy());
-            Application.Run(new FormKhachHang());
-            //Application.Run(new FormNhanVienBanHang());
             //Application.Run(new FormQuanLy());
+            //Application.Run(new FormKhachHang());
+            Application.Run(new FormNhanVienBanHang());
             //Application.Run(new FormDieuKhienChucVu());
 
 

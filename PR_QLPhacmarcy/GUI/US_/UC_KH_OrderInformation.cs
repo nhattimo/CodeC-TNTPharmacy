@@ -23,6 +23,8 @@ namespace GUI.US_
 
 
         #region Event
+
+        // btn đặt hàng
         private void btnBuyNow_Click(object sender, EventArgs e)
         {
             DateTime date = DateTime.Now;
@@ -54,8 +56,14 @@ namespace GUI.US_
             }
 
         }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            // làm mới dữ liệu
+        }
         #endregion
-        // btn đặt hàng
+        
 
 
 
@@ -96,5 +104,6 @@ namespace GUI.US_
         }
         #endregion
 
+       
     }
 }
