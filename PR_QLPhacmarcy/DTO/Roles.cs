@@ -9,11 +9,11 @@ namespace DTO
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // khoa tu sinh
         [Key]
-        int ID { get; set; }
+        public int ID { get; set; }
 
 
         [Column(TypeName = "NVARCHAR")]
         [StringLength(20)]
-        string Name { get; set; }
+        public string Name { get; set; }
     }
 }

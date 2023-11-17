@@ -9,3 +9,6 @@ E:\CODE\Dự án 1\PR_QLPhacmarcy\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cac
 E:\CODE\Dự án 1\PR_QLPhacmarcy\BLL\obj\Debug\BLL.csproj.CopyComplete
 E:\CODE\Dự án 1\PR_QLPhacmarcy\BLL\obj\Debug\BLL.dll
 E:\CODE\Dự án 1\PR_QLPhacmarcy\BLL\obj\Debug\BLL.pdb
+E:\CODE\Dự án 1\PR_QLPhacmarcy\BLL\bin\Debug\EntityFramework.dll
+E:\CODE\Dự án 1\PR_QLPhacmarcy\BLL\bin\Debug\DAL.dll.config
+E:\CODE\Dự án 1\PR_QLPhacmarcy\BLL\bin\Debug\EntityFramework.xml

@@ -39,3 +39,7 @@ E:\CODE\Dự án 1\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UserControl4.resources
 E:\CODE\Dự án 1\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UserControl5.resources
 E:\CODE\Dự án 1\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_Bill.resources
 E:\CODE\Dự án 1\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_KH_OrderInformation.resources
+E:\CODE\Dự án 1\PR_QLPhacmarcy\GUI\bin\Debug\EntityFramework.dll
+E:\CODE\Dự án 1\PR_QLPhacmarcy\GUI\bin\Debug\EntityFramework.SqlServer.dll
+E:\CODE\Dự án 1\PR_QLPhacmarcy\GUI\bin\Debug\EntityFramework.xml
+E:\CODE\Dự án 1\PR_QLPhacmarcy\GUI\bin\Debug\EntityFramework.SqlServer.xml

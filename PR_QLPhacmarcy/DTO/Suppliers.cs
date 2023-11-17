@@ -8,16 +8,16 @@ namespace DTO
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // khoa tu sinh
         [Key]
-        int ID { get; set; }
+        public int ID { get; set; }
 
 
         [Column(TypeName = "NVARCHAR")]
         [StringLength(30)]
-        string Name { get; set; }
+        public string Name { get; set; }
 
 
         [Column(TypeName = "NVARCHAR")]
         [StringLength(50)]
-        string Address { get; set; }
+        public string Address { get; set; }
     }
 }

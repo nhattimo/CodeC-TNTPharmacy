@@ -41,6 +41,9 @@
             this.btnTasbalCustomer = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnTasbalShop = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.uC_NVBH_CuaHang1 = new GUI.US_.UC_NVBH_CuaHang();
+            this.guna2ControlBox6 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox5 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox4 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ShadowPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -51,11 +54,12 @@
             this.guna2ShadowPanel1.Controls.Add(this.guna2GradientButton3);
             this.guna2ShadowPanel1.Controls.Add(this.guna2GradientTileButton5);
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
-            this.guna2ShadowPanel1.Location = new System.Drawing.Point(127, 33);
+            this.guna2ShadowPanel1.Location = new System.Drawing.Point(95, 34);
+            this.guna2ShadowPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.DarkGray;
             this.guna2ShadowPanel1.ShadowShift = 2;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(1781, 97);
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(1440, 72);
             this.guna2ShadowPanel1.TabIndex = 9;
             // 
             // guna2GradientButton3
@@ -74,9 +78,10 @@
             this.guna2GradientButton3.Image = ((System.Drawing.Image)(resources.GetObject("guna2GradientButton3.Image")));
             this.guna2GradientButton3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientButton3.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2GradientButton3.Location = new System.Drawing.Point(1422, 14);
+            this.guna2GradientButton3.Location = new System.Drawing.Point(1175, 9);
+            this.guna2GradientButton3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2GradientButton3.Name = "guna2GradientButton3";
-            this.guna2GradientButton3.Size = new System.Drawing.Size(271, 68);
+            this.guna2GradientButton3.Size = new System.Drawing.Size(203, 55);
             this.guna2GradientButton3.TabIndex = 12;
             this.guna2GradientButton3.Text = "NV bán hàng A";
             // 
@@ -96,9 +101,10 @@
             this.guna2GradientTileButton5.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.guna2GradientTileButton5.Image = ((System.Drawing.Image)(resources.GetObject("guna2GradientTileButton5.Image")));
             this.guna2GradientTileButton5.ImageSize = new System.Drawing.Size(60, 60);
-            this.guna2GradientTileButton5.Location = new System.Drawing.Point(1699, 22);
+            this.guna2GradientTileButton5.Location = new System.Drawing.Point(1383, 16);
+            this.guna2GradientTileButton5.Margin = new System.Windows.Forms.Padding(2);
             this.guna2GradientTileButton5.Name = "guna2GradientTileButton5";
-            this.guna2GradientTileButton5.Size = new System.Drawing.Size(62, 53);
+            this.guna2GradientTileButton5.Size = new System.Drawing.Size(46, 43);
             this.guna2GradientTileButton5.TabIndex = 11;
             // 
             // guna2ControlBox3
@@ -110,9 +116,10 @@
             this.guna2ControlBox3.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.guna2ControlBox3.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(1776, 0);
+            this.guna2ControlBox3.Location = new System.Drawing.Point(1721, 0);
+            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
-            this.guna2ControlBox3.Size = new System.Drawing.Size(44, 37);
+            this.guna2ControlBox3.Size = new System.Drawing.Size(33, 30);
             this.guna2ControlBox3.TabIndex = 8;
             // 
             // guna2ControlBox2
@@ -124,9 +131,10 @@
             this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1826, 0);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1759, 0);
+            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.Size = new System.Drawing.Size(44, 37);
+            this.guna2ControlBox2.Size = new System.Drawing.Size(33, 30);
             this.guna2ControlBox2.TabIndex = 7;
             // 
             // guna2ControlBox1
@@ -137,9 +145,10 @@
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1876, 0);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1796, 0);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(44, 37);
+            this.guna2ControlBox1.Size = new System.Drawing.Size(33, 30);
             this.guna2ControlBox1.TabIndex = 6;
             // 
             // guna2Panel1
@@ -153,8 +162,9 @@
             this.guna2Panel1.CustomBorderThickness = new System.Windows.Forms.Padding(1, 1, 1, 0);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(102, 1080);
+            this.guna2Panel1.Size = new System.Drawing.Size(76, 884);
             this.guna2Panel1.TabIndex = 5;
             // 
             // guna2Button1
@@ -169,9 +179,10 @@
             this.guna2Button1.FillColor = System.Drawing.Color.Red;
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(61, 325);
+            this.guna2Button1.Location = new System.Drawing.Point(46, 264);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(35, 28);
+            this.guna2Button1.Size = new System.Drawing.Size(26, 23);
             this.guna2Button1.TabIndex = 6;
             this.guna2Button1.Text = "3";
             // 
@@ -192,9 +203,10 @@
             this.btnTasbalOrder.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnTasbalOrder.Image = ((System.Drawing.Image)(resources.GetObject("btnTasbalOrder.Image")));
             this.btnTasbalOrder.ImageSize = new System.Drawing.Size(45, 45);
-            this.btnTasbalOrder.Location = new System.Drawing.Point(6, 309);
+            this.btnTasbalOrder.Location = new System.Drawing.Point(4, 251);
+            this.btnTasbalOrder.Margin = new System.Windows.Forms.Padding(2);
             this.btnTasbalOrder.Name = "btnTasbalOrder";
-            this.btnTasbalOrder.Size = new System.Drawing.Size(96, 135);
+            this.btnTasbalOrder.Size = new System.Drawing.Size(72, 110);
             this.btnTasbalOrder.TabIndex = 4;
             this.btnTasbalOrder.Text = "Đặt hàng";
             this.btnTasbalOrder.Click += new System.EventHandler(this.btnTasbalOrder_Click);
@@ -215,9 +227,10 @@
             this.btnTasbalCustomer.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnTasbalCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnTasbalCustomer.Image")));
             this.btnTasbalCustomer.ImageSize = new System.Drawing.Size(45, 45);
-            this.btnTasbalCustomer.Location = new System.Drawing.Point(3, 464);
+            this.btnTasbalCustomer.Location = new System.Drawing.Point(2, 377);
+            this.btnTasbalCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.btnTasbalCustomer.Name = "btnTasbalCustomer";
-            this.btnTasbalCustomer.Size = new System.Drawing.Size(96, 135);
+            this.btnTasbalCustomer.Size = new System.Drawing.Size(72, 110);
             this.btnTasbalCustomer.TabIndex = 2;
             this.btnTasbalCustomer.Text = "Khách hàng";
             // 
@@ -238,25 +251,68 @@
             this.btnTasbalShop.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnTasbalShop.Image = ((System.Drawing.Image)(resources.GetObject("btnTasbalShop.Image")));
             this.btnTasbalShop.ImageSize = new System.Drawing.Size(45, 45);
-            this.btnTasbalShop.Location = new System.Drawing.Point(3, 168);
+            this.btnTasbalShop.Location = new System.Drawing.Point(2, 136);
+            this.btnTasbalShop.Margin = new System.Windows.Forms.Padding(2);
             this.btnTasbalShop.Name = "btnTasbalShop";
-            this.btnTasbalShop.Size = new System.Drawing.Size(96, 135);
+            this.btnTasbalShop.Size = new System.Drawing.Size(72, 110);
             this.btnTasbalShop.TabIndex = 1;
             this.btnTasbalShop.Text = "Cửa hàng";
             this.btnTasbalShop.Click += new System.EventHandler(this.btnTasbalShop_Click);
             // 
             // uC_NVBH_CuaHang1
             // 
-            this.uC_NVBH_CuaHang1.Location = new System.Drawing.Point(127, 168);
+            this.uC_NVBH_CuaHang1.Location = new System.Drawing.Point(95, 136);
+            this.uC_NVBH_CuaHang1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.uC_NVBH_CuaHang1.Name = "uC_NVBH_CuaHang1";
-            this.uC_NVBH_CuaHang1.Size = new System.Drawing.Size(1771, 880);
+            this.uC_NVBH_CuaHang1.Size = new System.Drawing.Size(1328, 715);
             this.uC_NVBH_CuaHang1.TabIndex = 10;
+            // 
+            // guna2ControlBox6
+            // 
+            this.guna2ControlBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox6.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
+            this.guna2ControlBox6.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox6.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox6.Location = new System.Drawing.Point(1408, 0);
+            this.guna2ControlBox6.Name = "guna2ControlBox6";
+            this.guna2ControlBox6.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox6.TabIndex = 23;
+            this.guna2ControlBox6.UseWaitCursor = true;
+            // 
+            // guna2ControlBox5
+            // 
+            this.guna2ControlBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox5.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox5.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox5.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox5.Location = new System.Drawing.Point(1459, 0);
+            this.guna2ControlBox5.Name = "guna2ControlBox5";
+            this.guna2ControlBox5.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox5.TabIndex = 22;
+            this.guna2ControlBox5.UseWaitCursor = true;
+            // 
+            // guna2ControlBox4
+            // 
+            this.guna2ControlBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox4.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox4.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox4.Location = new System.Drawing.Point(1510, 0);
+            this.guna2ControlBox4.Name = "guna2ControlBox4";
+            this.guna2ControlBox4.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox4.TabIndex = 21;
+            this.guna2ControlBox4.UseWaitCursor = true;
             // 
             // FormNhanVienBanHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1556, 884);
+            this.Controls.Add(this.guna2ControlBox6);
+            this.Controls.Add(this.guna2ControlBox5);
+            this.Controls.Add(this.guna2ControlBox4);
             this.Controls.Add(this.uC_NVBH_CuaHang1);
             this.Controls.Add(this.guna2ShadowPanel1);
             this.Controls.Add(this.guna2ControlBox3);
@@ -264,6 +320,7 @@
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormNhanVienBanHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormNhanVienBanHang";
@@ -288,5 +345,8 @@
         private Guna.UI2.WinForms.Guna2GradientTileButton btnTasbalOrder;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private US_.UC_NVBH_CuaHang uC_NVBH_CuaHang1;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox6;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox5;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox4;
     }
 }

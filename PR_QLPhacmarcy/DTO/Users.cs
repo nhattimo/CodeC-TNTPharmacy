@@ -9,50 +9,50 @@ namespace DTO
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // khoa tu sinh
         [Key]
-        int ID { get; set; }
+        public int ID { get; set; }
 
 
         [Column(TypeName = "NVARCHAR")]
         [StringLength(30)]
-        string Name { get; set; }
+        public string Name { get; set; }
 
 
         [Column(TypeName = "NVARCHAR")]
         [StringLength(3)]
-        string Sex { get; set; }
+        public string Sex { get; set; }
 
 
         [Column(TypeName = "VARCHAR")]
         [StringLength(10)]
-        string Phone { get; set; }
+        public string Phone { get; set; }
 
 
         [Column(TypeName = "VARCHAR")]
         [StringLength(100)]
-        string Email { get; set; }
+        public string Email { get; set; }
 
 
         [Column(TypeName = "NVARCHAR")]
         [StringLength(100)]
-        string Address { get; set; }
+        public string Address { get; set; }
 
 
         [Column(TypeName = "VARCHAR")]
-        string Image { get; set; }
-
-
-        [Column(TypeName = "VARCHAR")]
-        [StringLength(30)]
-        string UserName { get; set; }
+        public string Image { get; set; }
 
 
         [Column(TypeName = "VARCHAR")]
         [StringLength(30)]
-        string Password { get; set; }
+        public string UserName { get; set; }
 
 
-        
-        int Role { get; set; }
+        [Column(TypeName = "VARCHAR")]
+        [StringLength(30)]
+        public string Password { get; set; }
+
+
+
+        public int Role { get; set; }
         [ForeignKey("ID")]
         public virtual Roles ROLES { get; set; }
 

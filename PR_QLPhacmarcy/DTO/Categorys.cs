@@ -9,17 +9,17 @@ namespace DTO
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // khoa tu sinh
         [Key]
-        int ID { get; set; }
+        public int ID { get; set; }
 
 
         [Column(TypeName = "NVARCHAR")]
         [StringLength(30)]
-        string Name { get; set; }
+        public string Name { get; set; }
 
 
         [Column(TypeName = "NVARCHAR")]
         [StringLength(10)]
-        string Status { get; set; }
+        public string Status { get; set; }
 
 
         [Column(TypeName = "DATETIME")]
@@ -28,11 +28,13 @@ namespace DTO
 
         [Column(TypeName = "NVARCHAR")]
         [StringLength(100)]
-        string Description { get; set; }
+        public string Description { get; set; }
 
 
 
-        int CreatedBy { get; set; }
+        public int CreatedBy { get; set; }
+        [ForeignKey("ID")]
+        public virtual Employees EMPLOYEES  { get; set; }
         
     }
 }
