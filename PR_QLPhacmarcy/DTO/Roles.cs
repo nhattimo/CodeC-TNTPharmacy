@@ -7,13 +7,14 @@ namespace DTO
     [Table("ROLES")]
     public class Roles
     {
+        // ID
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // khoa tu sinh
         [Key]
         public int ID { get; set; }
 
-
+        // Tên chức vụ
         [Column(TypeName = "NVARCHAR")]
-        [StringLength(20)]
+        [MaxLength(20)]
         public string Name { get; set; }
     }
 }

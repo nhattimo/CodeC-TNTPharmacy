@@ -42,11 +42,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BillOffline.cs" />
+    <Compile Include="BillOfflineDetail.cs" />
     <Compile Include="Categorys.cs" />
     <Compile Include="Employees.cs" />
+    <Compile Include="PayMent.cs" />
+    <Compile Include="PayMentMethond.cs" />
     <Compile Include="Products.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Roles.cs" />
+    <Compile Include="SalesOrder.cs" />
+    <Compile Include="SalesOrderDetail.cs" />
+    <Compile Include="Shipping.cs" />
     <Compile Include="Stocks.cs" />
     <Compile Include="Suppliers.cs" />
     <Compile Include="Users.cs" />
