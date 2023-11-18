@@ -95,3 +95,6 @@ E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_TK_NhapKho.resource
 E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_TK_XuatKho.resources
 E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UserControl7.resources
 E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_ItemProduct.resources
+E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\bin\Debug\DAL.dll
+E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\bin\Debug\DAL.pdb
+E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\bin\Debug\DAL.dll.config
