@@ -30,19 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_KH_Thuoc));
-            this.flowLayoutPanelProducts = new System.Windows.Forms.FlowLayoutPanel();
-            this.userControl11 = new GUI.US_.UserControl1();
-            this.userControl12 = new GUI.US_.UserControl1();
-            this.userControl13 = new GUI.US_.UserControl1();
-            this.userControl14 = new GUI.US_.UserControl1();
-            this.userControl15 = new GUI.US_.UserControl1();
-            this.userControl16 = new GUI.US_.UserControl1();
-            this.userControl17 = new GUI.US_.UserControl1();
-            this.userControl18 = new GUI.US_.UserControl1();
+            this.flowLayoutPanelItemProducts = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2GradientTileButton6 = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.flowLayoutPanelIteamProduct = new System.Windows.Forms.FlowLayoutPanel();
-            this.userControl21 = new GUI.US_.UserControl2();
-            this.userControl22 = new GUI.US_.UserControl2();
+            this.flowLayoutPanelIteamProductSelected = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label4 = new System.Windows.Forms.Label();
@@ -53,115 +43,20 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2HScrollBar1 = new Guna.UI2.WinForms.Guna2HScrollBar();
             this.uC_KH_OrderInformation1 = new GUI.US_.UC_KH_OrderInformation();
-            this.flowLayoutPanelProducts.SuspendLayout();
-            this.flowLayoutPanelIteamProduct.SuspendLayout();
+            this.userControl21 = new GUI.US_.UserControl2();
+            this.userControl22 = new GUI.US_.UserControl2();
+            this.flowLayoutPanelIteamProductSelected.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // flowLayoutPanelProducts
+            // flowLayoutPanelItemProducts
             // 
-            this.flowLayoutPanelProducts.Controls.Add(this.userControl11);
-            this.flowLayoutPanelProducts.Controls.Add(this.userControl12);
-            this.flowLayoutPanelProducts.Controls.Add(this.userControl13);
-            this.flowLayoutPanelProducts.Controls.Add(this.userControl14);
-            this.flowLayoutPanelProducts.Controls.Add(this.userControl15);
-            this.flowLayoutPanelProducts.Controls.Add(this.userControl16);
-            this.flowLayoutPanelProducts.Controls.Add(this.userControl17);
-            this.flowLayoutPanelProducts.Controls.Add(this.userControl18);
-            this.flowLayoutPanelProducts.Location = new System.Drawing.Point(5, 5);
-            this.flowLayoutPanelProducts.Margin = new System.Windows.Forms.Padding(5);
-            this.flowLayoutPanelProducts.Name = "flowLayoutPanelProducts";
-            this.flowLayoutPanelProducts.Size = new System.Drawing.Size(1097, 876);
-            this.flowLayoutPanelProducts.TabIndex = 8;
-            // 
-            // userControl11
-            // 
-            this.userControl11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.userControl11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userControl11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.userControl11.Location = new System.Drawing.Point(10, 10);
-            this.userControl11.Margin = new System.Windows.Forms.Padding(10);
-            this.userControl11.Name = "userControl11";
-            this.userControl11.Size = new System.Drawing.Size(252, 315);
-            this.userControl11.TabIndex = 0;
-            // 
-            // userControl12
-            // 
-            this.userControl12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.userControl12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userControl12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.userControl12.Location = new System.Drawing.Point(282, 10);
-            this.userControl12.Margin = new System.Windows.Forms.Padding(10);
-            this.userControl12.Name = "userControl12";
-            this.userControl12.Size = new System.Drawing.Size(252, 315);
-            this.userControl12.TabIndex = 1;
-            // 
-            // userControl13
-            // 
-            this.userControl13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.userControl13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userControl13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.userControl13.Location = new System.Drawing.Point(554, 10);
-            this.userControl13.Margin = new System.Windows.Forms.Padding(10);
-            this.userControl13.Name = "userControl13";
-            this.userControl13.Size = new System.Drawing.Size(252, 315);
-            this.userControl13.TabIndex = 2;
-            // 
-            // userControl14
-            // 
-            this.userControl14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.userControl14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userControl14.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.userControl14.Location = new System.Drawing.Point(826, 10);
-            this.userControl14.Margin = new System.Windows.Forms.Padding(10);
-            this.userControl14.Name = "userControl14";
-            this.userControl14.Size = new System.Drawing.Size(252, 315);
-            this.userControl14.TabIndex = 3;
-            // 
-            // userControl15
-            // 
-            this.userControl15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.userControl15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userControl15.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.userControl15.Location = new System.Drawing.Point(10, 345);
-            this.userControl15.Margin = new System.Windows.Forms.Padding(10);
-            this.userControl15.Name = "userControl15";
-            this.userControl15.Size = new System.Drawing.Size(252, 315);
-            this.userControl15.TabIndex = 4;
-            // 
-            // userControl16
-            // 
-            this.userControl16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.userControl16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userControl16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.userControl16.Location = new System.Drawing.Point(282, 345);
-            this.userControl16.Margin = new System.Windows.Forms.Padding(10);
-            this.userControl16.Name = "userControl16";
-            this.userControl16.Size = new System.Drawing.Size(252, 315);
-            this.userControl16.TabIndex = 5;
-            // 
-            // userControl17
-            // 
-            this.userControl17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.userControl17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userControl17.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.userControl17.Location = new System.Drawing.Point(554, 345);
-            this.userControl17.Margin = new System.Windows.Forms.Padding(10);
-            this.userControl17.Name = "userControl17";
-            this.userControl17.Size = new System.Drawing.Size(252, 315);
-            this.userControl17.TabIndex = 6;
-            // 
-            // userControl18
-            // 
-            this.userControl18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.userControl18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userControl18.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.userControl18.Location = new System.Drawing.Point(826, 345);
-            this.userControl18.Margin = new System.Windows.Forms.Padding(10);
-            this.userControl18.Name = "userControl18";
-            this.userControl18.Size = new System.Drawing.Size(252, 315);
-            this.userControl18.TabIndex = 7;
+            this.flowLayoutPanelItemProducts.Location = new System.Drawing.Point(5, 5);
+            this.flowLayoutPanelItemProducts.Margin = new System.Windows.Forms.Padding(5);
+            this.flowLayoutPanelItemProducts.Name = "flowLayoutPanelItemProducts";
+            this.flowLayoutPanelItemProducts.Size = new System.Drawing.Size(1097, 876);
+            this.flowLayoutPanelItemProducts.TabIndex = 8;
             // 
             // guna2GradientTileButton6
             // 
@@ -182,28 +77,14 @@
             this.guna2GradientTileButton6.Text = "Đặt hàng";
             this.guna2GradientTileButton6.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // flowLayoutPanelIteamProduct
+            // flowLayoutPanelIteamProductSelected
             // 
-            this.flowLayoutPanelIteamProduct.Controls.Add(this.userControl21);
-            this.flowLayoutPanelIteamProduct.Controls.Add(this.userControl22);
-            this.flowLayoutPanelIteamProduct.Location = new System.Drawing.Point(10, 101);
-            this.flowLayoutPanelIteamProduct.Name = "flowLayoutPanelIteamProduct";
-            this.flowLayoutPanelIteamProduct.Size = new System.Drawing.Size(588, 548);
-            this.flowLayoutPanelIteamProduct.TabIndex = 12;
-            // 
-            // userControl21
-            // 
-            this.userControl21.Location = new System.Drawing.Point(3, 3);
-            this.userControl21.Name = "userControl21";
-            this.userControl21.Size = new System.Drawing.Size(562, 132);
-            this.userControl21.TabIndex = 0;
-            // 
-            // userControl22
-            // 
-            this.userControl22.Location = new System.Drawing.Point(3, 141);
-            this.userControl22.Name = "userControl22";
-            this.userControl22.Size = new System.Drawing.Size(562, 132);
-            this.userControl22.TabIndex = 1;
+            this.flowLayoutPanelIteamProductSelected.Controls.Add(this.userControl21);
+            this.flowLayoutPanelIteamProductSelected.Controls.Add(this.userControl22);
+            this.flowLayoutPanelIteamProductSelected.Location = new System.Drawing.Point(10, 101);
+            this.flowLayoutPanelIteamProductSelected.Name = "flowLayoutPanelIteamProductSelected";
+            this.flowLayoutPanelIteamProductSelected.Size = new System.Drawing.Size(588, 548);
+            this.flowLayoutPanelIteamProductSelected.TabIndex = 12;
             // 
             // guna2Panel2
             // 
@@ -211,7 +92,7 @@
             this.guna2Panel2.BorderRadius = 1;
             this.guna2Panel2.BorderThickness = 1;
             this.guna2Panel2.Controls.Add(this.guna2CustomGradientPanel1);
-            this.guna2Panel2.Controls.Add(this.flowLayoutPanelIteamProduct);
+            this.guna2Panel2.Controls.Add(this.flowLayoutPanelIteamProductSelected);
             this.guna2Panel2.Controls.Add(this.guna2GradientTileButton6);
             this.guna2Panel2.Location = new System.Drawing.Point(1145, 13);
             this.guna2Panel2.Name = "guna2Panel2";
@@ -336,6 +217,20 @@
             this.uC_KH_OrderInformation1.Size = new System.Drawing.Size(1105, 850);
             this.uC_KH_OrderInformation1.TabIndex = 12;
             // 
+            // userControl21
+            // 
+            this.userControl21.Location = new System.Drawing.Point(3, 3);
+            this.userControl21.Name = "userControl21";
+            this.userControl21.Size = new System.Drawing.Size(562, 132);
+            this.userControl21.TabIndex = 0;
+            // 
+            // userControl22
+            // 
+            this.userControl22.Location = new System.Drawing.Point(3, 141);
+            this.userControl22.Name = "userControl22";
+            this.userControl22.Size = new System.Drawing.Size(562, 132);
+            this.userControl22.TabIndex = 1;
+            // 
             // UC_KH_Thuoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -343,12 +238,11 @@
             this.Controls.Add(this.uC_KH_OrderInformation1);
             this.Controls.Add(this.guna2HScrollBar1);
             this.Controls.Add(this.guna2Panel2);
-            this.Controls.Add(this.flowLayoutPanelProducts);
+            this.Controls.Add(this.flowLayoutPanelItemProducts);
             this.Name = "UC_KH_Thuoc";
             this.Size = new System.Drawing.Size(1765, 895);
             this.Load += new System.EventHandler(this.UC_KH_Thuoc_Load);
-            this.flowLayoutPanelProducts.ResumeLayout(false);
-            this.flowLayoutPanelIteamProduct.ResumeLayout(false);
+            this.flowLayoutPanelIteamProductSelected.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
@@ -357,9 +251,9 @@
         }
 
         #endregion
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelProducts;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelItemProducts;
         private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton6;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelIteamProduct;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelIteamProductSelected;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
@@ -370,14 +264,14 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnBuyNow;
         private UserControl2 userControl21;
         private UserControl2 userControl22;
-        private UserControl1 userControl11;
-        private UserControl1 userControl12;
-        private UserControl1 userControl13;
-        private UserControl1 userControl14;
-        private UserControl1 userControl15;
-        private UserControl1 userControl16;
-        private UserControl1 userControl17;
-        private UserControl1 userControl18;
+        private UC_ItemProduct userControl11;
+        private UC_ItemProduct userControl12;
+        private UC_ItemProduct userControl13;
+        private UC_ItemProduct userControl14;
+        private UC_ItemProduct userControl15;
+        private UC_ItemProduct userControl16;
+        private UC_ItemProduct userControl17;
+        private UC_ItemProduct userControl18;
         private Guna.UI2.WinForms.Guna2HScrollBar guna2HScrollBar1;
         private UC_KH_OrderInformation uC_KH_OrderInformation1;
     }

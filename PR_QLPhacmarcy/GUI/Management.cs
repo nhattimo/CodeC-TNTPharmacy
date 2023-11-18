@@ -113,5 +113,7 @@ namespace GUI
             MemoryStream stream = new MemoryStream();
             pictureBox.Image.Save(stream, pictureBox.Image.RawFormat);
         }
+
+       
     }
 }

@@ -44,12 +44,12 @@
             this.flowLayoutPanelProduct = new System.Windows.Forms.FlowLayoutPanel();
             this.btnSearch = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.userControl11 = new GUI.US_.UserControl1();
-            this.userControl12 = new GUI.US_.UserControl1();
-            this.userControl13 = new GUI.US_.UserControl1();
-            this.userControl14 = new GUI.US_.UserControl1();
-            this.userControl15 = new GUI.US_.UserControl1();
-            this.userControl16 = new GUI.US_.UserControl1();
+            this.userControl11 = new GUI.US_.UC_ItemProduct();
+            this.userControl12 = new GUI.US_.UC_ItemProduct();
+            this.userControl13 = new GUI.US_.UC_ItemProduct();
+            this.userControl14 = new GUI.US_.UC_ItemProduct();
+            this.userControl15 = new GUI.US_.UC_ItemProduct();
+            this.userControl16 = new GUI.US_.UC_ItemProduct();
             this.uC_Bill1 = new GUI.US_.UC_Bill();
             this.guna2Panel2.SuspendLayout();
             this.flowLayoutPanelOrderProduct.SuspendLayout();
@@ -369,12 +369,12 @@
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private UserControl2 userControl21;
         private UserControl2 userControl22;
-        private UserControl1 userControl11;
-        private UserControl1 userControl12;
-        private UserControl1 userControl13;
-        private UserControl1 userControl14;
-        private UserControl1 userControl15;
-        private UserControl1 userControl16;
+        private UC_ItemProduct userControl11;
+        private UC_ItemProduct userControl12;
+        private UC_ItemProduct userControl13;
+        private UC_ItemProduct userControl14;
+        private UC_ItemProduct userControl15;
+        private UC_ItemProduct userControl16;
         private UC_Bill uC_Bill1;
     }
 }

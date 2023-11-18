@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms.Helpers;
+using System;
 using System.Windows.Forms;
 
 namespace GUI.US_
@@ -13,6 +14,8 @@ namespace GUI.US_
 
         private void UC_KH_OrderInformation_Load(object sender, EventArgs e)
         {
+            PanelScrollHelper panelScrollHelper = new PanelScrollHelper(flowLayoutPanelIteamProduct, VScrollBar);
+
             PushCustomerInformation();
             RadioButtonFastShipping.Checked = true;
             RadioButtonDirectPayment.Checked = true;

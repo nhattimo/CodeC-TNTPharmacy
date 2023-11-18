@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GUI.US_;
+using System;
 using System.Windows.Forms;
 
 namespace GUI
@@ -16,8 +17,9 @@ namespace GUI
             //Application.Run(new FormDangNhap());
             //Application.Run(new FormDangKy());
             //Application.Run(new FormQuanLy());
-            //Application.Run(new FormKhachHang());
-            Application.Run(new FormNhanVienBanHang());
+            //Application.Run(new FormThuKho());
+            Application.Run(new FormKhachHang());
+            //Application.Run(new FormNhanVienBanHang());
             //Application.Run(new FormDieuKhienChucVu());
 
 

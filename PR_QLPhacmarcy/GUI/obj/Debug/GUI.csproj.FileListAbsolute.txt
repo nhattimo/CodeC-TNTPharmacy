@@ -78,7 +78,6 @@ E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_QL_Thuoc.resources
 E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_QL_TK_BanChay.resources
 E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_QL_TK_DoanhSo.resources
 E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_QL_TK_DoanhThu.resources
-E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UserControl1.resources
 E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UserControl2.resources
 E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UserControl3.resources
 E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UserControl4.resources
@@ -89,3 +88,10 @@ E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.csproj.CopyComplete
 E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.exe
 E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.pdb
 E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.UserControl1.resources
+E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.FormThuKho.resources
+E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UserControl6.resources
+E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_TK_ThuKho.resources
+E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_TK_NhapKho.resources
+E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_TK_XuatKho.resources
+E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UserControl7.resources
+E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_ItemProduct.resources

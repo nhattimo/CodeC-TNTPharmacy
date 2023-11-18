@@ -51,6 +51,7 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -106,6 +107,12 @@
     </Compile>
     <Compile Include="UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US_\FormThuKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US_\FormThuKho.Designer.cs">
+      <DependentUpon>FormThuKho.cs</DependentUpon>
     </Compile>
     <Compile Include="US_\UC_Bill.cs">
       <SubType>UserControl</SubType>
@@ -191,11 +198,29 @@
     <Compile Include="US_\UC_QL_TK_DoanhThu.Designer.cs">
       <DependentUpon>UC_QL_TK_DoanhThu.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UserControl1.cs">
+    <Compile Include="US_\UC_TK_NhapKho.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="US_\UC_TK_NhapKho.Designer.cs">
+      <DependentUpon>UC_TK_NhapKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US_\UC_TK_ThuKho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="US_\UC_TK_ThuKho.Designer.cs">
+      <DependentUpon>UC_TK_ThuKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US_\UC_TK_XuatKho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="US_\UC_TK_XuatKho.Designer.cs">
+      <DependentUpon>UC_TK_XuatKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US_\UC_ItemProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="US_\UC_ItemProduct.Designer.cs">
+      <DependentUpon>UC_ItemProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="US_\UserControl2.cs">
       <SubType>UserControl</SubType>
@@ -220,6 +245,18 @@
     </Compile>
     <Compile Include="US_\UserControl5.Designer.cs">
       <DependentUpon>UserControl5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US_\UserControl6.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="US_\UserControl6.Designer.cs">
+      <DependentUpon>UserControl6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US_\UserControl7.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="US_\UserControl7.Designer.cs">
+      <DependentUpon>UserControl7.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FormDangKy.resx">
       <DependentUpon>FormDangKy.cs</DependentUpon>
@@ -250,6 +287,9 @@
     </Compile>
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US_\FormThuKho.resx">
+      <DependentUpon>FormThuKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="US_\UC_Bill.resx">
       <DependentUpon>UC_Bill.cs</DependentUpon>
@@ -293,8 +333,17 @@
     <EmbeddedResource Include="US_\UC_QL_TK_DoanhThu.resx">
       <DependentUpon>UC_QL_TK_DoanhThu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="US_\UC_TK_NhapKho.resx">
+      <DependentUpon>UC_TK_NhapKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US_\UC_TK_ThuKho.resx">
+      <DependentUpon>UC_TK_ThuKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US_\UC_TK_XuatKho.resx">
+      <DependentUpon>UC_TK_XuatKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US_\UC_ItemProduct.resx">
+      <DependentUpon>UC_ItemProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="US_\UserControl2.resx">
       <DependentUpon>UserControl2.cs</DependentUpon>
@@ -307,6 +356,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="US_\UserControl5.resx">
       <DependentUpon>UserControl5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US_\UserControl6.resx">
+      <DependentUpon>UserControl6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US_\UserControl7.resx">
+      <DependentUpon>UserControl7.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -61,11 +61,11 @@
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientTileButton10 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.flowLayoutPanelProducts = new System.Windows.Forms.FlowLayoutPanel();
-            this.userControl11 = new GUI.US_.UserControl1();
-            this.userControl12 = new GUI.US_.UserControl1();
-            this.userControl14 = new GUI.US_.UserControl1();
-            this.userControl15 = new GUI.US_.UserControl1();
-            this.userControl16 = new GUI.US_.UserControl1();
+            this.userControl11 = new GUI.US_.UC_ItemProduct();
+            this.userControl12 = new GUI.US_.UC_ItemProduct();
+            this.userControl14 = new GUI.US_.UC_ItemProduct();
+            this.userControl15 = new GUI.US_.UC_ItemProduct();
+            this.userControl16 = new GUI.US_.UC_ItemProduct();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
@@ -751,11 +751,11 @@
         private System.Windows.Forms.Label errorSupplier;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnSearch;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
-        private UserControl1 userControl11;
-        private UserControl1 userControl12;
-        private UserControl1 userControl14;
-        private UserControl1 userControl15;
-        private UserControl1 userControl16;
+        private UC_ItemProduct userControl11;
+        private UC_ItemProduct userControl12;
+        private UC_ItemProduct userControl14;
+        private UC_ItemProduct userControl15;
+        private UC_ItemProduct userControl16;
         private Guna.UI2.WinForms.Guna2GradientButton btnAddPicture;
         private Guna.UI2.WinForms.Guna2PictureBox PictureBox;
     }

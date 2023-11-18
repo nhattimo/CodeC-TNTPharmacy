@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms.Helpers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,7 @@ namespace GUI.US_
 
         private void UC_KH_Cart_Load(object sender, EventArgs e)
         {
+            PanelScrollHelper panelScrollHelper  = new PanelScrollHelper(flowLayoutPanel, VScrollBar);
             uC_KH_OrderInformation1.Visible = false;
         }
 
