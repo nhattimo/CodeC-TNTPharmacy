@@ -63,7 +63,7 @@ namespace BLL
             return _objectDataAccess.GetProductById(idObj);
         }
 
-        public List<Products> GetAllObject()
+        public List<SalesOrder> GetAllObject()
         {
             // Kiểm tra logic kinh doanh trước khi lấy danh sách sản phẩm
             // ...

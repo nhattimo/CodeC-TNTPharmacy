@@ -11,11 +11,11 @@ namespace BLL
     public class EmployeesBusinessLogic
     {
         // Sử dụng để tương tác với DAL (DataAccess)
-        private readonly EmployeesDataAccess _objectDataAccess;
+        private readonly EmployeesDataAccess _objectDataAccess = new EmployeesDataAccess();
 
-        public EmployeesBusinessLogic(EmployeesDataAccess productDataAccess)
+        public EmployeesBusinessLogic()
         {
-            _objectDataAccess = productDataAccess;
+           
         }
 
         public void Add(Employees obj)
@@ -71,5 +71,6 @@ namespace BLL
             // Gọi phương thức GetList từ lớp DAL để lấy danh sách sản phẩm từ cơ sở dữ liệu
             return _objectDataAccess.GetList();
         }
+    
     }
 }

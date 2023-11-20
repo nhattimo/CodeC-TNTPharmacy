@@ -11,11 +11,11 @@ namespace BLL
     public class SuppliersBusinessLogic
     {
         // Sử dụng để tương tác với DAL (DataAccess)
-        private readonly SuppliersDataAccess _objectDataAccess;
+        private readonly SuppliersDataAccess _objectDataAccess = new SuppliersDataAccess();
 
-        public SuppliersBusinessLogic(SuppliersDataAccess productDataAccess)
+        public SuppliersBusinessLogic()
         {
-            _objectDataAccess = productDataAccess;
+            
         }
 
         public void Add(Suppliers obj)
@@ -54,6 +54,11 @@ namespace BLL
             return _objectDataAccess.IsMa(idObj);
         }
 
+        public int GetID(string name)
+        {
+            return _objectDataAccess.GetID(name);
+        }
+
         public Suppliers GetObjectById(int idObj)
         {
             // Kiểm tra logic kinh doanh trước khi lấy thông tin sản phẩm
@@ -71,5 +76,6 @@ namespace BLL
             // Gọi phương thức GetList từ lớp DAL để lấy danh sách sản phẩm từ cơ sở dữ liệu
             return _objectDataAccess.GetList();
         }
+       
     }
 }

@@ -7,13 +7,12 @@ namespace BLL
     public class ProductBusinessLogic
     {
         // Sử dụng để tương tác với DAL (DataAccess)
-        private readonly ProductDataAccess _objectDataAccess;
+        private ProductDataAccess _objectDataAccess =  new ProductDataAccess();
 
-        public ProductBusinessLogic(ProductDataAccess productDataAccess)
+        public ProductBusinessLogic()
         {
-            _objectDataAccess = productDataAccess;
         }
-
+        
         public void Add(Products obj)
         {
             // Kiểm tra logic trước khi thêm sản phẩm
@@ -47,7 +46,23 @@ namespace BLL
             // ...
 
             // Gọi phương thức IsMa từ lớp DAL để kiểm tra sự tồn tại của sản phẩm trong cơ sở dữ liệu
-            return _objectDataAccess.IsMa(idObj);
+            return _objectDataAccess.Exists(idObj);
+        }
+        public bool Exists(string name)
+        {
+            // Kiểm tra logic để kiểm tra sự tồn tại của sản phẩm
+            // ...
+
+            // Gọi phương thức IsMa từ lớp DAL để kiểm tra sự tồn tại của sản phẩm trong cơ sở dữ liệu
+            return _objectDataAccess.Exists(name);
+        }
+        public bool IsSupplierId(int idObj )
+        {
+            // Kiểm tra logic để kiểm tra sự tồn tại của sản phẩm
+            // ...
+
+            // Gọi phương thức IsMa từ lớp DAL để kiểm tra sự tồn tại của sản phẩm trong cơ sở dữ liệu
+            return _objectDataAccess.IsSupplierId(idObj);
         }
 
         public Products GetObjectById(int idObj)

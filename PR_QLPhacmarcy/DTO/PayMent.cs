@@ -19,12 +19,12 @@ namespace DTO
 
         // Phương thức thanh toán khóa ngoại đến phương thức thanh toán
         public int IDMethod { get; set; }
-        [ForeignKey("ID")]
+        [ForeignKey("IDMethod")]
         public virtual PayMentMethond PAYMENTMETHOND { get; set; }
 
         // ID khách hành khóa ngoại đến user
         public int IDCustomer { get; set; }
-        [ForeignKey("ID")]
+        [ForeignKey("IDCustomer")]
         public virtual Users USERS { get; set; }
     }
 }

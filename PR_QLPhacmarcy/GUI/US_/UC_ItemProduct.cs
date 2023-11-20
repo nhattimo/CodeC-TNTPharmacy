@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Drawing;
+using System.Drawing.Imaging;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 
 namespace GUI.US_
 {
@@ -20,8 +23,28 @@ namespace GUI.US_
             InitializeComponent();
             ID = id;
             Price = prive;
-            PriceDiscount = priveDiscount;
+            // nếu có phần trăm giảm giá
+            if(priveDiscount != 0)
+            {
+                // thì giảm giá sản phẩm
+                PriceDiscount = (float)Math.Round(prive - ((prive / 100) * priveDiscount), 0) ;
+                txtPercent.Text = priveDiscount + "";
+                IconPercent.Visible = true;
+                this.BackColor = Color.Red;
+                txtPrice.ForeColor = Color.White;
+                txtPriceDiscount.ForeColor = Color.White;
+                guna2HtmlLabel1.ForeColor = Color.White;
+            }
+            else
+            {
+                // ẩn giá trị tiền thực và giá giảm = giá gốc
+                PriceDiscount = prive;
+                txtPrice.Visible = false;
+                txtPercent.Text =  "";
+                IconPercent.Visible = false;
+            }
             NameProduct = nameProduct;
+            //Image = image;
             
         }
         private void UserControl1_Load(object sender, EventArgs e)
@@ -31,7 +54,8 @@ namespace GUI.US_
             txtPrice.Text = Price + ".000";
             txtPriceDiscount.Text = PriceDiscount + ".000";
             txtNameProduct.Text = NameProduct;
-
+  
+            PictureBoxProduct.ImageLocation = @"E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\Icon\thuoc-chua-benh-tri-tottri.jpg E:\CodeC - TNTPharmacy\PR_QLPhacmarcy\Icon\thuoc - chua - benh - tri - tottri.jpg";
         }
         private void btnDetail_Click(object sender, EventArgs e)
         {

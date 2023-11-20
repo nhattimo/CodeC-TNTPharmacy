@@ -58,7 +58,7 @@ namespace DTO
 
         // Vai trò khóa ngoại đến bảng roles
         public int Role { get; set; }
-        [ForeignKey("ID")]
+        [ForeignKey("Role")]
         public virtual Roles ROLES { get; set; }
 
     }

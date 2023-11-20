@@ -12,7 +12,8 @@ namespace GUI.US_
                                             new UC_ItemProduct(3, 200, 150, "Thuốc trĩ", "ED"), 
                                             new UC_ItemProduct(4, 200, 150, "Thuốc trĩ", "ED"), 
                                             new UC_ItemProduct(5, 200, 150, "Thuốc trĩ", "ED"), 
-                                            new UC_ItemProduct(6, 200, 150, "Thuốc trĩ", "ED")};
+                                            new UC_ItemProduct(6, 200, 150, "Thuốc trĩ", "ED"),
+                                            new UC_ItemProduct(7, 22200, 150, "Thuốc trĩ", "ED")};
         public UC_KH_Thuoc()
         {
             InitializeComponent();

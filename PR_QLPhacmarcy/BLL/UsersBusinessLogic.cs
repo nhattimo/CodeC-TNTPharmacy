@@ -11,11 +11,10 @@ namespace BLL
     public class UsersBusinessLogic
     {
         // Sử dụng để tương tác với DAL (DataAccess)
-        private readonly UsersDataAcccess _objectDataAccess;
+        private readonly UsersDataAcccess _objectDataAccess = new UsersDataAcccess();
 
-        public UsersBusinessLogic(UsersDataAcccess productDataAccess)
+        public UsersBusinessLogic()
         {
-            _objectDataAccess = productDataAccess;
         }
 
         public void Add(Users obj)

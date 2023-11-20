@@ -10,12 +10,12 @@ namespace DAL
     public class SuppliersDataAccess
     {
         // Sử dụng để tương tác với cơ sở dữ liệu
-        private readonly AppPharmacyContext _db;
+        private readonly AppPharmacyContext _db = new AppPharmacyContext();
 
         // Phương thức tạo (constructor)
-        public SuppliersDataAccess(AppPharmacyContext context)
+        public SuppliersDataAccess()
         {
-            _db = context;
+            
         }
 
         public void InsertDataAccess(Suppliers obj)
@@ -49,6 +49,13 @@ namespace DAL
             return false;
         }
 
+        public int GetID(string name)
+        {
+            var objItem = _db.SUPPLIERS.SingleOrDefault(item => item.Name == name);
+            if (objItem != null)
+                return objItem.ID;
+            return 0;
+        }
         public Suppliers GetProductById(int objId)
         {
             var objItem = _db.SUPPLIERS.SingleOrDefault(item => item.ID == objId);

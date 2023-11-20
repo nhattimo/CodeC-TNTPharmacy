@@ -25,7 +25,7 @@ namespace DTO
 
         // Ngày tạo
         [Column(TypeName = "DATETIME")]
-        DateTime CreatedDate {get; set; }
+        public DateTime CreatedDate {get; set; }
 
         // Mô tả 
         [Column(TypeName = "NVARCHAR")]
@@ -34,8 +34,8 @@ namespace DTO
 
         // Người tạo khóa ngoại đến nhân viên
         public int CreatedBy { get; set; }
-        [ForeignKey("ID")]
-        public virtual Employees EMPLOYEES  { get; set; }
+        /*[ForeignKey("CreatedBy")]
+        public virtual Employees EMPLOYEES  { get; set; }*/
         
     }
 }

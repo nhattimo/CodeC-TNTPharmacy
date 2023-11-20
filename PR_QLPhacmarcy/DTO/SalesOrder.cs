@@ -27,17 +27,13 @@ namespace DTO
 
         //ID vận chuyển khóa ngoại đến vận chuyển
         public int IDShipping { get; set; }
-        [ForeignKey("ID")]
+        [ForeignKey("IDShipping")]
         public virtual Shipping SHIPPING { get; set; }
 
         // ID phương thức thanh toán khóa ngoại đến phương thức thanh toán
         public int IDPayment { get; set; }
-        [ForeignKey("ID")]
+        [ForeignKey("IDPayment")]
         public virtual PayMent PAYMENT { get; set; }
 
-        // ID Người khách hàng khóa ngoại đến bảng User
-        public int IDCustomer { get; set; }
-        [ForeignKey("ID")]
-        public virtual Users USERS { get; set; }
     }
 }

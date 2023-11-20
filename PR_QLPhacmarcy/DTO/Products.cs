@@ -11,7 +11,7 @@ namespace DTO
         // ID
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // khoa tu sinh
         [Key]
-        public int ID { get; set; }
+        public int ID{ get; set; }
 
         // Tên sản phẩm
         [Column(TypeName = "NVARCHAR")]
@@ -53,7 +53,7 @@ namespace DTO
 
         // nhà cung cấp khóa ngoại đến nhà cung cấp
         public int SupplierId { get; set; }
-        [ForeignKey("ID")]
+        [ForeignKey("SupplierId")]
         public virtual Suppliers SUPPLIERS { get; set; }
 
         // Loại sản phẩm khóa ngoại đến loại
@@ -63,8 +63,8 @@ namespace DTO
 
         // được tảo bởi khóa ngoại đến nhân viên
         public int CreatedBy { get; set; }
-        [ForeignKey("ID")]
-        public virtual Employees EMPLOYEES { get; set; }
+        /*[ForeignKey("CreatedBy")]
+        public virtual Employees EMPLOYEES { get; set; }*/
 
     }
 }

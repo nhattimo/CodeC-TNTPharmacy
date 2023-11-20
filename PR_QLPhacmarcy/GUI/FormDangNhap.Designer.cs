@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDangNhap));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.btnChuaCoTK = new Guna.UI2.WinForms.Guna2Button();
-            this.labelDNThatBai = new System.Windows.Forms.Label();
+            this.errorLoginFailed = new System.Windows.Forms.Label();
             this.btnDangNhap = new Guna.UI2.WinForms.Guna2Button();
-            this.labelSaiMk = new System.Windows.Forms.Label();
-            this.labelSaiTK = new System.Windows.Forms.Label();
+            this.errorPassword = new System.Windows.Forms.Label();
+            this.errorAccount = new System.Windows.Forms.Label();
             this.txtMatKhau = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTenTaiKhoan = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,10 +53,10 @@
             this.guna2Panel1.BorderThickness = 2;
             this.guna2Panel1.Controls.Add(this.guna2ControlBox1);
             this.guna2Panel1.Controls.Add(this.btnChuaCoTK);
-            this.guna2Panel1.Controls.Add(this.labelDNThatBai);
+            this.guna2Panel1.Controls.Add(this.errorLoginFailed);
             this.guna2Panel1.Controls.Add(this.btnDangNhap);
-            this.guna2Panel1.Controls.Add(this.labelSaiMk);
-            this.guna2Panel1.Controls.Add(this.labelSaiTK);
+            this.guna2Panel1.Controls.Add(this.errorPassword);
+            this.guna2Panel1.Controls.Add(this.errorAccount);
             this.guna2Panel1.Controls.Add(this.txtMatKhau);
             this.guna2Panel1.Controls.Add(this.txtTenTaiKhoan);
             this.guna2Panel1.Controls.Add(this.label3);
@@ -64,6 +64,22 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(648, 718);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.BackColor = System.Drawing.Color.IndianRed;
+            this.guna2ControlBox1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.guna2ControlBox1.CustomIconSize = 15F;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.guna2ControlBox1.ForeColor = System.Drawing.Color.Red;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(573, 3);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(44, 37);
+            this.guna2ControlBox1.TabIndex = 23;
+            this.guna2ControlBox1.UseWaitCursor = true;
             // 
             // btnChuaCoTK
             // 
@@ -87,17 +103,17 @@
             this.btnChuaCoTK.Text = "Bạn chưa có tài khoản!";
             this.btnChuaCoTK.Click += new System.EventHandler(this.btnChuaCoTK_Click);
             // 
-            // labelDNThatBai
+            // errorLoginFailed
             // 
-            this.labelDNThatBai.AutoSize = true;
-            this.labelDNThatBai.BackColor = System.Drawing.Color.Transparent;
-            this.labelDNThatBai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelDNThatBai.ForeColor = System.Drawing.Color.Red;
-            this.labelDNThatBai.Location = new System.Drawing.Point(255, 478);
-            this.labelDNThatBai.Name = "labelDNThatBai";
-            this.labelDNThatBai.Size = new System.Drawing.Size(130, 18);
-            this.labelDNThatBai.TabIndex = 21;
-            this.labelDNThatBai.Text = "Đăng nhập thất bại";
+            this.errorLoginFailed.AutoSize = true;
+            this.errorLoginFailed.BackColor = System.Drawing.Color.Transparent;
+            this.errorLoginFailed.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.errorLoginFailed.ForeColor = System.Drawing.Color.Red;
+            this.errorLoginFailed.Location = new System.Drawing.Point(255, 478);
+            this.errorLoginFailed.Name = "errorLoginFailed";
+            this.errorLoginFailed.Size = new System.Drawing.Size(130, 18);
+            this.errorLoginFailed.TabIndex = 21;
+            this.errorLoginFailed.Text = "Đăng nhập thất bại";
             // 
             // btnDangNhap
             // 
@@ -118,30 +134,31 @@
             this.btnDangNhap.Size = new System.Drawing.Size(179, 46);
             this.btnDangNhap.TabIndex = 20;
             this.btnDangNhap.Text = "Đăng nhập";
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
-            // labelSaiMk
+            // errorPassword
             // 
-            this.labelSaiMk.AutoSize = true;
-            this.labelSaiMk.BackColor = System.Drawing.Color.Transparent;
-            this.labelSaiMk.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelSaiMk.ForeColor = System.Drawing.Color.Red;
-            this.labelSaiMk.Location = new System.Drawing.Point(143, 395);
-            this.labelSaiMk.Name = "labelSaiMk";
-            this.labelSaiMk.Size = new System.Drawing.Size(28, 18);
-            this.labelSaiMk.TabIndex = 19;
-            this.labelSaiMk.Text = "Lỗi";
+            this.errorPassword.AutoSize = true;
+            this.errorPassword.BackColor = System.Drawing.Color.Transparent;
+            this.errorPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.errorPassword.ForeColor = System.Drawing.Color.Red;
+            this.errorPassword.Location = new System.Drawing.Point(143, 395);
+            this.errorPassword.Name = "errorPassword";
+            this.errorPassword.Size = new System.Drawing.Size(28, 18);
+            this.errorPassword.TabIndex = 19;
+            this.errorPassword.Text = "Lỗi";
             // 
-            // labelSaiTK
+            // errorAccount
             // 
-            this.labelSaiTK.AutoSize = true;
-            this.labelSaiTK.BackColor = System.Drawing.Color.Transparent;
-            this.labelSaiTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelSaiTK.ForeColor = System.Drawing.Color.Red;
-            this.labelSaiTK.Location = new System.Drawing.Point(143, 299);
-            this.labelSaiTK.Name = "labelSaiTK";
-            this.labelSaiTK.Size = new System.Drawing.Size(28, 18);
-            this.labelSaiTK.TabIndex = 18;
-            this.labelSaiTK.Text = "Lỗi";
+            this.errorAccount.AutoSize = true;
+            this.errorAccount.BackColor = System.Drawing.Color.Transparent;
+            this.errorAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.errorAccount.ForeColor = System.Drawing.Color.Red;
+            this.errorAccount.Location = new System.Drawing.Point(143, 299);
+            this.errorAccount.Name = "errorAccount";
+            this.errorAccount.Size = new System.Drawing.Size(28, 18);
+            this.errorAccount.TabIndex = 18;
+            this.errorAccount.Text = "Lỗi";
             // 
             // txtMatKhau
             // 
@@ -168,6 +185,7 @@
             this.txtMatKhau.SelectedText = "";
             this.txtMatKhau.Size = new System.Drawing.Size(413, 53);
             this.txtMatKhau.TabIndex = 17;
+            this.txtMatKhau.Leave += new System.EventHandler(this.txtMatKhau_Leave);
             // 
             // txtTenTaiKhoan
             // 
@@ -194,6 +212,7 @@
             this.txtTenTaiKhoan.SelectedText = "";
             this.txtTenTaiKhoan.Size = new System.Drawing.Size(413, 53);
             this.txtTenTaiKhoan.TabIndex = 16;
+            this.txtTenTaiKhoan.Leave += new System.EventHandler(this.txtTenTaiKhoan_Leave);
             // 
             // label3
             // 
@@ -206,22 +225,6 @@
             this.label3.Size = new System.Drawing.Size(340, 73);
             this.label3.TabIndex = 15;
             this.label3.Text = "Đăng nhập";
-            // 
-            // guna2ControlBox1
-            // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.BackColor = System.Drawing.Color.IndianRed;
-            this.guna2ControlBox1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.guna2ControlBox1.CustomIconSize = 15F;
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2ControlBox1.ForeColor = System.Drawing.Color.Red;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(573, 3);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(44, 37);
-            this.guna2ControlBox1.TabIndex = 23;
-            this.guna2ControlBox1.UseWaitCursor = true;
             // 
             // FormDangNhap
             // 
@@ -245,10 +248,10 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.Label labelDNThatBai;
+        private System.Windows.Forms.Label errorLoginFailed;
         private Guna.UI2.WinForms.Guna2Button btnDangNhap;
-        private System.Windows.Forms.Label labelSaiMk;
-        private System.Windows.Forms.Label labelSaiTK;
+        private System.Windows.Forms.Label errorPassword;
+        private System.Windows.Forms.Label errorAccount;
         private Guna.UI2.WinForms.Guna2TextBox txtMatKhau;
         private Guna.UI2.WinForms.Guna2TextBox txtTenTaiKhoan;
         private System.Windows.Forms.Label label3;

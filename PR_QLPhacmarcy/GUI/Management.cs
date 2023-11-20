@@ -1,8 +1,15 @@
 ﻿using Guna.UI2.WinForms;
 using System;
+using System.Data;
 using System.Drawing;
 using System.IO;
+using System.Net.Mail;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using TheArtOfDevHtmlRenderer.Adapters;
+using static System.Net.Mime.MediaTypeNames;
+using Image = System.Drawing.Image;
+
 
 
 namespace GUI
@@ -86,13 +93,63 @@ namespace GUI
             }
         }
 
-        public static void SetImage(PictureBox pictureBox , object sender)
+       
+
+        public static void ErrorHide(System.Windows.Forms.Label[] txt)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
-            if(ofd.ShowDialog() == DialogResult.OK)
+            foreach (var item in txt)
             {
-                pictureBox.Image = new Bitmap(ofd.FileName);
+                item.Text = string.Empty;
+                item.Hide();
             }
+        }
+        public static void ErrorHide(System.Windows.Forms.Label txt)
+        {
+            txt.Hide(); 
+        }
+        public static void Errorshow(System.Windows.Forms.Label txt, string content)
+        {
+
+            txt.Text = content;
+            txt.Show();
+            
+        }
+        public static bool isNull(Guna2TextBox txt)
+        {
+            if(string.IsNullOrEmpty(txt.Text))
+                return true;
+            return false;
+        }
+        public static bool isNull(Guna2ComboBox txt)
+        {
+            if (string.IsNullOrEmpty(txt.Text))
+                return true;
+            return false;
+        }
+        public static bool IsEmail(string email)
+        {
+            try
+            {
+                MailAddress m = new MailAddress(email);
+                return true;
+            }
+            catch (FormatException)
+            {
+                return false;
+            }
+        }
+        public static bool IsNumber(string SDT)
+        {
+            foreach (Char c in SDT)
+            {
+                if (!Char.IsDigit(c))
+                    return false;
+            }
+            return true;
+        }
+
+        public static void SetImage(PictureBox pictureBox, object sender)
+        {
             OpenFileDialog open = new OpenFileDialog();
             PictureBox p = sender as PictureBox;
 
@@ -108,12 +165,41 @@ namespace GUI
                 }
             }
         }
-        public static void GetImage(PictureBox pictureBox)
+        public static string SaveImage(PictureBox pictureBox, string txt)
         {
-            MemoryStream stream = new MemoryStream();
-            pictureBox.Image.Save(stream, pictureBox.Image.RawFormat);
+            string fname = null;
+            // Đường dẫn đầy đủ đến thư mục mới
+            string folderPath = @"E:\FolderImgProduct";
+            try
+            {
+                // Kiểm tra xem thư mục đã tồn tại hay chưa
+                if (!Directory.Exists(folderPath))
+                {
+                    // Nếu chưa tồn tại, tạo thư mục mới
+                    Directory.CreateDirectory(folderPath);
+                }
+                else
+                {
+                    string folderPath1 = folderPath + @"\" + txt;
+                    fname = txt + ".jpg";
+                    string folderPathfname = folderPath + fname;
+                    string pathstring = System.IO.Path.Combine(folderPath1, fname); pictureBox.Image.Save(pathstring);
+                    return fname;
+                }
+                return fname;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            
         }
-
-       
+        public static bool ISexistImg(PictureBox pictureBox)
+        {
+            if (pictureBox.Image == null)
+                return false;
+            return true;
+        }
+        
     }
 }

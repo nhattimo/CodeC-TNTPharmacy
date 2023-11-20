@@ -10,12 +10,11 @@ namespace DAL
     public class UsersDataAcccess
     {
         // Sử dụng để tương tác với cơ sở dữ liệu
-        private readonly AppPharmacyContext _db;
+        private readonly AppPharmacyContext _db =  new AppPharmacyContext();
 
         // Phương thức tạo (constructor)
-        public UsersDataAcccess(AppPharmacyContext context)
+        public UsersDataAcccess()
         {
-            _db = context;
         }
 
         public void InsertDataAccess(Users obj)

@@ -13,7 +13,7 @@ namespace DTO
 
         // Ngày tạo bill
         [Column(TypeName = "DATETIME")]
-        DateTime CreatedDate { get; set; }
+        public DateTime CreatedDate { get; set; }
 
         // Tổng số lượng
         [Column(TypeName = "INT")]
@@ -21,12 +21,12 @@ namespace DTO
 
         // Người tạo khóa ngoại đến ID Nhân viên
         public int CreatedBy { get; set; }
-        [ForeignKey("ID")]
+        [ForeignKey("CreatedBy")]
         public virtual Employees EMPLOYEES { get; set; }
 
         // ID khách hàng khóa ngoại đến ID Khách hàng
         public int? IDCustomer { get; set; }
-        [ForeignKey("ID")]
+        [ForeignKey("IDCustomer")]
         public virtual Users USERS { get; set; }
     }
 }

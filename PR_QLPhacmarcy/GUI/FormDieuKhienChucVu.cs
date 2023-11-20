@@ -24,7 +24,7 @@ namespace GUI
 
         private void btnOther_Click(object sender, EventArgs e)
         {
-            FormDangNhap formDangNhap = new FormDangNhap();
+            FormDangNhap formDangNhap = new FormDangNhap(1);
             formDangNhap.ShowDialog();
             this.Hide();
         }

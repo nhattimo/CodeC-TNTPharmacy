@@ -18,9 +18,9 @@ namespace GUI
             //Application.Run(new FormDangKy());
             //Application.Run(new FormQuanLy());
             //Application.Run(new FormThuKho());
-            Application.Run(new FormKhachHang());
+            //Application.Run(new FormKhachHang());
             //Application.Run(new FormNhanVienBanHang());
-            //Application.Run(new FormDieuKhienChucVu());
+            Application.Run(new FormDieuKhienChucVu());
 
 
         }

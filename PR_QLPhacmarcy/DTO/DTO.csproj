@@ -59,6 +59,7 @@
     <Compile Include="Users.cs" />
     <Compile Include="WareHousing.cs" />
     <Compile Include="WareHousingDetails.cs" />
+    <Compile Include="WillCascadeOnDeleteAttribute.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

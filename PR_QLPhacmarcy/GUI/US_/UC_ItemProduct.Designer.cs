@@ -39,14 +39,18 @@
             this.txtPrice = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtPercent = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.IconPercent = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxProduct)).BeginInit();
+            this.IconPercent.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2CustomGradientPanel1
             // 
             this.guna2CustomGradientPanel1.Controls.Add(this.txtNameProduct);
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(-8, 271);
+            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(260, 44);
             this.guna2CustomGradientPanel1.TabIndex = 7;
@@ -56,6 +60,7 @@
             this.txtNameProduct.BackColor = System.Drawing.Color.White;
             this.txtNameProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtNameProduct.Location = new System.Drawing.Point(11, 9);
+            this.txtNameProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNameProduct.Name = "txtNameProduct";
             this.txtNameProduct.Size = new System.Drawing.Size(129, 27);
             this.txtNameProduct.TabIndex = 8;
@@ -66,19 +71,24 @@
             this.txtID.AutoSize = true;
             this.txtID.BackColor = System.Drawing.Color.Transparent;
             this.txtID.ForeColor = System.Drawing.Color.Transparent;
-            this.txtID.Location = new System.Drawing.Point(-202, 83);
+            this.txtID.Location = new System.Drawing.Point(0, 82);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(44, 16);
             this.txtID.TabIndex = 8;
             this.txtID.Text = "label1";
+            this.txtID.Visible = false;
             // 
             // PictureBoxProduct
             // 
+            this.PictureBoxProduct.Cursor = System.Windows.Forms.Cursors.Default;
+            this.PictureBoxProduct.Image = ((System.Drawing.Image)(resources.GetObject("PictureBoxProduct.Image")));
+            this.PictureBoxProduct.ImageLocation = "";
             this.PictureBoxProduct.ImageRotate = 0F;
-            this.PictureBoxProduct.Location = new System.Drawing.Point(9, 8);
+            this.PictureBoxProduct.Location = new System.Drawing.Point(9, 7);
             this.PictureBoxProduct.Margin = new System.Windows.Forms.Padding(0);
             this.PictureBoxProduct.Name = "PictureBoxProduct";
-            this.PictureBoxProduct.Size = new System.Drawing.Size(233, 227);
+            this.PictureBoxProduct.Size = new System.Drawing.Size(233, 226);
+            this.PictureBoxProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureBoxProduct.TabIndex = 10;
             this.PictureBoxProduct.TabStop = false;
             this.PictureBoxProduct.Click += new System.EventHandler(this.PictureBoxProduct_Click);
@@ -95,9 +105,10 @@
             this.btnDetail.Font = new System.Drawing.Font("Segoe UI Semibold", 8.2F, System.Drawing.FontStyle.Bold);
             this.btnDetail.ForeColor = System.Drawing.Color.Black;
             this.btnDetail.Image = ((System.Drawing.Image)(resources.GetObject("btnDetail.Image")));
-            this.btnDetail.Location = new System.Drawing.Point(154, 0);
+            this.btnDetail.Location = new System.Drawing.Point(155, 0);
+            this.btnDetail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDetail.Name = "btnDetail";
-            this.btnDetail.Size = new System.Drawing.Size(96, 35);
+            this.btnDetail.Size = new System.Drawing.Size(96, 34);
             this.btnDetail.TabIndex = 11;
             this.btnDetail.Text = "Chi tiết";
             this.btnDetail.Click += new System.EventHandler(this.btnDetail_Click);
@@ -107,6 +118,7 @@
             this.txtPriceDiscount.BackColor = System.Drawing.Color.Transparent;
             this.txtPriceDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtPriceDiscount.Location = new System.Drawing.Point(107, 238);
+            this.txtPriceDiscount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPriceDiscount.Name = "txtPriceDiscount";
             this.txtPriceDiscount.Size = new System.Drawing.Size(74, 27);
             this.txtPriceDiscount.TabIndex = 12;
@@ -116,7 +128,8 @@
             // 
             this.txtPrice.BackColor = System.Drawing.Color.Transparent;
             this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtPrice.Location = new System.Drawing.Point(9, 243);
+            this.txtPrice.Location = new System.Drawing.Point(9, 242);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(61, 22);
             this.txtPrice.TabIndex = 13;
@@ -131,10 +144,33 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(197, 238);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(45, 27);
             this.guna2HtmlLabel1.TabIndex = 14;
             this.guna2HtmlLabel1.Text = "VND";
+            // 
+            // txtPercent
+            // 
+            this.txtPercent.BackColor = System.Drawing.Color.Red;
+            this.txtPercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtPercent.ForeColor = System.Drawing.Color.Transparent;
+            this.txtPercent.Location = new System.Drawing.Point(13, 7);
+            this.txtPercent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPercent.Name = "txtPercent";
+            this.txtPercent.Size = new System.Drawing.Size(31, 31);
+            this.txtPercent.TabIndex = 16;
+            this.txtPercent.Text = "20";
+            // 
+            // IconPercent
+            // 
+            this.IconPercent.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("IconPercent.BackgroundImage")));
+            this.IconPercent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.IconPercent.Controls.Add(this.txtPercent);
+            this.IconPercent.Location = new System.Drawing.Point(0, 0);
+            this.IconPercent.Name = "IconPercent";
+            this.IconPercent.Size = new System.Drawing.Size(85, 49);
+            this.IconPercent.TabIndex = 17;
             // 
             // UC_ItemProduct
             // 
@@ -142,6 +178,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.IconPercent);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.txtPriceDiscount);
@@ -150,7 +187,7 @@
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Margin = new System.Windows.Forms.Padding(10);
+            this.Margin = new System.Windows.Forms.Padding(11, 10, 11, 10);
             this.Name = "UC_ItemProduct";
             this.Size = new System.Drawing.Size(252, 315);
             this.Load += new System.EventHandler(this.UserControl1_Load);
@@ -160,6 +197,8 @@
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxProduct)).EndInit();
+            this.IconPercent.ResumeLayout(false);
+            this.IconPercent.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,5 +214,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel txtPrice;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtPercent;
+        private Guna.UI2.WinForms.Guna2Panel IconPercent;
     }
 }

@@ -9,12 +9,12 @@ namespace DAL
     public class ProductDataAccess
     {
         // Sử dụng để tương tác với cơ sở dữ liệu
-        private readonly AppPharmacyContext _db;
+        private readonly AppPharmacyContext _db = new AppPharmacyContext();
 
         // Phương thức tạo (constructor)
-        public ProductDataAccess(AppPharmacyContext context)
+        public ProductDataAccess()
         {
-            _db = context;
+            
         }
 
         public void InsertDataAccess(Products obj)
@@ -40,14 +40,28 @@ namespace DAL
             _db.SaveChanges();
         }
 
-        public bool IsMa(int objId)
+        public bool Exists(int objId)
         {
             var objItem = _db.PRODUCTS.SingleOrDefault(item => item.ID == objId);
             if (objItem != null)
                 return true;
             return false;
         }
-
+        
+        public bool Exists(string name)
+        {
+            var objItem = _db.PRODUCTS.SingleOrDefault(item => item.Name == name);
+            if (objItem != null)
+                return true;
+            return false;
+        }
+        public bool IsSupplierId(int id)
+        {
+            var objItem = _db.PRODUCTS.SingleOrDefault(item => item.SupplierId == id);
+            if (objItem != null)
+                return true;
+            return false;
+        }
         public Products GetProductById(int objId)
         {
             var objItem = _db.PRODUCTS.SingleOrDefault(item => item.ID == objId);

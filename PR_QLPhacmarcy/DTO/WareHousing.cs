@@ -22,7 +22,7 @@ namespace DTO
 
         // Tạo bởi khóa ngoại đến nhân viên
         public int ImportedBy { get; set; }
-        [ForeignKey("ID")]
+        [ForeignKey("ImportedBy")]
         public virtual Employees EMPLOYEES { get; set; }
     }
 }

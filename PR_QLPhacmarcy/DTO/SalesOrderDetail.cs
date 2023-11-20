@@ -25,12 +25,12 @@ namespace DTO
 
         //ID sản phẩm khóa ngoại đến sản phẩm
         public int IDPruduct { get; set; }
-        [ForeignKey("ID")]
+        [ForeignKey("IDPruduct")]
         public virtual Products PRODUCTS { get; set; }
 
         // ID đơn hàng online khóa ngoại đến đơn hàng online
         public int IDSalesOrder { get; set; }
-        [ForeignKey("ID")]
+        [ForeignKey("IDSalesOrder")]
         public virtual SalesOrder SALESORDER { get; set; }
 
 

@@ -25,7 +25,7 @@ namespace DTO
 
         // Ngày sinh
         [Column(TypeName = "DATETIME")]
-        DateTime DateOfBirth { get; set; }
+        public DateTime DateOfBirth { get; set; }
         
         // Số điện thoại
         [Column(TypeName = "VARCHAR")]
@@ -61,7 +61,7 @@ namespace DTO
         public float Salary { get; set; }
 
         // Ngày vào làm
-        DateTime StartedDay { get; set; }
+        public DateTime StartedDay { get; set; }
 
         // CCCD
         [Column(TypeName = "VARCHAR")]
@@ -70,7 +70,7 @@ namespace DTO
 
         // Chức vụ khóa ngoại đến bản Roles
         public int Role { get; set; }
-        [ForeignKey("ID")]
+        [ForeignKey("Role")]
         public virtual Roles ROLES { get; set; }
     }
 }

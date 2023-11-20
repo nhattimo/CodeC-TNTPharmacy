@@ -41,8 +41,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BillOfflineBusinessLogic.cs" />
+    <Compile Include="BillOfflineDetailBusinessLogic.cs" />
+    <Compile Include="CategorysBusinessLogic.cs" />
+    <Compile Include="EmployeesBusinessLogic.cs" />
+    <Compile Include="PayMentBusinessLogic.cs" />
+    <Compile Include="PayMentMethondBusinessLogic.cs" />
     <Compile Include="ProductBusinessLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RolesBusinessLogic.cs" />
+    <Compile Include="SalesOrderBusinessLogic.cs" />
+    <Compile Include="SalesOrderDetailBusinessLogic.cs" />
+    <Compile Include="ShippingBusinessLogic.cs" />
+    <Compile Include="SuppliersBusinessLogic.cs" />
+    <Compile Include="UsersBusinessLogic.cs" />
+    <Compile Include="WareHousingBusinessLogic.cs" />
+    <Compile Include="WareHousingDetailsBusinessLogic.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
