@@ -1,8 +1,8 @@
 ﻿using BLL;
-using DTO;
+using GUI.US_;
 using System;
-using System.Web.ModelBinding;
 using System.Windows.Forms;
+
 
 namespace GUI
 {
@@ -10,16 +10,22 @@ namespace GUI
     {
         private readonly EmployeesBusinessLogic _Employees;
         private readonly UsersBusinessLogic _Users;
+        private readonly AccountBusinesLogiccs _Account;
+
         Label[] _laberError;
         bool _trangThai = false;
-        int vaiTro;
+        int _luaChon;
+        public FormDangNhap()
+        {
+        }
+
         public FormDangNhap(int CV)
         {
             InitializeComponent();
             _Employees = new EmployeesBusinessLogic();
             _Users = new UsersBusinessLogic();
-
-            vaiTro = CV;
+            _Account = new AccountBusinesLogiccs();
+            _luaChon = CV;
             // Add những txt lỗi vào mảng và dùng hàm ẩn đi
             _laberError = new Label[] { errorAccount, errorPassword, errorLoginFailed };
             Management.ErrorHide(_laberError);
@@ -28,33 +34,50 @@ namespace GUI
         // BTN
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            _trangThai = false;
-            foreach (var item in _laberError)
-            {
-                if (item.Visible == true)
-                {
-                    _trangThai = false;
-                    break;
-                }
-                else
-                    _trangThai = true;
+            // kiểm tra null của từng TXT
+            if(Management.ISNull(txtTenTaiKhoan) && Management.ISNull(txtMatKhau)){
+                Management.Errorshow(errorAccount, "Không để trống");
+                Management.Errorshow(errorPassword, "Không để trống");
+                _trangThai = false;
             }
-            if (_trangThai == true)
+            else if (Management.ISNull(txtTenTaiKhoan))
             {
-                MessageBox.Show("Đủ điều kiện kiểm tra tài khoản và mật khẩu");
-                if (vaiTro == 0)
-                {
-                    // kiểm tra tài khoản và mk người dùng
-
-                }
-                else
-                {
-                    // kiểm tra tài khoản nhân viên
-                }
+                Management.Errorshow(errorAccount, "Không để trống");
+                _trangThai = false;
+            }
+            else if (Management.ISNull(txtMatKhau))
+            {
+                Management.Errorshow(errorPassword, "Không để trống");
+                _trangThai = false;
             }
             else
             {
-                MessageBox.Show("chưa đủ điều kiện kiểm tra tài khoản và mật khẩu");
+                _trangThai = true;
+                Management.ErrorHide(errorAccount);
+                Management.ErrorHide(errorPassword);
+            }
+
+            if (_trangThai == true)
+            {
+                if (_luaChon == 0)
+                {
+                    // kiểm tra tài khoản và mk người dùng
+                }
+                else
+                {
+                    // kiểm tra tài khoản và mk nhân viên
+                    if (_Account.Exists(txtTenTaiKhoan.Text)) // kiểm tra tên tài khoản
+                    {
+                        if (_Account.IsLoggin(txtTenTaiKhoan.Text, txtMatKhau.Text)) // kiểm tra tên tài khoản và mật khẩu
+                        {
+                            LogginForm(txtTenTaiKhoan.Text);
+                        }
+                        else
+                            Management.Errorshow(errorPassword, "Mật khẩu không đúng");
+                    }
+                    else
+                        Management.Errorshow(errorAccount, "Tài khoản không tồn tại");
+                }
             }
         }
         private void btnClose_Click(object sender, EventArgs e)
@@ -62,14 +85,14 @@ namespace GUI
             this.Close();
             FormDieuKhienChucVu formDieuKhienChucVu = new FormDieuKhienChucVu();
             formDieuKhienChucVu.ShowDialog();
-            
+
         }
 
         private void btnChuaCoTK_Click(object sender, EventArgs e)
         {
             this.Close();
-            FormDangKy formDangKy = new FormDangKy();   
-            formDangKy.ShowDialog();    
+            FormDangKy formDangKy = new FormDangKy();
+            formDangKy.ShowDialog();
         }
 
 
@@ -77,7 +100,7 @@ namespace GUI
         // TXT
         private void txtTenTaiKhoan_Leave(object sender, EventArgs e)
         {
-            if (Management.isNull(txtTenTaiKhoan))
+            if (Management.ISNull(txtTenTaiKhoan))
             {
                 Management.Errorshow(errorAccount, "Không để trống");
             }
@@ -87,12 +110,65 @@ namespace GUI
 
         private void txtMatKhau_Leave(object sender, EventArgs e)
         {
-            if (Management.isNull(txtMatKhau))
+            if (Management.ISNull(txtMatKhau))
             {
                 Management.Errorshow(errorPassword, "Không để trống");
             }
             else
                 Management.ErrorHide(errorPassword);
+        }
+
+        private void LogginForm (string accountName){
+            int IDTK = _Account.GetID(accountName); // Lấy ID Tài khoản người dùng
+            switch (_Account.GetRole(accountName)) // Lấy ID Role
+            {
+                // Quản Lý
+                case 1:
+                    FormQuanLy formQuanLy = new FormQuanLy(IDTK);
+                    formQuanLy.ShowDialog();
+                    this.Hide();
+                    break;
+
+                // Nhân Viên Bán Hàng
+                case 2:
+                    FormNhanVienBanHang formNhanVienBanHang = new FormNhanVienBanHang(IDTK);
+                    formNhanVienBanHang.ShowDialog();
+                    this.Hide();
+                    break;
+
+                // Nhân Viên Thủ Kho
+                case 3:
+                    FormThuKho formThuKho = new FormThuKho(IDTK);
+                    formThuKho.ShowDialog();
+                    this.Hide();
+                    break;
+                // Nhân Viên Kế Toán
+
+                case 4:
+                   
+                    break;
+
+                // Khách hàng
+                case 5:
+                    FormKhachHang formKhachHang = new FormKhachHang();
+                    formKhachHang.ShowDialog();
+                    this.Hide();
+                    break;
+
+                default:
+                        
+                    break;
+            }
+        }
+
+        private void guna2Button1_MouseDown(object sender, MouseEventArgs e)
+        {
+            txtMatKhau.PasswordChar = '\0';
+        }
+
+        private void guna2Button1_MouseUp(object sender, MouseEventArgs e)
+        {
+            txtMatKhau.PasswordChar = '*';
         }
     }
 }

@@ -9,8 +9,15 @@ namespace GUI
 {
     public partial class FormKhachHang : Form
     {
+        int _IDTK;
         Guna2GradientTileButton[] btnArray;
         UserControl[] controlArray;
+
+        public FormKhachHang(int iDTK)
+        {
+            InitializeComponent();
+            _IDTK = iDTK;
+        }
         public FormKhachHang()
         {
             InitializeComponent();

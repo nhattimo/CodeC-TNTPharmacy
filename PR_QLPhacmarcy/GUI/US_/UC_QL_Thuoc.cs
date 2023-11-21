@@ -4,6 +4,8 @@ using System.Windows.Forms;
 using DTO;
 using System.Collections.Generic;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Guna.UI2.WinForms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace GUI.US_
 {
@@ -17,6 +19,8 @@ namespace GUI.US_
         string[] _dataComboBox;
         bool _trangThai;
         int _ID_Suppliers;
+        int _ID_Category = 1;
+        int _ID_Created = 1;
         public UC_QL_Thuoc()
         {
             InitializeComponent();
@@ -28,7 +32,7 @@ namespace GUI.US_
             txtDiscount.Text = "0";
 
             // Add những txt lỗi vào mảng và dùng hàm ẩn đi
-            _laberError = new Label[] { errorProductName, errorSupplier, errorCost, errorDiscount, errorDescribe };
+            _laberError = new Label[] { errorProductName, errorSupplier, errorCost, errorDiscount, errorDescribe,errorProductionDate, errorExpiryDate };
             Management.ErrorHide(_laberError);
 
             // Load dữ liệu từ cơ sở dữ liệu và hiển thị trên giao diện
@@ -42,6 +46,7 @@ namespace GUI.US_
         
         private void LoadData()
         {
+            flowLayoutPanelProducts.Controls.Clear();
             // Gọi phương thức GetAllProducts từ lớp BLL để lấy danh sách sản phẩm
             List<Products> listObj = _Product.GetAllObject();
             _UCItemProduct = new UC_ItemProduct[listObj.Count];
@@ -75,8 +80,14 @@ namespace GUI.US_
         // BTN
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            Check(ComboBoxSupplier,errorSupplier);
+            Check(txtProductName,errorProductName);
+            Check(txtCost,errorCost);
+            Check(txtDiscount, errorDiscount);
+            Check(picAnh, errorPic);
+            Check(txtProductionDate, errorProductionDate);
+            Check(txtExpiryDate, errorExpiryDate);
             // Xử lý sự kiện khi người dùng nhấn nút Thêm
-            _trangThai = false;
             foreach (var item in _laberError)
             {
                 if (item.Visible == true)
@@ -86,20 +97,34 @@ namespace GUI.US_
                 }else
                     _trangThai = true;
             }
-            if(_trangThai == true)
+            // Hiển thị giao diện thêm sản phẩm, thực hiện các logic cần thiết, và cập nhật cơ sở dữ liệu
+            if (_trangThai == true)
             {
-                MessageBox.Show("ok");
+                var time = DateTime.Now;
+                // Điều kiện để add
+                // - Trùng nhà cung cấp nhưng khác tên 
+                // - Trùng tên nhưng khác nhà cung cấp 
+                Products products = new Products(
+                    txtProductName.Text,
+                    float.Parse(txtCost.Text),
+                    float.Parse(txtDescribe.Text), // Assuming this is the Discount property, set to 0 for now
+                    0, // Assuming this is the Quantity property, set to 0 for now
+                    time,
+                    null,
+                    txtDescribe.Text,
+                    DateTime.Parse("10/10/2003"), 
+                    DateTime.Parse("10/10/2003"),
+                    _ID_Suppliers, // supplierId
+                    _ID_Category, // categoryId
+                    _ID_Created // createdBy
+                );
+                _Product.Add(products);
             }
             else {
-                MessageBox.Show("no");
+                MessageBox.Show("Add thất bại");
             }
 
-
-
-
-
-            // Hiển thị giao diện thêm sản phẩm, thực hiện các logic cần thiết, và cập nhật cơ sở dữ liệu
-            // ...
+            
 
             // Sau khi thêm sản phẩm, cập nhật lại danh sách và hiển thị trên giao diện
             LoadData();
@@ -146,46 +171,67 @@ namespace GUI.US_
         
         private void ComboBoxSupplier_Leave(object sender, EventArgs e)
         {
-            if (Management.isNull(ComboBoxSupplier))
-                Management.Errorshow(errorSupplier, "Không để trống");
-            else
-                Management.ErrorHide(errorSupplier);
+            Check(ComboBoxSupplier, errorSupplier);
         }
         
         private void txtProductName_Leave(object sender, EventArgs e)
         {
-            if (Management.isNull(txtProductName))
-            {
-                Management.Errorshow(errorProductName, "Không để trống");
-            }else
-                Management.ErrorHide(errorProductName);
+            Check(txtProductName, errorProductName);
         }
         
         private void txtCost_Leave(object sender, EventArgs e)
         {
-            if (Management.isNull(txtCost))
-            {
-                Management.Errorshow(errorCost, "Không để trống");
-            }
-            else
-                Management.ErrorHide(errorCost);
+            Check(txtCost, errorCost);
         }
         
         private void txtDiscount_Leave(object sender, EventArgs e)
         {
-            if (Management.isNull(txtDiscount))
-            {
-                Management.Errorshow(errorDiscount, "Không để trống");
-            }
-            else
-                Management.ErrorHide(errorDiscount);
+            Check(txtDiscount, errorDiscount);
         }
-
-        
 
         private void picAnh_Click(object sender, EventArgs e)
         {
             Management.SetImage(picAnh, sender);
         }
+
+        private void Check(Guna2TextBox txt, Label error )
+        {
+            if (Management.ISNull(txt))
+            {
+                Management.Errorshow(error, "Không để trống");
+            }else
+                Management.ErrorHide(error);
+        }
+        
+        private void Check(Guna2ComboBox txt, Label error)
+        {
+            if (Management.ISNull(txt))
+            {
+                Management.Errorshow(error, "Không để trống");
+            }
+            else
+                Management.ErrorHide(error);
+        }
+        
+        private void Check(PictureBox pic, Label error)
+        {
+            if (Management.ExistImg(pic))
+            {
+                Management.Errorshow(error, "Không để trống");
+            }
+            else
+                Management.ErrorHide(error);
+        }
+
+        private void Check(Guna2DateTimePicker time, Label error)
+        {
+            if (Management.ISTime(time))
+            {
+                Management.Errorshow(error, "Không để trống");
+            }
+            else
+                Management.ErrorHide(error);
+        }
+
     }
 }

@@ -10,6 +10,7 @@ namespace DAL
         {
 
         }
+        public DbSet<Account> ACCOUNT { get; set; }
         public DbSet<BillOffline> BILL_OFFLINES { get; set; }
         public DbSet<BillOfflineDetail> BILL_OFFLINE_DETAILS { get; set; }
         public DbSet<Categorys> CATEGORYS { get; set; }

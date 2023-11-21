@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account.cs" />
     <Compile Include="BillOffline.cs" />
     <Compile Include="BillOfflineDetail.cs" />
     <Compile Include="Categorys.cs" />

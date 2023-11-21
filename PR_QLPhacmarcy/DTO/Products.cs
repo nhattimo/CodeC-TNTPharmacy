@@ -8,6 +8,27 @@ namespace DTO
     [Table ("PRODUCTS")]
     public class Products
     {
+        public Products(string name, float price, float discount, int quantity, DateTime createdDate,
+                    string image, string description, DateTime productionDate, DateTime expiryDate,
+                    int supplierId, int categoryId, int createdBy)
+        {
+            Name = name;
+            Price = price;
+            Discount = discount;
+            Quantity = quantity;
+            CreatedDate = createdDate;
+            Image = image;
+            Description = description;
+            ProductionDate = productionDate;
+            ExpiryDate = expiryDate;
+            SupplierId = supplierId;
+            CategoryId = categoryId;
+            CreatedBy = createdBy;
+        }
+        public Products()
+        {
+           
+        }
         // ID
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // khoa tu sinh
         [Key]

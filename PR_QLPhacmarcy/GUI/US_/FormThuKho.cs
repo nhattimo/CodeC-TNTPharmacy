@@ -13,8 +13,15 @@ namespace GUI.US_
 {
     public partial class FormThuKho : Form
     {
+        int _IDTK;
         Guna2GradientTileButton[] btnArray;
         UserControl[] controlArray;
+
+        public FormThuKho(int iDTK)
+        {
+            InitializeComponent();
+            _IDTK = iDTK;
+        }
         public FormThuKho()
         {
             InitializeComponent();

@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountBusinesLogiccs.cs" />
     <Compile Include="BillOfflineBusinessLogic.cs" />
     <Compile Include="BillOfflineDetailBusinessLogic.cs" />
     <Compile Include="CategorysBusinessLogic.cs" />

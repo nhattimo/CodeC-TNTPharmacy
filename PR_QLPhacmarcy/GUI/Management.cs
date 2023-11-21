@@ -114,15 +114,21 @@ namespace GUI
             txt.Show();
             
         }
-        public static bool isNull(Guna2TextBox txt)
+        public static bool ISNull(Guna2TextBox txt)
         {
             if(string.IsNullOrEmpty(txt.Text))
                 return true;
             return false;
         }
-        public static bool isNull(Guna2ComboBox txt)
+        public static bool ISNull(Guna2ComboBox txt)
         {
             if (string.IsNullOrEmpty(txt.Text))
+                return true;
+            return false;
+        }
+        public static bool ISTime(Guna2DateTimePicker time)
+        {
+            if(string.IsNullOrEmpty(time.Text))
                 return true;
             return false;
         }
@@ -194,12 +200,12 @@ namespace GUI
             }
             
         }
-        public static bool ISexistImg(PictureBox pictureBox)
+        public static bool ExistImg(PictureBox pictureBox)
         {
             if (pictureBox.Image == null)
                 return false;
             return true;
         }
-        
+
     }
 }

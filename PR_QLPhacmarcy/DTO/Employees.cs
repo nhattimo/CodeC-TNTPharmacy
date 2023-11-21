@@ -46,15 +46,6 @@ namespace DTO
         [Column(TypeName = "VARCHAR")]
         public string Image { get; set; }
 
-        // tên tài khoản
-        [Column(TypeName = "VARCHAR")]
-        [MaxLength(30)]
-        public string UserName { get; set; }
-
-        // Mật khẩu
-        [Column(TypeName = "VARCHAR")]
-        [MaxLength(30)]
-        public string Password { get; set; }
 
         // Lương
         [Column(TypeName = "FLOAT")]
@@ -68,9 +59,9 @@ namespace DTO
         [MaxLength(12)]
         public string CCCD { get; set; }
 
-        // Chức vụ khóa ngoại đến bản Roles
-        public int Role { get; set; }
-        [ForeignKey("Role")]
-        public virtual Roles ROLES { get; set; }
+        // ID tài khoản khóa ngoại đến tài khoản
+        public int IDTK { get; set; }
+        [ForeignKey("IDTK")]
+        public virtual Account ACCOUNT { get; set; }
     }
 }

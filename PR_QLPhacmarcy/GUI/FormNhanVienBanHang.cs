@@ -8,8 +8,14 @@ namespace GUI
 {
     public partial class FormNhanVienBanHang : Form
     {
+        int _IDTK;
         Guna2GradientTileButton[] btnArray;
         UserControl[] controlArray;
+        public FormNhanVienBanHang(int iDTK)
+        {
+            InitializeComponent();
+            _IDTK = iDTK;
+        }
         public FormNhanVienBanHang()
         {
             InitializeComponent();
