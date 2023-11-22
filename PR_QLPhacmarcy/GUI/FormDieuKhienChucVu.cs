@@ -17,6 +17,7 @@ namespace GUI
 
         private void btnCustomer_Click(object sender, EventArgs e)
         {
+            Management.SetIDAccount(5);
             FormKhachHang formKhachHang = new FormKhachHang();
             formKhachHang.ShowDialog();
             this.Hide();

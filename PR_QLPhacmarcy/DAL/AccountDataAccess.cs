@@ -88,6 +88,13 @@ namespace DAL
                 return objItem.Role;
             return 0;
         }
-       
+        public int GetRole(int IDTK)
+        {
+            var objItem = _db.ACCOUNT.SingleOrDefault(item => item.ID == IDTK);
+            if (objItem != null)
+                return objItem.Role;
+            return 0;
+        }
+
     }
 }

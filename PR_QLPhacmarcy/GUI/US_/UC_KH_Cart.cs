@@ -20,7 +20,7 @@ namespace GUI.US_
 
         private void UC_KH_Cart_Load(object sender, EventArgs e)
         {
-            PanelScrollHelper panelScrollHelper  = new PanelScrollHelper(flowLayoutPanel, VScrollBar);
+            Management.ScrollBarFlowLayoutPanel(flowLayoutPanel, VScrollBar);
             uC_KH_OrderInformation1.Visible = false;
         }
 

@@ -1,4 +1,6 @@
-﻿using Guna.UI2.WinForms;
+﻿using GUI.US_;
+using Guna.UI2.WinForms;
+using Guna.UI2.WinForms.Helpers;
 using System;
 using System.Drawing;
 using System.IO;
@@ -227,5 +229,9 @@ namespace GUI
             return a;
         }
 
+        public static void ScrollBarFlowLayoutPanel(FlowLayoutPanel flowLayoutPanel, Guna2VScrollBar vScrollBar)
+        {
+            PanelScrollHelper panelScrollHelper = new PanelScrollHelper(flowLayoutPanel, vScrollBar);
+        }
     }
 }

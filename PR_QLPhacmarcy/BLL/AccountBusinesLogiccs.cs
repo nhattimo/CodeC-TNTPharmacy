@@ -1,16 +1,13 @@
 ﻿using DAL;
 using DTO;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace BLL
 {
     public class AccountBusinesLogiccs
     {
-        private readonly AccountDataAccess _objectDataAccess = new AccountDataAccess();
+        public readonly AccountDataAccess _objectDataAccess = new AccountDataAccess();
 
         public AccountBusinesLogiccs()
         {
@@ -83,7 +80,9 @@ namespace BLL
         {
             return _objectDataAccess.GetRole(objAccountName);
         }
-
-
+        public int GetRole(int IDAccount)
+        {
+            return _objectDataAccess.GetRole(IDAccount);
+        }
     }
 }

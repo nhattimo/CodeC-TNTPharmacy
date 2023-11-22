@@ -13,6 +13,7 @@ namespace GUI.US_
         //  sử dụng để tương tác với BLL (BusinessLogic)
         private readonly ProductBusinessLogic _Product;
         private readonly SuppliersBusinessLogic _Suppliers;
+
         UC_ItemProduct[] _UCItemProduct;
         Label[] _laberError;
         string[] _dataComboBox;
@@ -33,7 +34,7 @@ namespace GUI.US_
 
             _ID_Created = Management.GetIDAccount();
             // Add những txt lỗi vào mảng và dùng hàm ẩn đi
-            _laberError = new Label[] { errorProductName, errorSupplier, errorCost, errorDiscount, errorDescribe,errorProductionDate, errorExpiryDate };
+            _laberError = new Label[] { errorProductName, errorSupplier, errorCost, errorDiscount, errorDescribe, errorProductionDate, errorExpiryDate };
             Management.ErrorHide(_laberError);
 
             // Load dữ liệu từ cơ sở dữ liệu và hiển thị trên giao diện
@@ -42,9 +43,10 @@ namespace GUI.US_
         }
         private void UC_QL_Thuoc_Load(object sender, EventArgs e)
         {
-            
+            Management.ScrollBarFlowLayoutPanel(flowLayoutPanelProducts, VScrollBar);
+            Add(1);
         }
-        
+
         private void LoadData()
         {
             flowLayoutPanelProducts.Controls.Clear();
@@ -57,9 +59,9 @@ namespace GUI.US_
             }
             // Hiển thị danh sách sản phẩm trên giao diện
             Management.AddItemsUC(flowLayoutPanelProducts, _UCItemProduct);
-            
+
         }
-        
+
         private void LoaditemsComboBox()
         {
             List<Suppliers> listObj = _Suppliers.GetAllObject();
@@ -75,15 +77,15 @@ namespace GUI.US_
             {
                 ComboBoxSupplier.Items.AddRange(_dataComboBox);
             }
-            
+
         }
 
         // BTN
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Check(ComboBoxSupplier,errorSupplier);
-            Check(txtProductName,errorProductName);
-            Check(txtCost,errorCost);
+            Check(ComboBoxSupplier, errorSupplier);
+            Check(txtProductName, errorProductName);
+            Check(txtCost, errorCost);
             Check(txtDiscount, errorDiscount);
             Check(picAnh, errorPic);
             Check(txtProductionDate, errorProductionDate);
@@ -95,7 +97,7 @@ namespace GUI.US_
                 {
                     _trangThai = false;
                     break;
-                }else
+                } else
                     _trangThai = true;
             }
             // Hiển thị giao diện thêm sản phẩm, thực hiện các logic cần thiết, và cập nhật cơ sở dữ liệu
@@ -126,7 +128,7 @@ namespace GUI.US_
                 MessageBox.Show("Add thất bại");
             }
 
-            
+
 
             // Sau khi thêm sản phẩm, cập nhật lại danh sách và hiển thị trên giao diện
             LoadData();
@@ -162,29 +164,29 @@ namespace GUI.US_
             LoadData();
         }
 
-        
+
         // TXT
 
         private void txtSupplier_SelectedValueChanged(object sender, EventArgs e)
         {
             _ID_Suppliers = _Suppliers.GetID(ComboBoxSupplier.SelectedItem.ToString());
         }
-        
+
         private void ComboBoxSupplier_Leave(object sender, EventArgs e)
         {
             Check(ComboBoxSupplier, errorSupplier);
         }
-        
+
         private void txtProductName_Leave(object sender, EventArgs e)
         {
             Check(txtProductName, errorProductName);
         }
-        
+
         private void txtCost_Leave(object sender, EventArgs e)
         {
             Check(txtCost, errorCost);
         }
-        
+
         private void txtDiscount_Leave(object sender, EventArgs e)
         {
             Check(txtDiscount, errorDiscount);
@@ -195,15 +197,16 @@ namespace GUI.US_
             Management.SetImage(picAnh, sender);
         }
 
-        private void Check(Guna2TextBox txt, Label error )
+        // check
+        private void Check(Guna2TextBox txt, Label error)
         {
             if (Management.ISNull(txt))
             {
                 Management.Errorshow(error, "Không để trống");
-            }else
+            } else
                 Management.ErrorHide(error);
         }
-        
+
         private void Check(Guna2ComboBox txt, Label error)
         {
             if (Management.ISNull(txt))
@@ -213,7 +216,7 @@ namespace GUI.US_
             else
                 Management.ErrorHide(error);
         }
-        
+
         private void Check(PictureBox pic, Label error)
         {
             if (Management.ExistImg(pic))
@@ -233,6 +236,24 @@ namespace GUI.US_
             else
                 Management.ErrorHide(error);
         }
+        // 
+        public void AddThongTinSanPham(int IDProduct){
+            string filePath = @"E:\CodeC - TNTPharmacy\PR_QLPhacmarcy\Icon\087349.png";
 
+            Products obj = _Product.GetObjectById(IDProduct);
+            Suppliers suppliers = _Suppliers.GetObjectById(obj.SupplierId);
+
+            ComboBoxSupplier.Text = suppliers.Name;
+            txtProductName.Text = obj.Name;
+            txtCost.Text = obj.Price + "";
+            txtDiscount.Text = obj.Discount + "";
+            txtProductionDate.Value = obj.ProductionDate;
+            txtExpiryDate.Value = obj.ExpiryDate;
+            txtDescribe.Text = obj.Description;
+            if(picAnh.ImageLocation == null)
+                picAnh.ImageLocation = filePath;
+            else
+                picAnh.ImageLocation = obj.Image;
+        }
     }
 }

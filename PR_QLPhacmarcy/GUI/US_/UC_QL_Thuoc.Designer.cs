@@ -31,6 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_QL_Thuoc));
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.errorExpiryDate = new System.Windows.Forms.Label();
+            this.errorProductionDate = new System.Windows.Forms.Label();
+            this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtProductionDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.txtExpiryDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.errorPic = new System.Windows.Forms.Label();
             this.picAnh = new Guna.UI2.WinForms.Guna2PictureBox();
             this.errorSupplier = new System.Windows.Forms.Label();
             this.btnDelete = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -59,13 +66,7 @@
             this.guna2GradientTileButton10 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.flowLayoutPanelProducts = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.errorPic = new System.Windows.Forms.Label();
-            this.txtProductionDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.txtExpiryDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.errorProductionDate = new System.Windows.Forms.Label();
-            this.errorExpiryDate = new System.Windows.Forms.Label();
+            this.VScrollBar = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAnh)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -111,6 +112,104 @@
             this.guna2Panel2.Size = new System.Drawing.Size(628, 878);
             this.guna2Panel2.TabIndex = 15;
             this.guna2Panel2.UseWaitCursor = true;
+            // 
+            // errorExpiryDate
+            // 
+            this.errorExpiryDate.AutoSize = true;
+            this.errorExpiryDate.BackColor = System.Drawing.Color.Transparent;
+            this.errorExpiryDate.ForeColor = System.Drawing.Color.Red;
+            this.errorExpiryDate.Location = new System.Drawing.Point(27, 671);
+            this.errorExpiryDate.Name = "errorExpiryDate";
+            this.errorExpiryDate.Size = new System.Drawing.Size(25, 16);
+            this.errorExpiryDate.TabIndex = 186;
+            this.errorExpiryDate.Text = "Lỗi";
+            this.errorExpiryDate.UseWaitCursor = true;
+            // 
+            // errorProductionDate
+            // 
+            this.errorProductionDate.AutoSize = true;
+            this.errorProductionDate.BackColor = System.Drawing.Color.Transparent;
+            this.errorProductionDate.ForeColor = System.Drawing.Color.Red;
+            this.errorProductionDate.Location = new System.Drawing.Point(27, 576);
+            this.errorProductionDate.Name = "errorProductionDate";
+            this.errorProductionDate.Size = new System.Drawing.Size(25, 16);
+            this.errorProductionDate.TabIndex = 185;
+            this.errorProductionDate.Text = "Lỗi";
+            this.errorProductionDate.UseWaitCursor = true;
+            // 
+            // guna2HtmlLabel7
+            // 
+            this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(21, 592);
+            this.guna2HtmlLabel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(112, 25);
+            this.guna2HtmlLabel7.TabIndex = 184;
+            this.guna2HtmlLabel7.Text = "Ngày hết hạn";
+            this.guna2HtmlLabel7.UseWaitCursor = true;
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(21, 502);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(118, 25);
+            this.guna2HtmlLabel2.TabIndex = 183;
+            this.guna2HtmlLabel2.Text = "Ngày sản xuất";
+            this.guna2HtmlLabel2.UseWaitCursor = true;
+            // 
+            // txtProductionDate
+            // 
+            this.txtProductionDate.BackColor = System.Drawing.Color.Transparent;
+            this.txtProductionDate.BorderColor = System.Drawing.Color.SandyBrown;
+            this.txtProductionDate.Checked = true;
+            this.txtProductionDate.FillColor = System.Drawing.Color.Linen;
+            this.txtProductionDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtProductionDate.ForeColor = System.Drawing.Color.Black;
+            this.txtProductionDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.txtProductionDate.Location = new System.Drawing.Point(21, 528);
+            this.txtProductionDate.Margin = new System.Windows.Forms.Padding(4);
+            this.txtProductionDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.txtProductionDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.txtProductionDate.Name = "txtProductionDate";
+            this.txtProductionDate.Size = new System.Drawing.Size(293, 44);
+            this.txtProductionDate.TabIndex = 177;
+            this.txtProductionDate.UseWaitCursor = true;
+            this.txtProductionDate.Value = new System.DateTime(2023, 10, 2, 20, 5, 0, 423);
+            // 
+            // txtExpiryDate
+            // 
+            this.txtExpiryDate.BackColor = System.Drawing.Color.Transparent;
+            this.txtExpiryDate.BorderColor = System.Drawing.Color.SandyBrown;
+            this.txtExpiryDate.Checked = true;
+            this.txtExpiryDate.FillColor = System.Drawing.Color.Linen;
+            this.txtExpiryDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtExpiryDate.ForeColor = System.Drawing.Color.Black;
+            this.txtExpiryDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.txtExpiryDate.Location = new System.Drawing.Point(21, 623);
+            this.txtExpiryDate.Margin = new System.Windows.Forms.Padding(4);
+            this.txtExpiryDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.txtExpiryDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.txtExpiryDate.Name = "txtExpiryDate";
+            this.txtExpiryDate.Size = new System.Drawing.Size(575, 44);
+            this.txtExpiryDate.TabIndex = 178;
+            this.txtExpiryDate.UseWaitCursor = true;
+            this.txtExpiryDate.Value = new System.DateTime(2023, 10, 2, 20, 5, 0, 423);
+            // 
+            // errorPic
+            // 
+            this.errorPic.AutoSize = true;
+            this.errorPic.BackColor = System.Drawing.Color.Transparent;
+            this.errorPic.ForeColor = System.Drawing.Color.Red;
+            this.errorPic.Location = new System.Drawing.Point(326, 584);
+            this.errorPic.Name = "errorPic";
+            this.errorPic.Size = new System.Drawing.Size(25, 16);
+            this.errorPic.TabIndex = 176;
+            this.errorPic.Text = "Lỗi";
+            this.errorPic.UseWaitCursor = true;
             // 
             // picAnh
             // 
@@ -500,6 +599,7 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BorderRadius = 1;
             this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.VScrollBar);
             this.guna2Panel1.Controls.Add(this.btnSearch);
             this.guna2Panel1.Controls.Add(this.txtSearch);
             this.guna2Panel1.Controls.Add(this.guna2GradientTileButton10);
@@ -594,101 +694,16 @@
             // 
             this.guna2Elipse1.TargetControl = this;
             // 
-            // errorPic
+            // VScrollBar
             // 
-            this.errorPic.AutoSize = true;
-            this.errorPic.BackColor = System.Drawing.Color.Transparent;
-            this.errorPic.ForeColor = System.Drawing.Color.Red;
-            this.errorPic.Location = new System.Drawing.Point(326, 584);
-            this.errorPic.Name = "errorPic";
-            this.errorPic.Size = new System.Drawing.Size(25, 16);
-            this.errorPic.TabIndex = 176;
-            this.errorPic.Text = "Lỗi";
-            this.errorPic.UseWaitCursor = true;
-            // 
-            // txtProductionDate
-            // 
-            this.txtProductionDate.BackColor = System.Drawing.Color.Transparent;
-            this.txtProductionDate.BorderColor = System.Drawing.Color.SandyBrown;
-            this.txtProductionDate.Checked = true;
-            this.txtProductionDate.FillColor = System.Drawing.Color.Linen;
-            this.txtProductionDate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtProductionDate.ForeColor = System.Drawing.Color.Black;
-            this.txtProductionDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.txtProductionDate.Location = new System.Drawing.Point(21, 528);
-            this.txtProductionDate.Margin = new System.Windows.Forms.Padding(4);
-            this.txtProductionDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.txtProductionDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.txtProductionDate.Name = "txtProductionDate";
-            this.txtProductionDate.Size = new System.Drawing.Size(293, 44);
-            this.txtProductionDate.TabIndex = 177;
-            this.txtProductionDate.Value = new System.DateTime(2023, 10, 2, 20, 5, 0, 423);
-            // 
-            // txtExpiryDate
-            // 
-            this.txtExpiryDate.BackColor = System.Drawing.Color.Transparent;
-            this.txtExpiryDate.BorderColor = System.Drawing.Color.SandyBrown;
-            this.txtExpiryDate.Checked = true;
-            this.txtExpiryDate.FillColor = System.Drawing.Color.Linen;
-            this.txtExpiryDate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtExpiryDate.ForeColor = System.Drawing.Color.Black;
-            this.txtExpiryDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.txtExpiryDate.Location = new System.Drawing.Point(21, 623);
-            this.txtExpiryDate.Margin = new System.Windows.Forms.Padding(4);
-            this.txtExpiryDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.txtExpiryDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.txtExpiryDate.Name = "txtExpiryDate";
-            this.txtExpiryDate.Size = new System.Drawing.Size(575, 44);
-            this.txtExpiryDate.TabIndex = 178;
-            this.txtExpiryDate.Value = new System.DateTime(2023, 10, 2, 20, 5, 0, 423);
-            // 
-            // guna2HtmlLabel2
-            // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(21, 502);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(118, 25);
-            this.guna2HtmlLabel2.TabIndex = 183;
-            this.guna2HtmlLabel2.Text = "Ngày sản xuất";
-            this.guna2HtmlLabel2.UseWaitCursor = true;
-            // 
-            // guna2HtmlLabel7
-            // 
-            this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(21, 592);
-            this.guna2HtmlLabel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(118, 25);
-            this.guna2HtmlLabel7.TabIndex = 184;
-            this.guna2HtmlLabel7.Text = "Ngày sản xuất";
-            this.guna2HtmlLabel7.UseWaitCursor = true;
-            // 
-            // errorProductionDate
-            // 
-            this.errorProductionDate.AutoSize = true;
-            this.errorProductionDate.BackColor = System.Drawing.Color.Transparent;
-            this.errorProductionDate.ForeColor = System.Drawing.Color.Red;
-            this.errorProductionDate.Location = new System.Drawing.Point(27, 576);
-            this.errorProductionDate.Name = "errorProductionDate";
-            this.errorProductionDate.Size = new System.Drawing.Size(25, 16);
-            this.errorProductionDate.TabIndex = 185;
-            this.errorProductionDate.Text = "Lỗi";
-            this.errorProductionDate.UseWaitCursor = true;
-            // 
-            // errorExpiryDate
-            // 
-            this.errorExpiryDate.AutoSize = true;
-            this.errorExpiryDate.BackColor = System.Drawing.Color.Transparent;
-            this.errorExpiryDate.ForeColor = System.Drawing.Color.Red;
-            this.errorExpiryDate.Location = new System.Drawing.Point(27, 671);
-            this.errorExpiryDate.Name = "errorExpiryDate";
-            this.errorExpiryDate.Size = new System.Drawing.Size(25, 16);
-            this.errorExpiryDate.TabIndex = 186;
-            this.errorExpiryDate.Text = "Lỗi";
-            this.errorExpiryDate.UseWaitCursor = true;
+            this.VScrollBar.InUpdate = false;
+            this.VScrollBar.LargeChange = 10;
+            this.VScrollBar.Location = new System.Drawing.Point(1104, 120);
+            this.VScrollBar.Margin = new System.Windows.Forms.Padding(4);
+            this.VScrollBar.Name = "VScrollBar";
+            this.VScrollBar.ScrollbarSize = 5;
+            this.VScrollBar.Size = new System.Drawing.Size(5, 759);
+            this.VScrollBar.TabIndex = 26;
             // 
             // UC_QL_Thuoc
             // 
@@ -746,5 +761,6 @@
         private System.Windows.Forms.Label errorExpiryDate;
         private System.Windows.Forms.Label errorProductionDate;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
+        private Guna.UI2.WinForms.Guna2VScrollBar VScrollBar;
     }
 }
