@@ -81,9 +81,6 @@ namespace GUI
         }
         #endregion
 
-        private void uC_QL_ThongKe1_Load(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

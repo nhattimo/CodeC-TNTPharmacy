@@ -30,9 +30,6 @@ namespace GUI.US_
             _dataComboBox = new string[] { };
             _trangThai = false;
             txtDiscount.Text = "0";
-
-
-            _ID_Created = Management.GetIDAccount();
             // Add những txt lỗi vào mảng và dùng hàm ẩn đi
             _laberError = new Label[] { errorProductName, errorSupplier, errorCost, errorDiscount, errorDescribe, errorProductionDate, errorExpiryDate };
             Management.ErrorHide(_laberError);
@@ -44,7 +41,7 @@ namespace GUI.US_
         private void UC_QL_Thuoc_Load(object sender, EventArgs e)
         {
             Management.ScrollBarFlowLayoutPanel(flowLayoutPanelProducts, VScrollBar);
-            Add(1);
+            //Add(1);
         }
 
         private void LoadData()
@@ -239,7 +236,7 @@ namespace GUI.US_
         // 
         public void AddThongTinSanPham(int IDProduct){
             string filePath = @"E:\CodeC - TNTPharmacy\PR_QLPhacmarcy\Icon\087349.png";
-
+            _ID_Created = Management.GetIDAccount();
             Products obj = _Product.GetObjectById(IDProduct);
             Suppliers suppliers = _Suppliers.GetObjectById(obj.SupplierId);
 
