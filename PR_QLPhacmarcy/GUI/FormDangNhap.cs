@@ -124,32 +124,36 @@ namespace GUI
             {
                 // Quản Lý
                 case 1:
-                    FormQuanLy formQuanLy = new FormQuanLy(IDTK);
+                    Management.SetIDAccount(IDTK);
+                    FormQuanLy formQuanLy = new FormQuanLy();
                     formQuanLy.ShowDialog();
                     this.Hide();
                     break;
 
                 // Nhân Viên Bán Hàng
                 case 2:
-                    FormNhanVienBanHang formNhanVienBanHang = new FormNhanVienBanHang(IDTK);
+                    Management.SetIDAccount(IDTK);
+                    FormNhanVienBanHang formNhanVienBanHang = new FormNhanVienBanHang();
                     formNhanVienBanHang.ShowDialog();
                     this.Hide();
                     break;
 
                 // Nhân Viên Thủ Kho
                 case 3:
-                    FormThuKho formThuKho = new FormThuKho(IDTK);
+                    Management.SetIDAccount(IDTK);
+                    FormThuKho formThuKho = new FormThuKho();
                     formThuKho.ShowDialog();
                     this.Hide();
                     break;
                 // Nhân Viên Kế Toán
 
                 case 4:
-                   
+                    Management.SetIDAccount(IDTK);
                     break;
 
                 // Khách hàng
                 case 5:
+                    Management.SetIDAccount(IDTK);
                     FormKhachHang formKhachHang = new FormKhachHang();
                     formKhachHang.ShowDialog();
                     this.Hide();

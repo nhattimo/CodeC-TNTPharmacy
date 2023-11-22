@@ -13,11 +13,6 @@ namespace GUI
         Guna2GradientTileButton[] btnArray;
         UserControl[] controlArray;
 
-        public FormKhachHang(int iDTK)
-        {
-            InitializeComponent();
-            _IDTK = iDTK;
-        }
         public FormKhachHang()
         {
             InitializeComponent();

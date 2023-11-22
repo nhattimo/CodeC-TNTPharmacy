@@ -3,9 +3,8 @@ using System;
 using System.Windows.Forms;
 using DTO;
 using System.Collections.Generic;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using Guna.UI2.WinForms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
+
 
 namespace GUI.US_
 {
@@ -18,9 +17,9 @@ namespace GUI.US_
         Label[] _laberError;
         string[] _dataComboBox;
         bool _trangThai;
-        int _ID_Suppliers;
-        int _ID_Category = 1;
-        int _ID_Created = 1;
+        int _ID_Suppliers; // ID nhà cung cấp
+        int _ID_Category = 1; // ID loại sản phẩm
+        int _ID_Created; // ID người tạo
         public UC_QL_Thuoc()
         {
             InitializeComponent();
@@ -31,6 +30,8 @@ namespace GUI.US_
             _trangThai = false;
             txtDiscount.Text = "0";
 
+
+            _ID_Created = Management.GetIDAccount();
             // Add những txt lỗi vào mảng và dùng hàm ẩn đi
             _laberError = new Label[] { errorProductName, errorSupplier, errorCost, errorDiscount, errorDescribe,errorProductionDate, errorExpiryDate };
             Management.ErrorHide(_laberError);
@@ -105,19 +106,20 @@ namespace GUI.US_
                 // - Trùng nhà cung cấp nhưng khác tên 
                 // - Trùng tên nhưng khác nhà cung cấp 
                 Products products = new Products(
-                    txtProductName.Text,
-                    float.Parse(txtCost.Text),
-                    float.Parse(txtDescribe.Text), // Assuming this is the Discount property, set to 0 for now
-                    0, // Assuming this is the Quantity property, set to 0 for now
-                    time,
-                    null,
-                    txtDescribe.Text,
-                    DateTime.Parse("10/10/2003"), 
-                    DateTime.Parse("10/10/2003"),
-                    _ID_Suppliers, // supplierId
-                    _ID_Category, // categoryId
-                    _ID_Created // createdBy
+                    txtProductName.Text,            // Tên sản phẩm
+                    float.Parse(txtCost.Text),      // Giá tiền
+                    float.Parse(txtDiscount.Text),  // Phần trăm giảm giá
+                    0,                              // Số lượng
+                    time,                           // Thời gian nhập sản phẩm
+                    null,                           // Đường dẫn ảnh
+                    txtDescribe.Text,               // Mô tả sản phẩm
+                    DateTime.Parse("10/10/2003"),   // Ngày sản xuất
+                    DateTime.Parse("10/10/2003"),   // Ngày hết hạn
+                    _ID_Suppliers,                  // ID nhà cung cấp
+                    _ID_Category,                   // ID loại sản phẩm
+                    _ID_Created                     // ID người tạo
                 );
+                MessageBox.Show("" + products);
                 _Product.Add(products);
             }
             else {
@@ -166,7 +168,6 @@ namespace GUI.US_
         private void txtSupplier_SelectedValueChanged(object sender, EventArgs e)
         {
             _ID_Suppliers = _Suppliers.GetID(ComboBoxSupplier.SelectedItem.ToString());
-            MessageBox.Show("" + _ID_Suppliers);
         }
         
         private void ComboBoxSupplier_Leave(object sender, EventArgs e)

@@ -8,17 +8,12 @@ namespace GUI
 {
     public partial class FormQuanLy : Form
     {
-        int _IDTK;
         Guna2GradientTileButton[] btnArray;
         UserControl[] controlArray;
 
-        public FormQuanLy(int iDTK)
-        {
-            InitializeComponent();
-            _IDTK = iDTK;
-        }
         public FormQuanLy()
         {
+            
             InitializeComponent();
         }
         private void FormQuanLy_Load(object sender, EventArgs e)

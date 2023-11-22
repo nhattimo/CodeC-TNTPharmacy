@@ -1,13 +1,9 @@
 ﻿using Guna.UI2.WinForms;
 using System;
-using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Net.Mail;
 using System.Windows.Forms;
-using System.Xml.Linq;
-using TheArtOfDevHtmlRenderer.Adapters;
-using static System.Net.Mime.MediaTypeNames;
 using Image = System.Drawing.Image;
 
 
@@ -205,6 +201,30 @@ namespace GUI
             if (pictureBox.Image == null)
                 return false;
             return true;
+        }
+
+        public static void SetIDAccount(int maTK)
+        {
+            using (FileStream fs = new FileStream("data", FileMode.Create, FileAccess.ReadWrite))
+            {
+
+            }
+            using (FileStream fs = new FileStream("data", FileMode.Truncate, FileAccess.ReadWrite))
+            {
+                BinaryWriter bw = new BinaryWriter(fs);
+                bw.Write(maTK);
+                bw.Flush();
+            }
+        }
+        public static int GetIDAccount()
+        {
+            int a = 0;
+            using (FileStream fs = new FileStream("data", FileMode.Open, FileAccess.Read))
+            {
+                BinaryReader br = new BinaryReader(fs);
+                a = br.ReadInt32();
+            }
+            return a;
         }
 
     }
