@@ -98,4 +98,4 @@ E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_ItemProduct.resourc
 E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\bin\Debug\DAL.dll
 E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\bin\Debug\DAL.pdb
 E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\bin\Debug\DAL.dll.config
-E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_QL_Info.resources
+E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_Info_Employee.resources

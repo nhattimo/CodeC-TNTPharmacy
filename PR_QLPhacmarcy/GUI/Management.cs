@@ -7,9 +7,7 @@ using System;
 using System.Drawing;
 using System.IO;
 using System.Net.Mail;
-using System.Security.Principal;
 using System.Windows.Forms;
-using System.Xml.Linq;
 using Image = System.Drawing.Image;
 
 
@@ -21,6 +19,8 @@ namespace GUI
         private static readonly EmployeesBusinessLogic _Employee = new EmployeesBusinessLogic();
         private static readonly RolesBusinessLogic _Role = new RolesBusinessLogic();
         private static readonly AccountBusinesLogiccs _Account = new AccountBusinesLogiccs();
+
+        private static int IDProduct;
 
 
         // 1 số điều khiể giao diện
@@ -203,9 +203,10 @@ namespace GUI
         }
         public static string SaveImage(PictureBox pictureBox, string txt)
         {
-            string fname = null;
+            string fname = txt + ".jpg";
             // Đường dẫn đầy đủ đến thư mục mới
             string folderPath = @"E:\FolderImgProduct";
+            string pathString = "";
             try
             {
                 // Kiểm tra xem thư mục đã tồn tại hay chưa
@@ -213,24 +214,25 @@ namespace GUI
                 {
                     // Nếu chưa tồn tại, tạo thư mục mới
                     Directory.CreateDirectory(folderPath);
+
+                    pathString = System.IO.Path.Combine(folderPath, fname); pictureBox.Image.Save(pathString);
                 }
                 else
                 {
-                    string folderPath1 = folderPath + @"\" + txt;
-                    fname = txt + ".jpg";
-                    string folderPathfname = folderPath + fname;
-                    string pathstring = System.IO.Path.Combine(folderPath1, fname); pictureBox.Image.Save(pathstring);
-                    return fname;
+                    pathString = System.IO.Path.Combine(folderPath, fname); pictureBox.Image.Save(pathString);
                 }
-                return fname;
+                return pathString;
             }
             catch (Exception ex)
             {
-                return null;
+                return ex.Message;
             }
-            
+
         }
-  
+        public static void SetIDProduct(int idProduct)
+        {
+            IDProduct = idProduct;
+        }
         // Get
         public static int GetIDAccount()
         {
@@ -259,6 +261,10 @@ namespace GUI
 
             Employees obj = _Employee.GetObjectById(GetIDAccount());
             return obj.Name;
+        }
+        public static int GetIDProduct()
+        {
+            return IDProduct;
         }
         // Load
         public static void LoadInfoEmployee(PictureBox Image, Label txtName, Label txtDateOfBirth, Label txtSex,Label txtPhone, Label txtEmail, Label txtAddress,Label txtCCCD, Label txtStartedDay, Label txtRole)

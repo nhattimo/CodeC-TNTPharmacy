@@ -44,7 +44,7 @@
             this.btnInfo = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientTileButton7 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnLogOut = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.uC_QL_Info1 = new GUI.US_.UC_QL_Info();
+            this.uC_QL_Info1 = new GUI.US_.UC_Info_Employee();
             this.uC_QL_Thuoc1 = new GUI.US_.UC_QL_Thuoc();
             this.uC_QL_ThongKe1 = new GUI.US_.UC_QL_ThongKe();
             this.uC_QL_NguonCung1 = new GUI.US_.UC_QL_NguonCung();
@@ -478,7 +478,7 @@
         private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton7;
         private US_.UC_QL_ThongKe uC_QL_ThongKe1;
         private US_.UC_QL_Thuoc uC_QL_Thuoc1;
-        private US_.UC_QL_Info uC_QL_Info1;
+        private US_.UC_Info_Employee uC_QL_Info1;
         private Guna.UI2.WinForms.Guna2GradientButton btnLogOut;
     }
 }

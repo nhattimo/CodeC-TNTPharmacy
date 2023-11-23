@@ -4,15 +4,18 @@ using System.Windows.Forms;
 using DTO;
 using System.Collections.Generic;
 using Guna.UI2.WinForms;
-
+using System.Runtime.Remoting.Channels;
 
 namespace GUI.US_
 {
     public partial class UC_QL_Thuoc : UserControl
     {
+        private static UC_QL_Thuoc _instance;
+        private static readonly object _lock = new object();
+
         //  sử dụng để tương tác với BLL (BusinessLogic)
-        private readonly ProductBusinessLogic _Product;
-        private readonly SuppliersBusinessLogic _Suppliers;
+        private readonly ProductBusinessLogic _Product  = new ProductBusinessLogic();
+        private readonly SuppliersBusinessLogic _Suppliers = new SuppliersBusinessLogic();
 
         UC_ItemProduct[] _UCItemProduct;
         Label[] _laberError;
@@ -20,13 +23,10 @@ namespace GUI.US_
         bool _trangThai;
         int _ID_Suppliers; // ID nhà cung cấp
         int _ID_Category = 1; // ID loại sản phẩm
-        int _ID_Created; // ID người tạo
+        int _ID_Created = Management.GetIDAccount(); // ID người tạo
         public UC_QL_Thuoc()
         {
             InitializeComponent();
-            _Product = new ProductBusinessLogic();
-            _Suppliers = new SuppliersBusinessLogic();
-
             _dataComboBox = new string[] { };
             _trangThai = false;
             txtDiscount.Text = "0";
@@ -38,13 +38,12 @@ namespace GUI.US_
             LoaditemsComboBox();
             LoadData();
         }
-        private void UC_QL_Thuoc_Load(object sender, EventArgs e)
+        public void UC_QL_Thuoc_Load(object sender, EventArgs e)
         {
             Management.ScrollBarFlowLayoutPanel(flowLayoutPanelProducts, VScrollBar);
-            //Add(1);
         }
 
-        private void LoadData()
+        public  void LoadData()
         {
             flowLayoutPanelProducts.Controls.Clear();
             // Gọi phương thức GetAllProducts từ lớp BLL để lấy danh sách sản phẩm
@@ -110,7 +109,7 @@ namespace GUI.US_
                     float.Parse(txtDiscount.Text),  // Phần trăm giảm giá
                     0,                              // Số lượng
                     time,                           // Thời gian nhập sản phẩm
-                    null,                           // Đường dẫn ảnh
+                    Management.SaveImage(picAnh, txtProductName.Text),   // Đường dẫn ảnh
                     txtDescribe.Text,               // Mô tả sản phẩm
                     DateTime.Parse("10/10/2003"),   // Ngày sản xuất
                     DateTime.Parse("10/10/2003"),   // Ngày hết hạn
@@ -124,9 +123,6 @@ namespace GUI.US_
             else {
                 MessageBox.Show("Add thất bại");
             }
-
-
-
             // Sau khi thêm sản phẩm, cập nhật lại danh sách và hiển thị trên giao diện
             LoadData();
         }
@@ -233,24 +229,54 @@ namespace GUI.US_
             else
                 Management.ErrorHide(error);
         }
-        // 
-        public void AddThongTinSanPham(int IDProduct){
-            string filePath = @"E:\CodeC - TNTPharmacy\PR_QLPhacmarcy\Icon\087349.png";
-            _ID_Created = Management.GetIDAccount();
-            Products obj = _Product.GetObjectById(IDProduct);
-            Suppliers suppliers = _Suppliers.GetObjectById(obj.SupplierId);
 
-            ComboBoxSupplier.Text = suppliers.Name;
-            txtProductName.Text = obj.Name;
-            txtCost.Text = obj.Price + "";
-            txtDiscount.Text = obj.Discount + "";
-            txtProductionDate.Value = obj.ProductionDate;
-            txtExpiryDate.Value = obj.ExpiryDate;
-            txtDescribe.Text = obj.Description;
-            if(picAnh.ImageLocation == null)
-                picAnh.ImageLocation = filePath;
-            else
-                picAnh.ImageLocation = obj.Image;
+        // 
+
+       
+        public void AddThongTinSanPham( EventArgs e)
+        {
+            e = new EventArgs();
+            LoadData();
+            {
+                string filePath = @"E:\CodeC - TNTPharmacy\PR_QLPhacmarcy\Icon\087349.png";
+                Products obj = _Product.GetObjectById(Management.GetIDProduct());
+                Suppliers suppliers = _Suppliers.GetObjectById(obj.SupplierId);
+
+                ComboBoxSupplier.Text = suppliers.Name;
+                txtProductName.Text = obj.Name;
+                txtCost.Text = obj.Price + "";
+                txtDiscount.Text = obj.Discount + "";
+                txtProductionDate.Value = obj.ProductionDate;
+                txtExpiryDate.Value = obj.ExpiryDate;
+                txtDescribe.Text = obj.Description;
+
+                if (picAnh.ImageLocation == null)
+                    picAnh.ImageLocation = filePath;
+                else
+                    picAnh.ImageLocation = obj.Image;
+            } 
+        }
+
+        public static UC_QL_Thuoc Instance
+        {
+            get
+            {
+                // Kiểm tra xem thể hiện đã được tạo chưa
+                if (_instance == null)
+                {
+                    // Sử dụng khóa để đảm bảo chỉ có một luồng có thể tạo thể hiện
+                    lock (_lock)
+                    {
+                        // Kiểm tra lại sau khi có khóa để đảm bảo không tạo thêm thể hiện
+                        if (_instance == null)
+                        {
+                            _instance = new UC_QL_Thuoc();
+                        }
+                    }
+                }
+                return _instance;
+            }
         }
     }
+    
 }

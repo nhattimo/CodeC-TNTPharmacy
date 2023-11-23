@@ -1,6 +1,7 @@
 ﻿using BLL;
 using System;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace GUI.US_
@@ -13,7 +14,7 @@ namespace GUI.US_
         private float Price { get; set; }
         private float PriceDiscount { get; set; }
         private string NameProduct { get; set; }
-        private string Image { get; set; }
+        private string ImagesString { get; set; }
 
         public UC_ItemProduct()
         {
@@ -45,8 +46,9 @@ namespace GUI.US_
                 IconPercent.Visible = false;
             }
             NameProduct = nameProduct;
-            Image = image;  
+            ImagesString = image;  
         }
+        
         private void UserControl1_Load(object sender, EventArgs e)
         {
             //btnDetail.Visible = false;
@@ -54,7 +56,24 @@ namespace GUI.US_
             txtPrice.Text = Price + ".000";
             txtPriceDiscount.Text = PriceDiscount + ".000";
             txtNameProduct.Text = NameProduct;
-            PictureBoxProduct.ImageLocation = @"E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\Icon\thuoc-chua-benh-tri-tottri.jpg E:\CodeC - TNTPharmacy\PR_QLPhacmarcy\Icon\thuoc - chua - benh - tri - tottri.jpg";
+            if (File.Exists(ImagesString)) // Kiểm tra xem tệp hình ảnh có tồn tại hay không
+            {
+                try
+                {
+                    Image image = Image.FromFile(ImagesString); // Tạo đối tượng hình ảnh từ đường dẫn
+
+                    PictureBoxProduct.Image = image; // Gán hình ảnh cho PictureBox
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi khi tải hình ảnh: " + ex.Message, "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                /*MessageBox.Show("Tệp hình ảnh không tồn tại.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);*/
+            }
+
         }
         private void btnDetail_Click(object sender, EventArgs e)
         {
@@ -66,12 +85,11 @@ namespace GUI.US_
             // nếu là vai trò quản lý
             if(_objectBusinesLogiccs.GetRole(Management.GetIDAccount()) == 1)
             {
-                MessageBox.Show("Chọn sản phẩm với ID = " + ID + " với vai trò quản lý");
-                UC_QL_Thuoc item = new UC_QL_Thuoc();
-                item.AddThongTinSanPham(ID);
-                
+                Management.SetIDProduct(ID);
+                //MessageBox.Show("Chọn sản phẩm với ID = " + Management.GetIDProduct() + " với vai trò quản lý");
+                UC_QL_Thuoc.Instance.AddThongTinSanPham( e);
             }else
-                MessageBox.Show("Chọn sản phẩm với ID = " + ID + " với vai Khác");
+               MessageBox.Show("Chọn sản phẩm với ID = " + ID + " với vai Khác");
         }
         private void UserControl1_Click(object sender, EventArgs e)
         {
@@ -90,8 +108,5 @@ namespace GUI.US_
                 btnDetail.Visible = false;*/
         }
 
-       
-
-        
     }
 }
