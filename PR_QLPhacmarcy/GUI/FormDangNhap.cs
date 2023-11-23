@@ -70,7 +70,8 @@ namespace GUI
                     {
                         if (_Account.IsLoggin(txtTenTaiKhoan.Text, txtMatKhau.Text)) // kiểm tra tên tài khoản và mật khẩu
                         {
-                            LogginForm(txtTenTaiKhoan.Text);
+                            int IDTK = _Account.GetID(txtTenTaiKhoan.Text);
+                            Management.LogginForm(this, IDTK);
                         }
                         else
                             Management.Errorshow(errorPassword, "Mật khẩu không đúng");
@@ -173,6 +174,14 @@ namespace GUI
         private void guna2Button1_MouseUp(object sender, MouseEventArgs e)
         {
             txtMatKhau.PasswordChar = '*';
+        }
+
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormDieuKhienChucVu formDieuKhienChucVu = new FormDieuKhienChucVu();
+            formDieuKhienChucVu.ShowDialog();
+            this.Close();
         }
     }
 }

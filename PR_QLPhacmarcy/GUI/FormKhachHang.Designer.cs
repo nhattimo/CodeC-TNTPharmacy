@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormKhachHang));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnCart = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.btnSetting = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnMedicines = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnSetting = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2GradientTileButton7 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnSearch = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
@@ -86,6 +86,28 @@
             this.btnCart.Text = "Giỏ hàng";
             this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
             // 
+            // btnSetting
+            // 
+            this.btnSetting.BackColor = System.Drawing.Color.Transparent;
+            this.btnSetting.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSetting.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSetting.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSetting.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSetting.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSetting.FillColor = System.Drawing.Color.Transparent;
+            this.btnSetting.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnSetting.FocusedColor = System.Drawing.Color.IndianRed;
+            this.btnSetting.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnSetting.ForeColor = System.Drawing.Color.Black;
+            this.btnSetting.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
+            this.btnSetting.ImageSize = new System.Drawing.Size(60, 60);
+            this.btnSetting.Location = new System.Drawing.Point(20, 963);
+            this.btnSetting.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSetting.Name = "btnSetting";
+            this.btnSetting.Size = new System.Drawing.Size(61, 53);
+            this.btnSetting.TabIndex = 11;
+            // 
             // btnMedicines
             // 
             this.btnMedicines.BackColor = System.Drawing.Color.Transparent;
@@ -124,6 +146,7 @@
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(44, 37);
             this.guna2ControlBox1.TabIndex = 1;
+            this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
             // 
             // guna2ControlBox2
             // 
@@ -194,28 +217,6 @@
             this.guna2GradientButton3.Size = new System.Drawing.Size(271, 68);
             this.guna2GradientButton3.TabIndex = 12;
             this.guna2GradientButton3.Text = "Nguyễn Văn A";
-            // 
-            // btnSetting
-            // 
-            this.btnSetting.BackColor = System.Drawing.Color.Transparent;
-            this.btnSetting.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSetting.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSetting.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSetting.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSetting.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSetting.FillColor = System.Drawing.Color.Transparent;
-            this.btnSetting.FillColor2 = System.Drawing.Color.Transparent;
-            this.btnSetting.FocusedColor = System.Drawing.Color.IndianRed;
-            this.btnSetting.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnSetting.ForeColor = System.Drawing.Color.Black;
-            this.btnSetting.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
-            this.btnSetting.ImageSize = new System.Drawing.Size(60, 60);
-            this.btnSetting.Location = new System.Drawing.Point(20, 963);
-            this.btnSetting.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Size = new System.Drawing.Size(61, 53);
-            this.btnSetting.TabIndex = 11;
             // 
             // guna2GradientTileButton7
             // 
@@ -293,6 +294,7 @@
             // uC_KH_Cart1
             // 
             this.uC_KH_Cart1.Location = new System.Drawing.Point(127, 158);
+            this.uC_KH_Cart1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uC_KH_Cart1.Name = "uC_KH_Cart1";
             this.uC_KH_Cart1.Size = new System.Drawing.Size(1765, 895);
             this.uC_KH_Cart1.TabIndex = 8;

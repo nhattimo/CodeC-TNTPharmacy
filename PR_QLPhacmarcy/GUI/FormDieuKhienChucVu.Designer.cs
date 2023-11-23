@@ -79,6 +79,7 @@
             this.guna2ControlBox1.Size = new System.Drawing.Size(44, 37);
             this.guna2ControlBox1.TabIndex = 12;
             this.guna2ControlBox1.UseWaitCursor = true;
+            this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
             // 
             // btnCustomer
             // 

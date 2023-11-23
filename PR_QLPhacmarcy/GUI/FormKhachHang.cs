@@ -52,5 +52,11 @@ namespace GUI
             UCManagement(uC_KH_Cart1);
             BtnTasbalClickManagement(btnCart);
         }
+
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+            Management.SetIDAccount(0);
+            Application.Exit();
+        }
     }
 }

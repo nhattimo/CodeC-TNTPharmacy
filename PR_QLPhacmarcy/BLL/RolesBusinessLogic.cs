@@ -11,13 +11,11 @@ namespace BLL
     public class RolesBusinessLogic
     {
         // Sử dụng để tương tác với DAL (DataAccess)
-        private readonly RolesDataAccess _objectDataAccess;
+        private readonly RolesDataAccess _objectDataAccess = new RolesDataAccess();
 
-        public RolesBusinessLogic(RolesDataAccess productDataAccess)
-        {
-            _objectDataAccess = productDataAccess;
+        public RolesBusinessLogic()
+        {  
         }
-
         public void Add(Roles obj)
         {
             // Kiểm tra logic trước khi thêm sản phẩm

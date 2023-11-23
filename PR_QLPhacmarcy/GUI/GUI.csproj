@@ -150,6 +150,12 @@
     <Compile Include="US_\UC_NVBH_Order.Designer.cs">
       <DependentUpon>UC_NVBH_Order.cs</DependentUpon>
     </Compile>
+    <Compile Include="US_\UC_QL_Info.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="US_\UC_QL_Info.Designer.cs">
+      <DependentUpon>UC_QL_Info.cs</DependentUpon>
+    </Compile>
     <Compile Include="US_\UC_QL_KhachHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -308,6 +314,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="US_\UC_NVBH_Order.resx">
       <DependentUpon>UC_NVBH_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US_\UC_QL_Info.resx">
+      <DependentUpon>UC_QL_Info.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="US_\UC_QL_KhachHang.resx">
       <DependentUpon>UC_QL_KhachHang.cs</DependentUpon>

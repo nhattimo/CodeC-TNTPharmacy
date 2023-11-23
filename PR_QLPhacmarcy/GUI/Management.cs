@@ -1,11 +1,15 @@
-﻿using GUI.US_;
+﻿using BLL;
+using DTO;
+using GUI.US_;
 using Guna.UI2.WinForms;
 using Guna.UI2.WinForms.Helpers;
 using System;
 using System.Drawing;
 using System.IO;
 using System.Net.Mail;
+using System.Security.Principal;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using Image = System.Drawing.Image;
 
 
@@ -14,14 +18,20 @@ namespace GUI
 {
     public static class Management
     {
+        private static readonly EmployeesBusinessLogic _Employee = new EmployeesBusinessLogic();
+        private static readonly RolesBusinessLogic _Role = new RolesBusinessLogic();
+        private static readonly AccountBusinesLogiccs _Account = new AccountBusinesLogiccs();
 
-        // chuyển màu Backcolor una2GradientTileButton
+
+        // 1 số điều khiể giao diện
+        public static void ScrollBarFlowLayoutPanel(FlowLayoutPanel flowLayoutPanel, Guna2VScrollBar vScrollBar)
+        {
+            PanelScrollHelper panelScrollHelper = new PanelScrollHelper(flowLayoutPanel, vScrollBar);
+        }
         public static void BtnColerClick(Guna2GradientTileButton btn, Color colorBtn)
         {
             btn.BackColor = colorBtn;
         }
-
-        // Trả array btn.BackColor về màu trong suốt
         public static void BtnRefreshColerTransparentClick(Guna2GradientTileButton[] btnArray, Color colorBtnArray)
         {
             foreach (var item in btnArray)
@@ -29,8 +39,6 @@ namespace GUI
                 item.BackColor = colorBtnArray;
             }
         }
-
-        // 
         public static void BtnTasbalClick(Guna2GradientTileButton[] btnArray, Color colorbtnArray, Guna2GradientTileButton btn, Color colorBtn)
         {
 
@@ -40,17 +48,10 @@ namespace GUI
             // chuyển màu Backcolor
             BtnColerClick(btn,colorBtn);
         }
-
-
-        
-        
-        // chuyển màu Backcolor Guna2GradientButton
         public static void BtnColerClick(Guna2GradientButton btn, Color colorBtn)
         {
             btn.BackColor = colorBtn;
         }
-
-        // Trả array btn.BackColor về màu trong suốt
         public static void BtnRefreshColerTransparentClick(Guna2GradientButton[] btnArray, Color colorBtnArray)
         {
             foreach (var item in btnArray)
@@ -58,7 +59,6 @@ namespace GUI
                 item.BackColor = colorBtnArray;
             }
         }
-        //
         public static void BtnTasbalClick(Guna2GradientButton[] btnArray, Color colorbtnArray, Guna2GradientButton btn, Color colorBtn)
         {
 
@@ -69,8 +69,6 @@ namespace GUI
             BtnColerClick(btn, colorBtn);
         }
 
-        
-        
         // UC
         public static void UCArrayVisible(System.Windows.Forms.UserControl[] uCArrray, System.Windows.Forms.UserControl uC)
         {
@@ -82,7 +80,6 @@ namespace GUI
                     item.Visible = false;
             }
         }
-
         public static void AddItemsUC(FlowLayoutPanel flowLayoutPanel, System.Windows.Forms.UserControl[] uC)
         {
             foreach (var item in uC)
@@ -91,8 +88,7 @@ namespace GUI
             }
         }
 
-       
-
+        // Error
         public static void ErrorHide(System.Windows.Forms.Label[] txt)
         {
             foreach (var item in txt)
@@ -112,6 +108,8 @@ namespace GUI
             txt.Show();
             
         }
+
+        // Is null
         public static bool ISNull(Guna2TextBox txt)
         {
             if(string.IsNullOrEmpty(txt.Text))
@@ -151,7 +149,14 @@ namespace GUI
             }
             return true;
         }
-
+        public static bool ExistImg(PictureBox pictureBox)
+        {
+            if (pictureBox.ImageLocation == null)
+                return false;
+            return true;
+        }
+       
+        // Set
         public static void SetImage(PictureBox pictureBox, object sender)
         {
             OpenFileDialog open = new OpenFileDialog();
@@ -166,6 +171,33 @@ namespace GUI
                 if (open.ShowDialog() == DialogResult.OK)
                 {
                     p.Image = Image.FromFile(open.FileName);
+                }
+            }
+        }
+        public static void SetIDAccount(int maTK)
+        {
+            string filePath = "data";
+
+            if (!File.Exists(filePath))
+            {
+                using (FileStream fs = new FileStream(filePath, FileMode.Create, FileAccess.ReadWrite))
+                {
+                    using (BinaryWriter bw = new BinaryWriter(fs))
+                    {
+                        bw.Write(maTK);
+                        bw.Flush();
+                    }
+                }
+            }
+            else
+            {
+                using (FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.ReadWrite))
+                {
+                    using (BinaryWriter bw = new BinaryWriter(fs))
+                    {
+                        bw.Write(maTK);
+                        bw.Flush();
+                    }
                 }
             }
         }
@@ -198,40 +230,120 @@ namespace GUI
             }
             
         }
-        public static bool ExistImg(PictureBox pictureBox)
-        {
-            if (pictureBox.Image == null)
-                return false;
-            return true;
-        }
-
-        public static void SetIDAccount(int maTK)
-        {
-            using (FileStream fs = new FileStream("data", FileMode.Create, FileAccess.ReadWrite))
-            {
-
-            }
-            using (FileStream fs = new FileStream("data", FileMode.Truncate, FileAccess.ReadWrite))
-            {
-                BinaryWriter bw = new BinaryWriter(fs);
-                bw.Write(maTK);
-                bw.Flush();
-            }
-        }
+  
+        // Get
         public static int GetIDAccount()
         {
             int a = 0;
-            using (FileStream fs = new FileStream("data", FileMode.Open, FileAccess.Read))
+            string filePath = "data";
+
+            if (File.Exists(filePath))
             {
-                BinaryReader br = new BinaryReader(fs);
-                a = br.ReadInt32();
+                using (FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+                {
+                    using (BinaryReader br = new BinaryReader(fs))
+                    {
+                        a = br.ReadInt32();
+                    }
+                }
             }
+            else
+            {
+                a = 1;
+            }
+
             return a;
         }
-
-        public static void ScrollBarFlowLayoutPanel(FlowLayoutPanel flowLayoutPanel, Guna2VScrollBar vScrollBar)
+        public static string GetName()
         {
-            PanelScrollHelper panelScrollHelper = new PanelScrollHelper(flowLayoutPanel, vScrollBar);
+
+            Employees obj = _Employee.GetObjectById(GetIDAccount());
+            return obj.Name;
         }
+        // Load
+        public static void LoadInfoEmployee(PictureBox Image, Label txtName, Label txtDateOfBirth, Label txtSex,Label txtPhone, Label txtEmail, Label txtAddress,Label txtCCCD, Label txtStartedDay, Label txtRole)
+        {
+            Employees obj = _Employee.GetObjectById(Management.GetIDAccount());
+            txtName.Text = obj.Name;
+            txtDateOfBirth.Text = obj.DateOfBirth + "";
+            txtSex.Text = obj.Sex;
+            txtPhone.Text = obj.Phone;
+            txtEmail.Text = obj.Email;
+            txtAddress.Text = obj.Address;
+            txtCCCD.Text = obj.CCCD;
+            txtStartedDay.Text = obj.StartedDay + "";
+            Roles rl = _Role.GetObjectById(Management.GetIDAccount());
+            txtRole.Text = rl.Name;
+            Image.ImageLocation = obj.Image;
+
+        }
+        public static void LogginForm(Form form, int IDTK)
+        {
+           
+            switch (_Account.GetRole(IDTK)) // Lấy ID Role
+            {
+                // Quản Lý
+                case 1:
+                    form.Hide();
+                    SetIDAccount(IDTK);
+                    FormQuanLy formQuanLy = new FormQuanLy();
+                    formQuanLy.ShowDialog();
+                    form.Close();
+                    break;
+
+                // Nhân Viên Bán Hàng
+                case 2:
+                    form.Hide();
+                    SetIDAccount(IDTK);
+                    FormNhanVienBanHang formNhanVienBanHang = new FormNhanVienBanHang();
+                    formNhanVienBanHang.ShowDialog();
+                    form.Close();
+                    break;
+
+                // Nhân Viên Thủ Kho
+                case 3:
+                    form.Hide();
+                    SetIDAccount(IDTK);
+                    FormThuKho formThuKho = new FormThuKho();
+                    formThuKho.ShowDialog();
+                    form.Close();
+                    break;
+                // Nhân Viên Kế Toán
+
+                case 4:
+                    form.Hide();
+                    SetIDAccount(IDTK);
+                    form.Close();
+                    break;
+
+                // Khách hàng
+                case 5:
+                    form.Hide();
+                    SetIDAccount(IDTK);
+                    FormKhachHang formKhachHang = new FormKhachHang();
+                    formKhachHang.ShowDialog();
+                    form.Close();
+                    break;
+
+                default:
+
+                    break;
+            }
+        }
+        public static void LogOut(Form form)
+        {
+            SetIDAccount(0);
+            form.Hide();
+            FormDieuKhienChucVu formDieuKhienChucVu = new FormDieuKhienChucVu();
+            formDieuKhienChucVu.ShowDialog();
+            form.Close();
+        }
+
+        
+        
+        
+        
+        
     }
+
 }

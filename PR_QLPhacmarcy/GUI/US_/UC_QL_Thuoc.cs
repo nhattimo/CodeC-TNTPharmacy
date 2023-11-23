@@ -31,7 +31,7 @@ namespace GUI.US_
             _trangThai = false;
             txtDiscount.Text = "0";
             // Add những txt lỗi vào mảng và dùng hàm ẩn đi
-            _laberError = new Label[] { errorProductName, errorSupplier, errorCost, errorDiscount, errorDescribe, errorProductionDate, errorExpiryDate };
+            _laberError = new Label[] { errorProductName, errorSupplier, errorCost, errorDiscount, errorDescribe, errorProductionDate, errorExpiryDate, errorPic };
             Management.ErrorHide(_laberError);
 
             // Load dữ liệu từ cơ sở dữ liệu và hiển thị trên giao diện

@@ -10,12 +10,11 @@ namespace DAL
     public class RolesDataAccess
     {
         // Sử dụng để tương tác với cơ sở dữ liệu
-        private readonly AppPharmacyContext _db;
+        private readonly AppPharmacyContext _db =  new AppPharmacyContext();
 
         // Phương thức tạo (constructor)
-        public RolesDataAccess(AppPharmacyContext context)
+        public RolesDataAccess()
         {
-            _db = context;
         }
 
         public void InsertDataAccess(Roles obj)
