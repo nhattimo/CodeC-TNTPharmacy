@@ -108,17 +108,29 @@
     <Compile Include="UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\FormThuKho.cs">
+    <Compile Include="FormThuKho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="US_\FormThuKho.Designer.cs">
+    <Compile Include="FormThuKho.Designer.cs">
       <DependentUpon>FormThuKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLuaChonCuaKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLuaChonCuaKhachHang.Designer.cs">
+      <DependentUpon>FormLuaChonCuaKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="US_\UC_Bill.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="US_\UC_Bill.Designer.cs">
       <DependentUpon>UC_Bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US_\UC_Info_Customer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="US_\UC_Info_Customer.Designer.cs">
+      <DependentUpon>UC_Info_Customer.cs</DependentUpon>
     </Compile>
     <Compile Include="US_\UC_KH_Cart.cs">
       <SubType>UserControl</SubType>
@@ -264,6 +276,12 @@
     <Compile Include="US_\UserControl7.Designer.cs">
       <DependentUpon>UserControl7.cs</DependentUpon>
     </Compile>
+    <Compile Include="US_\US_UC_\UC_QL_Thuoc_CRUDcs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="US_\US_UC_\UC_QL_Thuoc_CRUDcs.Designer.cs">
+      <DependentUpon>UC_QL_Thuoc_CRUDcs.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormDangKy.resx">
       <DependentUpon>FormDangKy.cs</DependentUpon>
     </EmbeddedResource>
@@ -294,11 +312,17 @@
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\FormThuKho.resx">
+    <EmbeddedResource Include="FormThuKho.resx">
       <DependentUpon>FormThuKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLuaChonCuaKhachHang.resx">
+      <DependentUpon>FormLuaChonCuaKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="US_\UC_Bill.resx">
       <DependentUpon>UC_Bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US_\UC_Info_Customer.resx">
+      <DependentUpon>UC_Info_Customer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="US_\UC_KH_Cart.resx">
       <DependentUpon>UC_KH_Cart.cs</DependentUpon>
@@ -371,6 +395,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="US_\UserControl7.resx">
       <DependentUpon>UserControl7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US_\US_UC_\UC_QL_Thuoc_CRUDcs.resx">
+      <DependentUpon>UC_QL_Thuoc_CRUDcs.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

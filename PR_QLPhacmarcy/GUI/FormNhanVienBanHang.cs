@@ -35,7 +35,7 @@ namespace GUI
 
         void UCManagement(UserControl uC)
         {
-            controlArray = new UserControl[] {uC_NVBH_CuaHang1,uC_NVBH_Order1 };
+            controlArray = new UserControl[] {uC_NVBH_CuaHang1,uC_NVBH_Order1,uC_Info_Employee1 };
             Management.UCArrayVisible(controlArray, uC);
         }
         void BtnTasbalClickManagement(Guna2GradientTileButton btn)
@@ -43,6 +43,7 @@ namespace GUI
             btnArray = new Guna2GradientTileButton[] { btnTasbalShop, btnTasbalOrder, btnTasbalCustomer };
             Management.BtnTasbalClick(btnArray, Color.Transparent, btn, Color.DarkGray);
             btn.BringToFront();
+            btnLogOut.Visible = false;
 
         }
 
@@ -58,6 +59,17 @@ namespace GUI
         {
             UCManagement(uC_NVBH_Order1);
             BtnTasbalClickManagement(btnTasbalOrder);
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            Management.LogOut(this);
+        }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            btnLogOut.Visible = true;
+            UCManagement(uC_Info_Employee1);
         }
     }
 }

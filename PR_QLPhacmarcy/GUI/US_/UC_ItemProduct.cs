@@ -1,4 +1,5 @@
 ﻿using BLL;
+using GUI.US_.US_UC_;
 using System;
 using System.Drawing;
 using System.IO;
@@ -9,7 +10,6 @@ namespace GUI.US_
     public partial class UC_ItemProduct : UserControl
     {
         public readonly AccountBusinesLogiccs _objectBusinesLogiccs = new AccountBusinesLogiccs();
-
         private int ID {  get; set; }
         private float Price { get; set; }
         private float PriceDiscount { get; set; }
@@ -48,7 +48,7 @@ namespace GUI.US_
             NameProduct = nameProduct;
             ImagesString = image;  
         }
-        
+
         private void UserControl1_Load(object sender, EventArgs e)
         {
             //btnDetail.Visible = false;
@@ -78,18 +78,24 @@ namespace GUI.US_
         private void btnDetail_Click(object sender, EventArgs e)
         {
             MessageBox.Show("ID: " + ID);
+            UC_QL_Thuoc a = new UC_QL_Thuoc();
+            UC_QL_Thuoc.Instance.AddInfoProduct();
+           
         }
 
         private void PictureBoxProduct_Click(object sender, EventArgs e)
         {
-            // nếu là vai trò quản lý
-            if(_objectBusinesLogiccs.GetRole(Management.GetIDAccount()) == 1)
+            // Nếu là vai trò quản lý
+            if (_objectBusinesLogiccs.GetRole(Management.GetIDAccount()) == 1)
             {
                 Management.SetIDProduct(ID);
-                //MessageBox.Show("Chọn sản phẩm với ID = " + Management.GetIDProduct() + " với vai trò quản lý");
-                UC_QL_Thuoc.Instance.AddThongTinSanPham( e);
-            }else
-               MessageBox.Show("Chọn sản phẩm với ID = " + ID + " với vai Khác");
+                MessageBox.Show("Chon anh voi " + ID);
+                UC_QL_Thuoc.Instance.AddInfoProduct();
+            }
+            else
+            {
+                MessageBox.Show("Chọn sản phẩm với ID = " + ID + " với vai Khác");
+            }
         }
         private void UserControl1_Click(object sender, EventArgs e)
         {
@@ -108,5 +114,13 @@ namespace GUI.US_
                 btnDetail.Visible = false;*/
         }
 
+        private void PictureBoxProduct_MouseClick(object sender, MouseEventArgs e)
+        {
+        }
+
+        public void aaa()
+        {
+
+        }
     }
 }

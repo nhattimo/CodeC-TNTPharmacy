@@ -15,6 +15,7 @@ namespace BLL
 
         public UsersBusinessLogic()
         {
+
         }
 
         public void Add(Users obj)

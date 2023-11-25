@@ -155,7 +155,7 @@ namespace GUI
                 // Khách hàng
                 case 5:
                     Management.SetIDAccount(IDTK);
-                    FormKhachHang formKhachHang = new FormKhachHang();
+                    FormKhachHang formKhachHang = new FormKhachHang(true);
                     formKhachHang.ShowDialog();
                     this.Hide();
                     break;

@@ -37,12 +37,13 @@
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnInfo = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientTileButton7 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnSearch = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.uC_KH_Thuoc1 = new GUI.US_.UC_KH_Thuoc();
             this.uC_KH_Cart1 = new GUI.US_.UC_KH_Cart();
+            this.uC_KH_Thuoc1 = new GUI.US_.UC_KH_Thuoc();
+            this.btnLogOut = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2Panel1.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -59,7 +60,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(101, 1080);
+            this.guna2Panel1.Size = new System.Drawing.Size(101, 1081);
             this.guna2Panel1.TabIndex = 0;
             // 
             // btnCart
@@ -102,7 +103,7 @@
             this.btnSetting.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
             this.btnSetting.ImageSize = new System.Drawing.Size(60, 60);
-            this.btnSetting.Location = new System.Drawing.Point(20, 963);
+            this.btnSetting.Location = new System.Drawing.Point(20, 962);
             this.btnSetting.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSetting.Name = "btnSetting";
             this.btnSetting.Size = new System.Drawing.Size(61, 53);
@@ -172,7 +173,7 @@
             this.guna2ControlBox3.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.guna2ControlBox3.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(1814, 0);
+            this.guna2ControlBox3.Location = new System.Drawing.Point(1813, 0);
             this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.Size = new System.Drawing.Size(44, 37);
@@ -181,7 +182,7 @@
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel1.Controls.Add(this.guna2GradientButton3);
+            this.guna2ShadowPanel1.Controls.Add(this.btnInfo);
             this.guna2ShadowPanel1.Controls.Add(this.guna2GradientTileButton7);
             this.guna2ShadowPanel1.Controls.Add(this.btnSearch);
             this.guna2ShadowPanel1.Controls.Add(this.txtSearch);
@@ -195,28 +196,29 @@
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(1765, 97);
             this.guna2ShadowPanel1.TabIndex = 4;
             // 
-            // guna2GradientButton3
+            // btnInfo
             // 
-            this.guna2GradientButton3.BorderColor = System.Drawing.Color.BurlyWood;
-            this.guna2GradientButton3.BorderRadius = 10;
-            this.guna2GradientButton3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton3.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.guna2GradientButton3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.guna2GradientButton3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2GradientButton3.ForeColor = System.Drawing.Color.Black;
-            this.guna2GradientButton3.Image = ((System.Drawing.Image)(resources.GetObject("guna2GradientButton3.Image")));
-            this.guna2GradientButton3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2GradientButton3.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2GradientButton3.Location = new System.Drawing.Point(1481, 14);
-            this.guna2GradientButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2GradientButton3.Name = "guna2GradientButton3";
-            this.guna2GradientButton3.Size = new System.Drawing.Size(271, 68);
-            this.guna2GradientButton3.TabIndex = 12;
-            this.guna2GradientButton3.Text = "Nguyễn Văn A";
+            this.btnInfo.BorderColor = System.Drawing.Color.BurlyWood;
+            this.btnInfo.BorderRadius = 10;
+            this.btnInfo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnInfo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnInfo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnInfo.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnInfo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnInfo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnInfo.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnInfo.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnInfo.ForeColor = System.Drawing.Color.Black;
+            this.btnInfo.Image = ((System.Drawing.Image)(resources.GetObject("btnInfo.Image")));
+            this.btnInfo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnInfo.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnInfo.Location = new System.Drawing.Point(1481, 14);
+            this.btnInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(271, 68);
+            this.btnInfo.TabIndex = 12;
+            this.btnInfo.Text = "Nguyễn Văn A";
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
             // 
             // guna2GradientTileButton7
             // 
@@ -283,14 +285,6 @@
             this.txtSearch.Size = new System.Drawing.Size(477, 53);
             this.txtSearch.TabIndex = 0;
             // 
-            // uC_KH_Thuoc1
-            // 
-            this.uC_KH_Thuoc1.Location = new System.Drawing.Point(127, 158);
-            this.uC_KH_Thuoc1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.uC_KH_Thuoc1.Name = "uC_KH_Thuoc1";
-            this.uC_KH_Thuoc1.Size = new System.Drawing.Size(1765, 895);
-            this.uC_KH_Thuoc1.TabIndex = 7;
-            // 
             // uC_KH_Cart1
             // 
             this.uC_KH_Cart1.Location = new System.Drawing.Point(127, 158);
@@ -299,11 +293,48 @@
             this.uC_KH_Cart1.Size = new System.Drawing.Size(1765, 895);
             this.uC_KH_Cart1.TabIndex = 8;
             // 
+            // uC_KH_Thuoc1
+            // 
+            this.uC_KH_Thuoc1.Location = new System.Drawing.Point(127, 158);
+            this.uC_KH_Thuoc1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.uC_KH_Thuoc1.Name = "uC_KH_Thuoc1";
+            this.uC_KH_Thuoc1.Size = new System.Drawing.Size(1765, 895);
+            this.uC_KH_Thuoc1.TabIndex = 7;
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogOut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLogOut.BorderRadius = 20;
+            this.btnLogOut.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.btnLogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogOut.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogOut.FillColor = System.Drawing.Color.Red;
+            this.btnLogOut.FillColor2 = System.Drawing.Color.Red;
+            this.btnLogOut.FocusedColor = System.Drawing.Color.IndianRed;
+            this.btnLogOut.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnLogOut.ForeColor = System.Drawing.Color.Black;
+            this.btnLogOut.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
+            this.btnLogOut.ImageSize = new System.Drawing.Size(45, 45);
+            this.btnLogOut.Location = new System.Drawing.Point(1669, 882);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(171, 146);
+            this.btnLogOut.TabIndex = 13;
+            this.btnLogOut.Text = "Đăng xuất";
+            this.btnLogOut.UseWaitCursor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
             // FormKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1920, 1081);
+            this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.uC_KH_Cart1);
             this.Controls.Add(this.uC_KH_Thuoc1);
             this.Controls.Add(this.guna2ShadowPanel1);
@@ -338,8 +369,9 @@
         private Guna.UI2.WinForms.Guna2GradientTileButton btnSearch;
         private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton7;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnSetting;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton3;
+        private Guna.UI2.WinForms.Guna2GradientButton btnInfo;
         private US_.UC_KH_Thuoc uC_KH_Thuoc1;
         private US_.UC_KH_Cart uC_KH_Cart1;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btnLogOut;
     }
 }

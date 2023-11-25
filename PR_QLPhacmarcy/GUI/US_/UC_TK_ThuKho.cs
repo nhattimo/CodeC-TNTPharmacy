@@ -7,7 +7,7 @@ namespace GUI.US_
     public partial class UC_TK_ThuKho : UserControl
     {
         //  sử dụng để tương tác với BLL (BusinessLogic)
-        private readonly ProductBusinessLogic _objectBusinessLogic;
+        private readonly ProductBusinessLogic _objectBusinessLogic = new ProductBusinessLogic();
         public UC_TK_ThuKho()
         {
             InitializeComponent();

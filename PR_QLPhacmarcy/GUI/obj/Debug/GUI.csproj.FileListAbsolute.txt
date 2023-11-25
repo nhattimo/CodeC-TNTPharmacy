@@ -74,7 +74,6 @@ E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_QL_KhachHang.resour
 E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_QL_NguonCung.resources
 E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_QL_NhanVIen.resources
 E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_QL_ThongKe.resources
-E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_QL_Thuoc.resources
 E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_QL_TK_BanChay.resources
 E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_QL_TK_DoanhSo.resources
 E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_QL_TK_DoanhThu.resources
@@ -99,3 +98,7 @@ E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\bin\Debug\DAL.dll
 E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\bin\Debug\DAL.pdb
 E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\bin\Debug\DAL.dll.config
 E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_Info_Employee.resources
+E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_QL_Thuoc.resources
+E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.US_UC_.UC_QL_Thuoc_CRUDcs.resources
+E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_Info_Customer.resources
+E:\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.FormLuaChonCuaKhachHang.resources

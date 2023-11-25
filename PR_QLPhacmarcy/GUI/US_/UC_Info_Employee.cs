@@ -1,12 +1,9 @@
-﻿using BLL;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace GUI.US_
 {
     public partial class UC_Info_Employee : UserControl
     {
-        private readonly EmployeesBusinessLogic _Employee = new EmployeesBusinessLogic();
-        private readonly RolesBusinessLogic _Role = new RolesBusinessLogic();
         public UC_Info_Employee()
         {
             InitializeComponent();

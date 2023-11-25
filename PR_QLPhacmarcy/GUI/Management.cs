@@ -19,6 +19,7 @@ namespace GUI
         private static readonly EmployeesBusinessLogic _Employee = new EmployeesBusinessLogic();
         private static readonly RolesBusinessLogic _Role = new RolesBusinessLogic();
         private static readonly AccountBusinesLogiccs _Account = new AccountBusinesLogiccs();
+        private static readonly UsersBusinessLogic _User = new UsersBusinessLogic();
 
         private static int IDProduct;
 
@@ -44,9 +45,9 @@ namespace GUI
 
             // Trả array btn.BackColor về màu trong suốt
             BtnRefreshColerTransparentClick(btnArray, colorbtnArray);
-            
+
             // chuyển màu Backcolor
-            BtnColerClick(btn,colorBtn);
+            BtnColerClick(btn, colorBtn);
         }
         public static void BtnColerClick(Guna2GradientButton btn, Color colorBtn)
         {
@@ -70,17 +71,17 @@ namespace GUI
         }
 
         // UC
-        public static void UCArrayVisible(System.Windows.Forms.UserControl[] uCArrray, System.Windows.Forms.UserControl uC)
+        public static void UCArrayVisible(UserControl[] uCArrray, UserControl uC)
         {
             uC.Visible = true;
-            
+
             foreach (var item in uCArrray)
             {
-                if(item != uC) 
+                if (item != uC)
                     item.Visible = false;
             }
         }
-        public static void AddItemsUC(FlowLayoutPanel flowLayoutPanel, System.Windows.Forms.UserControl[] uC)
+        public static void AddItemsUC(FlowLayoutPanel flowLayoutPanel, UserControl[] uC)
         {
             foreach (var item in uC)
             {
@@ -89,7 +90,7 @@ namespace GUI
         }
 
         // Error
-        public static void ErrorHide(System.Windows.Forms.Label[] txt)
+        public static void ErrorHide(Label[] txt)
         {
             foreach (var item in txt)
             {
@@ -97,22 +98,22 @@ namespace GUI
                 item.Hide();
             }
         }
-        public static void ErrorHide(System.Windows.Forms.Label txt)
+        public static void ErrorHide(Label txt)
         {
-            txt.Hide(); 
+            txt.Hide();
         }
-        public static void Errorshow(System.Windows.Forms.Label txt, string content)
+        public static void Errorshow(Label txt, string content)
         {
 
             txt.Text = content;
             txt.Show();
-            
+
         }
 
         // Is null
         public static bool ISNull(Guna2TextBox txt)
         {
-            if(string.IsNullOrEmpty(txt.Text))
+            if (string.IsNullOrEmpty(txt.Text))
                 return true;
             return false;
         }
@@ -124,7 +125,7 @@ namespace GUI
         }
         public static bool ISTime(Guna2DateTimePicker time)
         {
-            if(string.IsNullOrEmpty(time.Text))
+            if (string.IsNullOrEmpty(time.Text))
                 return true;
             return false;
         }
@@ -155,7 +156,7 @@ namespace GUI
                 return false;
             return true;
         }
-       
+
         // Set
         public static void SetImage(PictureBox pictureBox, object sender)
         {
@@ -233,6 +234,7 @@ namespace GUI
         {
             IDProduct = idProduct;
         }
+        
         // Get
         public static int GetIDAccount()
         {
@@ -249,27 +251,27 @@ namespace GUI
                     }
                 }
             }
-            else
-            {
-                a = 1;
-            }
-
             return a;
         }
-        public static string GetName()
+        public static string GetNameEmployeesAccount()
         {
-
             Employees obj = _Employee.GetObjectById(GetIDAccount());
+            return obj.Name;
+        }
+        public static string GetNameCustomerAccount()
+        {
+            Users obj = _User.GetObjectById(GetIDAccount());
             return obj.Name;
         }
         public static int GetIDProduct()
         {
             return IDProduct;
         }
+        
         // Load
-        public static void LoadInfoEmployee(PictureBox Image, Label txtName, Label txtDateOfBirth, Label txtSex,Label txtPhone, Label txtEmail, Label txtAddress,Label txtCCCD, Label txtStartedDay, Label txtRole)
+        public static void LoadInfoEmployee(PictureBox Image, Label txtName, Label txtDateOfBirth, Label txtSex, Label txtPhone, Label txtEmail, Label txtAddress, Label txtCCCD, Label txtStartedDay, Label txtRole)
         {
-            Employees obj = _Employee.GetObjectById(Management.GetIDAccount());
+            Employees obj = _Employee.GetObjectById(GetIDAccount());
             txtName.Text = obj.Name;
             txtDateOfBirth.Text = obj.DateOfBirth + "";
             txtSex.Text = obj.Sex;
@@ -278,14 +280,33 @@ namespace GUI
             txtAddress.Text = obj.Address;
             txtCCCD.Text = obj.CCCD;
             txtStartedDay.Text = obj.StartedDay + "";
-            Roles rl = _Role.GetObjectById(Management.GetIDAccount());
+            Roles rl = _Role.GetObjectById(GetIDAccount());
             txtRole.Text = rl.Name;
             Image.ImageLocation = obj.Image;
 
         }
+        public static void LoadInfoCustomer(PictureBox Image, Label txtName, Label txtSex, Label txtPhone, Label txtEmail, Label txtAddress)
+        {
+            if (ISCustomer())
+            {
+                Users obj = _User.GetObjectById(GetIDAccount());
+                txtName.Text = obj.Name;
+                txtSex.Text = obj.Sex;
+                txtPhone.Text = obj.Phone;
+                txtEmail.Text = obj.Email;
+                txtAddress.Text = obj.Address;
+                Image.ImageLocation = obj.Image;
+                MessageBox.Show("Đã có tài khoản");
+            }
+            else
+            {
+                MessageBox.Show("Chưa đăng nhập");
+            }
+            
+        }
         public static void LogginForm(Form form, int IDTK)
         {
-           
+
             switch (_Account.GetRole(IDTK)) // Lấy ID Role
             {
                 // Quản Lý
@@ -326,7 +347,7 @@ namespace GUI
                 case 5:
                     form.Hide();
                     SetIDAccount(IDTK);
-                    FormKhachHang formKhachHang = new FormKhachHang();
+                    FormKhachHang formKhachHang = new FormKhachHang(true);
                     formKhachHang.ShowDialog();
                     form.Close();
                     break;
@@ -344,12 +365,11 @@ namespace GUI
             formDieuKhienChucVu.ShowDialog();
             form.Close();
         }
-
-        
-        
-        
-        
-        
+        public static bool ISCustomer()
+        {
+            if(GetIDAccount() == 0 || _User.GetObjectById(GetIDAccount()) == null)
+                return false;
+            return true;
+        }
     }
-
 }

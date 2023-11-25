@@ -4,7 +4,6 @@ using System.Windows.Forms;
 using DTO;
 using System.Collections.Generic;
 using Guna.UI2.WinForms;
-using System.Runtime.Remoting.Channels;
 
 namespace GUI.US_
 {
@@ -23,13 +22,14 @@ namespace GUI.US_
         bool _trangThai;
         int _ID_Suppliers; // ID nhà cung cấp
         int _ID_Category = 1; // ID loại sản phẩm
-        int _ID_Created = Management.GetIDAccount(); // ID người tạo
+        int _ID_Created; // ID người tạo
         public UC_QL_Thuoc()
         {
             InitializeComponent();
             _dataComboBox = new string[] { };
             _trangThai = false;
             txtDiscount.Text = "0";
+            _ID_Created = Management.GetIDAccount();
             // Add những txt lỗi vào mảng và dùng hàm ẩn đi
             _laberError = new Label[] { errorProductName, errorSupplier, errorCost, errorDiscount, errorDescribe, errorProductionDate, errorExpiryDate, errorPic };
             Management.ErrorHide(_laberError);
@@ -38,6 +38,8 @@ namespace GUI.US_
             LoaditemsComboBox();
             LoadData();
         }
+
+
         public void UC_QL_Thuoc_Load(object sender, EventArgs e)
         {
             Management.ScrollBarFlowLayoutPanel(flowLayoutPanelProducts, VScrollBar);
@@ -45,7 +47,7 @@ namespace GUI.US_
 
         public  void LoadData()
         {
-            flowLayoutPanelProducts.Controls.Clear();
+            //flowLayoutPanelProducts.Controls.Clear();
             // Gọi phương thức GetAllProducts từ lớp BLL để lấy danh sách sản phẩm
             List<Products> listObj = _Product.GetAllObject();
             _UCItemProduct = new UC_ItemProduct[listObj.Count];
@@ -232,29 +234,25 @@ namespace GUI.US_
 
         // 
 
-       
-        public void AddThongTinSanPham( EventArgs e)
+        public void AddInfoProduct()
         {
-            e = new EventArgs();
-            LoadData();
-            {
-                string filePath = @"E:\CodeC - TNTPharmacy\PR_QLPhacmarcy\Icon\087349.png";
-                Products obj = _Product.GetObjectById(Management.GetIDProduct());
-                Suppliers suppliers = _Suppliers.GetObjectById(obj.SupplierId);
+            MessageBox.Show("Demo");
 
-                ComboBoxSupplier.Text = suppliers.Name;
-                txtProductName.Text = obj.Name;
-                txtCost.Text = obj.Price + "";
-                txtDiscount.Text = obj.Discount + "";
-                txtProductionDate.Value = obj.ProductionDate;
-                txtExpiryDate.Value = obj.ExpiryDate;
-                txtDescribe.Text = obj.Description;
+            string filePath = @"E:\CodeC - TNTPharmacy\PR_QLPhacmarcy\Icon\087349.png";
+            Products obj = _Product.GetObjectById(Management.GetIDProduct());
+            Suppliers suppliers = _Suppliers.GetObjectById(obj.SupplierId);
+            ComboBoxSupplier.Text = suppliers.Name;
+            txtProductName.Text = "Nhaatj timo";
+            txtCost.Text = obj.Price + "";
+            txtDiscount.Text = obj.Discount + "";
+            txtProductionDate.Value = obj.ProductionDate;
+            txtExpiryDate.Value = obj.ExpiryDate;
+            txtDescribe.Text = obj.Description;
 
-                if (picAnh.ImageLocation == null)
-                    picAnh.ImageLocation = filePath;
-                else
-                    picAnh.ImageLocation = obj.Image;
-            } 
+            if (picAnh.ImageLocation == null)
+                picAnh.ImageLocation = filePath;
+            else
+                picAnh.ImageLocation = obj.Image;  
         }
 
         public static UC_QL_Thuoc Instance
@@ -277,6 +275,7 @@ namespace GUI.US_
                 return _instance;
             }
         }
+    
     }
     
 }

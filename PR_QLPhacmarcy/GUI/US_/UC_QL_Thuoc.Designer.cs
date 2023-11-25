@@ -61,12 +61,13 @@
             this.guna2GradientTileButton6 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnAdd = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.VScrollBar = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.btnSearch = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientTileButton10 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.flowLayoutPanelProducts = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.VScrollBar = new Guna.UI2.WinForms.Guna2VScrollBar();
+            this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAnh)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -171,7 +172,7 @@
             this.txtProductionDate.ForeColor = System.Drawing.Color.Black;
             this.txtProductionDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.txtProductionDate.Location = new System.Drawing.Point(21, 528);
-            this.txtProductionDate.Margin = new System.Windows.Forms.Padding(4);
+            this.txtProductionDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtProductionDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.txtProductionDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.txtProductionDate.Name = "txtProductionDate";
@@ -190,7 +191,7 @@
             this.txtExpiryDate.ForeColor = System.Drawing.Color.Black;
             this.txtExpiryDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.txtExpiryDate.Location = new System.Drawing.Point(21, 623);
-            this.txtExpiryDate.Margin = new System.Windows.Forms.Padding(4);
+            this.txtExpiryDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtExpiryDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.txtExpiryDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.txtExpiryDate.Name = "txtExpiryDate";
@@ -204,7 +205,7 @@
             this.errorPic.AutoSize = true;
             this.errorPic.BackColor = System.Drawing.Color.Transparent;
             this.errorPic.ForeColor = System.Drawing.Color.Red;
-            this.errorPic.Location = new System.Drawing.Point(326, 584);
+            this.errorPic.Location = new System.Drawing.Point(325, 583);
             this.errorPic.Name = "errorPic";
             this.errorPic.Size = new System.Drawing.Size(25, 16);
             this.errorPic.TabIndex = 176;
@@ -335,7 +336,7 @@
             this.txtDiscount.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDiscount.ForeColor = System.Drawing.Color.Black;
             this.txtDiscount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDiscount.Location = new System.Drawing.Point(21, 424);
+            this.txtDiscount.Location = new System.Drawing.Point(21, 423);
             this.txtDiscount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDiscount.Name = "txtDiscount";
             this.txtDiscount.PasswordChar = '\0';
@@ -364,7 +365,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(238, 337);
+            this.label3.Location = new System.Drawing.Point(237, 337);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 29);
             this.label3.TabIndex = 137;
@@ -435,7 +436,7 @@
             this.errorDescribe.AutoSize = true;
             this.errorDescribe.BackColor = System.Drawing.Color.Transparent;
             this.errorDescribe.ForeColor = System.Drawing.Color.Red;
-            this.errorDescribe.Location = new System.Drawing.Point(27, 776);
+            this.errorDescribe.Location = new System.Drawing.Point(27, 775);
             this.errorDescribe.Name = "errorDescribe";
             this.errorDescribe.Size = new System.Drawing.Size(25, 16);
             this.errorDescribe.TabIndex = 117;
@@ -537,7 +538,7 @@
             this.txtProductName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtProductName.ForeColor = System.Drawing.Color.Black;
             this.txtProductName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtProductName.Location = new System.Drawing.Point(21, 221);
+            this.txtProductName.Location = new System.Drawing.Point(21, 222);
             this.txtProductName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.PasswordChar = '\0';
@@ -610,6 +611,18 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1117, 885);
             this.guna2Panel1.TabIndex = 147;
             this.guna2Panel1.UseWaitCursor = true;
+            // 
+            // VScrollBar
+            // 
+            this.VScrollBar.InUpdate = false;
+            this.VScrollBar.LargeChange = 10;
+            this.VScrollBar.Location = new System.Drawing.Point(1104, 121);
+            this.VScrollBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.VScrollBar.Name = "VScrollBar";
+            this.VScrollBar.ScrollbarSize = 5;
+            this.VScrollBar.Size = new System.Drawing.Size(5, 759);
+            this.VScrollBar.TabIndex = 26;
+            this.VScrollBar.UseWaitCursor = true;
             // 
             // btnSearch
             // 
@@ -684,7 +697,7 @@
             // flowLayoutPanelProducts
             // 
             this.flowLayoutPanelProducts.Location = new System.Drawing.Point(8, 121);
-            this.flowLayoutPanelProducts.Margin = new System.Windows.Forms.Padding(5);
+            this.flowLayoutPanelProducts.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.flowLayoutPanelProducts.Name = "flowLayoutPanelProducts";
             this.flowLayoutPanelProducts.Size = new System.Drawing.Size(1101, 758);
             this.flowLayoutPanelProducts.TabIndex = 17;
@@ -694,22 +707,35 @@
             // 
             this.guna2Elipse1.TargetControl = this;
             // 
-            // VScrollBar
+            // guna2GradientButton3
             // 
-            this.VScrollBar.InUpdate = false;
-            this.VScrollBar.LargeChange = 10;
-            this.VScrollBar.Location = new System.Drawing.Point(1104, 120);
-            this.VScrollBar.Margin = new System.Windows.Forms.Padding(4);
-            this.VScrollBar.Name = "VScrollBar";
-            this.VScrollBar.ScrollbarSize = 5;
-            this.VScrollBar.Size = new System.Drawing.Size(5, 759);
-            this.VScrollBar.TabIndex = 26;
+            this.guna2GradientButton3.BorderRadius = 10;
+            this.guna2GradientButton3.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2GradientButton3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton3.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientButton3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.guna2GradientButton3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.guna2GradientButton3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.guna2GradientButton3.ForeColor = System.Drawing.Color.Black;
+            this.guna2GradientButton3.Image = ((System.Drawing.Image)(resources.GetObject("guna2GradientButton3.Image")));
+            this.guna2GradientButton3.ImageSize = new System.Drawing.Size(25, 25);
+            this.guna2GradientButton3.Location = new System.Drawing.Point(431, 567);
+            this.guna2GradientButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2GradientButton3.Name = "guna2GradientButton3";
+            this.guna2GradientButton3.Size = new System.Drawing.Size(208, 57);
+            this.guna2GradientButton3.TabIndex = 189;
+            this.guna2GradientButton3.Text = "Thêm";
+            this.guna2GradientButton3.UseWaitCursor = true;
             // 
             // UC_QL_Thuoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.guna2GradientButton3);
             this.Controls.Add(this.guna2Panel2);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_QL_Thuoc";
@@ -762,5 +788,6 @@
         private System.Windows.Forms.Label errorProductionDate;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2VScrollBar VScrollBar;
+        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton3;
     }
 }
