@@ -16,7 +16,6 @@ namespace GUI.US_
         private readonly ProductBusinessLogic _Product  = new ProductBusinessLogic();
         private readonly SuppliersBusinessLogic _Suppliers = new SuppliersBusinessLogic();
 
-        UC_ItemProduct[] _UCItemProduct;
         Label[] _laberError;
         string[] _dataComboBox;
         bool _trangThai;
@@ -37,6 +36,7 @@ namespace GUI.US_
             // Load dữ liệu từ cơ sở dữ liệu và hiển thị trên giao diện
             LoaditemsComboBox();
             LoadData();
+            btnLoad.Visible = false;
         }
 
 
@@ -50,13 +50,8 @@ namespace GUI.US_
             //flowLayoutPanelProducts.Controls.Clear();
             // Gọi phương thức GetAllProducts từ lớp BLL để lấy danh sách sản phẩm
             List<Products> listObj = _Product.GetAllObject();
-            _UCItemProduct = new UC_ItemProduct[listObj.Count];
-            for (int i = 0; i < listObj.Count; i++)
-            {
-                _UCItemProduct[i] = new UC_ItemProduct(listObj[i].ID, listObj[i].Price, listObj[i].Discount, listObj[i].Name, listObj[i].Image);
-            }
             // Hiển thị danh sách sản phẩm trên giao diện
-            Management.AddItemsUC(flowLayoutPanelProducts, _UCItemProduct);
+            Management.AddItemsUC(flowLayoutPanelProducts, listObj);
 
         }
 
@@ -111,7 +106,7 @@ namespace GUI.US_
                     float.Parse(txtDiscount.Text),  // Phần trăm giảm giá
                     0,                              // Số lượng
                     time,                           // Thời gian nhập sản phẩm
-                    Management.SaveImage(picAnh, txtProductName.Text),   // Đường dẫn ảnh
+                    Management.SaveImage(picAnh, txtProductName.Text + _ID_Suppliers + _ID_Category + _ID_Created),   // Đường dẫn ảnh
                     txtDescribe.Text,               // Mô tả sản phẩm
                     DateTime.Parse("10/10/2003"),   // Ngày sản xuất
                     DateTime.Parse("10/10/2003"),   // Ngày hết hạn
@@ -121,12 +116,12 @@ namespace GUI.US_
                 );
                 MessageBox.Show("" + products);
                 _Product.Add(products);
+                Management.AddItemsUC(flowLayoutPanelProducts, products);
             }
             else {
                 MessageBox.Show("Add thất bại");
             }
             // Sau khi thêm sản phẩm, cập nhật lại danh sách và hiển thị trên giao diện
-            LoadData();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -159,8 +154,9 @@ namespace GUI.US_
             LoadData();
         }
 
-        private void btnLoad_Click(object sender, EventArgs e)
+        public void btnLoad_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("sdfsdfsdfsdf");
             AddInfoProduct();
         }
         // TXT
@@ -239,9 +235,6 @@ namespace GUI.US_
 
         public void AddInfoProduct()
         {
-            MessageBox.Show("Demo");
-
-            string filePath = @"E:\CodeC - TNTPharmacy\PR_QLPhacmarcy\Icon\087349.png";
             Products obj = _Product.GetObjectById(Management.GetIDProduct());
             Suppliers suppliers = _Suppliers.GetObjectById(obj.SupplierId);
             ComboBoxSupplier.Text = suppliers.Name;
@@ -251,11 +244,19 @@ namespace GUI.US_
             txtProductionDate.Value = obj.ProductionDate;
             txtExpiryDate.Value = obj.ExpiryDate;
             txtDescribe.Text = obj.Description;
+            try
+            {
+                picAnh.Image = System.Drawing.Image.FromFile(obj.Image);
+            }
+            catch (Exception)
+            {  
 
-            if (picAnh.ImageLocation == null)
-                picAnh.ImageLocation = filePath;
-            else
-                picAnh.ImageLocation = obj.Image;  
+            }
+        }
+
+        public void Hien()
+        {
+            btnLoad.Visible = true;
         }
 
         public static UC_QL_Thuoc Instance
@@ -278,6 +279,8 @@ namespace GUI.US_
                 return _instance;
             }
         }
+
+        
     }
     
 }

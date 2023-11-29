@@ -60,14 +60,15 @@
             this.txtProductName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientTileButton6 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnAdd = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnLoad = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.VScrollBar = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.btnSearch = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientTileButton10 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.flowLayoutPanelProducts = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.btnLoad = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAnh)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -79,7 +80,6 @@
             this.guna2Panel2.BorderRadius = 1;
             this.guna2Panel2.BorderThickness = 1;
             this.guna2Panel2.Controls.Add(this.errorExpiryDate);
-            this.guna2Panel2.Controls.Add(this.btnLoad);
             this.guna2Panel2.Controls.Add(this.errorProductionDate);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel7);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel2);
@@ -566,7 +566,7 @@
             this.guna2GradientTileButton6.Location = new System.Drawing.Point(3, 9);
             this.guna2GradientTileButton6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2GradientTileButton6.Name = "guna2GradientTileButton6";
-            this.guna2GradientTileButton6.Size = new System.Drawing.Size(535, 86);
+            this.guna2GradientTileButton6.Size = new System.Drawing.Size(622, 86);
             this.guna2GradientTileButton6.TabIndex = 10;
             this.guna2GradientTileButton6.Text = "Sản phẩm";
             this.guna2GradientTileButton6.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -596,22 +596,72 @@
             this.btnAdd.UseWaitCursor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // btnLoad
+            // 
+            this.btnLoad.BackColor = System.Drawing.Color.Transparent;
+            this.btnLoad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLoad.BorderColor = System.Drawing.Color.Transparent;
+            this.btnLoad.BorderRadius = 10;
+            this.btnLoad.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.btnLoad.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLoad.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLoad.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLoad.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLoad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLoad.FillColor = System.Drawing.Color.Transparent;
+            this.btnLoad.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnLoad.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnLoad.ForeColor = System.Drawing.Color.Black;
+            this.btnLoad.Image = ((System.Drawing.Image)(resources.GetObject("btnLoad.Image")));
+            this.btnLoad.ImageSize = new System.Drawing.Size(45, 45);
+            this.btnLoad.Location = new System.Drawing.Point(8, 99);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(64, 55);
+            this.btnLoad.TabIndex = 189;
+            this.btnLoad.UseWaitCursor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            // 
             // guna2Panel1
             // 
             this.guna2Panel1.BorderColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BorderRadius = 1;
             this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.guna2ComboBox1);
             this.guna2Panel1.Controls.Add(this.VScrollBar);
+            this.guna2Panel1.Controls.Add(this.btnLoad);
             this.guna2Panel1.Controls.Add(this.btnSearch);
             this.guna2Panel1.Controls.Add(this.txtSearch);
             this.guna2Panel1.Controls.Add(this.guna2GradientTileButton10);
             this.guna2Panel1.Controls.Add(this.flowLayoutPanelProducts);
+            this.guna2Panel1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.guna2Panel1.Location = new System.Drawing.Point(644, 1);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1117, 885);
             this.guna2Panel1.TabIndex = 147;
             this.guna2Panel1.UseWaitCursor = true;
+            // 
+            // guna2ComboBox1
+            // 
+            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 22.2F);
+            this.guna2ComboBox1.ForeColor = System.Drawing.Color.Black;
+            this.guna2ComboBox1.ItemHeight = 30;
+            this.guna2ComboBox1.Items.AddRange(new object[] {
+            "Ac",
+            "Non-Ac"});
+            this.guna2ComboBox1.Location = new System.Drawing.Point(357, 42);
+            this.guna2ComboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2ComboBox1.Name = "guna2ComboBox1";
+            this.guna2ComboBox1.Size = new System.Drawing.Size(306, 36);
+            this.guna2ComboBox1.TabIndex = 190;
+            this.guna2ComboBox1.UseWaitCursor = true;
             // 
             // VScrollBar
             // 
@@ -643,7 +693,7 @@
             this.btnSearch.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.btnSearch.HoverState.FillColor2 = System.Drawing.Color.Transparent;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnSearch.ImageSize = new System.Drawing.Size(25, 25);
             this.btnSearch.Location = new System.Drawing.Point(1004, 25);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
@@ -664,13 +714,13 @@
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Location = new System.Drawing.Point(669, 25);
+            this.txtSearch.Location = new System.Drawing.Point(669, 42);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "Tìm kiếm sản phẩm";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(396, 53);
+            this.txtSearch.Size = new System.Drawing.Size(396, 36);
             this.txtSearch.TabIndex = 19;
             this.txtSearch.UseWaitCursor = true;
             // 
@@ -697,41 +747,16 @@
             // 
             // flowLayoutPanelProducts
             // 
-            this.flowLayoutPanelProducts.Location = new System.Drawing.Point(8, 121);
+            this.flowLayoutPanelProducts.Location = new System.Drawing.Point(8, 161);
             this.flowLayoutPanelProducts.Margin = new System.Windows.Forms.Padding(5);
             this.flowLayoutPanelProducts.Name = "flowLayoutPanelProducts";
-            this.flowLayoutPanelProducts.Size = new System.Drawing.Size(1101, 758);
+            this.flowLayoutPanelProducts.Size = new System.Drawing.Size(1101, 718);
             this.flowLayoutPanelProducts.TabIndex = 17;
             this.flowLayoutPanelProducts.UseWaitCursor = true;
             // 
             // guna2Elipse1
             // 
             this.guna2Elipse1.TargetControl = this;
-            // 
-            // btnLoad
-            // 
-            this.btnLoad.BackColor = System.Drawing.Color.Transparent;
-            this.btnLoad.BorderColor = System.Drawing.Color.Transparent;
-            this.btnLoad.BorderRadius = 10;
-            this.btnLoad.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.btnLoad.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLoad.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLoad.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLoad.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLoad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLoad.FillColor = System.Drawing.Color.Olive;
-            this.btnLoad.FillColor2 = System.Drawing.Color.Olive;
-            this.btnLoad.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnLoad.ForeColor = System.Drawing.Color.Black;
-            this.btnLoad.Image = ((System.Drawing.Image)(resources.GetObject("btnLoad.Image")));
-            this.btnLoad.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnLoad.Location = new System.Drawing.Point(544, 9);
-            this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(80, 86);
-            this.btnLoad.TabIndex = 189;
-            this.btnLoad.UseWaitCursor = true;
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // UC_QL_Thuoc
             // 
@@ -791,5 +816,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2VScrollBar VScrollBar;
         private Guna.UI2.WinForms.Guna2GradientButton btnLoad;
+        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
     }
 }

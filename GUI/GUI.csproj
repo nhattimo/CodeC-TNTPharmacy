@@ -100,6 +100,12 @@
       <DependentUpon>FormQuanLy.cs</DependentUpon>
     </Compile>
     <Compile Include="Management.cs" />
+    <Compile Include="Msg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Msg.Designer.cs">
+      <DependentUpon>Msg.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserControl1.cs">
@@ -252,11 +258,11 @@
     <Compile Include="US_\UserControl3.Designer.cs">
       <DependentUpon>UserControl3.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UserControl4.cs">
+    <Compile Include="US_\UC_QL_Item_Info_Employees_.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UserControl4.Designer.cs">
-      <DependentUpon>UserControl4.cs</DependentUpon>
+    <Compile Include="US_\UC_QL_Item_Info_Employees_.Designer.cs">
+      <DependentUpon>UC_QL_Item_Info_Employees_.cs</DependentUpon>
     </Compile>
     <Compile Include="US_\UserControl5.cs">
       <SubType>UserControl</SubType>
@@ -299,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormQuanLy.resx">
       <DependentUpon>FormQuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Msg.resx">
+      <DependentUpon>Msg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -384,8 +393,8 @@
     <EmbeddedResource Include="US_\UserControl3.resx">
       <DependentUpon>UserControl3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UserControl4.resx">
-      <DependentUpon>UserControl4.cs</DependentUpon>
+    <EmbeddedResource Include="US_\UC_QL_Item_Info_Employees_.resx">
+      <DependentUpon>UC_QL_Item_Info_Employees_.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="US_\UserControl5.resx">
       <DependentUpon>UserControl5.cs</DependentUpon>

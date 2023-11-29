@@ -43,9 +43,6 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2HScrollBar1 = new Guna.UI2.WinForms.Guna2HScrollBar();
             this.uC_KH_OrderInformation1 = new GUI.US_.UC_KH_OrderInformation();
-            this.userControl21 = new GUI.US_.UserControl2();
-            this.userControl22 = new GUI.US_.UserControl2();
-            this.flowLayoutPanelIteamProductSelected.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -79,8 +76,6 @@
             // 
             // flowLayoutPanelIteamProductSelected
             // 
-            this.flowLayoutPanelIteamProductSelected.Controls.Add(this.userControl21);
-            this.flowLayoutPanelIteamProductSelected.Controls.Add(this.userControl22);
             this.flowLayoutPanelIteamProductSelected.Location = new System.Drawing.Point(10, 101);
             this.flowLayoutPanelIteamProductSelected.Name = "flowLayoutPanelIteamProductSelected";
             this.flowLayoutPanelIteamProductSelected.Size = new System.Drawing.Size(588, 548);
@@ -125,7 +120,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(492, 23);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 29);
+            this.label4.Size = new System.Drawing.Size(59, 24);
             this.label4.TabIndex = 14;
             this.label4.Text = " VND";
             // 
@@ -137,7 +132,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label5.Location = new System.Drawing.Point(366, 23);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(104, 29);
+            this.label5.Size = new System.Drawing.Size(82, 24);
             this.label5.TabIndex = 13;
             this.label5.Text = "500.000";
             // 
@@ -148,7 +143,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label6.Location = new System.Drawing.Point(20, 26);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 25);
+            this.label6.Size = new System.Drawing.Size(84, 20);
             this.label6.TabIndex = 12;
             this.label6.Text = "Tổng tiền";
             // 
@@ -213,23 +208,10 @@
             // uC_KH_OrderInformation1
             // 
             this.uC_KH_OrderInformation1.Location = new System.Drawing.Point(330, 22);
+            this.uC_KH_OrderInformation1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uC_KH_OrderInformation1.Name = "uC_KH_OrderInformation1";
             this.uC_KH_OrderInformation1.Size = new System.Drawing.Size(1105, 850);
             this.uC_KH_OrderInformation1.TabIndex = 12;
-            // 
-            // userControl21
-            // 
-            this.userControl21.Location = new System.Drawing.Point(3, 3);
-            this.userControl21.Name = "userControl21";
-            this.userControl21.Size = new System.Drawing.Size(562, 132);
-            this.userControl21.TabIndex = 0;
-            // 
-            // userControl22
-            // 
-            this.userControl22.Location = new System.Drawing.Point(3, 141);
-            this.userControl22.Name = "userControl22";
-            this.userControl22.Size = new System.Drawing.Size(562, 132);
-            this.userControl22.TabIndex = 1;
             // 
             // UC_KH_Thuoc
             // 
@@ -242,7 +224,6 @@
             this.Name = "UC_KH_Thuoc";
             this.Size = new System.Drawing.Size(1765, 895);
             this.Load += new System.EventHandler(this.UC_KH_Thuoc_Load);
-            this.flowLayoutPanelIteamProductSelected.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
@@ -261,17 +242,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2GradientButton btnAddToCart;
-        private Guna.UI2.WinForms.Guna2GradientButton btnBuyNow;
-        private UserControl2 userControl21;
-        private UserControl2 userControl22;
-        private UC_ItemProduct userControl11;
-        private UC_ItemProduct userControl12;
-        private UC_ItemProduct userControl13;
-        private UC_ItemProduct userControl14;
-        private UC_ItemProduct userControl15;
-        private UC_ItemProduct userControl16;
-        private UC_ItemProduct userControl17;
-        private UC_ItemProduct userControl18;
+        private Guna.UI2.WinForms.Guna2GradientButton btnBuyNow; 
         private Guna.UI2.WinForms.Guna2HScrollBar guna2HScrollBar1;
         private UC_KH_OrderInformation uC_KH_OrderInformation1;
     }

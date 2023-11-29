@@ -14,7 +14,7 @@ namespace BLL
            
         }
 
-        public void AddBillOffline(Account obj)
+        public void Add(Account obj)
         {
             // Thực hiện kiểm tra logic kinh doanh nếu cần
             // ...
@@ -22,7 +22,7 @@ namespace BLL
             _objectDataAccess.Insert(obj);
         }
 
-        public void UpdateBillOffline(int objectId, Account obj)
+        public void Update(int objectId, Account obj)
         {
             // Thực hiện kiểm tra logic kinh doanh nếu cần
             // ...
@@ -30,7 +30,7 @@ namespace BLL
             _objectDataAccess.Update(objectId, obj);
         }
 
-        public void DeleteBillOffline(int objectId)
+        public void Delete(int objectId)
         {
             // Thực hiện kiểm tra logic kinh doanh nếu cần
             // ...
@@ -38,7 +38,7 @@ namespace BLL
             _objectDataAccess.Delete(objectId);
         }
 
-        public bool BillOfflineExists(int objectId)
+        public bool Exists(int objectId)
         {
             // Thực hiện kiểm tra logic để kiểm tra sự tồn tại của đối tượng
             // ...
@@ -46,7 +46,7 @@ namespace BLL
             return _objectDataAccess.IsMa(objectId);
         }
 
-        public Account GetBillOfflineById(int objectId)
+        public Account GetObjectById(int objectId)
         {
             // Thực hiện kiểm tra logic kinh doanh trước khi lấy thông tin đối tượng
             // ...
@@ -54,7 +54,7 @@ namespace BLL
             return _objectDataAccess.GetProductById(objectId);
         }
 
-        public List<Account> GetAllBillOfflines()
+        public List<Account> GetAllObject()
         {
             // Thực hiện kiểm tra logic kinh doanh trước khi lấy danh sách đối tượng
             // ...

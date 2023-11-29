@@ -14,14 +14,19 @@ namespace GUI.US_.US_UC_
 
         Label[] _laberError;
         string[] _dataComboBox;
-        int _ID_Suppliers = 0; // ID nhà cung cấp
-        int _ID_Category = 1; // ID loại sản phẩm
-        int _ID_Created = Management.GetIDAccount(); // ID người tạo
+        int _ID_Suppliers = 0;
+        int _ID_Category = 1;
+        int _ID_Created = Management.GetIDAccount(); 
         public UC_QL_Thuoc_CRUDcs()
         {
             InitializeComponent();
             _dataComboBox = new string[] { };
             _laberError = new Label[] { errorProductName, errorSupplier, errorCost, errorDiscount, errorDescribe, errorProductionDate, errorExpiryDate, errorPic };
+
+            _ID_Suppliers = 0;
+            _ID_Category = 1;
+            _ID_Created = Management.GetIDAccount(); 
+
             Management.ErrorHide(_laberError);
             LoaditemsComboBox();
             AddThongTinSanPham();

@@ -55,19 +55,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnBuyNow = new Guna.UI2.WinForms.Guna2GradientButton();
             this.flowLayoutPanelIteamProduct = new System.Windows.Forms.FlowLayoutPanel();
-            this.userControl21 = new GUI.US_.UserControl2();
-            this.userControl22 = new GUI.US_.UserControl2();
             this.guna2GradientTileButton6 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.userControl23 = new GUI.US_.UserControl2();
-            this.userControl24 = new GUI.US_.UserControl2();
-            this.userControl25 = new GUI.US_.UserControl2();
-            this.userControl26 = new GUI.US_.UserControl2();
             this.guna2Panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
-            this.flowLayoutPanelIteamProduct.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel2
@@ -88,20 +81,21 @@
             this.guna2Panel2.Controls.Add(this.guna2CustomGradientPanel1);
             this.guna2Panel2.Controls.Add(this.flowLayoutPanelIteamProduct);
             this.guna2Panel2.Controls.Add(this.guna2GradientTileButton6);
-            this.guna2Panel2.Location = new System.Drawing.Point(10, 3);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel2.Location = new System.Drawing.Point(13, 4);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(808, 684);
+            this.guna2Panel2.Size = new System.Drawing.Size(1077, 842);
             this.guna2Panel2.TabIndex = 10;
             // 
             // VScrollBar
             // 
             this.VScrollBar.InUpdate = false;
             this.VScrollBar.LargeChange = 10;
-            this.VScrollBar.Location = new System.Drawing.Point(450, 81);
+            this.VScrollBar.Location = new System.Drawing.Point(600, 100);
+            this.VScrollBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.VScrollBar.Name = "VScrollBar";
-            this.VScrollBar.ScrollbarSize = 10;
-            this.VScrollBar.Size = new System.Drawing.Size(10, 496);
+            this.VScrollBar.ScrollbarSize = 13;
+            this.VScrollBar.Size = new System.Drawing.Size(13, 610);
             this.VScrollBar.TabIndex = 160;
             // 
             // btnReturn
@@ -116,10 +110,10 @@
             this.btnReturn.FillColor = System.Drawing.Color.Transparent;
             this.btnReturn.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnReturn.ForeColor = System.Drawing.Color.Red;
-            this.btnReturn.Location = new System.Drawing.Point(5, 4);
-            this.btnReturn.Margin = new System.Windows.Forms.Padding(2);
+            this.btnReturn.Location = new System.Drawing.Point(7, 5);
+            this.btnReturn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(46, 70);
+            this.btnReturn.Size = new System.Drawing.Size(61, 86);
             this.btnReturn.TabIndex = 159;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
@@ -127,10 +121,10 @@
             // 
             this.txtAddress.BackColor = System.Drawing.Color.Transparent;
             this.txtAddress.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtAddress.Location = new System.Drawing.Point(585, 128);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAddress.Location = new System.Drawing.Point(780, 158);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(176, 25);
+            this.txtAddress.Size = new System.Drawing.Size(149, 21);
             this.txtAddress.TabIndex = 158;
             this.txtAddress.Text = "Lệ Thủy -  Quảng Bình ";
             this.txtAddress.UseWaitCursor = true;
@@ -139,10 +133,10 @@
             // 
             this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel10.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel10.Location = new System.Drawing.Point(474, 128);
-            this.guna2HtmlLabel10.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2HtmlLabel10.Location = new System.Drawing.Point(632, 158);
+            this.guna2HtmlLabel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            this.guna2HtmlLabel10.Size = new System.Drawing.Size(61, 25);
+            this.guna2HtmlLabel10.Size = new System.Drawing.Size(53, 21);
             this.guna2HtmlLabel10.TabIndex = 157;
             this.guna2HtmlLabel10.Text = "Địa chỉ:";
             this.guna2HtmlLabel10.UseWaitCursor = true;
@@ -151,10 +145,10 @@
             // 
             this.txtPhone.BackColor = System.Drawing.Color.Transparent;
             this.txtPhone.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtPhone.Location = new System.Drawing.Point(585, 104);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPhone.Location = new System.Drawing.Point(780, 128);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(93, 25);
+            this.txtPhone.Size = new System.Drawing.Size(83, 21);
             this.txtPhone.TabIndex = 156;
             this.txtPhone.Text = "0857075999";
             this.txtPhone.UseWaitCursor = true;
@@ -163,10 +157,10 @@
             // 
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(474, 104);
-            this.guna2HtmlLabel8.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(632, 128);
+            this.guna2HtmlLabel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(111, 25);
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(95, 21);
             this.guna2HtmlLabel8.TabIndex = 155;
             this.guna2HtmlLabel8.Text = "Số điện thoại:";
             this.guna2HtmlLabel8.UseWaitCursor = true;
@@ -175,10 +169,10 @@
             // 
             this.txtNameCustomer.BackColor = System.Drawing.Color.Transparent;
             this.txtNameCustomer.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtNameCustomer.Location = new System.Drawing.Point(585, 81);
-            this.txtNameCustomer.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNameCustomer.Location = new System.Drawing.Point(780, 100);
+            this.txtNameCustomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNameCustomer.Name = "txtNameCustomer";
-            this.txtNameCustomer.Size = new System.Drawing.Size(117, 25);
+            this.txtNameCustomer.Size = new System.Drawing.Size(98, 21);
             this.txtNameCustomer.TabIndex = 154;
             this.txtNameCustomer.Text = "Nguyễn Văn A";
             this.txtNameCustomer.UseWaitCursor = true;
@@ -187,10 +181,10 @@
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(474, 81);
-            this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(632, 100);
+            this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(103, 25);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(88, 21);
             this.guna2HtmlLabel5.TabIndex = 153;
             this.guna2HtmlLabel5.Text = "Người nhận:";
             this.guna2HtmlLabel5.UseWaitCursor = true;
@@ -204,11 +198,11 @@
             this.groupBox2.Controls.Add(this.guna2HtmlLabel12);
             this.groupBox2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.groupBox2.Location = new System.Drawing.Point(473, 184);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Location = new System.Drawing.Point(631, 226);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(317, 89);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(423, 110);
             this.groupBox2.TabIndex = 150;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Phương thức vận chuyển";
@@ -218,10 +212,10 @@
             // 
             this.guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel11.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel11.Location = new System.Drawing.Point(64, 28);
-            this.guna2HtmlLabel11.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2HtmlLabel11.Location = new System.Drawing.Point(85, 34);
+            this.guna2HtmlLabel11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-            this.guna2HtmlLabel11.Size = new System.Drawing.Size(59, 25);
+            this.guna2HtmlLabel11.Size = new System.Drawing.Size(49, 21);
             this.guna2HtmlLabel11.TabIndex = 140;
             this.guna2HtmlLabel11.Text = "Nhanh";
             this.guna2HtmlLabel11.UseWaitCursor = true;
@@ -232,10 +226,10 @@
             this.RadioButtonFireShipping.CheckedState.BorderThickness = 0;
             this.RadioButtonFireShipping.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.RadioButtonFireShipping.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.RadioButtonFireShipping.Location = new System.Drawing.Point(31, 56);
-            this.RadioButtonFireShipping.Margin = new System.Windows.Forms.Padding(2);
+            this.RadioButtonFireShipping.Location = new System.Drawing.Point(41, 69);
+            this.RadioButtonFireShipping.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RadioButtonFireShipping.Name = "RadioButtonFireShipping";
-            this.RadioButtonFireShipping.Size = new System.Drawing.Size(15, 16);
+            this.RadioButtonFireShipping.Size = new System.Drawing.Size(20, 20);
             this.RadioButtonFireShipping.TabIndex = 138;
             this.RadioButtonFireShipping.Text = "Không tài khoản";
             this.RadioButtonFireShipping.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -250,10 +244,10 @@
             this.RadioButtonFastShipping.CheckedState.BorderThickness = 0;
             this.RadioButtonFastShipping.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.RadioButtonFastShipping.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.RadioButtonFastShipping.Location = new System.Drawing.Point(31, 32);
-            this.RadioButtonFastShipping.Margin = new System.Windows.Forms.Padding(2);
+            this.RadioButtonFastShipping.Location = new System.Drawing.Point(41, 39);
+            this.RadioButtonFastShipping.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RadioButtonFastShipping.Name = "RadioButtonFastShipping";
-            this.RadioButtonFastShipping.Size = new System.Drawing.Size(15, 16);
+            this.RadioButtonFastShipping.Size = new System.Drawing.Size(20, 20);
             this.RadioButtonFastShipping.TabIndex = 139;
             this.RadioButtonFastShipping.Text = "Có tài khoản";
             this.RadioButtonFastShipping.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -266,10 +260,10 @@
             // 
             this.guna2HtmlLabel12.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel12.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel12.Location = new System.Drawing.Point(64, 52);
-            this.guna2HtmlLabel12.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2HtmlLabel12.Location = new System.Drawing.Point(85, 64);
+            this.guna2HtmlLabel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel12.Name = "guna2HtmlLabel12";
-            this.guna2HtmlLabel12.Size = new System.Drawing.Size(64, 25);
+            this.guna2HtmlLabel12.Size = new System.Drawing.Size(53, 21);
             this.guna2HtmlLabel12.TabIndex = 141;
             this.guna2HtmlLabel12.Text = "Hỏa tốc";
             this.guna2HtmlLabel12.UseWaitCursor = true;
@@ -283,11 +277,11 @@
             this.groupBox1.Controls.Add(this.guna2HtmlLabel3);
             this.groupBox1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.groupBox1.Location = new System.Drawing.Point(473, 297);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(631, 366);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(317, 84);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(423, 103);
             this.groupBox1.TabIndex = 149;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Phương thức thanh toán";
@@ -297,10 +291,10 @@
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(64, 25);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(85, 31);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(217, 25);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(182, 21);
             this.guna2HtmlLabel2.TabIndex = 136;
             this.guna2HtmlLabel2.Text = "Thanh toán khi nhận hàng";
             this.guna2HtmlLabel2.UseWaitCursor = true;
@@ -311,10 +305,10 @@
             this.RadioButtonAccountPayment.CheckedState.BorderThickness = 0;
             this.RadioButtonAccountPayment.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.RadioButtonAccountPayment.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.RadioButtonAccountPayment.Location = new System.Drawing.Point(31, 53);
-            this.RadioButtonAccountPayment.Margin = new System.Windows.Forms.Padding(2);
+            this.RadioButtonAccountPayment.Location = new System.Drawing.Point(41, 65);
+            this.RadioButtonAccountPayment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RadioButtonAccountPayment.Name = "RadioButtonAccountPayment";
-            this.RadioButtonAccountPayment.Size = new System.Drawing.Size(15, 16);
+            this.RadioButtonAccountPayment.Size = new System.Drawing.Size(20, 20);
             this.RadioButtonAccountPayment.TabIndex = 134;
             this.RadioButtonAccountPayment.Text = "Không tài khoản";
             this.RadioButtonAccountPayment.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -329,10 +323,10 @@
             this.RadioButtonDirectPayment.CheckedState.BorderThickness = 0;
             this.RadioButtonDirectPayment.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.RadioButtonDirectPayment.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.RadioButtonDirectPayment.Location = new System.Drawing.Point(31, 29);
-            this.RadioButtonDirectPayment.Margin = new System.Windows.Forms.Padding(2);
+            this.RadioButtonDirectPayment.Location = new System.Drawing.Point(41, 36);
+            this.RadioButtonDirectPayment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RadioButtonDirectPayment.Name = "RadioButtonDirectPayment";
-            this.RadioButtonDirectPayment.Size = new System.Drawing.Size(15, 16);
+            this.RadioButtonDirectPayment.Size = new System.Drawing.Size(20, 20);
             this.RadioButtonDirectPayment.TabIndex = 135;
             this.RadioButtonDirectPayment.Text = "Có tài khoản";
             this.RadioButtonDirectPayment.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -345,10 +339,10 @@
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(64, 49);
-            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(85, 60);
+            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(210, 25);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(176, 21);
             this.guna2HtmlLabel3.TabIndex = 137;
             this.guna2HtmlLabel3.Text = "Thanh toán qua tài khoản";
             this.guna2HtmlLabel3.UseWaitCursor = true;
@@ -365,10 +359,10 @@
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(5, 582);
-            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(7, 716);
+            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(798, 89);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1064, 110);
             this.guna2CustomGradientPanel1.TabIndex = 13;
             // 
             // label4
@@ -377,10 +371,9 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(524, 37);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(699, 46);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 29);
+            this.label4.Size = new System.Drawing.Size(59, 24);
             this.label4.TabIndex = 14;
             this.label4.Text = " VND";
             // 
@@ -390,10 +383,9 @@
             this.txtTotal.BackColor = System.Drawing.Color.Transparent;
             this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtTotal.Location = new System.Drawing.Point(412, 37);
-            this.txtTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtTotal.Location = new System.Drawing.Point(549, 46);
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(104, 29);
+            this.txtTotal.Size = new System.Drawing.Size(82, 24);
             this.txtTotal.TabIndex = 13;
             this.txtTotal.Text = "500.000";
             // 
@@ -402,10 +394,9 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6.Location = new System.Drawing.Point(25, 37);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(33, 46);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 25);
+            this.label6.Size = new System.Drawing.Size(84, 20);
             this.label6.TabIndex = 12;
             this.label6.Text = "Tổng tiền";
             // 
@@ -424,43 +415,21 @@
             this.btnBuyNow.ForeColor = System.Drawing.Color.Black;
             this.btnBuyNow.Image = ((System.Drawing.Image)(resources.GetObject("btnBuyNow.Image")));
             this.btnBuyNow.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnBuyNow.Location = new System.Drawing.Point(595, 15);
-            this.btnBuyNow.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuyNow.Location = new System.Drawing.Point(793, 18);
+            this.btnBuyNow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBuyNow.Name = "btnBuyNow";
-            this.btnBuyNow.Size = new System.Drawing.Size(190, 55);
+            this.btnBuyNow.Size = new System.Drawing.Size(253, 68);
             this.btnBuyNow.TabIndex = 10;
             this.btnBuyNow.Text = "Đặt hàng";
             this.btnBuyNow.Click += new System.EventHandler(this.btnBuyNow_Click);
             // 
             // flowLayoutPanelIteamProduct
             // 
-            this.flowLayoutPanelIteamProduct.Controls.Add(this.userControl21);
-            this.flowLayoutPanelIteamProduct.Controls.Add(this.userControl22);
-            this.flowLayoutPanelIteamProduct.Controls.Add(this.userControl23);
-            this.flowLayoutPanelIteamProduct.Controls.Add(this.userControl24);
-            this.flowLayoutPanelIteamProduct.Controls.Add(this.userControl25);
-            this.flowLayoutPanelIteamProduct.Controls.Add(this.userControl26);
-            this.flowLayoutPanelIteamProduct.Location = new System.Drawing.Point(5, 79);
-            this.flowLayoutPanelIteamProduct.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutPanelIteamProduct.Location = new System.Drawing.Point(7, 97);
+            this.flowLayoutPanelIteamProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanelIteamProduct.Name = "flowLayoutPanelIteamProduct";
-            this.flowLayoutPanelIteamProduct.Size = new System.Drawing.Size(440, 498);
+            this.flowLayoutPanelIteamProduct.Size = new System.Drawing.Size(587, 613);
             this.flowLayoutPanelIteamProduct.TabIndex = 12;
-            // 
-            // userControl21
-            // 
-            this.userControl21.Location = new System.Drawing.Point(2, 2);
-            this.userControl21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.userControl21.Name = "userControl21";
-            this.userControl21.Size = new System.Drawing.Size(422, 107);
-            this.userControl21.TabIndex = 0;
-            // 
-            // userControl22
-            // 
-            this.userControl22.Location = new System.Drawing.Point(2, 113);
-            this.userControl22.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.userControl22.Name = "userControl22";
-            this.userControl22.Size = new System.Drawing.Size(422, 107);
-            this.userControl22.TabIndex = 1;
             // 
             // guna2GradientTileButton6
             // 
@@ -474,10 +443,10 @@
             this.guna2GradientTileButton6.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.guna2GradientTileButton6.Font = new System.Drawing.Font("Segoe UI Semibold", 20.2F, System.Drawing.FontStyle.Bold);
             this.guna2GradientTileButton6.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientTileButton6.Location = new System.Drawing.Point(5, 4);
-            this.guna2GradientTileButton6.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2GradientTileButton6.Location = new System.Drawing.Point(7, 5);
+            this.guna2GradientTileButton6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2GradientTileButton6.Name = "guna2GradientTileButton6";
-            this.guna2GradientTileButton6.Size = new System.Drawing.Size(798, 70);
+            this.guna2GradientTileButton6.Size = new System.Drawing.Size(1064, 86);
             this.guna2GradientTileButton6.TabIndex = 10;
             this.guna2GradientTileButton6.Text = "Đặt hàng";
             // 
@@ -485,46 +454,14 @@
             // 
             this.guna2Elipse1.TargetControl = this;
             // 
-            // userControl23
-            // 
-            this.userControl23.Location = new System.Drawing.Point(2, 224);
-            this.userControl23.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.userControl23.Name = "userControl23";
-            this.userControl23.Size = new System.Drawing.Size(422, 107);
-            this.userControl23.TabIndex = 2;
-            // 
-            // userControl24
-            // 
-            this.userControl24.Location = new System.Drawing.Point(2, 335);
-            this.userControl24.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.userControl24.Name = "userControl24";
-            this.userControl24.Size = new System.Drawing.Size(422, 107);
-            this.userControl24.TabIndex = 3;
-            // 
-            // userControl25
-            // 
-            this.userControl25.Location = new System.Drawing.Point(2, 446);
-            this.userControl25.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.userControl25.Name = "userControl25";
-            this.userControl25.Size = new System.Drawing.Size(422, 107);
-            this.userControl25.TabIndex = 4;
-            // 
-            // userControl26
-            // 
-            this.userControl26.Location = new System.Drawing.Point(2, 557);
-            this.userControl26.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.userControl26.Name = "userControl26";
-            this.userControl26.Size = new System.Drawing.Size(422, 107);
-            this.userControl26.TabIndex = 5;
-            // 
             // UC_KH_OrderInformation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2Panel2);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_KH_OrderInformation";
-            this.Size = new System.Drawing.Size(829, 691);
+            this.Size = new System.Drawing.Size(1105, 850);
             this.Load += new System.EventHandler(this.UC_KH_OrderInformation_Load);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
@@ -534,7 +471,6 @@
             this.groupBox1.PerformLayout();
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
-            this.flowLayoutPanelIteamProduct.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -548,8 +484,6 @@
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2GradientButton btnBuyNow;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelIteamProduct;
-        private UserControl2 userControl21;
-        private UserControl2 userControl22;
         private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton6;
         private System.Windows.Forms.GroupBox groupBox1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
@@ -570,9 +504,5 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Button btnReturn;
         private Guna.UI2.WinForms.Guna2VScrollBar VScrollBar;
-        private UserControl2 userControl23;
-        private UserControl2 userControl24;
-        private UserControl2 userControl25;
-        private UserControl2 userControl26;
     }
 }

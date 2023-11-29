@@ -13,8 +13,8 @@ namespace GUI
 
         public FormQuanLy()
         {
-            InitializeComponent();  
-        }   
+            InitializeComponent();
+        }
 
         private void FormQuanLy_Load(object sender, EventArgs e)
         {
@@ -27,16 +27,16 @@ namespace GUI
         #region Các Function
         void UCManagement(UserControl uC)
         {
-            controlArray = new UserControl[] { uC_QL_Thuoc1, uC_QL_NhanVIen1, uC_QL_KhachHang1, uC_QL_NguonCung1, uC_QL_ThongKe1/*, uC_QL_Info1*/};
+            controlArray = new UserControl[] { uC_QL_Thuoc1, uC_QL_NhanVIen1, uC_QL_KhachHang1, uC_QL_NguonCung1, uC_QL_ThongKe1, uC_Info_Employee1 };
             Management.UCArrayVisible(controlArray, uC);
         }
 
         void BtnTasbalClickManagement(Guna2GradientTileButton btn)
         {
-            btnArray = new Guna2GradientTileButton[] { btnMedicine, btnSalesAgent, btnCustomer, btnSupplier, btnStatistical, btnLogOut};
+            btnArray = new Guna2GradientTileButton[] { btnMedicine, btnSalesAgent, btnCustomer, btnSupplier, btnStatistical, btnLogOut };
             Management.BtnTasbalClick(btnArray, Color.Transparent, btn, Color.DarkGray);
             btn.BringToFront();
-            btnLogOut.Visible=false;
+            btnLogOut.Visible = false;
         }
 
         #endregion
@@ -83,7 +83,7 @@ namespace GUI
         private void btnInfo_Click(object sender, EventArgs e)
         {
             btnLogOut.Visible = true;
-            //UCManagement(uC_QL_Info1);
+            UCManagement(uC_Info_Employee1);
             Management.BtnRefreshColerTransparentClick(btnArray, Color.Transparent);
         }
 
@@ -94,12 +94,14 @@ namespace GUI
         }
 
         // btn đăng xuất
-        private void btnLogOut_Click_1(object sender, EventArgs e)
+        private void btnLogOut_Click(object sender, EventArgs e)
         {
+
             Management.LogOut(this);
         }
-        
+
+
         #endregion
 
-    }
+    } 
 }

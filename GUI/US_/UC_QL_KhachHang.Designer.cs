@@ -60,11 +60,11 @@
             this.errorProductName = new System.Windows.Forms.Label();
             this.txtProductName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnAddPicture = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.PictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GradientTileButton6 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnAdd = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.btnAddPicture = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.PictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnSearch = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
@@ -616,6 +616,39 @@
             this.guna2Panel2.TabIndex = 150;
             this.guna2Panel2.UseWaitCursor = true;
             // 
+            // btnAddPicture
+            // 
+            this.btnAddPicture.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddPicture.BorderRadius = 10;
+            this.btnAddPicture.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.btnAddPicture.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddPicture.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddPicture.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddPicture.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddPicture.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddPicture.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddPicture.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnAddPicture.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAddPicture.ForeColor = System.Drawing.Color.Black;
+            this.btnAddPicture.Image = ((System.Drawing.Image)(resources.GetObject("btnAddPicture.Image")));
+            this.btnAddPicture.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnAddPicture.Location = new System.Drawing.Point(445, 357);
+            this.btnAddPicture.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddPicture.Name = "btnAddPicture";
+            this.btnAddPicture.Size = new System.Drawing.Size(63, 57);
+            this.btnAddPicture.TabIndex = 176;
+            this.btnAddPicture.UseWaitCursor = true;
+            // 
+            // PictureBox
+            // 
+            this.PictureBox.ImageRotate = 0F;
+            this.PictureBox.Location = new System.Drawing.Point(328, 260);
+            this.PictureBox.Name = "PictureBox";
+            this.PictureBox.Size = new System.Drawing.Size(280, 255);
+            this.PictureBox.TabIndex = 175;
+            this.PictureBox.TabStop = false;
+            this.PictureBox.UseWaitCursor = true;
+            // 
             // guna2GradientTileButton6
             // 
             this.guna2GradientTileButton6.Checked = true;
@@ -664,38 +697,6 @@
             // guna2Elipse1
             // 
             this.guna2Elipse1.TargetControl = this;
-            // 
-            // btnAddPicture
-            // 
-            this.btnAddPicture.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddPicture.BorderRadius = 10;
-            this.btnAddPicture.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.btnAddPicture.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddPicture.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddPicture.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddPicture.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddPicture.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddPicture.FillColor = System.Drawing.Color.Transparent;
-            this.btnAddPicture.FillColor2 = System.Drawing.Color.Transparent;
-            this.btnAddPicture.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAddPicture.ForeColor = System.Drawing.Color.Black;
-            this.btnAddPicture.Image = ((System.Drawing.Image)(resources.GetObject("btnAddPicture.Image")));
-            this.btnAddPicture.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnAddPicture.Location = new System.Drawing.Point(445, 357);
-            this.btnAddPicture.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAddPicture.Name = "btnAddPicture";
-            this.btnAddPicture.Size = new System.Drawing.Size(63, 57);
-            this.btnAddPicture.TabIndex = 176;
-            this.btnAddPicture.UseWaitCursor = true;
-            // 
-            // PictureBox
-            // 
-            this.PictureBox.ImageRotate = 0F;
-            this.PictureBox.Location = new System.Drawing.Point(328, 260);
-            this.PictureBox.Name = "PictureBox";
-            this.PictureBox.Size = new System.Drawing.Size(280, 255);
-            this.PictureBox.TabIndex = 175;
-            this.PictureBox.TabStop = false;
             // 
             // guna2Panel1
             // 
@@ -801,6 +802,7 @@
             this.userControl51.Name = "userControl51";
             this.userControl51.Size = new System.Drawing.Size(524, 263);
             this.userControl51.TabIndex = 0;
+            this.userControl51.UseWaitCursor = true;
             // 
             // userControl52
             // 
@@ -809,6 +811,7 @@
             this.userControl52.Name = "userControl52";
             this.userControl52.Size = new System.Drawing.Size(524, 263);
             this.userControl52.TabIndex = 1;
+            this.userControl52.UseWaitCursor = true;
             // 
             // userControl53
             // 
@@ -817,6 +820,7 @@
             this.userControl53.Name = "userControl53";
             this.userControl53.Size = new System.Drawing.Size(524, 263);
             this.userControl53.TabIndex = 2;
+            this.userControl53.UseWaitCursor = true;
             // 
             // UC_QL_KhachHang
             // 

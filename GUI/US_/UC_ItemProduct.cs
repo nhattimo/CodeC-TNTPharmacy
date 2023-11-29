@@ -1,4 +1,5 @@
 ﻿using BLL;
+using DTO;
 using GUI.US_.US_UC_;
 using System;
 using System.Drawing;
@@ -10,6 +11,7 @@ namespace GUI.US_
     public partial class UC_ItemProduct : UserControl
     {
         public readonly AccountBusinesLogiccs _objectBusinesLogiccs = new AccountBusinesLogiccs();
+        public readonly ProductBusinessLogic _ProductBusinesLogiccs = new ProductBusinessLogic();
         private int ID {  get; set; }
         private float Price { get; set; }
         private float PriceDiscount { get; set; }
@@ -20,18 +22,21 @@ namespace GUI.US_
         {
             InitializeComponent();
         }
-        public UC_ItemProduct( int id, float prive, float priveDiscount, string nameProduct, string image)
+        public UC_ItemProduct( int id)
         {
             InitializeComponent();
-            ID = id;
-            Price = prive;
+            Products obj = _ProductBusinesLogiccs.GetObjectById(id);
+            ID = obj.ID;
+            Price = obj.Price;
+            NameProduct = obj.Name;
             // nếu có phần trăm giảm giá
-            if(priveDiscount != 0)
+            if (obj.Discount != 0)
             {
                 // thì giảm giá sản phẩm
-                PriceDiscount = (float)Math.Round(prive - ((prive / 100) * priveDiscount), 0) ;
-                txtPercent.Text = priveDiscount + "";
+                PriceDiscount = (float)Math.Round(obj.Price - ((obj.Price / 100) * obj.Discount), 0) ;
+                txtPercent.Text = obj.Discount + "";
                 IconPercent.Visible = true;
+                // đổi màu khi đc giảm giá
                 this.BackColor = Color.Red;
                 txtPrice.ForeColor = Color.White;
                 txtPriceDiscount.ForeColor = Color.White;
@@ -40,13 +45,29 @@ namespace GUI.US_
             else
             {
                 // ẩn giá trị tiền thực và giá giảm = giá gốc
-                PriceDiscount = prive;
+                PriceDiscount = obj.Price;
                 txtPrice.Visible = false;
                 txtPercent.Text =  "";
                 IconPercent.Visible = false;
             }
-            NameProduct = nameProduct;
-            ImagesString = image;  
+            // kiểm tra ảnh
+            if (File.Exists(obj.Image)) // Kiểm tra xem tệp hình ảnh có tồn tại hay không
+            {
+                try
+                {
+                    PictureBoxProduct.Image = Image.FromFile(obj.Image);
+                    ImagesString = obj.Image;
+                }
+                catch 
+                {
+                    PictureBoxProduct.Image = null;
+                }
+            }
+            else
+            {
+                // ảnh không tồn tại
+                PictureBoxProduct.Image = null;
+            } 
         }
 
         private void UserControl1_Load(object sender, EventArgs e)
@@ -56,31 +77,10 @@ namespace GUI.US_
             txtPrice.Text = Price + ".000";
             txtPriceDiscount.Text = PriceDiscount + ".000";
             txtNameProduct.Text = NameProduct;
-            if (File.Exists(ImagesString)) // Kiểm tra xem tệp hình ảnh có tồn tại hay không
-            {
-                try
-                {
-                    Image image = Image.FromFile(ImagesString); // Tạo đối tượng hình ảnh từ đường dẫn
-
-                    PictureBoxProduct.Image = image; // Gán hình ảnh cho PictureBox
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi khi tải hình ảnh: " + ex.Message, "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                /*MessageBox.Show("Tệp hình ảnh không tồn tại.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);*/
-            }
-
         }
         private void btnDetail_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("ID: " + ID);
-            UC_QL_Thuoc a = new UC_QL_Thuoc();
-            UC_QL_Thuoc.Instance.AddInfoProduct();
-           
+            MessageBox.Show("chi tiết thuốc ID: " + ID);
         }
 
         private void PictureBoxProduct_Click(object sender, EventArgs e)
@@ -89,8 +89,8 @@ namespace GUI.US_
             if (_objectBusinesLogiccs.GetRole(Management.GetIDAccount()) == 1)
             {
                 Management.SetIDProduct(ID);
-                MessageBox.Show("Chon anh voi " + ID);
-                UC_QL_Thuoc.Instance.AddInfoProduct();
+                Msg msg = new Msg(ID);
+                msg.Show();
             }
             else
             {
@@ -116,11 +116,6 @@ namespace GUI.US_
 
         private void PictureBoxProduct_MouseClick(object sender, MouseEventArgs e)
         {
-        }
-
-        public void aaa()
-        {
-
         }
     }
 }

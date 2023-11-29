@@ -87,7 +87,7 @@
             this.txtName.ForeColor = System.Drawing.Color.Black;
             this.txtName.Location = new System.Drawing.Point(188, 28);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(54, 20);
+            this.txtName.Size = new System.Drawing.Size(45, 17);
             this.txtName.TabIndex = 137;
             this.txtName.Text = " VND";
             this.txtName.UseWaitCursor = true;
@@ -152,7 +152,7 @@
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(16, 68);
             this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(88, 25);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(75, 21);
             this.guna2HtmlLabel1.TabIndex = 130;
             this.guna2HtmlLabel1.Text = "Ngày sinh:";
             this.guna2HtmlLabel1.UseWaitCursor = true;
@@ -164,7 +164,7 @@
             this.txtRole.ForeColor = System.Drawing.Color.Black;
             this.txtRole.Location = new System.Drawing.Point(192, 389);
             this.txtRole.Name = "txtRole";
-            this.txtRole.Size = new System.Drawing.Size(50, 20);
+            this.txtRole.Size = new System.Drawing.Size(41, 17);
             this.txtRole.TabIndex = 194;
             this.txtRole.Text = " VND";
             this.txtRole.UseWaitCursor = true;
@@ -176,7 +176,7 @@
             this.guna2HtmlLabel3.Location = new System.Drawing.Point(16, 23);
             this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(85, 25);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(70, 21);
             this.guna2HtmlLabel3.TabIndex = 132;
             this.guna2HtmlLabel3.Text = "Họ và tên:";
             this.guna2HtmlLabel3.UseWaitCursor = true;
@@ -188,7 +188,7 @@
             this.guna2HtmlLabel9.Location = new System.Drawing.Point(16, 383);
             this.guna2HtmlLabel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            this.guna2HtmlLabel9.Size = new System.Drawing.Size(73, 25);
+            this.guna2HtmlLabel9.Size = new System.Drawing.Size(61, 21);
             this.guna2HtmlLabel9.TabIndex = 193;
             this.guna2HtmlLabel9.Text = "Chức vụ: ";
             this.guna2HtmlLabel9.UseWaitCursor = true;
@@ -200,7 +200,7 @@
             this.guna2HtmlLabel4.Location = new System.Drawing.Point(16, 113);
             this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(74, 25);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(65, 21);
             this.guna2HtmlLabel4.TabIndex = 133;
             this.guna2HtmlLabel4.Text = "Giới tính:";
             this.guna2HtmlLabel4.UseWaitCursor = true;
@@ -212,7 +212,7 @@
             this.txtStartedDay.ForeColor = System.Drawing.Color.Black;
             this.txtStartedDay.Location = new System.Drawing.Point(192, 343);
             this.txtStartedDay.Name = "txtStartedDay";
-            this.txtStartedDay.Size = new System.Drawing.Size(50, 20);
+            this.txtStartedDay.Size = new System.Drawing.Size(41, 17);
             this.txtStartedDay.TabIndex = 192;
             this.txtStartedDay.Text = " VND";
             this.txtStartedDay.UseWaitCursor = true;
@@ -224,7 +224,7 @@
             this.txtCCCD.ForeColor = System.Drawing.Color.Black;
             this.txtCCCD.Location = new System.Drawing.Point(192, 298);
             this.txtCCCD.Name = "txtCCCD";
-            this.txtCCCD.Size = new System.Drawing.Size(50, 20);
+            this.txtCCCD.Size = new System.Drawing.Size(41, 17);
             this.txtCCCD.TabIndex = 191;
             this.txtCCCD.Text = " VND";
             this.txtCCCD.UseWaitCursor = true;
@@ -236,7 +236,7 @@
             this.guna2HtmlLabel6.Location = new System.Drawing.Point(16, 293);
             this.guna2HtmlLabel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(53, 25);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(44, 21);
             this.guna2HtmlLabel6.TabIndex = 139;
             this.guna2HtmlLabel6.Text = "CCCD:";
             this.guna2HtmlLabel6.UseWaitCursor = true;
@@ -248,7 +248,7 @@
             this.txtAddress.ForeColor = System.Drawing.Color.Black;
             this.txtAddress.Location = new System.Drawing.Point(192, 253);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(50, 20);
+            this.txtAddress.Size = new System.Drawing.Size(41, 17);
             this.txtAddress.TabIndex = 190;
             this.txtAddress.Text = " VND";
             this.txtAddress.UseWaitCursor = true;
@@ -260,7 +260,7 @@
             this.guna2HtmlLabel5.Location = new System.Drawing.Point(16, 158);
             this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(111, 25);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(95, 21);
             this.guna2HtmlLabel5.TabIndex = 142;
             this.guna2HtmlLabel5.Text = "Số điện thoại:";
             this.guna2HtmlLabel5.UseWaitCursor = true;
@@ -272,7 +272,7 @@
             this.txtEmail.ForeColor = System.Drawing.Color.Black;
             this.txtEmail.Location = new System.Drawing.Point(192, 208);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(50, 20);
+            this.txtEmail.Size = new System.Drawing.Size(41, 17);
             this.txtEmail.TabIndex = 189;
             this.txtEmail.Text = " VND";
             this.txtEmail.UseWaitCursor = true;
@@ -284,7 +284,7 @@
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(16, 203);
             this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(51, 25);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(44, 21);
             this.guna2HtmlLabel2.TabIndex = 183;
             this.guna2HtmlLabel2.Text = "Email:";
             this.guna2HtmlLabel2.UseWaitCursor = true;
@@ -296,7 +296,7 @@
             this.txtPhone.ForeColor = System.Drawing.Color.Black;
             this.txtPhone.Location = new System.Drawing.Point(192, 163);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(50, 20);
+            this.txtPhone.Size = new System.Drawing.Size(41, 17);
             this.txtPhone.TabIndex = 188;
             this.txtPhone.Text = " VND";
             this.txtPhone.UseWaitCursor = true;
@@ -308,7 +308,7 @@
             this.guna2HtmlLabel7.Location = new System.Drawing.Point(16, 248);
             this.guna2HtmlLabel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(56, 25);
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(49, 21);
             this.guna2HtmlLabel7.TabIndex = 184;
             this.guna2HtmlLabel7.Text = "Địa chỉ";
             this.guna2HtmlLabel7.UseWaitCursor = true;
@@ -320,7 +320,7 @@
             this.txtSex.ForeColor = System.Drawing.Color.Black;
             this.txtSex.Location = new System.Drawing.Point(192, 118);
             this.txtSex.Name = "txtSex";
-            this.txtSex.Size = new System.Drawing.Size(50, 20);
+            this.txtSex.Size = new System.Drawing.Size(41, 17);
             this.txtSex.TabIndex = 187;
             this.txtSex.Text = " VND";
             this.txtSex.UseWaitCursor = true;
@@ -332,7 +332,7 @@
             this.guna2HtmlLabel8.Location = new System.Drawing.Point(16, 338);
             this.guna2HtmlLabel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(117, 25);
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(98, 21);
             this.guna2HtmlLabel8.TabIndex = 185;
             this.guna2HtmlLabel8.Text = "Ngày vào làm: ";
             this.guna2HtmlLabel8.UseWaitCursor = true;
@@ -344,7 +344,7 @@
             this.txtDateOfBirth.ForeColor = System.Drawing.Color.Black;
             this.txtDateOfBirth.Location = new System.Drawing.Point(192, 73);
             this.txtDateOfBirth.Name = "txtDateOfBirth";
-            this.txtDateOfBirth.Size = new System.Drawing.Size(50, 20);
+            this.txtDateOfBirth.Size = new System.Drawing.Size(41, 17);
             this.txtDateOfBirth.TabIndex = 186;
             this.txtDateOfBirth.Text = " VND";
             this.txtDateOfBirth.UseWaitCursor = true;
@@ -353,6 +353,7 @@
             // 
             this.guna2Panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2Panel1.BackgroundImage")));
             this.guna2Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.guna2Panel1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.guna2Panel1.Location = new System.Drawing.Point(20, 94);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(739, 705);
@@ -402,7 +403,7 @@
         private System.Windows.Forms.Label txtStartedDay;
         private System.Windows.Forms.Label txtCCCD;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }

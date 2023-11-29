@@ -4,10 +4,12 @@ using GUI.US_;
 using Guna.UI2.WinForms;
 using Guna.UI2.WinForms.Helpers;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Net.Mail;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 using Image = System.Drawing.Image;
 
 
@@ -16,12 +18,16 @@ namespace GUI
 {
     public static class Management
     {
+
         private static readonly EmployeesBusinessLogic _Employee = new EmployeesBusinessLogic();
-        private static readonly RolesBusinessLogic _Role = new RolesBusinessLogic();
-        private static readonly AccountBusinesLogiccs _Account = new AccountBusinesLogiccs();
         private static readonly UsersBusinessLogic _User = new UsersBusinessLogic();
 
-        private static int IDProduct;
+        private static readonly RolesBusinessLogic _Role = new RolesBusinessLogic();
+        private static readonly AccountBusinesLogiccs _Account = new AccountBusinesLogiccs();
+
+        private static int IdIteamProduct;
+        private static int IdIteamEmployess;
+        private static int IdIteamEmployess1;
 
 
         // 1 số điều khiể giao diện
@@ -88,9 +94,49 @@ namespace GUI
                 flowLayoutPanel.Controls.Add(item);
             }
         }
+        public static void AddItemsUC(FlowLayoutPanel flowLayoutPanel, UserControl uC)
+        {
+             flowLayoutPanel.Controls.Add(uC); 
+        }
+        public static void AddItemsUC(FlowLayoutPanel flowLayoutPanel, Products obj)
+        {
+            UC_ItemProduct itemProduct = new UC_ItemProduct(obj.ID);
+            flowLayoutPanel.Controls.Add(itemProduct);
+        }
+        public static void AddItemsUC(FlowLayoutPanel flowLayoutPanel, List<Products> listObj)
+        {
+            UC_ItemProduct [] itemProduct = new UC_ItemProduct[listObj.Count];
+            for (int i = 0; i < listObj.Count; i++)
+            {
+                itemProduct[i] = new UC_ItemProduct(listObj[i].ID);
+            }
+
+            foreach (var item in itemProduct)
+            {
+                flowLayoutPanel.Controls.Add(item);
+            }
+        }
+        public static void AddItemsUC(FlowLayoutPanel flowLayoutPanel, Employees obj)
+        {
+            UC_QL_Item_Info_Employees_ itemProduct = new UC_QL_Item_Info_Employees_(obj.ID);
+            flowLayoutPanel.Controls.Add(itemProduct);
+        }
+        public static void AddItemsUC(FlowLayoutPanel flowLayoutPanel, List<Employees> listObj)
+        {
+            UC_QL_Item_Info_Employees_[] itemProduct = new UC_QL_Item_Info_Employees_[listObj.Count];
+            for (int i = 0; i < listObj.Count; i++)
+            {
+                itemProduct[i] = new UC_QL_Item_Info_Employees_(listObj[i].ID);
+            }
+
+            foreach (var item in itemProduct)
+            {
+                flowLayoutPanel.Controls.Add(item);
+            }
+        }
 
         // Error
-        public static void ErrorHide(Label[] txt)
+        public static void ErrorHide(System.Windows.Forms.Label[] txt)
         {
             foreach (var item in txt)
             {
@@ -98,11 +144,11 @@ namespace GUI
                 item.Hide();
             }
         }
-        public static void ErrorHide(Label txt)
+        public static void ErrorHide(System.Windows.Forms.Label txt)
         {
             txt.Hide();
         }
-        public static void Errorshow(Label txt, string content)
+        public static void Errorshow(System.Windows.Forms.Label txt, string content)
         {
 
             txt.Text = content;
@@ -206,7 +252,7 @@ namespace GUI
         {
             string fname = txt + ".jpg";
             // Đường dẫn đầy đủ đến thư mục mới
-            string folderPath = @"E:\FolderImgProduct";
+            string folderPath = @"D:\FolderImgProduct";
             string pathString = "";
             try
             {
@@ -216,11 +262,11 @@ namespace GUI
                     // Nếu chưa tồn tại, tạo thư mục mới
                     Directory.CreateDirectory(folderPath);
 
-                    pathString = System.IO.Path.Combine(folderPath, fname); pictureBox.Image.Save(pathString);
+                    pathString = Path.Combine(folderPath, fname); pictureBox.Image.Save(pathString);
                 }
                 else
                 {
-                    pathString = System.IO.Path.Combine(folderPath, fname); pictureBox.Image.Save(pathString);
+                    pathString = Path.Combine(folderPath, fname); pictureBox.Image.Save(pathString);
                 }
                 return pathString;
             }
@@ -232,10 +278,19 @@ namespace GUI
         }
         public static void SetIDProduct(int idProduct)
         {
-            IDProduct = idProduct;
+            IdIteamProduct = idProduct;
         }
-        
+        public static void SetIDEmployess(int idEmployess)
+        {
+            IdIteamEmployess = idEmployess;
+        }
+
         // Get
+        public static string GetNameRole(int IDTK)
+        {
+            Roles rl = _Role.GetObjectById(IDTK);
+            return rl.Name;
+        }
         public static int GetIDAccount()
         {
             int a = 0;
@@ -265,36 +320,41 @@ namespace GUI
         }
         public static int GetIDProduct()
         {
-            return IDProduct;
+            return IdIteamProduct;
         }
-        
+        public static int GetIDEmployess()
+        {
+            return IdIteamEmployess;
+        }
+
         // Load
-        public static void LoadInfoEmployee(PictureBox Image, Label txtName, Label txtDateOfBirth, Label txtSex, Label txtPhone, Label txtEmail, Label txtAddress, Label txtCCCD, Label txtStartedDay, Label txtRole)
+        public static void LoadInfoEmployee(PictureBox Image, System.Windows.Forms.Label Name, System.Windows.Forms.Label DateOfBirth, System.Windows.Forms.Label Sex, System.Windows.Forms.Label Phone, System.Windows.Forms.   Label Email, System.Windows.Forms.Label Address, System.Windows.Forms.Label CCCD, System.Windows.Forms.Label StartedDay, System.Windows.Forms.Label Role)
         {
             Employees obj = _Employee.GetObjectById(GetIDAccount());
-            txtName.Text = obj.Name;
-            txtDateOfBirth.Text = obj.DateOfBirth + "";
-            txtSex.Text = obj.Sex;
-            txtPhone.Text = obj.Phone;
-            txtEmail.Text = obj.Email;
-            txtAddress.Text = obj.Address;
-            txtCCCD.Text = obj.CCCD;
-            txtStartedDay.Text = obj.StartedDay + "";
             Roles rl = _Role.GetObjectById(GetIDAccount());
-            txtRole.Text = rl.Name;
+
+            Name.Text = obj.Name;
+            DateOfBirth.Text = obj.DateOfBirth + "";
+            Sex.Text = obj.Sex;
+            Phone.Text = obj.Phone;
+            Email.Text = obj.Email;
+            Address.Text = obj.Address;
+            CCCD.Text = obj.CCCD;
+            StartedDay.Text = obj.StartedDay + "";
+            Role.Text = rl.Name;
             Image.ImageLocation = obj.Image;
 
         }
-        public static void LoadInfoCustomer(PictureBox Image, Label txtName, Label txtSex, Label txtPhone, Label txtEmail, Label txtAddress)
+        public static void LoadInfoCustomer(PictureBox Image, System.Windows.Forms. Label Name, System.Windows.Forms.Label Sex, System.Windows.Forms.Label Phone, System.Windows.Forms.Label Email, System.Windows.Forms.Label Address)
         {
             if (ISCustomer())
             {
                 Users obj = _User.GetObjectById(GetIDAccount());
-                txtName.Text = obj.Name;
-                txtSex.Text = obj.Sex;
-                txtPhone.Text = obj.Phone;
-                txtEmail.Text = obj.Email;
-                txtAddress.Text = obj.Address;
+                Name.Text = obj.Name;
+                Sex.Text = obj.Sex;
+                Phone.Text = obj.Phone;
+                Email.Text = obj.Email;
+                Address.Text = obj.Address;
                 Image.ImageLocation = obj.Image;
                 MessageBox.Show("Đã có tài khoản");
             }
@@ -371,5 +431,55 @@ namespace GUI
                 return false;
             return true;
         }
+
+        public static void Check(Guna2TextBox txt, Label error)
+        {
+            if (ISNull(txt))
+            {
+                Errorshow(error, "Không để trống");
+            }
+            else
+                ErrorHide(error);
+        }
+        public static void Check(Guna2ComboBox txt, Label error)
+        {
+            if (ISNull(txt))
+            {
+                Errorshow(error, "Không để trống");
+            }
+            else
+                ErrorHide(error);
+        }
+
+        public static void Check(PictureBox pic, Label error)
+        {
+            if (ExistImg(pic))
+            {
+                Errorshow(error, "Không để trống");
+            }
+            else
+                ErrorHide(error);
+        }
+
+        public static void Check(Guna2DateTimePicker time, Label error)
+        {
+            if (ISTime(time))
+            {
+                Errorshow(error, "Không để trống");
+            }
+            else
+                ErrorHide(error);
+        }
+        public static void Check(RadioButton radioradioButtonMale, RadioButton radioButtonFemale, Label error)
+        {
+            if (radioradioButtonMale.Checked == false && radioButtonFemale.Checked == false)
+            {
+                Errorshow(error, "Không để trống");
+            }
+            else
+                ErrorHide(error);
+        }
+
+
     }
 }
