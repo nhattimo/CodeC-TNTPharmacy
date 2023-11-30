@@ -28,7 +28,7 @@ namespace GUI
         private static int IdIteamProduct;
         private static int IdIteamEmployess;
         private static int IdIteamEmployess1;
-
+        private static List<int[]> IDItemChooseProducts = new List<int[]> { };
 
         // 1 số điều khiể giao diện
         public static void ScrollBarFlowLayoutPanel(FlowLayoutPanel flowLayoutPanel, Guna2VScrollBar vScrollBar)
@@ -105,13 +105,21 @@ namespace GUI
         }
         public static void AddItemsUC(FlowLayoutPanel flowLayoutPanel, List<Products> listObj)
         {
-            UC_ItemProduct [] itemProduct = new UC_ItemProduct[listObj.Count];
+            UC_ItemProduct[] itemProduct = new UC_ItemProduct[listObj.Count];
             for (int i = 0; i < listObj.Count; i++)
             {
                 itemProduct[i] = new UC_ItemProduct(listObj[i].ID);
             }
 
             foreach (var item in itemProduct)
+            {
+                flowLayoutPanel.Controls.Add(item);
+            }
+        }
+
+        public static void AddItemsUC(FlowLayoutPanel flowLayoutPanel, List<UC_ItemChooseProducts> listObj)
+        {
+            foreach (var item in listObj)
             {
                 flowLayoutPanel.Controls.Add(item);
             }
@@ -280,10 +288,48 @@ namespace GUI
         {
             IdIteamProduct = idProduct;
         }
-        public static void SetIDEmployess(int idEmployess)
+        public static void SetIDItemChooseProducts( int idProduct, int sl ,bool trangThaiAddorNo, int noiAdd)
         {
-            IdIteamEmployess = idEmployess;
+            bool exist = false;
+            if (trangThaiAddorNo)
+            {
+                foreach (var item in IDItemChooseProducts)
+                {
+                    // nếu trong list đã có mà ko add từ us UC_ItemProduct thì chỉnh sửa số lượng
+                    if (item[0] == idProduct && noiAdd != 0)
+                    {
+                        item[1] = sl;
+                        exist = true;
+                        Console.WriteLine("Đã sửa số lượng từ " + (sl -1) + " Lên " +  sl);
+                        break;
+                    }else if (item[0] == idProduct && noiAdd == 0)
+                    {
+                        exist = true;
+                    }
+                }
+
+                // nếu sản phẩm ko có thì tạo mới và thêm vào
+                if(exist != true)
+                {
+                    int[] itemAdd = new int[] { idProduct, sl };
+                    Console.WriteLine("Tạo mới 1 iteam");
+                    IDItemChooseProducts.Add(itemAdd);
+                }
+            }
+            else
+            {
+                foreach (var item in IDItemChooseProducts)
+                {
+                    if (item[0] == idProduct)
+                    {
+                        IDItemChooseProducts.Remove(item);
+                        Console.WriteLine("Đã xóa 1 item số lượng hiện có " + IDItemChooseProducts.Count) ;
+                        break;
+                    }
+                }
+            }
         }
+        
 
         // Get
         public static string GetNameRole(int IDTK)
@@ -325,6 +371,10 @@ namespace GUI
         public static int GetIDEmployess()
         {
             return IdIteamEmployess;
+        }
+        public static List<int[]> GetIDItemChooseProducts()
+        {
+            return IDItemChooseProducts;
         }
 
         // Load

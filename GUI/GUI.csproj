@@ -81,37 +81,37 @@
     <Compile Include="FormDieuKhienChucVu.Designer.cs">
       <DependentUpon>FormDieuKhienChucVu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormKhachHang.cs">
+    <Compile Include="US_Interface\UC_KhanhHang\FormKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormKhachHang.Designer.cs">
+    <Compile Include="US_Interface\UC_KhanhHang\FormKhachHang.Designer.cs">
       <DependentUpon>FormKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormNhanVienBanHang.cs">
+    <Compile Include="US_Interface\UC_NhanVIenBanHang\FormNhanVienBanHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormNhanVienBanHang.Designer.cs">
+    <Compile Include="US_Interface\UC_NhanVIenBanHang\FormNhanVienBanHang.Designer.cs">
       <DependentUpon>FormNhanVienBanHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormQuanLy.cs">
+    <Compile Include="US_Interface\UC_QuanLy\FormQuanLy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormQuanLy.Designer.cs">
+    <Compile Include="US_Interface\UC_QuanLy\FormQuanLy.Designer.cs">
       <DependentUpon>FormQuanLy.cs</DependentUpon>
     </Compile>
     <Compile Include="Management.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="US_\UC_Item\UC_ItemOnlineOrders.cs">
+    <Compile Include="US_Interface\UC_Item\UC_ItemOnlineOrders.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UC_Item\UC_ItemOnlineOrders.Designer.cs">
+    <Compile Include="US_Interface\UC_Item\UC_ItemOnlineOrders.Designer.cs">
       <DependentUpon>UC_ItemOnlineOrders.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormThuKho.cs">
+    <Compile Include="US_Interface\UC_ThuKho\FormThuKho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormThuKho.Designer.cs">
+    <Compile Include="US_Interface\UC_ThuKho\FormThuKho.Designer.cs">
       <DependentUpon>FormThuKho.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLuaChonCuaKhachHang.cs">
@@ -120,166 +120,166 @@
     <Compile Include="FormLuaChonCuaKhachHang.Designer.cs">
       <DependentUpon>FormLuaChonCuaKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\From_CRUD\Form_QL_Thuoc_CRUD.cs">
+    <Compile Include="US_Interface\From_CRUD\Form_QL_Thuoc_CRUD.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="US_\From_CRUD\Form_QL_Thuoc_CRUD.Designer.cs">
+    <Compile Include="US_Interface\From_CRUD\Form_QL_Thuoc_CRUD.Designer.cs">
       <DependentUpon>Form_QL_Thuoc_CRUD.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UC_Bill.cs">
+    <Compile Include="US_Interface\UC_Bill.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UC_Bill.Designer.cs">
+    <Compile Include="US_Interface\UC_Bill.Designer.cs">
       <DependentUpon>UC_Bill.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UC_Info_Customer.cs">
+    <Compile Include="US_Interface\UC_Info_Customer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UC_Info_Customer.Designer.cs">
+    <Compile Include="US_Interface\UC_Info_Customer.Designer.cs">
       <DependentUpon>UC_Info_Customer.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UC_KH_Cart.cs">
+    <Compile Include="US_Interface\UC_KhanhHang\UC_KH_Cart.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UC_KH_Cart.Designer.cs">
+    <Compile Include="US_Interface\UC_KhanhHang\UC_KH_Cart.Designer.cs">
       <DependentUpon>UC_KH_Cart.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UC_KH_OrderInformation.cs">
+    <Compile Include="US_Interface\UC_KhanhHang\UC_KH_OrderInformation.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UC_KH_OrderInformation.Designer.cs">
+    <Compile Include="US_Interface\UC_KhanhHang\UC_KH_OrderInformation.Designer.cs">
       <DependentUpon>UC_KH_OrderInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UC_KH_Thuoc.cs">
+    <Compile Include="US_Interface\UC_KhanhHang\UC_KH_Thuoc.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UC_KH_Thuoc.Designer.cs">
+    <Compile Include="US_Interface\UC_KhanhHang\UC_KH_Thuoc.Designer.cs">
       <DependentUpon>UC_KH_Thuoc.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UC_NVBH_CuaHang.cs">
+    <Compile Include="US_Interface\UC_NhanVIenBanHang\UC_NVBH_CuaHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UC_NVBH_CuaHang.Designer.cs">
+    <Compile Include="US_Interface\UC_NhanVIenBanHang\UC_NVBH_CuaHang.Designer.cs">
       <DependentUpon>UC_NVBH_CuaHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UC_NVBH_Order.cs">
+    <Compile Include="US_Interface\UC_NhanVIenBanHang\UC_NVBH_Order.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UC_NVBH_Order.Designer.cs">
+    <Compile Include="US_Interface\UC_NhanVIenBanHang\UC_NVBH_Order.Designer.cs">
       <DependentUpon>UC_NVBH_Order.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UC_Info_Employee.cs">
+    <Compile Include="US_Interface\UC_Info_Employee.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UC_Info_Employee.Designer.cs">
+    <Compile Include="US_Interface\UC_Info_Employee.Designer.cs">
       <DependentUpon>UC_Info_Employee.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UC_QL_KhachHang.cs">
+    <Compile Include="US_Interface\UC_QuanLy\UC_QL_KhachHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UC_QL_KhachHang.Designer.cs">
+    <Compile Include="US_Interface\UC_QuanLy\UC_QL_KhachHang.Designer.cs">
       <DependentUpon>UC_QL_KhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UC_QL_NguonCung.cs">
+    <Compile Include="US_Interface\UC_QuanLy\UC_QL_NguonCung.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UC_QL_NguonCung.Designer.cs">
+    <Compile Include="US_Interface\UC_QuanLy\UC_QL_NguonCung.Designer.cs">
       <DependentUpon>UC_QL_NguonCung.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UC_QL_NhanVIen.cs">
+    <Compile Include="US_Interface\UC_QuanLy\UC_QL_NhanVIen.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UC_QL_NhanVIen.Designer.cs">
+    <Compile Include="US_Interface\UC_QuanLy\UC_QL_NhanVIen.Designer.cs">
       <DependentUpon>UC_QL_NhanVIen.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UC_QL_ThongKe.cs">
+    <Compile Include="US_Interface\UC_QuanLy\UC_QL_ThongKe.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UC_QL_ThongKe.Designer.cs">
+    <Compile Include="US_Interface\UC_QuanLy\UC_QL_ThongKe.Designer.cs">
       <DependentUpon>UC_QL_ThongKe.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UC_QL_Thuoc.cs">
+    <Compile Include="US_Interface\UC_QuanLy\UC_QL_Thuoc.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UC_QL_Thuoc.Designer.cs">
+    <Compile Include="US_Interface\UC_QuanLy\UC_QL_Thuoc.Designer.cs">
       <DependentUpon>UC_QL_Thuoc.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UC_QL_TK_BanChay.cs">
+    <Compile Include="US_Interface\UC_QuanLy\UC_QL_TK_BanChay.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UC_QL_TK_BanChay.Designer.cs">
+    <Compile Include="US_Interface\UC_QuanLy\UC_QL_TK_BanChay.Designer.cs">
       <DependentUpon>UC_QL_TK_BanChay.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UC_QL_TK_DoanhSo.cs">
+    <Compile Include="US_Interface\UC_QuanLy\UC_QL_TK_DoanhSo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UC_QL_TK_DoanhSo.Designer.cs">
+    <Compile Include="US_Interface\UC_QuanLy\UC_QL_TK_DoanhSo.Designer.cs">
       <DependentUpon>UC_QL_TK_DoanhSo.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UC_QL_TK_DoanhThu.cs">
+    <Compile Include="US_Interface\UC_QuanLy\UC_QL_TK_DoanhThu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UC_QL_TK_DoanhThu.Designer.cs">
+    <Compile Include="US_Interface\UC_QuanLy\UC_QL_TK_DoanhThu.Designer.cs">
       <DependentUpon>UC_QL_TK_DoanhThu.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UC_TK_NhapKho.cs">
+    <Compile Include="US_Interface\UC_ThuKho\UC_TK_NhapKho.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UC_TK_NhapKho.Designer.cs">
+    <Compile Include="US_Interface\UC_ThuKho\UC_TK_NhapKho.Designer.cs">
       <DependentUpon>UC_TK_NhapKho.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UC_TK_ThuKho.cs">
+    <Compile Include="US_Interface\UC_ThuKho\UC_TK_ThuKho.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UC_TK_ThuKho.Designer.cs">
+    <Compile Include="US_Interface\UC_ThuKho\UC_TK_ThuKho.Designer.cs">
       <DependentUpon>UC_TK_ThuKho.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UC_TK_XuatKho.cs">
+    <Compile Include="US_Interface\UC_ThuKho\UC_TK_XuatKho.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UC_TK_XuatKho.Designer.cs">
+    <Compile Include="US_Interface\UC_ThuKho\UC_TK_XuatKho.Designer.cs">
       <DependentUpon>UC_TK_XuatKho.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UC_Item\UC_ItemProduct.cs">
+    <Compile Include="US_Interface\UC_Item\UC_ItemProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UC_Item\UC_ItemProduct.Designer.cs">
+    <Compile Include="US_Interface\UC_Item\UC_ItemProduct.Designer.cs">
       <DependentUpon>UC_ItemProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UC_Item\UC_ItemChooseProducts.cs">
+    <Compile Include="US_Interface\UC_Item\UC_ItemChooseProducts.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UC_Item\UC_ItemChooseProducts.Designer.cs">
+    <Compile Include="US_Interface\UC_Item\UC_ItemChooseProducts.Designer.cs">
       <DependentUpon>UC_ItemChooseProducts.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UC_Item\UC_ItemProductsInCart.cs">
+    <Compile Include="US_Interface\UC_Item\UC_ItemProductsInCart.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UC_Item\UC_ItemProductsInCart.Designer.cs">
+    <Compile Include="US_Interface\UC_Item\UC_ItemProductsInCart.Designer.cs">
       <DependentUpon>UC_ItemProductsInCart.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UC_Item\UC_ItemInfoEmployees_.cs">
+    <Compile Include="US_Interface\UC_Item\UC_ItemInfoEmployees_.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UC_Item\UC_ItemInfoEmployees_.Designer.cs">
+    <Compile Include="US_Interface\UC_Item\UC_ItemInfoEmployees_.Designer.cs">
       <DependentUpon>UC_ItemInfoEmployees_.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UC_Item\UC_ItemInfoCustomer.cs.cs">
+    <Compile Include="US_Interface\UC_Item\UC_ItemInfoCustomer.cs.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UC_Item\UC_ItemInfoCustomer.cs.Designer.cs">
+    <Compile Include="US_Interface\UC_Item\UC_ItemInfoCustomer.cs.Designer.cs">
       <DependentUpon>UC_ItemInfoCustomer.cs.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UC_Item\UserControl6.cs">
+    <Compile Include="US_Interface\UC_Item\UserControl6.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UC_Item\UserControl6.Designer.cs">
+    <Compile Include="US_Interface\UC_Item\UserControl6.Designer.cs">
       <DependentUpon>UserControl6.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UC_Item\UserControl7.cs">
+    <Compile Include="US_Interface\UC_Item\UserControl7.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UC_Item\UserControl7.Designer.cs">
+    <Compile Include="US_Interface\UC_Item\UserControl7.Designer.cs">
       <DependentUpon>UserControl7.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FormDangKy.resx">
@@ -291,13 +291,13 @@
     <EmbeddedResource Include="FormDieuKhienChucVu.resx">
       <DependentUpon>FormDieuKhienChucVu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormKhachHang.resx">
+    <EmbeddedResource Include="US_Interface\UC_KhanhHang\FormKhachHang.resx">
       <DependentUpon>FormKhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormNhanVienBanHang.resx">
+    <EmbeddedResource Include="US_Interface\UC_NhanVIenBanHang\FormNhanVienBanHang.resx">
       <DependentUpon>FormNhanVienBanHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormQuanLy.resx">
+    <EmbeddedResource Include="US_Interface\UC_QuanLy\FormQuanLy.resx">
       <DependentUpon>FormQuanLy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -309,94 +309,94 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="US_\UC_Item\UC_ItemOnlineOrders.resx">
+    <EmbeddedResource Include="US_Interface\UC_Item\UC_ItemOnlineOrders.resx">
       <DependentUpon>UC_ItemOnlineOrders.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormThuKho.resx">
+    <EmbeddedResource Include="US_Interface\UC_ThuKho\FormThuKho.resx">
       <DependentUpon>FormThuKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLuaChonCuaKhachHang.resx">
       <DependentUpon>FormLuaChonCuaKhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\From_CRUD\Form_QL_Thuoc_CRUD.resx">
+    <EmbeddedResource Include="US_Interface\From_CRUD\Form_QL_Thuoc_CRUD.resx">
       <DependentUpon>Form_QL_Thuoc_CRUD.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UC_Bill.resx">
+    <EmbeddedResource Include="US_Interface\UC_Bill.resx">
       <DependentUpon>UC_Bill.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UC_Info_Customer.resx">
+    <EmbeddedResource Include="US_Interface\UC_Info_Customer.resx">
       <DependentUpon>UC_Info_Customer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UC_KH_Cart.resx">
+    <EmbeddedResource Include="US_Interface\UC_KhanhHang\UC_KH_Cart.resx">
       <DependentUpon>UC_KH_Cart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UC_KH_OrderInformation.resx">
+    <EmbeddedResource Include="US_Interface\UC_KhanhHang\UC_KH_OrderInformation.resx">
       <DependentUpon>UC_KH_OrderInformation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UC_KH_Thuoc.resx">
+    <EmbeddedResource Include="US_Interface\UC_KhanhHang\UC_KH_Thuoc.resx">
       <DependentUpon>UC_KH_Thuoc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UC_NVBH_CuaHang.resx">
+    <EmbeddedResource Include="US_Interface\UC_NhanVIenBanHang\UC_NVBH_CuaHang.resx">
       <DependentUpon>UC_NVBH_CuaHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UC_NVBH_Order.resx">
+    <EmbeddedResource Include="US_Interface\UC_NhanVIenBanHang\UC_NVBH_Order.resx">
       <DependentUpon>UC_NVBH_Order.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UC_Info_Employee.resx">
+    <EmbeddedResource Include="US_Interface\UC_Info_Employee.resx">
       <DependentUpon>UC_Info_Employee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UC_QL_KhachHang.resx">
+    <EmbeddedResource Include="US_Interface\UC_QuanLy\UC_QL_KhachHang.resx">
       <DependentUpon>UC_QL_KhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UC_QL_NguonCung.resx">
+    <EmbeddedResource Include="US_Interface\UC_QuanLy\UC_QL_NguonCung.resx">
       <DependentUpon>UC_QL_NguonCung.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UC_QL_NhanVIen.resx">
+    <EmbeddedResource Include="US_Interface\UC_QuanLy\UC_QL_NhanVIen.resx">
       <DependentUpon>UC_QL_NhanVIen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UC_QL_ThongKe.resx">
+    <EmbeddedResource Include="US_Interface\UC_QuanLy\UC_QL_ThongKe.resx">
       <DependentUpon>UC_QL_ThongKe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UC_QL_Thuoc.resx">
+    <EmbeddedResource Include="US_Interface\UC_QuanLy\UC_QL_Thuoc.resx">
       <DependentUpon>UC_QL_Thuoc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UC_QL_TK_BanChay.resx">
+    <EmbeddedResource Include="US_Interface\UC_QuanLy\UC_QL_TK_BanChay.resx">
       <DependentUpon>UC_QL_TK_BanChay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UC_QL_TK_DoanhSo.resx">
+    <EmbeddedResource Include="US_Interface\UC_QuanLy\UC_QL_TK_DoanhSo.resx">
       <DependentUpon>UC_QL_TK_DoanhSo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UC_QL_TK_DoanhThu.resx">
+    <EmbeddedResource Include="US_Interface\UC_QuanLy\UC_QL_TK_DoanhThu.resx">
       <DependentUpon>UC_QL_TK_DoanhThu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UC_TK_NhapKho.resx">
+    <EmbeddedResource Include="US_Interface\UC_ThuKho\UC_TK_NhapKho.resx">
       <DependentUpon>UC_TK_NhapKho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UC_TK_ThuKho.resx">
+    <EmbeddedResource Include="US_Interface\UC_ThuKho\UC_TK_ThuKho.resx">
       <DependentUpon>UC_TK_ThuKho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UC_TK_XuatKho.resx">
+    <EmbeddedResource Include="US_Interface\UC_ThuKho\UC_TK_XuatKho.resx">
       <DependentUpon>UC_TK_XuatKho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UC_Item\UC_ItemProduct.resx">
+    <EmbeddedResource Include="US_Interface\UC_Item\UC_ItemProduct.resx">
       <DependentUpon>UC_ItemProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UC_Item\UC_ItemChooseProducts.resx">
+    <EmbeddedResource Include="US_Interface\UC_Item\UC_ItemChooseProducts.resx">
       <DependentUpon>UC_ItemChooseProducts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UC_Item\UC_ItemProductsInCart.resx">
+    <EmbeddedResource Include="US_Interface\UC_Item\UC_ItemProductsInCart.resx">
       <DependentUpon>UC_ItemProductsInCart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UC_Item\UC_ItemInfoEmployees_.resx">
+    <EmbeddedResource Include="US_Interface\UC_Item\UC_ItemInfoEmployees_.resx">
       <DependentUpon>UC_ItemInfoEmployees_.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UC_Item\UC_ItemInfoCustomer.cs.resx">
+    <EmbeddedResource Include="US_Interface\UC_Item\UC_ItemInfoCustomer.cs.resx">
       <DependentUpon>UC_ItemInfoCustomer.cs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UC_Item\UserControl6.resx">
+    <EmbeddedResource Include="US_Interface\UC_Item\UserControl6.resx">
       <DependentUpon>UserControl6.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UC_Item\UserControl7.resx">
+    <EmbeddedResource Include="US_Interface\UC_Item\UserControl7.resx">
       <DependentUpon>UserControl7.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
