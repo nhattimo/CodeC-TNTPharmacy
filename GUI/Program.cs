@@ -22,6 +22,8 @@ namespace GUI
             //Application.Run(new FormNhanVienBanHang());
             Application.Run(new FormDieuKhienChucVu());
 
+            // demo 1
+
 
         }
     }
