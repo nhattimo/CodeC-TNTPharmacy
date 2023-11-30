@@ -118,15 +118,15 @@ namespace GUI
         }
         public static void AddItemsUC(FlowLayoutPanel flowLayoutPanel, Employees obj)
         {
-            UC_QL_Item_Info_Employees_ itemProduct = new UC_QL_Item_Info_Employees_(obj.ID);
+            UC_ItemInfoEmployees_ itemProduct = new UC_ItemInfoEmployees_(obj.ID);
             flowLayoutPanel.Controls.Add(itemProduct);
         }
         public static void AddItemsUC(FlowLayoutPanel flowLayoutPanel, List<Employees> listObj)
         {
-            UC_QL_Item_Info_Employees_[] itemProduct = new UC_QL_Item_Info_Employees_[listObj.Count];
+            UC_ItemInfoEmployees_[] itemProduct = new UC_ItemInfoEmployees_[listObj.Count];
             for (int i = 0; i < listObj.Count; i++)
             {
-                itemProduct[i] = new UC_QL_Item_Info_Employees_(listObj[i].ID);
+                itemProduct[i] = new UC_ItemInfoEmployees_(listObj[i].ID);
             }
 
             foreach (var item in itemProduct)

@@ -4,16 +4,13 @@ using System.Windows.Forms;
 using DTO;
 using System.Collections.Generic;
 using Guna.UI2.WinForms;
+using System.Threading.Tasks;
 
 namespace GUI.US_
 {
     public partial class UC_QL_Thuoc : UserControl
     {
-        private static UC_QL_Thuoc _instance;
-        private static readonly object _lock = new object();
-
-        //  sử dụng để tương tác với BLL (BusinessLogic)
-        private readonly ProductBusinessLogic _Product  = new ProductBusinessLogic();
+        private readonly ProductBusinessLogic _Product = new ProductBusinessLogic();
         private readonly SuppliersBusinessLogic _Suppliers = new SuppliersBusinessLogic();
 
         Label[] _laberError;
@@ -32,29 +29,55 @@ namespace GUI.US_
             // Add những txt lỗi vào mảng và dùng hàm ẩn đi
             _laberError = new Label[] { errorProductName, errorSupplier, errorCost, errorDiscount, errorDescribe, errorProductionDate, errorExpiryDate, errorPic };
             Management.ErrorHide(_laberError);
-
+            Management.SetIDProduct(-1);
             // Load dữ liệu từ cơ sở dữ liệu và hiển thị trên giao diện
             LoaditemsComboBox();
             LoadData();
-            btnLoad.Visible = false;
         }
-
 
         public void UC_QL_Thuoc_Load(object sender, EventArgs e)
         {
             Management.ScrollBarFlowLayoutPanel(flowLayoutPanelProducts, VScrollBar);
+            RunContinuousFunction();
         }
 
-        public  void LoadData()
+        public void LoadData()
         {
-            //flowLayoutPanelProducts.Controls.Clear();
+            flowLayoutPanelProducts.Controls.Clear();
             // Gọi phương thức GetAllProducts từ lớp BLL để lấy danh sách sản phẩm
             List<Products> listObj = _Product.GetAllObject();
             // Hiển thị danh sách sản phẩm trên giao diện
             Management.AddItemsUC(flowLayoutPanelProducts, listObj);
-
         }
 
+        async Task RunContinuousFunction()
+        {
+            int IDProduct = Management.GetIDProduct();
+            while (true)
+            {
+                if (this.Visible != false)
+                {
+                    // nếu mã = 0 có nghĩa là vừa sảy ra sự kiện cập nhật hoặc xóa 
+                    if (Management.GetIDProduct() == 0)
+                    {
+                        Management.SetIDProduct(-1);
+
+                        Console.WriteLine("Đã thực hiện cập nhật");
+                        LoadData();
+                    }
+                    // nếu mã đã có sự thay đổi thì có nghĩa là đã chọn vào sản phẩm đó
+                    else if (Management.GetIDProduct() != IDProduct && Management.GetIDProduct() > 0)
+                    {
+                        IDProduct = Management.GetIDProduct();
+
+                        Console.WriteLine("Đã thực hiện chọn sản phẩm");
+                        AddInfoProduct();
+                    }
+                }
+                await Task.Delay(100);
+            }
+        }
+        
         private void LoaditemsComboBox()
         {
             List<Suppliers> listObj = _Suppliers.GetAllObject();
@@ -69,6 +92,37 @@ namespace GUI.US_
             if (_dataComboBox.Length > 0)
             {
                 ComboBoxSupplier.Items.AddRange(_dataComboBox);
+            }
+
+        }
+        
+
+        public void AddInfoProduct()
+        {
+            try
+            {
+                Products obj = _Product.GetObjectById(Management.GetIDProduct());
+                Suppliers suppliers = _Suppliers.GetObjectById(obj.SupplierId);
+                ComboBoxSupplier.Text = suppliers.Name;
+                txtProductName.Text = obj.Name;
+                txtCost.Text = obj.Price + "";
+                txtDiscount.Text = obj.Discount + "";
+                txtProductionDate.Value = obj.ProductionDate;
+                txtExpiryDate.Value = obj.ExpiryDate;
+                txtDescribe.Text = obj.Description;
+                try
+                {
+                    picAnh.Image = System.Drawing.Image.FromFile(obj.Image);
+                }
+                catch (Exception)
+                {
+
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
 
         }
@@ -124,26 +178,6 @@ namespace GUI.US_
             // Sau khi thêm sản phẩm, cập nhật lại danh sách và hiển thị trên giao diện
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            // Xử lý sự kiện khi người dùng nhấn nút Cập nhật
-            // Hiển thị giao diện cập nhật sản phẩm, thực hiện các logic cần thiết, và cập nhật cơ sở dữ liệu
-            // ...
-
-            // Sau khi cập nhật sản phẩm, cập nhật lại danh sách và hiển thị trên giao diện
-            LoadData();
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            // Xử lý sự kiện khi người dùng nhấn nút Xóa
-            // Hiển thị giao diện xóa sản phẩm, thực hiện các logic cần thiết, và cập nhật cơ sở dữ liệu
-            // ...
-
-            // Sau khi xóa sản phẩm, cập nhật lại danh sách và hiển thị trên giao diện
-            LoadData();
-        }
-
         private void btnSearch_Click_1(object sender, EventArgs e)
         {
             // Xử lý sự kiện khi người dùng nhấn nút Tìm kiếm
@@ -154,11 +188,6 @@ namespace GUI.US_
             LoadData();
         }
 
-        public void btnLoad_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("sdfsdfsdfsdf");
-            AddInfoProduct();
-        }
         // TXT
 
         private void txtSupplier_SelectedValueChanged(object sender, EventArgs e)
@@ -233,54 +262,6 @@ namespace GUI.US_
 
         // 
 
-        public void AddInfoProduct()
-        {
-            Products obj = _Product.GetObjectById(Management.GetIDProduct());
-            Suppliers suppliers = _Suppliers.GetObjectById(obj.SupplierId);
-            ComboBoxSupplier.Text = suppliers.Name;
-            txtProductName.Text = "Nhaatj timo";
-            txtCost.Text = obj.Price + "";
-            txtDiscount.Text = obj.Discount + "";
-            txtProductionDate.Value = obj.ProductionDate;
-            txtExpiryDate.Value = obj.ExpiryDate;
-            txtDescribe.Text = obj.Description;
-            try
-            {
-                picAnh.Image = System.Drawing.Image.FromFile(obj.Image);
-            }
-            catch (Exception)
-            {  
-
-            }
-        }
-
-        public void Hien()
-        {
-            btnLoad.Visible = true;
-        }
-
-        public static UC_QL_Thuoc Instance
-        {
-            get
-            {
-                // Kiểm tra xem thể hiện đã được tạo chưa
-                if (_instance == null)
-                {
-                    // Sử dụng khóa để đảm bảo chỉ có một luồng có thể tạo thể hiện
-                    lock (_lock)
-                    {
-                        // Kiểm tra lại sau khi có khóa để đảm bảo không tạo thêm thể hiện
-                        if (_instance == null)
-                        {
-                            _instance = new UC_QL_Thuoc();
-                        }
-                    }
-                }
-                return _instance;
-            }
-        }
-
-        
     }
     
 }

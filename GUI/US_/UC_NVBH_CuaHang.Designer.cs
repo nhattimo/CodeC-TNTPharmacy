@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_NVBH_CuaHang));
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.flowLayoutPanelOrderProduct = new System.Windows.Forms.FlowLayoutPanel();
-            this.userControl21 = new GUI.US_.UserControl2();
-            this.userControl22 = new GUI.US_.UserControl2();
+            this.userControl21 = new GUI.US_.UC_ItemChooseProducts();
+            this.userControl22 = new GUI.US_.UC_ItemChooseProducts();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtQuantity = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -367,8 +367,8 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelProduct;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnSearch;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
-        private UserControl2 userControl21;
-        private UserControl2 userControl22;
+        private UC_ItemChooseProducts userControl21;
+        private UC_ItemChooseProducts userControl22;
         private UC_ItemProduct userControl11;
         private UC_ItemProduct userControl12;
         private UC_ItemProduct userControl13;

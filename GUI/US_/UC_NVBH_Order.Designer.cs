@@ -35,8 +35,6 @@
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.userControl11 = new GUI.UserControl1();
-            this.userControl12 = new GUI.UserControl1();
             this.guna2GradientTileButton1 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel1.SuspendLayout();
@@ -119,27 +117,11 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel1.Controls.Add(this.userControl11);
-            this.flowLayoutPanel1.Controls.Add(this.userControl12);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(34, 110);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(5);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1691, 762);
             this.flowLayoutPanel1.TabIndex = 15;
-            // 
-            // userControl11
-            // 
-            this.userControl11.Location = new System.Drawing.Point(3, 3);
-            this.userControl11.Name = "userControl11";
-            this.userControl11.Size = new System.Drawing.Size(1680, 297);
-            this.userControl11.TabIndex = 0;
-            // 
-            // userControl12
-            // 
-            this.userControl12.Location = new System.Drawing.Point(3, 306);
-            this.userControl12.Name = "userControl12";
-            this.userControl12.Size = new System.Drawing.Size(1680, 297);
-            this.userControl12.TabIndex = 1;
             // 
             // guna2GradientTileButton1
             // 
@@ -185,8 +167,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton1;
-        private GUI.UserControl1 userControl11;
-        private GUI.UserControl1 userControl12;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnSearch;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;

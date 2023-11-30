@@ -100,19 +100,13 @@
       <DependentUpon>FormQuanLy.cs</DependentUpon>
     </Compile>
     <Compile Include="Management.cs" />
-    <Compile Include="Msg.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Msg.Designer.cs">
-      <DependentUpon>Msg.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserControl1.cs">
+    <Compile Include="US_\UC_Item\UC_ItemOnlineOrders.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="US_\UC_Item\UC_ItemOnlineOrders.Designer.cs">
+      <DependentUpon>UC_ItemOnlineOrders.cs</DependentUpon>
     </Compile>
     <Compile Include="FormThuKho.cs">
       <SubType>Form</SubType>
@@ -125,6 +119,12 @@
     </Compile>
     <Compile Include="FormLuaChonCuaKhachHang.Designer.cs">
       <DependentUpon>FormLuaChonCuaKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US_\From_CRUD\Form_QL_Thuoc_CRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US_\From_CRUD\Form_QL_Thuoc_CRUD.Designer.cs">
+      <DependentUpon>Form_QL_Thuoc_CRUD.cs</DependentUpon>
     </Compile>
     <Compile Include="US_\UC_Bill.cs">
       <SubType>UserControl</SubType>
@@ -240,53 +240,47 @@
     <Compile Include="US_\UC_TK_XuatKho.Designer.cs">
       <DependentUpon>UC_TK_XuatKho.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UC_ItemProduct.cs">
+    <Compile Include="US_\UC_Item\UC_ItemProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UC_ItemProduct.Designer.cs">
+    <Compile Include="US_\UC_Item\UC_ItemProduct.Designer.cs">
       <DependentUpon>UC_ItemProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UserControl2.cs">
+    <Compile Include="US_\UC_Item\UC_ItemChooseProducts.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UserControl2.Designer.cs">
-      <DependentUpon>UserControl2.cs</DependentUpon>
+    <Compile Include="US_\UC_Item\UC_ItemChooseProducts.Designer.cs">
+      <DependentUpon>UC_ItemChooseProducts.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UserControl3.cs">
+    <Compile Include="US_\UC_Item\UC_ItemProductsInCart.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UserControl3.Designer.cs">
-      <DependentUpon>UserControl3.cs</DependentUpon>
+    <Compile Include="US_\UC_Item\UC_ItemProductsInCart.Designer.cs">
+      <DependentUpon>UC_ItemProductsInCart.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UC_QL_Item_Info_Employees_.cs">
+    <Compile Include="US_\UC_Item\UC_ItemInfoEmployees_.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UC_QL_Item_Info_Employees_.Designer.cs">
-      <DependentUpon>UC_QL_Item_Info_Employees_.cs</DependentUpon>
+    <Compile Include="US_\UC_Item\UC_ItemInfoEmployees_.Designer.cs">
+      <DependentUpon>UC_ItemInfoEmployees_.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UserControl5.cs">
+    <Compile Include="US_\UC_Item\UC_ItemInfoCustomer.cs.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UserControl5.Designer.cs">
-      <DependentUpon>UserControl5.cs</DependentUpon>
+    <Compile Include="US_\UC_Item\UC_ItemInfoCustomer.cs.Designer.cs">
+      <DependentUpon>UC_ItemInfoCustomer.cs.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UserControl6.cs">
+    <Compile Include="US_\UC_Item\UserControl6.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UserControl6.Designer.cs">
+    <Compile Include="US_\UC_Item\UserControl6.Designer.cs">
       <DependentUpon>UserControl6.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_\UserControl7.cs">
+    <Compile Include="US_\UC_Item\UserControl7.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_\UserControl7.Designer.cs">
+    <Compile Include="US_\UC_Item\UserControl7.Designer.cs">
       <DependentUpon>UserControl7.cs</DependentUpon>
-    </Compile>
-    <Compile Include="US_\US_UC_\UC_QL_Thuoc_CRUDcs.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="US_\US_UC_\UC_QL_Thuoc_CRUDcs.Designer.cs">
-      <DependentUpon>UC_QL_Thuoc_CRUDcs.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FormDangKy.resx">
       <DependentUpon>FormDangKy.cs</DependentUpon>
@@ -306,9 +300,6 @@
     <EmbeddedResource Include="FormQuanLy.resx">
       <DependentUpon>FormQuanLy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Msg.resx">
-      <DependentUpon>Msg.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -318,14 +309,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="US_\UC_Item\UC_ItemOnlineOrders.resx">
+      <DependentUpon>UC_ItemOnlineOrders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormThuKho.resx">
       <DependentUpon>FormThuKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLuaChonCuaKhachHang.resx">
       <DependentUpon>FormLuaChonCuaKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US_\From_CRUD\Form_QL_Thuoc_CRUD.resx">
+      <DependentUpon>Form_QL_Thuoc_CRUD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="US_\UC_Bill.resx">
       <DependentUpon>UC_Bill.cs</DependentUpon>
@@ -384,29 +378,26 @@
     <EmbeddedResource Include="US_\UC_TK_XuatKho.resx">
       <DependentUpon>UC_TK_XuatKho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UC_ItemProduct.resx">
+    <EmbeddedResource Include="US_\UC_Item\UC_ItemProduct.resx">
       <DependentUpon>UC_ItemProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UserControl2.resx">
-      <DependentUpon>UserControl2.cs</DependentUpon>
+    <EmbeddedResource Include="US_\UC_Item\UC_ItemChooseProducts.resx">
+      <DependentUpon>UC_ItemChooseProducts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UserControl3.resx">
-      <DependentUpon>UserControl3.cs</DependentUpon>
+    <EmbeddedResource Include="US_\UC_Item\UC_ItemProductsInCart.resx">
+      <DependentUpon>UC_ItemProductsInCart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UC_QL_Item_Info_Employees_.resx">
-      <DependentUpon>UC_QL_Item_Info_Employees_.cs</DependentUpon>
+    <EmbeddedResource Include="US_\UC_Item\UC_ItemInfoEmployees_.resx">
+      <DependentUpon>UC_ItemInfoEmployees_.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UserControl5.resx">
-      <DependentUpon>UserControl5.cs</DependentUpon>
+    <EmbeddedResource Include="US_\UC_Item\UC_ItemInfoCustomer.cs.resx">
+      <DependentUpon>UC_ItemInfoCustomer.cs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UserControl6.resx">
+    <EmbeddedResource Include="US_\UC_Item\UserControl6.resx">
       <DependentUpon>UserControl6.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_\UserControl7.resx">
+    <EmbeddedResource Include="US_\UC_Item\UserControl7.resx">
       <DependentUpon>UserControl7.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="US_\US_UC_\UC_QL_Thuoc_CRUDcs.resx">
-      <DependentUpon>UC_QL_Thuoc_CRUDcs.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -432,6 +423,7 @@
       <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

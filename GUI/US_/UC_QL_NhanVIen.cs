@@ -2,6 +2,7 @@
 using DTO;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUI.US_
@@ -23,10 +24,55 @@ namespace GUI.US_
 
         private void UC_QL_NhanVIen_Load(object sender, EventArgs e)
         {
+            Management.ScrollBarFlowLayoutPanel(flowLayoutPanelEmployee, VScrollBar);
             List<Employees> obj = _EmployeesBusinesLogiccs.GetAllObject();
             Management.AddItemsUC(flowLayoutPanelEmployee, obj);
         }
 
+        public async Task RunContinuousFunction()
+        {
+            int IDProduct = Management.GetIDEmployess();
+            while (true)
+            {
+                if (this.Visible != false)
+                {
+                    if (Management.GetIDEmployess() != IDProduct)
+                    {
+                        Console.WriteLine("Đã thay đổi");
+                        LoadInfoOfIteam();
+                        IDProduct = Management.GetIDProduct();
+                    }
+                }
+                await Task.Delay(100);
+            }
+        }
+
+        public void LoadInfoOfIteam()
+        {
+            Employees obj = _EmployeesBusinesLogiccs.GetObjectById(Management.GetIDEmployess());
+            Account account = _AccountBusinesLogiccs.GetObjectById(Management.GetIDEmployess());
+            txtNameAccount.Text = account.AccountName;
+            txtPassword.Text = account.Password;
+            txtName.Text = obj.Name;
+            if (obj.Sex == "Nam" || obj.Sex == "nam")
+                radioButtonMale.Checked = true;
+            else
+                radioButtonMale.Checked = false;
+            txtDateOfBirth.Value = obj.DateOfBirth;
+            txtEmail.Text = obj.Email;
+            txtCCCD.Text = obj.CCCD;
+            txtStartedDay.Value = obj.StartedDay;
+            txtAddress.Text = obj.Address;
+
+            try
+            {
+                PicAnh.Image = System.Drawing.Image.FromFile(obj.Image);
+            }
+            catch (Exception)
+            {
+                PicAnh.Image = null;
+            }
+        }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -81,39 +127,7 @@ namespace GUI.US_
 
         }
 
-        //
-        public void LoadInfoOfIteam()
-        {
-            Employees obj = _EmployeesBusinesLogiccs.GetObjectById(Management.GetIDEmployess());
-            Account account = _AccountBusinesLogiccs.GetObjectById(Management.GetIDEmployess());
-            txtNameAccount.Text = account.AccountName;
-            txtPassword.Text = account.Password;
-            txtName.Text = obj.Name;
-            if (obj.Sex == "Nam" || obj.Sex == "nam")
-                radioButtonMale.Checked = true;
-            else
-                radioButtonMale.Checked = false;
-            txtDateOfBirth.Value = obj.DateOfBirth;
-            txtEmail.Text = obj.Email;
-            txtCCCD.Text = obj.CCCD;
-            txtStartedDay.Value = obj.StartedDay;
-            txtAddress.Text = obj.Address;
-
-            try
-            {
-                PicAnh.Image = System.Drawing.Image.FromFile(obj.Image);
-            }
-            catch (Exception)
-            {
-                PicAnh.Image = null;
-            }
-        }
-
-        private void btnLoad_Click(object sender, EventArgs e)
-        {
-            LoadInfoOfIteam();
-        }
-
+        
         // txt
         private void txtNameAccount_Leave(object sender, EventArgs e)
         {
