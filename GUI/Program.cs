@@ -23,6 +23,8 @@ namespace GUI
             Application.Run(new FormDieuKhienChucVu());
 
             // demo master 1
+            // demo master 1
+            // demo master 12
         }
     }
 }
