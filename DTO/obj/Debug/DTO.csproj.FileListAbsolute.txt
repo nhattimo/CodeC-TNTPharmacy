@@ -16,3 +16,9 @@ E:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DTO\obj\Debug\DTO.csproj.Ass
 E:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 E:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DTO\obj\Debug\DTO.dll
 E:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DTO\obj\Debug\DTO.pdb
+D:\CodeC-TNTPharmacy\DTO\bin\Debug\DTO.dll
+D:\CodeC-TNTPharmacy\DTO\bin\Debug\DTO.pdb
+D:\CodeC-TNTPharmacy\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\CodeC-TNTPharmacy\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\CodeC-TNTPharmacy\DTO\obj\Debug\DTO.dll
+D:\CodeC-TNTPharmacy\DTO\obj\Debug\DTO.pdb

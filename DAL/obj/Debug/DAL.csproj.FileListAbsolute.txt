@@ -44,3 +44,19 @@ E:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DAL\obj\Debug\DAL.csproj.Cor
 E:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DAL\obj\Debug\DAL.csproj.CopyComplete
 E:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DAL\obj\Debug\DAL.dll
 E:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DAL\obj\Debug\DAL.pdb
+D:\CodeC-TNTPharmacy\DAL\bin\Debug\DAL.dll.config
+D:\CodeC-TNTPharmacy\DAL\bin\Debug\DAL.dll
+D:\CodeC-TNTPharmacy\DAL\bin\Debug\DAL.pdb
+D:\CodeC-TNTPharmacy\DAL\bin\Debug\DTO.dll
+D:\CodeC-TNTPharmacy\DAL\bin\Debug\EntityFramework.dll
+D:\CodeC-TNTPharmacy\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\CodeC-TNTPharmacy\DAL\bin\Debug\DTO.pdb
+D:\CodeC-TNTPharmacy\DAL\bin\Debug\EntityFramework.xml
+D:\CodeC-TNTPharmacy\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\CodeC-TNTPharmacy\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\CodeC-TNTPharmacy\DAL\obj\Debug\DAL.Migrations.Migration.resources
+D:\CodeC-TNTPharmacy\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+D:\CodeC-TNTPharmacy\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\CodeC-TNTPharmacy\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\CodeC-TNTPharmacy\DAL\obj\Debug\DAL.dll
+D:\CodeC-TNTPharmacy\DAL\obj\Debug\DAL.pdb

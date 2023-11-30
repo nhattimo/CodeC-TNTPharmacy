@@ -40,3 +40,17 @@ E:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\BLL\obj\Debug\BLL.csproj.Cor
 E:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\BLL\obj\Debug\BLL.csproj.CopyComplete
 E:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\BLL\obj\Debug\BLL.dll
 E:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\BLL\obj\Debug\BLL.pdb
+D:\CodeC-TNTPharmacy\BLL\bin\Debug\BLL.dll
+D:\CodeC-TNTPharmacy\BLL\bin\Debug\BLL.pdb
+D:\CodeC-TNTPharmacy\BLL\bin\Debug\DAL.dll
+D:\CodeC-TNTPharmacy\BLL\bin\Debug\DTO.dll
+D:\CodeC-TNTPharmacy\BLL\bin\Debug\EntityFramework.dll
+D:\CodeC-TNTPharmacy\BLL\bin\Debug\DAL.pdb
+D:\CodeC-TNTPharmacy\BLL\bin\Debug\DAL.dll.config
+D:\CodeC-TNTPharmacy\BLL\bin\Debug\DTO.pdb
+D:\CodeC-TNTPharmacy\BLL\bin\Debug\EntityFramework.xml
+D:\CodeC-TNTPharmacy\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\CodeC-TNTPharmacy\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\CodeC-TNTPharmacy\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\CodeC-TNTPharmacy\BLL\obj\Debug\BLL.dll
+D:\CodeC-TNTPharmacy\BLL\obj\Debug\BLL.pdb
