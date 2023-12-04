@@ -11,11 +11,11 @@ namespace BLL
     public class CategorysBusinessLogic
     {
         // Sử dụng để tương tác với DAL (DataAccess)
-        private readonly CategorysDataAccess _objectDataAccess;
+        private readonly CategorysDataAccess _objectDataAccess = new CategorysDataAccess();
 
-        public CategorysBusinessLogic(CategorysDataAccess productDataAccess)
+        public CategorysBusinessLogic()
         {
-            _objectDataAccess = productDataAccess;
+            
         }
 
         public void Add(Categorys obj)

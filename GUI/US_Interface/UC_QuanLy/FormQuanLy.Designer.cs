@@ -329,22 +329,25 @@
             // 
             // guna2GradientTileButton7
             // 
+            this.guna2GradientTileButton7.BorderColor = System.Drawing.Color.Transparent;
             this.guna2GradientTileButton7.Checked = true;
             this.guna2GradientTileButton7.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2GradientTileButton7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2GradientTileButton7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2GradientTileButton7.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2GradientTileButton7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientTileButton7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.guna2GradientTileButton7.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.guna2GradientTileButton7.FillColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton7.FillColor2 = System.Drawing.Color.Transparent;
             this.guna2GradientTileButton7.Font = new System.Drawing.Font("Segoe UI Semibold", 20.2F, System.Drawing.FontStyle.Bold);
-            this.guna2GradientTileButton7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.guna2GradientTileButton7.ForeColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton7.Image = ((System.Drawing.Image)(resources.GetObject("guna2GradientTileButton7.Image")));
+            this.guna2GradientTileButton7.ImageSize = new System.Drawing.Size(250, 70);
             this.guna2GradientTileButton7.Location = new System.Drawing.Point(20, 5);
             this.guna2GradientTileButton7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2GradientTileButton7.Name = "guna2GradientTileButton7";
+            this.guna2GradientTileButton7.PressedColor = System.Drawing.Color.Transparent;
             this.guna2GradientTileButton7.Size = new System.Drawing.Size(339, 86);
             this.guna2GradientTileButton7.TabIndex = 9;
-            this.guna2GradientTileButton7.Text = "Logo";
             this.guna2GradientTileButton7.UseWaitCursor = true;
             // 
             // btnLogOut
@@ -381,6 +384,7 @@
             this.uC_Info_Employee1.Name = "uC_Info_Employee1";
             this.uC_Info_Employee1.Size = new System.Drawing.Size(1765, 895);
             this.uC_Info_Employee1.TabIndex = 28;
+            this.uC_Info_Employee1.UseWaitCursor = true;
             // 
             // uC_QL_Thuoc1
             // 

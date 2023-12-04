@@ -279,11 +279,19 @@ namespace GUI
                     // Nếu chưa tồn tại, tạo thư mục mới
                     Directory.CreateDirectory(folderPath);
 
-                    pathString = Path.Combine(folderPath, fname); pictureBox.Image.Save(pathString);
+                    pathString = Path.Combine(folderPath, fname);
+                    if (pictureBox.Image != null)
+                        pictureBox.Image.Save(pathString);
+                    else
+                        pathString = "";
                 }
                 else
                 {
-                    pathString = Path.Combine(folderPath, fname); pictureBox.Image.Save(pathString);
+                    pathString = Path.Combine(folderPath, fname);
+                    if (pictureBox.Image != null)
+                        pictureBox.Image.Save(pathString);
+                    else
+                        pathString = "";
                 }
                 return pathString;
             }

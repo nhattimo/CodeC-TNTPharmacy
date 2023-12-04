@@ -11,22 +11,38 @@ namespace GUI.US_
     {
         public readonly EmployeesBusinessLogic _EmployeesBusinesLogiccs = new EmployeesBusinessLogic();
         public readonly AccountBusinesLogiccs _AccountBusinesLogiccs = new AccountBusinesLogiccs();
+        public readonly RolesBusinessLogic _RolesBusinesLogiccs = new RolesBusinessLogic();
+ 
+
+        List<Employees> _listObjEmployees;
+        List<Account> _listObjAccount;
+        List<Roles> _listObjRoles;
+        Employees _objEmployees;
+        Account _objAccount;
+
+        int _ID_RoleSearch;
 
         Label[] _laberError;
+        string[] _dataComboBox;
         bool _trangThai;
         public UC_QL_NhanVIen()
         {
             InitializeComponent();
-            _laberError = new Label[] { errorNameAccount, errorPassword, errorName, errorDateOfBirth, errorSex, errorEmail, errorCCCD, errorStartDay, errorAddress };
+            _listObjEmployees = _EmployeesBusinesLogiccs.GetAllObject();
+            _listObjAccount = _AccountBusinesLogiccs.GetAllObject();
+            _listObjRoles = _RolesBusinesLogiccs.GetAllObject();
+            _laberError = new Label[] { errorNameAccount, errorPassword, errorName, errorDateOfBirth, errorSex, errorEmail, errorCCCD, errorStartDay, errorAddress, errorRole };
             _trangThai = false;
             Management.ErrorHide(_laberError);
+            LoadDataComboBoxRoleTxt();
+            LoadDataComboBoxRoleChoose();
+            LoadDataEmployees();
+            ComboBoxRoleChoose.Text = "Tất cả";
         }
 
         private void UC_QL_NhanVIen_Load(object sender, EventArgs e)
         {
             Management.ScrollBarFlowLayoutPanel(flowLayoutPanelEmployee, VScrollBar);
-            List<Employees> obj = _EmployeesBusinesLogiccs.GetAllObject();
-            Management.AddItemsUC(flowLayoutPanelEmployee, obj);
         }
 
         public async Task RunContinuousFunction()
@@ -49,31 +65,111 @@ namespace GUI.US_
 
         public void LoadInfoOfIteam()
         {
-            Employees obj = _EmployeesBusinesLogiccs.GetObjectById(Management.GetIDEmployess());
-            Account account = _AccountBusinesLogiccs.GetObjectById(Management.GetIDEmployess());
-            txtNameAccount.Text = account.AccountName;
-            txtPassword.Text = account.Password;
-            txtName.Text = obj.Name;
-            if (obj.Sex == "Nam" || obj.Sex == "nam")
+            _objEmployees = _EmployeesBusinesLogiccs.GetObjectById(Management.GetIDEmployess());
+            _objAccount = _AccountBusinesLogiccs.GetObjectById(Management.GetIDEmployess());
+            txtNameAccount.Text = _objAccount.AccountName;
+            txtPassword.Text = _objAccount.Password;
+            txtName.Text = _objEmployees.Name;
+            if (_objEmployees.Sex == "Nam" || _objEmployees.Sex == "nam")
                 radioButtonMale.Checked = true;
             else
                 radioButtonMale.Checked = false;
-            txtDateOfBirth.Value = obj.DateOfBirth;
-            txtEmail.Text = obj.Email;
-            txtCCCD.Text = obj.CCCD;
-            txtStartedDay.Value = obj.StartedDay;
-            txtAddress.Text = obj.Address;
+            txtDateOfBirth.Value = _objEmployees.DateOfBirth;
+            txtEmail.Text = _objEmployees.Email;
+            txtCCCD.Text = _objEmployees.CCCD;
+            txtStartedDay.Value = _objEmployees.StartedDay;
+            txtAddress.Text = _objEmployees.Address;
+            foreach (var item in _listObjRoles)
+            {
+                if(item.ID == _objAccount.Role)
+                {
+                    ComboBoxRoleTxt.Text = item.Name;
+                    break;
+                }
 
+            }
+            
             try
             {
-                PicAnh.Image = System.Drawing.Image.FromFile(obj.Image);
+                PicAnh.Image = System.Drawing.Image.FromFile(_objEmployees.Image);
             }
             catch (Exception)
             {
                 PicAnh.Image = null;
             }
         }
+        private void LoadDataEmployees()
+        {
+            flowLayoutPanelEmployee.Controls.Clear();
+            // Load tất cả 
+            if (ComboBoxRoleChoose.Text == "Tất cả")
+            {
+                // Hiển thị danh nhân viên trên giao diện
+                Management.AddItemsUC(flowLayoutPanelEmployee, _listObjEmployees);
+            } // load theo _ID_RoleSearch
+            else
+            {
+                List<int> listIDAccount = new List<int>();
+                foreach (var item in _listObjAccount)
+                {
+                    if( item.Role == _ID_RoleSearch)
+                    {
+                        listIDAccount.Add(item.ID);
+                    }
+                }
 
+                List<Employees> listIteamEmployees = new List<Employees>();
+                foreach (var item in _listObjEmployees)
+                {
+                    foreach (var itemID in listIDAccount)
+                    {
+                        if (item.IDTK == itemID)
+                        {
+                            listIteamEmployees.Add(item);
+                            break;
+                        }
+                    }
+                }
+                
+
+                Management.AddItemsUC(flowLayoutPanelEmployee, listIteamEmployees);
+            }
+        }
+        private void LoadDataComboBoxRoleTxt()
+        {
+            _dataComboBox = new string[_listObjRoles.Count];
+            for (int i = 0; i < _listObjRoles.Count; i++)
+            {
+                _dataComboBox[i] = _listObjRoles[i].Name;
+            }
+
+
+            // Gán mảng dữ liệu cho ComboBox
+            ComboBoxRoleTxt.Items.Clear();
+            if (_dataComboBox.Length > 0)
+            {
+                ComboBoxRoleTxt.Items.AddRange(_dataComboBox);
+            }
+
+        }
+
+        private void LoadDataComboBoxRoleChoose()
+        {
+            _dataComboBox = new string[_listObjRoles.Count];
+            for (int i = 0; i < _listObjRoles.Count; i++)
+            {
+                _dataComboBox[i] = _listObjRoles[i].Name;
+            }
+
+
+            // Gán mảng dữ liệu cho ComboBox
+            ComboBoxRoleChoose.Items.Clear();
+            ComboBoxRoleChoose.Items.Add("Tất cả");
+            if (_dataComboBox.Length > 0)
+            {
+                ComboBoxRoleChoose.Items.AddRange(_dataComboBox);
+            }
+        }
         private void btnAdd_Click(object sender, EventArgs e)
         {
             // check ko để trống
@@ -108,8 +204,6 @@ namespace GUI.US_
             {
                 MessageBox.Show("Add thất bại");
             }
-
-
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -169,7 +263,36 @@ namespace GUI.US_
             Management.Check(txtAddress, errorAddress);
         }
 
+        private void ComboBoxRoleTxt_Leave(object sender, EventArgs e)
+        {
+            Management.Check(ComboBoxRoleTxt, errorRole);
+        }
 
-        
+        private void ComboBoxRoleChoose_SelectedValueChanged(object sender, EventArgs e)
+        {
+            foreach (var item in _listObjRoles)
+            {
+                if (item.Name == ComboBoxRoleChoose.Text)
+                {
+                    _ID_RoleSearch = item.ID;
+                    Console.WriteLine(_ID_RoleSearch);
+                    break;
+                }
+            }
+            LoadDataEmployees();
+        }
+
+        private void ComboBoxRoleTxt_SelectedValueChanged(object sender, EventArgs e)
+        {
+            /*foreach (var item in _ListObjCategorys)
+            {
+                if (item.Name == ComboBoxCategoryTxt.Text)
+                {
+                    _ID_Category = item.ID;
+                    Console.WriteLine(_ID_Category + " " + item.Name);
+                    break;
+                }
+            }*/
+        }
     }
 }

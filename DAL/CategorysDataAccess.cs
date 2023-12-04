@@ -10,12 +10,12 @@ namespace DAL
     public class CategorysDataAccess
     {
         // Sử dụng để tương tác với cơ sở dữ liệu
-        private readonly AppPharmacyContext _db;
+        private readonly AppPharmacyContext _db = new AppPharmacyContext();
 
         // Phương thức tạo (constructor)
-        public CategorysDataAccess(AppPharmacyContext context)
+        public CategorysDataAccess()
         {
-            _db = context;
+           
         }
 
         public void InsertDataAccess(Categorys obj)

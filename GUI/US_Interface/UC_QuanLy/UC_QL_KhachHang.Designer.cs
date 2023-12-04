@@ -785,9 +785,6 @@ namespace GUI.US_
             // 
             // flowLayoutPanelCustomers
             // 
-            this.flowLayoutPanelCustomers.Controls.Add(this.userControl51);
-            this.flowLayoutPanelCustomers.Controls.Add(this.userControl52);
-            this.flowLayoutPanelCustomers.Controls.Add(this.userControl53);
             this.flowLayoutPanelCustomers.Location = new System.Drawing.Point(27, 120);
             this.flowLayoutPanelCustomers.Margin = new System.Windows.Forms.Padding(5);
             this.flowLayoutPanelCustomers.Name = "flowLayoutPanelCustomers";
@@ -795,32 +792,7 @@ namespace GUI.US_
             this.flowLayoutPanelCustomers.TabIndex = 17;
             this.flowLayoutPanelCustomers.UseWaitCursor = true;
             // 
-            // userControl51
-            // 
-            this.userControl51.BackColor = System.Drawing.SystemColors.Info;
-            this.userControl51.Location = new System.Drawing.Point(3, 3);
-            this.userControl51.Name = "userControl51";
-            this.userControl51.Size = new System.Drawing.Size(524, 263);
-            this.userControl51.TabIndex = 0;
-            this.userControl51.UseWaitCursor = true;
-            // 
-            // userControl52
-            // 
-            this.userControl52.BackColor = System.Drawing.SystemColors.Info;
-            this.userControl52.Location = new System.Drawing.Point(533, 3);
-            this.userControl52.Name = "userControl52";
-            this.userControl52.Size = new System.Drawing.Size(524, 263);
-            this.userControl52.TabIndex = 1;
-            this.userControl52.UseWaitCursor = true;
-            // 
-            // userControl53
-            // 
-            this.userControl53.BackColor = System.Drawing.SystemColors.Info;
-            this.userControl53.Location = new System.Drawing.Point(3, 272);
-            this.userControl53.Name = "userControl53";
-            this.userControl53.Size = new System.Drawing.Size(524, 263);
-            this.userControl53.TabIndex = 2;
-            this.userControl53.UseWaitCursor = true;
+          
             // 
             // UC_QL_KhachHang
             // 

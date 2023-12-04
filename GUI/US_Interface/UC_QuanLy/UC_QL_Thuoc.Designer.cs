@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_QL_Thuoc));
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.errorCategory = new System.Windows.Forms.Label();
+            this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.ComboBoxCategoryTxt = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.errorExpiryDate = new System.Windows.Forms.Label();
             this.errorProductionDate = new System.Windows.Forms.Label();
@@ -61,7 +64,7 @@
             this.btnAdd = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.VScrollBar = new Guna.UI2.WinForms.Guna2VScrollBar();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.ComboBoxCategoryChoose = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnSearch = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientTileButton10 = new Guna.UI2.WinForms.Guna2GradientTileButton();
@@ -77,6 +80,9 @@
             this.guna2Panel2.BorderColor = System.Drawing.Color.Gray;
             this.guna2Panel2.BorderRadius = 1;
             this.guna2Panel2.BorderThickness = 1;
+            this.guna2Panel2.Controls.Add(this.errorCategory);
+            this.guna2Panel2.Controls.Add(this.guna2HtmlLabel9);
+            this.guna2Panel2.Controls.Add(this.ComboBoxCategoryTxt);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel8);
             this.guna2Panel2.Controls.Add(this.errorExpiryDate);
             this.guna2Panel2.Controls.Add(this.errorProductionDate);
@@ -112,6 +118,53 @@
             this.guna2Panel2.TabIndex = 15;
             this.guna2Panel2.UseWaitCursor = true;
             // 
+            // errorCategory
+            // 
+            this.errorCategory.AutoSize = true;
+            this.errorCategory.BackColor = System.Drawing.Color.Transparent;
+            this.errorCategory.ForeColor = System.Drawing.Color.Red;
+            this.errorCategory.Location = new System.Drawing.Point(15, 682);
+            this.errorCategory.Name = "errorCategory";
+            this.errorCategory.Size = new System.Drawing.Size(25, 16);
+            this.errorCategory.TabIndex = 193;
+            this.errorCategory.Text = "Lỗi";
+            this.errorCategory.UseWaitCursor = true;
+            // 
+            // guna2HtmlLabel9
+            // 
+            this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(18, 615);
+            this.guna2HtmlLabel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
+            this.guna2HtmlLabel9.Size = new System.Drawing.Size(86, 25);
+            this.guna2HtmlLabel9.TabIndex = 192;
+            this.guna2HtmlLabel9.Text = "Loại thuốc";
+            this.guna2HtmlLabel9.UseWaitCursor = true;
+            // 
+            // ComboBoxCategoryTxt
+            // 
+            this.ComboBoxCategoryTxt.BackColor = System.Drawing.Color.Transparent;
+            this.ComboBoxCategoryTxt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ComboBoxCategoryTxt.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ComboBoxCategoryTxt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxCategoryTxt.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ComboBoxCategoryTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ComboBoxCategoryTxt.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.ComboBoxCategoryTxt.ForeColor = System.Drawing.Color.Black;
+            this.ComboBoxCategoryTxt.ItemHeight = 30;
+            this.ComboBoxCategoryTxt.Items.AddRange(new object[] {
+            "Ac",
+            "Non-Ac"});
+            this.ComboBoxCategoryTxt.Location = new System.Drawing.Point(17, 644);
+            this.ComboBoxCategoryTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ComboBoxCategoryTxt.Name = "ComboBoxCategoryTxt";
+            this.ComboBoxCategoryTxt.Size = new System.Drawing.Size(589, 36);
+            this.ComboBoxCategoryTxt.TabIndex = 191;
+            this.ComboBoxCategoryTxt.UseWaitCursor = true;
+            this.ComboBoxCategoryTxt.SelectedValueChanged += new System.EventHandler(this.ComboBoxCategoryTxt_SelectedValueChanged);
+            this.ComboBoxCategoryTxt.Leave += new System.EventHandler(this.ComboBoxCategoryTxt_Leave);
+            // 
             // guna2HtmlLabel8
             // 
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
@@ -129,7 +182,7 @@
             this.errorExpiryDate.AutoSize = true;
             this.errorExpiryDate.BackColor = System.Drawing.Color.Transparent;
             this.errorExpiryDate.ForeColor = System.Drawing.Color.Red;
-            this.errorExpiryDate.Location = new System.Drawing.Point(24, 666);
+            this.errorExpiryDate.Location = new System.Drawing.Point(22, 564);
             this.errorExpiryDate.Name = "errorExpiryDate";
             this.errorExpiryDate.Size = new System.Drawing.Size(25, 16);
             this.errorExpiryDate.TabIndex = 186;
@@ -141,7 +194,7 @@
             this.errorProductionDate.AutoSize = true;
             this.errorProductionDate.BackColor = System.Drawing.Color.Transparent;
             this.errorProductionDate.ForeColor = System.Drawing.Color.Red;
-            this.errorProductionDate.Location = new System.Drawing.Point(24, 571);
+            this.errorProductionDate.Location = new System.Drawing.Point(22, 469);
             this.errorProductionDate.Name = "errorProductionDate";
             this.errorProductionDate.Size = new System.Drawing.Size(25, 16);
             this.errorProductionDate.TabIndex = 185;
@@ -152,7 +205,7 @@
             // 
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(19, 587);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(17, 485);
             this.guna2HtmlLabel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(112, 25);
@@ -164,7 +217,7 @@
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(19, 497);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(17, 395);
             this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(118, 25);
@@ -181,8 +234,8 @@
             this.txtProductionDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtProductionDate.ForeColor = System.Drawing.Color.Black;
             this.txtProductionDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.txtProductionDate.Location = new System.Drawing.Point(19, 523);
-            this.txtProductionDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtProductionDate.Location = new System.Drawing.Point(17, 421);
+            this.txtProductionDate.Margin = new System.Windows.Forms.Padding(4);
             this.txtProductionDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.txtProductionDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.txtProductionDate.Name = "txtProductionDate";
@@ -200,12 +253,12 @@
             this.txtExpiryDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtExpiryDate.ForeColor = System.Drawing.Color.Black;
             this.txtExpiryDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.txtExpiryDate.Location = new System.Drawing.Point(19, 618);
-            this.txtExpiryDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtExpiryDate.Location = new System.Drawing.Point(17, 516);
+            this.txtExpiryDate.Margin = new System.Windows.Forms.Padding(4);
             this.txtExpiryDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.txtExpiryDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.txtExpiryDate.Name = "txtExpiryDate";
-            this.txtExpiryDate.Size = new System.Drawing.Size(575, 44);
+            this.txtExpiryDate.Size = new System.Drawing.Size(293, 44);
             this.txtExpiryDate.TabIndex = 178;
             this.txtExpiryDate.UseWaitCursor = true;
             this.txtExpiryDate.Value = new System.DateTime(2023, 10, 2, 20, 5, 0, 423);
@@ -251,7 +304,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(253, 433);
+            this.label1.Location = new System.Drawing.Point(251, 330);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 29);
             this.label1.TabIndex = 143;
@@ -262,7 +315,7 @@
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(19, 388);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(17, 286);
             this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(73, 25);
@@ -275,7 +328,7 @@
             this.errorDiscount.AutoSize = true;
             this.errorDiscount.BackColor = System.Drawing.Color.Transparent;
             this.errorDiscount.ForeColor = System.Drawing.Color.Red;
-            this.errorDiscount.Location = new System.Drawing.Point(24, 475);
+            this.errorDiscount.Location = new System.Drawing.Point(22, 373);
             this.errorDiscount.Name = "errorDiscount";
             this.errorDiscount.Size = new System.Drawing.Size(25, 16);
             this.errorDiscount.TabIndex = 141;
@@ -298,7 +351,7 @@
             this.txtDiscount.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDiscount.ForeColor = System.Drawing.Color.Black;
             this.txtDiscount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDiscount.Location = new System.Drawing.Point(19, 418);
+            this.txtDiscount.Location = new System.Drawing.Point(17, 316);
             this.txtDiscount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDiscount.Name = "txtDiscount";
             this.txtDiscount.PasswordChar = '\0';
@@ -314,7 +367,7 @@
             // 
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(19, 684);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(17, 582);
             this.guna2HtmlLabel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(48, 25);
@@ -327,7 +380,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(233, 321);
+            this.label3.Location = new System.Drawing.Point(542, 218);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 29);
             this.label3.TabIndex = 137;
@@ -338,7 +391,7 @@
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(17, 278);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(326, 175);
             this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(61, 25);
@@ -387,7 +440,7 @@
             this.ComboBoxSupplier.Location = new System.Drawing.Point(17, 112);
             this.ComboBoxSupplier.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ComboBoxSupplier.Name = "ComboBoxSupplier";
-            this.ComboBoxSupplier.Size = new System.Drawing.Size(575, 36);
+            this.ComboBoxSupplier.Size = new System.Drawing.Size(589, 36);
             this.ComboBoxSupplier.TabIndex = 129;
             this.ComboBoxSupplier.UseWaitCursor = true;
             this.ComboBoxSupplier.SelectedValueChanged += new System.EventHandler(this.txtSupplier_SelectedValueChanged);
@@ -410,7 +463,7 @@
             this.errorCost.AutoSize = true;
             this.errorCost.BackColor = System.Drawing.Color.Transparent;
             this.errorCost.ForeColor = System.Drawing.Color.Red;
-            this.errorCost.Location = new System.Drawing.Point(23, 366);
+            this.errorCost.Location = new System.Drawing.Point(332, 263);
             this.errorCost.Name = "errorCost";
             this.errorCost.Size = new System.Drawing.Size(25, 16);
             this.errorCost.TabIndex = 114;
@@ -472,7 +525,7 @@
             this.txtCost.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCost.ForeColor = System.Drawing.Color.Black;
             this.txtCost.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCost.Location = new System.Drawing.Point(17, 309);
+            this.txtCost.Location = new System.Drawing.Point(326, 206);
             this.txtCost.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCost.Name = "txtCost";
             this.txtCost.PasswordChar = '\0';
@@ -507,7 +560,7 @@
             this.txtProductName.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtProductName.PlaceholderText = "VD: Abcd";
             this.txtProductName.SelectedText = "";
-            this.txtProductName.Size = new System.Drawing.Size(576, 53);
+            this.txtProductName.Size = new System.Drawing.Size(289, 53);
             this.txtProductName.TabIndex = 106;
             this.txtProductName.UseWaitCursor = true;
             this.txtProductName.Leave += new System.EventHandler(this.txtProductName_Leave);
@@ -563,7 +616,7 @@
             this.guna2Panel1.BorderRadius = 1;
             this.guna2Panel1.BorderThickness = 1;
             this.guna2Panel1.Controls.Add(this.VScrollBar);
-            this.guna2Panel1.Controls.Add(this.guna2ComboBox1);
+            this.guna2Panel1.Controls.Add(this.ComboBoxCategoryChoose);
             this.guna2Panel1.Controls.Add(this.btnSearch);
             this.guna2Panel1.Controls.Add(this.txtSearch);
             this.guna2Panel1.Controls.Add(this.guna2GradientTileButton10);
@@ -581,33 +634,34 @@
             this.VScrollBar.InUpdate = false;
             this.VScrollBar.LargeChange = 10;
             this.VScrollBar.Location = new System.Drawing.Point(1111, 85);
-            this.VScrollBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.VScrollBar.Margin = new System.Windows.Forms.Padding(4);
             this.VScrollBar.Name = "VScrollBar";
             this.VScrollBar.ScrollbarSize = 7;
             this.VScrollBar.Size = new System.Drawing.Size(7, 795);
             this.VScrollBar.TabIndex = 26;
             this.VScrollBar.UseWaitCursor = true;
             // 
-            // guna2ComboBox1
+            // ComboBoxCategoryChoose
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 22.2F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Items.AddRange(new object[] {
+            this.ComboBoxCategoryChoose.BackColor = System.Drawing.Color.Transparent;
+            this.ComboBoxCategoryChoose.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ComboBoxCategoryChoose.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ComboBoxCategoryChoose.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxCategoryChoose.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ComboBoxCategoryChoose.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ComboBoxCategoryChoose.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.ComboBoxCategoryChoose.ForeColor = System.Drawing.Color.Black;
+            this.ComboBoxCategoryChoose.ItemHeight = 30;
+            this.ComboBoxCategoryChoose.Items.AddRange(new object[] {
             "Ac",
             "Non-Ac"});
-            this.guna2ComboBox1.Location = new System.Drawing.Point(463, 25);
-            this.guna2ComboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(228, 36);
-            this.guna2ComboBox1.TabIndex = 190;
-            this.guna2ComboBox1.UseWaitCursor = true;
+            this.ComboBoxCategoryChoose.Location = new System.Drawing.Point(463, 25);
+            this.ComboBoxCategoryChoose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ComboBoxCategoryChoose.Name = "ComboBoxCategoryChoose";
+            this.ComboBoxCategoryChoose.Size = new System.Drawing.Size(228, 36);
+            this.ComboBoxCategoryChoose.TabIndex = 190;
+            this.ComboBoxCategoryChoose.UseWaitCursor = true;
+            this.ComboBoxCategoryChoose.SelectedValueChanged += new System.EventHandler(this.ComboBoxCategory_SelectedValueChanged);
             // 
             // btnSearch
             // 
@@ -682,7 +736,7 @@
             // flowLayoutPanelProducts
             // 
             this.flowLayoutPanelProducts.Location = new System.Drawing.Point(8, 85);
-            this.flowLayoutPanelProducts.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.flowLayoutPanelProducts.Margin = new System.Windows.Forms.Padding(5);
             this.flowLayoutPanelProducts.Name = "flowLayoutPanelProducts";
             this.flowLayoutPanelProducts.Size = new System.Drawing.Size(1101, 794);
             this.flowLayoutPanelProducts.TabIndex = 17;
@@ -747,7 +801,10 @@
         private System.Windows.Forms.Label errorProductionDate;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2VScrollBar VScrollBar;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox ComboBoxCategoryChoose;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
+        private Guna.UI2.WinForms.Guna2ComboBox ComboBoxCategoryTxt;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
+        private System.Windows.Forms.Label errorCategory;
     }
 }
