@@ -81,6 +81,12 @@
     <Compile Include="FormDieuKhienChucVu.Designer.cs">
       <DependentUpon>FormDieuKhienChucVu.cs</DependentUpon>
     </Compile>
+    <Compile Include="US_Interface\From_CRUD\Form_NVBH_Bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US_Interface\From_CRUD\Form_NVBH_Bill.Designer.cs">
+      <DependentUpon>Form_NVBH_Bill.cs</DependentUpon>
+    </Compile>
     <Compile Include="US_Interface\UC_KhanhHang\FormKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -264,11 +270,11 @@
     <Compile Include="US_Interface\UC_Item\UC_ItemInfoEmployees_.Designer.cs">
       <DependentUpon>UC_ItemInfoEmployees_.cs</DependentUpon>
     </Compile>
-    <Compile Include="US_Interface\UC_Item\UC_ItemInfoCustomer.cs.cs">
+    <Compile Include="US_Interface\UC_Item\UC_ItemInfoCustomer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="US_Interface\UC_Item\UC_ItemInfoCustomer.cs.Designer.cs">
-      <DependentUpon>UC_ItemInfoCustomer.cs.cs</DependentUpon>
+    <Compile Include="US_Interface\UC_Item\UC_ItemInfoCustomer.Designer.cs">
+      <DependentUpon>UC_ItemInfoCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="US_Interface\UC_Item\UserControl6.cs">
       <SubType>UserControl</SubType>
@@ -290,6 +296,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDieuKhienChucVu.resx">
       <DependentUpon>FormDieuKhienChucVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US_Interface\From_CRUD\Form_NVBH_Bill.resx">
+      <DependentUpon>Form_NVBH_Bill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="US_Interface\UC_KhanhHang\FormKhachHang.resx">
       <DependentUpon>FormKhachHang.cs</DependentUpon>
@@ -390,8 +399,8 @@
     <EmbeddedResource Include="US_Interface\UC_Item\UC_ItemInfoEmployees_.resx">
       <DependentUpon>UC_ItemInfoEmployees_.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="US_Interface\UC_Item\UC_ItemInfoCustomer.cs.resx">
-      <DependentUpon>UC_ItemInfoCustomer.cs.cs</DependentUpon>
+    <EmbeddedResource Include="US_Interface\UC_Item\UC_ItemInfoCustomer.resx">
+      <DependentUpon>UC_ItemInfoCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="US_Interface\UC_Item\UserControl6.resx">
       <DependentUpon>UserControl6.cs</DependentUpon>

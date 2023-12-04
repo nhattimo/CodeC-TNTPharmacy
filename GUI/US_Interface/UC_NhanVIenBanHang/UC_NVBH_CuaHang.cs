@@ -1,8 +1,8 @@
 ﻿using BLL;
 using DTO;
+using GUI.US_Interface.From_CRUD;
 using System;
 using System.Collections.Generic;
-using System.Security.AccessControl;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,7 +13,10 @@ namespace GUI.US_
 
         private readonly ProductBusinessLogic _Product = new ProductBusinessLogic();
         private readonly SuppliersBusinessLogic _Suppliers = new SuppliersBusinessLogic();
-        
+
+        double total = 0;
+        int sl = 0;
+
         public UC_NVBH_CuaHang()
         {
             InitializeComponent();
@@ -23,7 +26,6 @@ namespace GUI.US_
         {
             Management.ScrollBarFlowLayoutPanel(flowLayoutPanelOrderProduct, VScrollBar);
             Management.ScrollBarFlowLayoutPanel(flowLayoutPanelProducts, guna2VScrollBar1);
-            uC_Bill1.Visible = false;
             LoadData();
             RunContinuousFunction();
         }
@@ -49,26 +51,63 @@ namespace GUI.US_
             Management.AddItemsUC(flowLayoutPanelOrderProduct, listObj);
         }
         
+        private void LoadPanlePay()
+        {
+            total = 0;
+            sl = 0;
+            foreach (var item in Management.GetIDItemChooseProducts())
+            {
+                var obj = _Product.GetObjectById(item[0]);
+                sl += item[1];
+                total += (Math.Round(obj.Price - ((obj.Price / 100) * obj.Discount), 0)) * item[1];
+            }
+            ltxtTotal.Text = total + ".000";
+        }
         async Task RunContinuousFunction()
         {
-            int leng = Management.GetIDItemChooseProducts().Count;
+            int ItemLeng = Management.GetIDItemChooseProducts().Count;
             while (true)
             {
-                if (this.Visible != false)
+                if(Management.GetIDItemChooseProducts() == null)
                 {
-                    // nếu độ dài thay đổi có nghĩa là có sự thay đổi 
-                    if (Management.GetIDItemChooseProducts().Count > leng || Management.GetIDItemChooseProducts().Count < leng)
+                    flowLayoutPanelOrderProduct.Controls.Clear();
+                    panelPay.Visible = false;
+                }
+                else
+                {
+                    if (this.Visible != false)
                     {
-                        leng = Management.GetIDItemChooseProducts().Count;
-                        LoadItemChooseProducts();
-                        Console.WriteLine("Tăng 1" + "Số lượng hiện tại: " + leng);
+                        // điều kiện btn pay
+                        if (ItemLeng > 0)
+                        {
+                            if (panelPay.Visible != true)
+                                panelPay.Visible = true;
+                        }
+                        else
+                        {
+                            if (panelPay.Visible != false)
+                                panelPay.Visible = false;
+                        }
 
+                        // nếu độ dài thay đổi có nghĩa là có sự thay đổi 
+                        if (Management.GetIDItemChooseProducts().Count > ItemLeng || Management.GetIDItemChooseProducts().Count < ItemLeng)
+                        {
+                            ItemLeng = Management.GetIDItemChooseProducts().Count;
+                            LoadItemChooseProducts();
+                            // tính tiền tổng sản phẩm đã chọn
+                            LoadPanlePay();
+                        }
+                        else
+                        {
+                            LoadPanlePay();
+                        }
+                        /*else if(Management.GetIDItemChooseProducts().Count < leng)
+                        {
+                            leng = Management.GetIDItemChooseProducts().Count;
+                            Console.WriteLine("Giảm 1" + "Số lượng hiện tại: " + leng);
+                        }*/
                     }
-                    else if(Management.GetIDItemChooseProducts().Count < leng)
-                    {
-                        leng = Management.GetIDItemChooseProducts().Count;
-                        Console.WriteLine("Giảm 1" + "Số lượng hiện tại: " + leng);
-                    } 
+
                 }
                 await Task.Delay(100);
             }
@@ -77,18 +116,25 @@ namespace GUI.US_
         // btn thanh toán
         private void btnPay_Click(object sender, EventArgs e)
         {
-            uC_Bill1.Visible = true;
-            foreach (var item in Management.GetIDItemChooseProducts())
-            {
-                Console.WriteLine("Sản phẩm ID = " + item[0] + " Số lượng: " + item[1] );
-            }
-            
+            Form_NVBH_Bill form_NVBH_Bill = new Form_NVBH_Bill(total, sl);
+            form_NVBH_Bill.ShowDialog();
         }
 
         // btn tìm kiếm
         private void btnSearch_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            
+           
         }
     }
 }

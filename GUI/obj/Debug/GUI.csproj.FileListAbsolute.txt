@@ -209,7 +209,6 @@ D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_TK_
 D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_TK_XuatKho.resources
 D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_ItemProduct.resources
 D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UserControl3.resources
-D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UserControl5.resources
 D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UserControl6.resources
 D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UserControl7.resources
 D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
@@ -221,3 +220,5 @@ D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.From_C
 D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.UC_ItemOnlineOrders.resources
 D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_ItemChooseProducts.resources
 D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_ItemInfoEmployees_.resources
+D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_Interface.From_CRUD.Form_NVBH_Bill.resources
+D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_ItemInfoCustomer.resources

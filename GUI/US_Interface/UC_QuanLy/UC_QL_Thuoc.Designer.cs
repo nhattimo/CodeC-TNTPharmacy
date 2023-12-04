@@ -106,9 +106,9 @@
             this.guna2Panel2.Controls.Add(this.guna2GradientTileButton6);
             this.guna2Panel2.Controls.Add(this.btnAdd);
             this.guna2Panel2.Location = new System.Drawing.Point(0, 1);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(471, 713);
+            this.guna2Panel2.Size = new System.Drawing.Size(628, 878);
             this.guna2Panel2.TabIndex = 15;
             this.guna2Panel2.UseWaitCursor = true;
             // 
@@ -116,10 +116,10 @@
             // 
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(331, 226);
-            this.guna2HtmlLabel8.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(441, 278);
+            this.guna2HtmlLabel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(30, 21);
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(36, 25);
             this.guna2HtmlLabel8.TabIndex = 187;
             this.guna2HtmlLabel8.Text = "Ảnh";
             this.guna2HtmlLabel8.UseWaitCursor = true;
@@ -129,10 +129,9 @@
             this.errorExpiryDate.AutoSize = true;
             this.errorExpiryDate.BackColor = System.Drawing.Color.Transparent;
             this.errorExpiryDate.ForeColor = System.Drawing.Color.Red;
-            this.errorExpiryDate.Location = new System.Drawing.Point(18, 541);
-            this.errorExpiryDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.errorExpiryDate.Location = new System.Drawing.Point(24, 666);
             this.errorExpiryDate.Name = "errorExpiryDate";
-            this.errorExpiryDate.Size = new System.Drawing.Size(21, 13);
+            this.errorExpiryDate.Size = new System.Drawing.Size(25, 16);
             this.errorExpiryDate.TabIndex = 186;
             this.errorExpiryDate.Text = "Lỗi";
             this.errorExpiryDate.UseWaitCursor = true;
@@ -142,10 +141,9 @@
             this.errorProductionDate.AutoSize = true;
             this.errorProductionDate.BackColor = System.Drawing.Color.Transparent;
             this.errorProductionDate.ForeColor = System.Drawing.Color.Red;
-            this.errorProductionDate.Location = new System.Drawing.Point(18, 464);
-            this.errorProductionDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.errorProductionDate.Location = new System.Drawing.Point(24, 571);
             this.errorProductionDate.Name = "errorProductionDate";
-            this.errorProductionDate.Size = new System.Drawing.Size(21, 13);
+            this.errorProductionDate.Size = new System.Drawing.Size(25, 16);
             this.errorProductionDate.TabIndex = 185;
             this.errorProductionDate.Text = "Lỗi";
             this.errorProductionDate.UseWaitCursor = true;
@@ -154,10 +152,10 @@
             // 
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(14, 477);
-            this.guna2HtmlLabel7.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(19, 587);
+            this.guna2HtmlLabel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(94, 21);
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(112, 25);
             this.guna2HtmlLabel7.TabIndex = 184;
             this.guna2HtmlLabel7.Text = "Ngày hết hạn";
             this.guna2HtmlLabel7.UseWaitCursor = true;
@@ -166,10 +164,10 @@
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(14, 404);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(19, 497);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(99, 21);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(118, 25);
             this.guna2HtmlLabel2.TabIndex = 183;
             this.guna2HtmlLabel2.Text = "Ngày sản xuất";
             this.guna2HtmlLabel2.UseWaitCursor = true;
@@ -183,11 +181,12 @@
             this.txtProductionDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtProductionDate.ForeColor = System.Drawing.Color.Black;
             this.txtProductionDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.txtProductionDate.Location = new System.Drawing.Point(14, 425);
+            this.txtProductionDate.Location = new System.Drawing.Point(19, 523);
+            this.txtProductionDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtProductionDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.txtProductionDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.txtProductionDate.Name = "txtProductionDate";
-            this.txtProductionDate.Size = new System.Drawing.Size(220, 36);
+            this.txtProductionDate.Size = new System.Drawing.Size(293, 44);
             this.txtProductionDate.TabIndex = 177;
             this.txtProductionDate.UseWaitCursor = true;
             this.txtProductionDate.Value = new System.DateTime(2023, 10, 2, 20, 5, 0, 423);
@@ -201,11 +200,12 @@
             this.txtExpiryDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtExpiryDate.ForeColor = System.Drawing.Color.Black;
             this.txtExpiryDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.txtExpiryDate.Location = new System.Drawing.Point(14, 502);
+            this.txtExpiryDate.Location = new System.Drawing.Point(19, 618);
+            this.txtExpiryDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtExpiryDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.txtExpiryDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.txtExpiryDate.Name = "txtExpiryDate";
-            this.txtExpiryDate.Size = new System.Drawing.Size(431, 36);
+            this.txtExpiryDate.Size = new System.Drawing.Size(575, 44);
             this.txtExpiryDate.TabIndex = 178;
             this.txtExpiryDate.UseWaitCursor = true;
             this.txtExpiryDate.Value = new System.DateTime(2023, 10, 2, 20, 5, 0, 423);
@@ -215,10 +215,9 @@
             this.errorPic.AutoSize = true;
             this.errorPic.BackColor = System.Drawing.Color.Transparent;
             this.errorPic.ForeColor = System.Drawing.Color.Red;
-            this.errorPic.Location = new System.Drawing.Point(242, 470);
-            this.errorPic.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.errorPic.Location = new System.Drawing.Point(323, 578);
             this.errorPic.Name = "errorPic";
-            this.errorPic.Size = new System.Drawing.Size(21, 13);
+            this.errorPic.Size = new System.Drawing.Size(25, 16);
             this.errorPic.TabIndex = 176;
             this.errorPic.Text = "Lỗi";
             this.errorPic.UseWaitCursor = true;
@@ -226,10 +225,10 @@
             // picAnh
             // 
             this.picAnh.ImageRotate = 0F;
-            this.picAnh.Location = new System.Drawing.Point(245, 251);
-            this.picAnh.Margin = new System.Windows.Forms.Padding(2);
+            this.picAnh.Location = new System.Drawing.Point(327, 309);
+            this.picAnh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picAnh.Name = "picAnh";
-            this.picAnh.Size = new System.Drawing.Size(200, 210);
+            this.picAnh.Size = new System.Drawing.Size(267, 258);
             this.picAnh.TabIndex = 175;
             this.picAnh.TabStop = false;
             this.picAnh.UseWaitCursor = true;
@@ -240,10 +239,9 @@
             this.errorSupplier.AutoSize = true;
             this.errorSupplier.BackColor = System.Drawing.Color.Transparent;
             this.errorSupplier.ForeColor = System.Drawing.Color.Red;
-            this.errorSupplier.Location = new System.Drawing.Point(17, 129);
-            this.errorSupplier.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.errorSupplier.Location = new System.Drawing.Point(23, 159);
             this.errorSupplier.Name = "errorSupplier";
-            this.errorSupplier.Size = new System.Drawing.Size(21, 13);
+            this.errorSupplier.Size = new System.Drawing.Size(25, 16);
             this.errorSupplier.TabIndex = 147;
             this.errorSupplier.Text = "Lỗi";
             this.errorSupplier.UseWaitCursor = true;
@@ -253,10 +251,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(190, 352);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(253, 433);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 24);
+            this.label1.Size = new System.Drawing.Size(36, 29);
             this.label1.TabIndex = 143;
             this.label1.Text = "%";
             this.label1.UseWaitCursor = true;
@@ -265,10 +262,10 @@
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(14, 315);
-            this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(19, 388);
+            this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(63, 21);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(73, 25);
             this.guna2HtmlLabel5.TabIndex = 142;
             this.guna2HtmlLabel5.Text = "Giảm giá";
             this.guna2HtmlLabel5.UseWaitCursor = true;
@@ -278,10 +275,9 @@
             this.errorDiscount.AutoSize = true;
             this.errorDiscount.BackColor = System.Drawing.Color.Transparent;
             this.errorDiscount.ForeColor = System.Drawing.Color.Red;
-            this.errorDiscount.Location = new System.Drawing.Point(18, 386);
-            this.errorDiscount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.errorDiscount.Location = new System.Drawing.Point(24, 475);
             this.errorDiscount.Name = "errorDiscount";
-            this.errorDiscount.Size = new System.Drawing.Size(21, 13);
+            this.errorDiscount.Size = new System.Drawing.Size(25, 16);
             this.errorDiscount.TabIndex = 141;
             this.errorDiscount.Text = "Lỗi";
             this.errorDiscount.UseWaitCursor = true;
@@ -302,14 +298,14 @@
             this.txtDiscount.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDiscount.ForeColor = System.Drawing.Color.Black;
             this.txtDiscount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDiscount.Location = new System.Drawing.Point(14, 340);
-            this.txtDiscount.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtDiscount.Location = new System.Drawing.Point(19, 418);
+            this.txtDiscount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDiscount.Name = "txtDiscount";
             this.txtDiscount.PasswordChar = '\0';
             this.txtDiscount.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtDiscount.PlaceholderText = "VD: 1";
             this.txtDiscount.SelectedText = "";
-            this.txtDiscount.Size = new System.Drawing.Size(161, 43);
+            this.txtDiscount.Size = new System.Drawing.Size(215, 53);
             this.txtDiscount.TabIndex = 140;
             this.txtDiscount.UseWaitCursor = true;
             this.txtDiscount.Leave += new System.EventHandler(this.txtDiscount_Leave);
@@ -318,10 +314,10 @@
             // 
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(14, 556);
-            this.guna2HtmlLabel6.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(19, 684);
+            this.guna2HtmlLabel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(41, 21);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(48, 25);
             this.guna2HtmlLabel6.TabIndex = 139;
             this.guna2HtmlLabel6.Text = "Mô tả";
             this.guna2HtmlLabel6.UseWaitCursor = true;
@@ -331,10 +327,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(175, 261);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(233, 321);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 24);
+            this.label3.Size = new System.Drawing.Size(73, 29);
             this.label3.TabIndex = 137;
             this.label3.Text = " VND";
             this.label3.UseWaitCursor = true;
@@ -343,10 +338,10 @@
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(13, 226);
-            this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(17, 278);
+            this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(53, 21);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(61, 25);
             this.guna2HtmlLabel4.TabIndex = 133;
             this.guna2HtmlLabel4.Text = "Giá gốc";
             this.guna2HtmlLabel4.UseWaitCursor = true;
@@ -355,10 +350,10 @@
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(13, 65);
-            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(17, 80);
+            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(97, 21);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(113, 25);
             this.guna2HtmlLabel3.TabIndex = 132;
             this.guna2HtmlLabel3.Text = "Nhà cung cấp";
             this.guna2HtmlLabel3.UseWaitCursor = true;
@@ -367,10 +362,10 @@
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(13, 141);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(17, 174);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(99, 21);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(117, 25);
             this.guna2HtmlLabel1.TabIndex = 130;
             this.guna2HtmlLabel1.Text = "Tên sản phẩm";
             this.guna2HtmlLabel1.UseWaitCursor = true;
@@ -389,10 +384,10 @@
             this.ComboBoxSupplier.Items.AddRange(new object[] {
             "Ac",
             "Non-Ac"});
-            this.ComboBoxSupplier.Location = new System.Drawing.Point(13, 91);
-            this.ComboBoxSupplier.Margin = new System.Windows.Forms.Padding(2);
+            this.ComboBoxSupplier.Location = new System.Drawing.Point(17, 112);
+            this.ComboBoxSupplier.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ComboBoxSupplier.Name = "ComboBoxSupplier";
-            this.ComboBoxSupplier.Size = new System.Drawing.Size(432, 36);
+            this.ComboBoxSupplier.Size = new System.Drawing.Size(575, 36);
             this.ComboBoxSupplier.TabIndex = 129;
             this.ComboBoxSupplier.UseWaitCursor = true;
             this.ComboBoxSupplier.SelectedValueChanged += new System.EventHandler(this.txtSupplier_SelectedValueChanged);
@@ -403,10 +398,9 @@
             this.errorDescribe.AutoSize = true;
             this.errorDescribe.BackColor = System.Drawing.Color.Transparent;
             this.errorDescribe.ForeColor = System.Drawing.Color.Red;
-            this.errorDescribe.Location = new System.Drawing.Point(18, 626);
-            this.errorDescribe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.errorDescribe.Location = new System.Drawing.Point(24, 770);
             this.errorDescribe.Name = "errorDescribe";
-            this.errorDescribe.Size = new System.Drawing.Size(21, 13);
+            this.errorDescribe.Size = new System.Drawing.Size(25, 16);
             this.errorDescribe.TabIndex = 117;
             this.errorDescribe.Text = "Lỗi";
             this.errorDescribe.UseWaitCursor = true;
@@ -416,10 +410,9 @@
             this.errorCost.AutoSize = true;
             this.errorCost.BackColor = System.Drawing.Color.Transparent;
             this.errorCost.ForeColor = System.Drawing.Color.Red;
-            this.errorCost.Location = new System.Drawing.Point(17, 297);
-            this.errorCost.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.errorCost.Location = new System.Drawing.Point(23, 366);
             this.errorCost.Name = "errorCost";
-            this.errorCost.Size = new System.Drawing.Size(21, 13);
+            this.errorCost.Size = new System.Drawing.Size(25, 16);
             this.errorCost.TabIndex = 114;
             this.errorCost.Text = "Lỗi";
             this.errorCost.UseWaitCursor = true;
@@ -440,14 +433,14 @@
             this.txtDescribe.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDescribe.ForeColor = System.Drawing.Color.Black;
             this.txtDescribe.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDescribe.Location = new System.Drawing.Point(14, 581);
-            this.txtDescribe.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtDescribe.Location = new System.Drawing.Point(19, 715);
+            this.txtDescribe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDescribe.Name = "txtDescribe";
             this.txtDescribe.PasswordChar = '\0';
             this.txtDescribe.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtDescribe.PlaceholderText = "VD: Abcd";
             this.txtDescribe.SelectedText = "";
-            this.txtDescribe.Size = new System.Drawing.Size(440, 43);
+            this.txtDescribe.Size = new System.Drawing.Size(587, 53);
             this.txtDescribe.TabIndex = 112;
             this.txtDescribe.UseWaitCursor = true;
             // 
@@ -456,10 +449,9 @@
             this.errorProductName.AutoSize = true;
             this.errorProductName.BackColor = System.Drawing.Color.Transparent;
             this.errorProductName.ForeColor = System.Drawing.Color.Red;
-            this.errorProductName.Location = new System.Drawing.Point(17, 213);
-            this.errorProductName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.errorProductName.Location = new System.Drawing.Point(23, 262);
             this.errorProductName.Name = "errorProductName";
-            this.errorProductName.Size = new System.Drawing.Size(21, 13);
+            this.errorProductName.Size = new System.Drawing.Size(25, 16);
             this.errorProductName.TabIndex = 108;
             this.errorProductName.Text = "Lỗi";
             this.errorProductName.UseWaitCursor = true;
@@ -480,14 +472,14 @@
             this.txtCost.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCost.ForeColor = System.Drawing.Color.Black;
             this.txtCost.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCost.Location = new System.Drawing.Point(13, 251);
-            this.txtCost.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtCost.Location = new System.Drawing.Point(17, 309);
+            this.txtCost.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCost.Name = "txtCost";
             this.txtCost.PasswordChar = '\0';
             this.txtCost.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtCost.PlaceholderText = "VD: 300.000";
             this.txtCost.SelectedText = "";
-            this.txtCost.Size = new System.Drawing.Size(161, 43);
+            this.txtCost.Size = new System.Drawing.Size(215, 53);
             this.txtCost.TabIndex = 107;
             this.txtCost.UseWaitCursor = true;
             this.txtCost.Leave += new System.EventHandler(this.txtCost_Leave);
@@ -508,14 +500,14 @@
             this.txtProductName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtProductName.ForeColor = System.Drawing.Color.Black;
             this.txtProductName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtProductName.Location = new System.Drawing.Point(13, 167);
-            this.txtProductName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtProductName.Location = new System.Drawing.Point(17, 206);
+            this.txtProductName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.PasswordChar = '\0';
             this.txtProductName.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtProductName.PlaceholderText = "VD: Abcd";
             this.txtProductName.SelectedText = "";
-            this.txtProductName.Size = new System.Drawing.Size(432, 43);
+            this.txtProductName.Size = new System.Drawing.Size(576, 53);
             this.txtProductName.TabIndex = 106;
             this.txtProductName.UseWaitCursor = true;
             this.txtProductName.Leave += new System.EventHandler(this.txtProductName_Leave);
@@ -532,10 +524,10 @@
             this.guna2GradientTileButton6.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.guna2GradientTileButton6.Font = new System.Drawing.Font("Segoe UI Semibold", 20.2F, System.Drawing.FontStyle.Bold);
             this.guna2GradientTileButton6.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientTileButton6.Location = new System.Drawing.Point(2, 7);
-            this.guna2GradientTileButton6.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2GradientTileButton6.Location = new System.Drawing.Point(3, 9);
+            this.guna2GradientTileButton6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2GradientTileButton6.Name = "guna2GradientTileButton6";
-            this.guna2GradientTileButton6.Size = new System.Drawing.Size(466, 56);
+            this.guna2GradientTileButton6.Size = new System.Drawing.Size(621, 69);
             this.guna2GradientTileButton6.TabIndex = 10;
             this.guna2GradientTileButton6.Text = "Sản phẩm";
             this.guna2GradientTileButton6.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -556,10 +548,10 @@
             this.btnAdd.ForeColor = System.Drawing.Color.Black;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnAdd.Location = new System.Drawing.Point(245, 646);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdd.Location = new System.Drawing.Point(327, 795);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(208, 46);
+            this.btnAdd.Size = new System.Drawing.Size(277, 57);
             this.btnAdd.TabIndex = 5;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseWaitCursor = true;
@@ -577,10 +569,10 @@
             this.guna2Panel1.Controls.Add(this.guna2GradientTileButton10);
             this.guna2Panel1.Controls.Add(this.flowLayoutPanelProducts);
             this.guna2Panel1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.guna2Panel1.Location = new System.Drawing.Point(483, 1);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel1.Location = new System.Drawing.Point(644, 1);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(838, 719);
+            this.guna2Panel1.Size = new System.Drawing.Size(1117, 885);
             this.guna2Panel1.TabIndex = 147;
             this.guna2Panel1.UseWaitCursor = true;
             // 
@@ -588,10 +580,11 @@
             // 
             this.VScrollBar.InUpdate = false;
             this.VScrollBar.LargeChange = 10;
-            this.VScrollBar.Location = new System.Drawing.Point(833, 69);
+            this.VScrollBar.Location = new System.Drawing.Point(1111, 85);
+            this.VScrollBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.VScrollBar.Name = "VScrollBar";
-            this.VScrollBar.ScrollbarSize = 5;
-            this.VScrollBar.Size = new System.Drawing.Size(5, 646);
+            this.VScrollBar.ScrollbarSize = 7;
+            this.VScrollBar.Size = new System.Drawing.Size(7, 795);
             this.VScrollBar.TabIndex = 26;
             this.VScrollBar.UseWaitCursor = true;
             // 
@@ -609,10 +602,10 @@
             this.guna2ComboBox1.Items.AddRange(new object[] {
             "Ac",
             "Non-Ac"});
-            this.guna2ComboBox1.Location = new System.Drawing.Point(347, 20);
-            this.guna2ComboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2ComboBox1.Location = new System.Drawing.Point(463, 25);
+            this.guna2ComboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(172, 36);
+            this.guna2ComboBox1.Size = new System.Drawing.Size(228, 36);
             this.guna2ComboBox1.TabIndex = 190;
             this.guna2ComboBox1.UseWaitCursor = true;
             // 
@@ -635,10 +628,10 @@
             this.btnSearch.HoverState.FillColor2 = System.Drawing.Color.Transparent;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
             this.btnSearch.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnSearch.Location = new System.Drawing.Point(799, 20);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSearch.Location = new System.Drawing.Point(1065, 25);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(33, 36);
+            this.btnSearch.Size = new System.Drawing.Size(44, 44);
             this.btnSearch.TabIndex = 20;
             this.btnSearch.UseTransparentBackground = true;
             this.btnSearch.UseWaitCursor = true;
@@ -655,13 +648,13 @@
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Location = new System.Drawing.Point(535, 20);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtSearch.Location = new System.Drawing.Point(713, 25);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "Tìm kiếm sản phẩm";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(297, 36);
+            this.txtSearch.Size = new System.Drawing.Size(396, 44);
             this.txtSearch.TabIndex = 19;
             this.txtSearch.UseWaitCursor = true;
             // 
@@ -677,10 +670,10 @@
             this.guna2GradientTileButton10.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.guna2GradientTileButton10.Font = new System.Drawing.Font("Segoe UI Semibold", 20.2F, System.Drawing.FontStyle.Bold);
             this.guna2GradientTileButton10.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientTileButton10.Location = new System.Drawing.Point(2, 7);
-            this.guna2GradientTileButton10.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2GradientTileButton10.Location = new System.Drawing.Point(3, 9);
+            this.guna2GradientTileButton10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2GradientTileButton10.Name = "guna2GradientTileButton10";
-            this.guna2GradientTileButton10.Size = new System.Drawing.Size(834, 56);
+            this.guna2GradientTileButton10.Size = new System.Drawing.Size(1112, 69);
             this.guna2GradientTileButton10.TabIndex = 18;
             this.guna2GradientTileButton10.Text = "Danh sách sản phẩm";
             this.guna2GradientTileButton10.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -688,10 +681,10 @@
             // 
             // flowLayoutPanelProducts
             // 
-            this.flowLayoutPanelProducts.Location = new System.Drawing.Point(6, 69);
-            this.flowLayoutPanelProducts.Margin = new System.Windows.Forms.Padding(4);
+            this.flowLayoutPanelProducts.Location = new System.Drawing.Point(8, 85);
+            this.flowLayoutPanelProducts.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.flowLayoutPanelProducts.Name = "flowLayoutPanelProducts";
-            this.flowLayoutPanelProducts.Size = new System.Drawing.Size(826, 645);
+            this.flowLayoutPanelProducts.Size = new System.Drawing.Size(1101, 794);
             this.flowLayoutPanelProducts.TabIndex = 17;
             this.flowLayoutPanelProducts.UseWaitCursor = true;
             // 
@@ -701,13 +694,13 @@
             // 
             // UC_QL_Thuoc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2Panel2);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_QL_Thuoc";
-            this.Size = new System.Drawing.Size(1324, 727);
+            this.Size = new System.Drawing.Size(1765, 895);
             this.Load += new System.EventHandler(this.UC_QL_Thuoc_Load);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();

@@ -22,7 +22,7 @@ namespace GUI.US_
             Products obj = _ProductBusinesLogiccs.GetObjectById(ID);
             txtNameProduct.Text = obj.Name;
             txtCost.Text = (obj.Price * int.Parse(Sl.ToString())) + ".000 VND";
-            txtPriceDiscount.Text = "- " + (obj.Price - (Math.Round(obj.Price - ((obj.Price / 100) * obj.Discount), 0))) * int.Parse(Sl.ToString()) + ".000 VND";
+            txtPriceDiscount.Text = "- " + (obj.Price - (Math.Round(obj.Price - ((obj.Price / 100) * obj.Discount), 0))) * int.Parse(Sl.ToString()) + ".000 VND"; 
             txtPrice.Text = ((Math.Round(obj.Price - ((obj.Price / 100) * obj.Discount), 0))) * int.Parse(Sl.ToString()) + ".000 VND";
             if (File.Exists(obj.Image)) // Kiểm tra xem tệp hình ảnh có tồn tại hay không
             {

@@ -61,6 +61,10 @@
     <Compile Include="Migrations\202311210650168_Migration.designer.cs">
       <DependentUpon>202311210650168_Migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202312041015308_Migration1.cs" />
+    <Compile Include="Migrations\202312041015308_Migration1.designer.cs">
+      <DependentUpon>202312041015308_Migration1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PayMentDataAccess.cs" />
     <Compile Include="PayMentMethondDataAccess.cs" />
@@ -135,6 +139,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202311210650168_Migration.resx">
       <DependentUpon>202311210650168_Migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312041015308_Migration1.resx">
+      <DependentUpon>202312041015308_Migration1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

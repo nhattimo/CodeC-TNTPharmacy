@@ -1,4 +1,6 @@
-﻿namespace GUI.US_
+﻿using GUI.US_Interface.From_CRUD;
+
+namespace GUI.US_
 {
     partial class UC_QL_NguonCung
     {
@@ -46,9 +48,6 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GradientTileButton10 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.flowLayoutPanelCustomers = new System.Windows.Forms.FlowLayoutPanel();
-            this.userControl51 = new GUI.US_.UserControl5();
-            this.userControl52 = new GUI.US_.UserControl5();
-            this.userControl53 = new GUI.US_.UserControl5();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
@@ -533,9 +532,9 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton10;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelCustomers;
-        private UserControl5 userControl51;
-        private UserControl5 userControl52;
-        private UserControl5 userControl53;
+        private Form_NVBH_Bill userControl51;
+        private Form_NVBH_Bill userControl52;
+        private Form_NVBH_Bill userControl53;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnSearch;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;

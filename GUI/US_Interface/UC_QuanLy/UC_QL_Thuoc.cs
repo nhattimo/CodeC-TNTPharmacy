@@ -10,6 +10,12 @@ namespace GUI.US_
 {
     public partial class UC_QL_Thuoc : UserControl
     {
+        // Biến static Instance
+        private static UC_QL_Thuoc _instance;
+
+        // Để đảm bảo chỉ tạo một instance duy nhất, sử dụng một biến kiểm soát
+        private static readonly object _lockObject = new object();
+
         private readonly ProductBusinessLogic _Product = new ProductBusinessLogic();
         private readonly SuppliersBusinessLogic _Suppliers = new SuppliersBusinessLogic();
 
@@ -34,6 +40,69 @@ namespace GUI.US_
             LoaditemsComboBox();
             LoadData();
         }
+
+        public void SomeMethod(int id)
+        {
+            try
+            {
+                Products obj = _Product.GetObjectById(id);
+                Suppliers suppliers = _Suppliers.GetObjectById(obj.SupplierId);
+                ComboBoxSupplier.Text = suppliers.Name;
+                txtProductName.Text = obj.Name;
+                txtCost.Text = obj.Price + "";
+                txtDiscount.Text = obj.Discount + "";
+                txtProductionDate.Value = obj.ProductionDate;
+                txtExpiryDate.Value = obj.ExpiryDate;
+                txtDescribe.Text = obj.Description;
+                try
+                {
+                    picAnh.Image = System.Drawing.Image.FromFile(obj.Image);
+                }
+                catch (Exception)
+                {
+
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        #region Demo Delegate
+       /* public void AddInfoProduct(int ID)
+        {
+            
+            try
+            {
+                Products obj = _Product.GetObjectById(ID);
+                Suppliers suppliers = _Suppliers.GetObjectById(obj.SupplierId);
+                ComboBoxSupplier.Text = suppliers.Name;
+                txtProductName.Text = obj.Name;
+                txtCost.Text = obj.Price + "";
+                txtDiscount.Text = obj.Discount + "";
+                txtProductionDate.Value = obj.ProductionDate;
+                txtExpiryDate.Value = obj.ExpiryDate;
+                txtDescribe.Text = obj.Description;
+                try
+                {
+                    picAnh.Image = System.Drawing.Image.FromFile(obj.Image);
+                }
+                catch (Exception)
+                {
+
+                }
+                MessageBox.Show("Add item delegate");
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }*/
+        #endregion
 
         public void UC_QL_Thuoc_Load(object sender, EventArgs e)
         {
@@ -116,7 +185,7 @@ namespace GUI.US_
                 }
                 catch (Exception)
                 {
-
+                    picAnh.Image = null;
                 }
             }
             catch (Exception)
@@ -126,6 +195,8 @@ namespace GUI.US_
             }
 
         }
+
+
 
         // BTN
         private void btnAdd_Click(object sender, EventArgs e)
@@ -260,6 +331,28 @@ namespace GUI.US_
                 Management.ErrorHide(error);
         }
 
+
+        public static UC_QL_Thuoc Instance
+        {
+            get
+            {
+                // Kiểm tra xem instance đã được tạo chưa
+                if (_instance == null)
+                {
+                    // Sử dụng lock để đảm bảo chỉ có một thread có thể tạo instance
+                    lock (_lockObject)
+                    {
+                        // Kiểm tra lại xem instance đã được tạo trong trường hợp nhiều thread
+                        if (_instance == null)
+                        {
+                            _instance = new UC_QL_Thuoc();
+                        }
+                    }
+                }
+                return _instance;
+            }
+
+        }
         // 
 
     }

@@ -25,12 +25,17 @@ namespace DTO
 
         // Ngày sinh
         [Column(TypeName = "DATETIME")]
-        DateTime DateOfBirth { get; set; }
+        public DateTime DateOfBirth { get; set; }
 
         // Số điện thoại
         [Column(TypeName = "VARCHAR")]
         [MaxLength(10)]
         public string Phone { get; set; }
+
+        //Điểm số 
+        [Column(TypeName = "VARCHAR")]
+        [MaxLength(10)]
+        public string Point { get; set; }
 
         // Địa chỉ
         [Column(TypeName = "NVARCHAR")]

@@ -9,7 +9,6 @@ using System.Drawing;
 using System.IO;
 using System.Net.Mail;
 using System.Windows.Forms;
-using static System.Net.Mime.MediaTypeNames;
 using Image = System.Drawing.Image;
 
 
@@ -27,8 +26,13 @@ namespace GUI
 
         private static int IdIteamProduct;
         private static int IdIteamEmployess;
-        private static int IdIteamEmployess1;
         private static List<int[]> IDItemChooseProducts = new List<int[]> { };
+
+        public static void ResestIDItemChooseProducts()
+        {
+            IDItemChooseProducts = new List<int[]>();
+        }
+
 
         // 1 số điều khiể giao diện
         public static void ScrollBarFlowLayoutPanel(FlowLayoutPanel flowLayoutPanel, Guna2VScrollBar vScrollBar)
@@ -102,6 +106,11 @@ namespace GUI
         {
             UC_ItemProduct itemProduct = new UC_ItemProduct(obj.ID);
             flowLayoutPanel.Controls.Add(itemProduct);
+        }
+        public static void AddItemsUC(FlowLayoutPanel flowLayoutPanel, Users obj)
+        {
+            UC_ItemInfoCustomer itemUsers = new UC_ItemInfoCustomer(obj.ID);
+            flowLayoutPanel.Controls.Add(itemUsers);
         }
         public static void AddItemsUC(FlowLayoutPanel flowLayoutPanel, List<Products> listObj)
         {
@@ -293,18 +302,21 @@ namespace GUI
             bool exist = false;
             if (trangThaiAddorNo)
             {
-                foreach (var item in IDItemChooseProducts)
+                if(IDItemChooseProducts != null)
                 {
-                    // nếu trong list đã có mà ko add từ us UC_ItemProduct thì chỉnh sửa số lượng
-                    if (item[0] == idProduct && noiAdd != 0)
+                    foreach (var item in IDItemChooseProducts)
                     {
-                        item[1] = sl;
-                        exist = true;
-                        Console.WriteLine("Đã sửa số lượng từ " + (sl -1) + " Lên " +  sl);
-                        break;
-                    }else if (item[0] == idProduct && noiAdd == 0)
-                    {
-                        exist = true;
+                        // nếu trong list đã có mà ko add từ us UC_ItemProduct thì chỉnh sửa số lượng
+                        if (item[0] == idProduct && noiAdd != 0)
+                        {
+                            item[1] = sl;
+                            exist = true;
+                            break;
+                        }
+                        else if (item[0] == idProduct && noiAdd == 0)
+                        {
+                            exist = true;
+                        }
                     }
                 }
 
