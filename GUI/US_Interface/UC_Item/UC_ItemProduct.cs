@@ -126,6 +126,9 @@ namespace GUI.US_
             else if (_objectBusinesLogiccs.GetRole(Management.GetIDAccount()) == 2)
             {
                 Management.SetIDItemChooseProducts(ID, 1, true, 0);
+            }else if (_objectBusinesLogiccs.GetRole(Management.GetIDAccount()) == 5)
+            {
+                Management.SetIDItemChooseProducts(ID, 1, true, 0);
             }
             //truyen();
         }

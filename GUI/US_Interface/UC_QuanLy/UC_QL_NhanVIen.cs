@@ -1,5 +1,6 @@
 ﻿using BLL;
 using DTO;
+using GUI.US_Interface.From_CRUD;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -21,7 +22,8 @@ namespace GUI.US_
         Account _objAccount;
 
         int _ID_RoleSearch;
-
+        int _ID_Account;
+        int _ID_RoleChoose ;
         Label[] _laberError;
         string[] _dataComboBox;
         bool _trangThai;
@@ -31,7 +33,7 @@ namespace GUI.US_
             _listObjEmployees = _EmployeesBusinesLogiccs.GetAllObject();
             _listObjAccount = _AccountBusinesLogiccs.GetAllObject();
             _listObjRoles = _RolesBusinesLogiccs.GetAllObject();
-            _laberError = new Label[] { errorNameAccount, errorPassword, errorName, errorDateOfBirth, errorSex, errorEmail, errorCCCD, errorStartDay, errorAddress, errorRole };
+            _laberError = new Label[] { errorNameAccount, errorPassword, errorName, errorDateOfBirth, errorSex, errorEmail, errorCCCD, errorStartDay, errorAddress, errorRole, errorSalary, errorPhone };
             _trangThai = false;
             Management.ErrorHide(_laberError);
             LoadDataComboBoxRoleTxt();
@@ -43,20 +45,20 @@ namespace GUI.US_
         private void UC_QL_NhanVIen_Load(object sender, EventArgs e)
         {
             Management.ScrollBarFlowLayoutPanel(flowLayoutPanelEmployee, VScrollBar);
+            RunContinuousFunction();
         }
 
         public async Task RunContinuousFunction()
         {
-            int IDProduct = Management.GetIDEmployess();
+            int IDEmployess = Management.GetIDEmployess();
             while (true)
             {
-                if (this.Visible != false)
+                if (this.Visible)
                 {
-                    if (Management.GetIDEmployess() != IDProduct)
+                    if (Management.GetIDEmployess() != IDEmployess)
                     {
-                        Console.WriteLine("Đã thay đổi");
                         LoadInfoOfIteam();
-                        IDProduct = Management.GetIDProduct();
+                        IDEmployess = Management.GetIDEmployess();
                     }
                 }
                 await Task.Delay(100);
@@ -65,20 +67,23 @@ namespace GUI.US_
 
         public void LoadInfoOfIteam()
         {
+
             _objEmployees = _EmployeesBusinesLogiccs.GetObjectById(Management.GetIDEmployess());
-            _objAccount = _AccountBusinesLogiccs.GetObjectById(Management.GetIDEmployess());
+            _objAccount = _AccountBusinesLogiccs.GetObjectById(_objEmployees.IDTK);
             txtNameAccount.Text = _objAccount.AccountName;
             txtPassword.Text = _objAccount.Password;
             txtName.Text = _objEmployees.Name;
             if (_objEmployees.Sex == "Nam" || _objEmployees.Sex == "nam")
                 radioButtonMale.Checked = true;
             else
-                radioButtonMale.Checked = false;
+                radioButtonFemale.Checked = true;
             txtDateOfBirth.Value = _objEmployees.DateOfBirth;
+            txtPhone.Text = _objEmployees.Phone;
             txtEmail.Text = _objEmployees.Email;
             txtCCCD.Text = _objEmployees.CCCD;
             txtStartedDay.Value = _objEmployees.StartedDay;
             txtAddress.Text = _objEmployees.Address;
+            txtSalary.Text = _objEmployees.Salary + "";
             foreach (var item in _listObjRoles)
             {
                 if(item.ID == _objAccount.Role)
@@ -86,7 +91,13 @@ namespace GUI.US_
                     ComboBoxRoleTxt.Text = item.Name;
                     break;
                 }
-
+            }
+            _ID_Account = _objEmployees.IDTK;
+            foreach (var item in _listObjAccount)
+            {
+                if (item.ID == _ID_Account) {
+                    _ID_RoleChoose = item.Role;
+                }
             }
             
             try
@@ -98,8 +109,11 @@ namespace GUI.US_
                 PicAnh.Image = null;
             }
         }
+        
         private void LoadDataEmployees()
         {
+            _listObjEmployees = _EmployeesBusinesLogiccs.GetAllObject();
+            _listObjAccount = _AccountBusinesLogiccs.GetAllObject();
             flowLayoutPanelEmployee.Controls.Clear();
             // Load tất cả 
             if (ComboBoxRoleChoose.Text == "Tất cả")
@@ -135,6 +149,7 @@ namespace GUI.US_
                 Management.AddItemsUC(flowLayoutPanelEmployee, listIteamEmployees);
             }
         }
+        
         private void LoadDataComboBoxRoleTxt()
         {
             _dataComboBox = new string[_listObjRoles.Count];
@@ -172,8 +187,13 @@ namespace GUI.US_
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            Form_QL_NhanVien_CRUD form_QL_NhanVien_CRUD = new Form_QL_NhanVien_CRUD();
+            form_QL_NhanVien_CRUD.ShowDialog();           
+        }
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
             // check ko để trống
-            Management.Check(txtNameAccount,errorNameAccount);
+            Management.Check(txtNameAccount, errorNameAccount);
             Management.Check(txtPassword, errorPassword);
             Management.Check(txtName, errorName);
             Management.Check(txtDateOfBirth, errorDateOfBirth);
@@ -181,6 +201,8 @@ namespace GUI.US_
             Management.Check(txtCCCD, errorCCCD);
             Management.Check(txtStartedDay, errorStartDay);
             Management.Check(txtAddress, errorAddress);
+            Management.Check(ComboBoxRoleTxt, errorRole);
+            Management.Check(txtSalary, errorSalary);
 
             foreach (var item in _laberError)
             {
@@ -192,23 +214,36 @@ namespace GUI.US_
                 else
                     _trangThai = true;
             }
-            // kiểm tra sử lý dữ liệu
-            // ...
-
-            // add 
+            //
             if (_trangThai)
             {
-                MessageBox.Show("Add thành công");
+                _objEmployees = _EmployeesBusinesLogiccs.GetObjectById(Management.GetIDEmployess());
+                _objAccount = _AccountBusinesLogiccs.GetObjectById(_objEmployees.IDTK);
+                // tạo đối tượng nhân viên với dữ liệu nhập
+                Employees employees = new Employees(
+                    txtName.Text,                               // Tên 
+                    "Nam",                                      // Giới tính
+                    DateTime.Parse(txtDateOfBirth.Text.ToString()),  // Ngày sinh
+                    txtPhone.Text,                              // SĐT
+                    txtAddress.Text,                            // Địa chỉ
+                    txtEmail.Text,                              // Email
+                    Management.SaveImage(PicAnh, txtName.Text + txtPhone),                        // Đường dẫn ảnh
+                    txtSalary.Text,                             // Lương
+                    DateTime.Parse(txtStartedDay.Text.ToString()),// Ngày vào làm
+                    txtCCCD.Text,                               // Căn cước công dân
+                    _objEmployees.IDTK                                 // IDTK 
+                );
+                if (radioButtonFemale.Checked == true)
+                    employees.Sex = "Nữ";
+                // 
+
+                _EmployeesBusinesLogiccs.Update(_objEmployees.ID,employees);
+                MessageBox.Show("Sửa thành công");
             }
             else
             {
-                MessageBox.Show("Add thất bại");
+                MessageBox.Show("Kiểm tra lại thông tin");
             }
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -216,12 +251,21 @@ namespace GUI.US_
 
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void btnSearch_Click_1(object sender, EventArgs e)
         {
-
+            // Xử lý sự kiện khi người dùng nhấn nút Tìm kiếm
+            if (string.IsNullOrEmpty(txtSearch.Text) != true)
+            {
+                List<Employees> _iteamListObjProducts = FindProductsByKey(txtSearch.Text);
+                Management.AddItemsUC(flowLayoutPanelEmployee, _iteamListObjProducts);
+            }
+            else
+            {
+                LoadDataEmployees();
+            }
         }
 
-        
+
         // txt
         private void txtNameAccount_Leave(object sender, EventArgs e)
         {
@@ -268,6 +312,11 @@ namespace GUI.US_
             Management.Check(ComboBoxRoleTxt, errorRole);
         }
 
+        private void txtSalary_Leave(object sender, EventArgs e)
+        {
+            Management.Check(txtSalary, errorSalary);
+        }
+
         private void ComboBoxRoleChoose_SelectedValueChanged(object sender, EventArgs e)
         {
             foreach (var item in _listObjRoles)
@@ -284,15 +333,48 @@ namespace GUI.US_
 
         private void ComboBoxRoleTxt_SelectedValueChanged(object sender, EventArgs e)
         {
-            /*foreach (var item in _ListObjCategorys)
+            foreach (var item in _listObjRoles)
             {
-                if (item.Name == ComboBoxCategoryTxt.Text)
+                if (item.Name == ComboBoxRoleTxt.Text)
                 {
-                    _ID_Category = item.ID;
-                    Console.WriteLine(_ID_Category + " " + item.Name);
+                    _ID_RoleChoose = item.ID;
                     break;
                 }
-            }*/
+            }
         }
+
+        private List<Employees> FindProductsByKey(string key)
+        {
+            List<Employees> foundEmployees = new List<Employees>();
+
+            if (ComboBoxRoleChoose.Text == "Tất cả")
+            {
+
+                foreach (var item in _listObjEmployees)
+                {
+                    // Kiểm tra xem tên sản phẩm có chứa từ khóa hay không (không phân biệt chữ hoa/chữ thường)
+                    if (item.Name.IndexOf(key, StringComparison.OrdinalIgnoreCase) >= 0)
+                    {
+                        foundEmployees.Add(item);
+                    }
+                }
+            }
+            else
+            {
+                foreach (var item in _listObjEmployees)
+                {
+                    // Kiểm tra xem tên sản phẩm có chứa từ khóa hay không (không phân biệt chữ hoa/chữ thường)
+                    if (item.Name.IndexOf(key, StringComparison.OrdinalIgnoreCase) >= 0)
+                    {
+                        Account account = _AccountBusinesLogiccs.GetObjectById(item.IDTK);
+                        if (account.Role == _ID_RoleSearch)
+                            foundEmployees.Add(item);
+                    }
+                }
+            }
+            return foundEmployees;
+        }
+
+        
     }
 }

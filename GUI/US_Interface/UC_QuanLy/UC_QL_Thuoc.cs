@@ -5,6 +5,8 @@ using DTO;
 using System.Collections.Generic;
 using Guna.UI2.WinForms;
 using System.Threading.Tasks;
+using System.Linq;
+
 
 namespace GUI.US_
 {
@@ -19,10 +21,12 @@ namespace GUI.US_
         private readonly ProductBusinessLogic _Product = new ProductBusinessLogic();
         private readonly SuppliersBusinessLogic _Suppliers = new SuppliersBusinessLogic();
         private readonly CategorysBusinessLogic _Categorys = new CategorysBusinessLogic();
-        
+        private readonly EmployeesBusinessLogic _Employees = new EmployeesBusinessLogic();
+
         List<Categorys> _ListObjCategorys;
         List<Products> _ListObjProducts;
         List<Suppliers> _ListObjSuppliers;
+        Employees _ObjEmployees;
         Suppliers _ObjSuppliers;
         Products _ObjProducts;
         int _ID_CategorySearch = 0; // ID loại sản phẩm
@@ -55,73 +59,8 @@ namespace GUI.US_
             ComboBoxCategoryChoose.Text = "Tất cả";
             LoadDataIteamProduct();
 
-            
 
         }
-
-
-        #region Demo Delegate
-        /* public void AddInfoProduct(int ID)
-         {
-
-             try
-             {
-                 Products obj = _Product.GetObjectById(ID);
-                 Suppliers suppliers = _Suppliers.GetObjectById(obj.SupplierId);
-                 ComboBoxSupplier.Text = suppliers.Name;
-                 txtProductName.Text = obj.Name;
-                 txtCost.Text = obj.Price + "";
-                 txtDiscount.Text = obj.Discount + "";
-                 txtProductionDate.Value = obj.ProductionDate;
-                 txtExpiryDate.Value = obj.ExpiryDate;
-                 txtDescribe.Text = obj.Description;
-                 try
-                 {
-                     picAnh.Image = System.Drawing.Image.FromFile(obj.Image);
-                 }
-                 catch (Exception)
-                 {
-
-                 }
-                 MessageBox.Show("Add item delegate");
-             }
-             catch (Exception)
-             {
-
-                 throw;
-             }
-
-         }
-        public void SomeMethod(int id)
-         {
-             try
-             {
-                 Products obj = _Product.GetObjectById(id);
-                 Suppliers suppliers = _Suppliers.GetObjectById(obj.SupplierId);
-                 ComboBoxSupplier.Text = suppliers.Name;
-                 txtProductName.Text = obj.Name;
-                 txtCost.Text = obj.Price + "";
-                 txtDiscount.Text = obj.Discount + "";
-                 txtProductionDate.Value = obj.ProductionDate;
-                 txtExpiryDate.Value = obj.ExpiryDate;
-                 txtDescribe.Text = obj.Description;
-                 try
-                 {
-                     picAnh.Image = System.Drawing.Image.FromFile(obj.Image);
-                 }
-                 catch (Exception)
-                 {
-
-                 }
-             }
-             catch (Exception)
-             {
-
-                 throw;
-             }
-         }
-         */
-        #endregion
 
         public void UC_QL_Thuoc_Load(object sender, EventArgs e)
         {
@@ -155,7 +94,12 @@ namespace GUI.US_
 
         public void LoadDataIteamProduct()
         {
+            _ListObjCategorys = _Categorys.GetAllObject();
+            _ListObjProducts = _Product.GetAllObject();
+            _ListObjSuppliers = _Suppliers.GetAllObject();
+
             flowLayoutPanelProducts.Controls.Clear();
+
             // Load tất cả 
             if (ComboBoxCategoryChoose.Text == "Tất cả")
             {
@@ -177,6 +121,7 @@ namespace GUI.US_
 
         private void LoadDataComboBoxSupplier()
         {
+            _ListObjSuppliers = _Suppliers.GetAllObject();
             _dataComboBox = new string[_ListObjSuppliers.Count];
             for (int i = 0; i < _ListObjSuppliers.Count; i++)
             {
@@ -305,7 +250,7 @@ namespace GUI.US_
                     _ID_Category,                   // ID loại sản phẩm
                     _ID_Created                     // ID người tạo
                 );
-                MessageBox.Show("" + products);
+                MessageBox.Show("Thêm thành công sản phẩm");
                 _Product.Add(products);
                 Management.AddItemsUC(flowLayoutPanelProducts, products);
             }
@@ -319,11 +264,20 @@ namespace GUI.US_
         private void btnSearch_Click_1(object sender, EventArgs e)
         {
             // Xử lý sự kiện khi người dùng nhấn nút Tìm kiếm
+            if (string.IsNullOrEmpty(txtSearch.Text) != true)
+            {
+                List<Products> _iteamListObjProducts = FindProductsByKey(txtSearch.Text);
+                Management.AddItemsUC(flowLayoutPanelProducts, _iteamListObjProducts);
+            }
+            else
+            {
+                LoadDataIteamProduct();
+            }
+            
             // Hiển thị giao diện tìm kiếm sản phẩm, thực hiện các logic kinh doanh cần thiết, và cập nhật cơ sở dữ liệu
             // ...
 
             // Sau khi tìm kiếm sản phẩm, cập nhật lại danh sách và hiển thị trên giao diện
-            LoadDataIteamProduct();
         }
 
         // TXT
@@ -335,6 +289,7 @@ namespace GUI.US_
 
         private void ComboBoxSupplier_Leave(object sender, EventArgs e)
         {
+            LoadDataComboBoxSupplier();
             Check(ComboBoxSupplier, errorSupplier);
         }
 
@@ -432,6 +387,38 @@ namespace GUI.US_
 
         #endregion
 
+        private List<Products> FindProductsByKey(string key)
+        {
+            List<Products> foundProducts = new List<Products>();
+            _ListObjProducts = _Product.GetAllObject();
+            if(ComboBoxCategoryChoose.Text == "Tất cả")
+            {
+                foreach (var item in _ListObjProducts)
+                {
+                    // Kiểm tra xem tên sản phẩm có chứa từ khóa hay không (không phân biệt chữ hoa/chữ thường)
+                    if (item.Name.IndexOf(key, StringComparison.OrdinalIgnoreCase) >= 0)
+                    {
+                            foundProducts.Add(item);
+                    }
+                }
+            }
+            else
+            {
+                foreach (var item in _ListObjProducts)
+                {
+                    // Kiểm tra xem tên sản phẩm có chứa từ khóa hay không (không phân biệt chữ hoa/chữ thường)
+                    if (item.Name.IndexOf(key, StringComparison.OrdinalIgnoreCase) >= 0)
+                    {
+                        if (item.CategoryId == _ID_CategorySearch)
+                            foundProducts.Add(item);
+                    }
+                }
+            }
+            
+
+            return foundProducts;
+        }
+
         public static UC_QL_Thuoc Instance
         {
             get
@@ -453,9 +440,6 @@ namespace GUI.US_
             }
 
         }
-
-       
-
 
 
 

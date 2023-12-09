@@ -855,8 +855,5 @@ namespace GUI.US_
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton10;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelCustomers;
-        private Form_NVBH_Bill userControl51;
-        private Form_NVBH_Bill userControl52;
-        private Form_NVBH_Bill userControl53;
     }
 }

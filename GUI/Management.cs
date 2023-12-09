@@ -24,8 +24,8 @@ namespace GUI
         private static readonly RolesBusinessLogic _Role = new RolesBusinessLogic();
         private static readonly AccountBusinesLogiccs _Account = new AccountBusinesLogiccs();
 
-        private static int IdIteamProduct;
-        private static int IdIteamEmployess;
+        private static int IdIteamProduct = 0;
+        private static int IdIteamEmployess = 0;
         private static List<int[]> IDItemChooseProducts = new List<int[]> { };
 
         public static void ResestIDItemChooseProducts()
@@ -80,6 +80,20 @@ namespace GUI
             BtnColerClick(btn, colorBtn);
         }
 
+        public static void ConvertBtn(Guna2GradientButton btn, int number)
+        {
+            if (number == 1)
+            {
+                btn.FillColor = Color.Green;
+                btn.FillColor2 = Color.Green;
+                btn.Text = "Thêm";
+            }else if (number == 2)
+            {
+                btn.FillColor = Color.Yellow;
+                btn.FillColor2 = Color.Yellow;
+                btn.Text = "Sửa";
+            }
+        }
         // UC
         public static void UCArrayVisible(UserControl[] uCArrray, UserControl uC)
         {
@@ -114,7 +128,8 @@ namespace GUI
         }
         public static void AddItemsUC(FlowLayoutPanel flowLayoutPanel, List<Products> listObj)
         {
-            UC_ItemProduct[] itemProduct = new UC_ItemProduct[listObj.Count];
+            flowLayoutPanel.Controls.Clear();
+           UC_ItemProduct[] itemProduct = new UC_ItemProduct[listObj.Count];
             for (int i = 0; i < listObj.Count; i++)
             {
                 itemProduct[i] = new UC_ItemProduct(listObj[i].ID);
@@ -128,6 +143,7 @@ namespace GUI
 
         public static void AddItemsUC(FlowLayoutPanel flowLayoutPanel, List<UC_ItemChooseProducts> listObj)
         {
+            flowLayoutPanel.Controls.Clear();
             foreach (var item in listObj)
             {
                 flowLayoutPanel.Controls.Add(item);
@@ -140,6 +156,7 @@ namespace GUI
         }
         public static void AddItemsUC(FlowLayoutPanel flowLayoutPanel, List<Employees> listObj)
         {
+            flowLayoutPanel.Controls.Clear();
             UC_ItemInfoEmployees_[] itemProduct = new UC_ItemInfoEmployees_[listObj.Count];
             for (int i = 0; i < listObj.Count; i++)
             {
@@ -265,6 +282,7 @@ namespace GUI
                 }
             }
         }
+        
         public static string SaveImage(PictureBox pictureBox, string txt)
         {
             string fname = txt + ".jpg";
@@ -304,6 +322,10 @@ namespace GUI
         public static void SetIDProduct(int idProduct)
         {
             IdIteamProduct = idProduct;
+        }
+        public static void SetIDEmployess(int idEmployess)
+        {
+            IdIteamEmployess = idEmployess;
         }
         public static void SetIDItemChooseProducts( int idProduct, int sl ,bool trangThaiAddorNo, int noiAdd)
         {
@@ -354,8 +376,9 @@ namespace GUI
         // Get
         public static string GetNameRole(int IDTK)
         {
-            Roles rl = _Role.GetObjectById(IDTK);
-            return rl.Name;
+            Account account = _Account.GetObjectById(IDTK);
+            Roles rl = _Role.GetObjectById(account.Role);
+            return rl.Name; 
         }
         public static int GetIDAccount()
         {
@@ -377,6 +400,10 @@ namespace GUI
         public static string GetNameEmployeesAccount()
         {
             Employees obj = _Employee.GetObjectById(GetIDAccount());
+            if(obj == null)
+            {
+                return "";
+            }
             return obj.Name;
         }
         public static string GetNameCustomerAccount()
@@ -436,9 +463,9 @@ namespace GUI
         }
         public static void LogginForm(Form form, int IDTK)
         {
-
             switch (_Account.GetRole(IDTK)) // Lấy ID Role
             {
+                
                 // Quản Lý
                 case 1:
                     form.Hide();
@@ -470,6 +497,10 @@ namespace GUI
                 case 4:
                     form.Hide();
                     SetIDAccount(IDTK);
+                    MessageBox.Show("Form kế toán chưa đc mở, cảm ơn và hẹn gặp lại");
+                    SetIDAccount(0);
+                    FormDieuKhienChucVu formDieu = new FormDieuKhienChucVu();
+                    formDieu.Show();
                     form.Close();
                     break;
 

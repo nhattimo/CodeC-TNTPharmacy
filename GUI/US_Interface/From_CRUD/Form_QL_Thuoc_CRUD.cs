@@ -4,6 +4,7 @@ using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace GUI.US_.From_CRUD
 {
@@ -12,41 +13,65 @@ namespace GUI.US_.From_CRUD
 
         private readonly ProductBusinessLogic _Product = new ProductBusinessLogic();
         private readonly SuppliersBusinessLogic _Suppliers = new SuppliersBusinessLogic();
+        private readonly CategorysBusinessLogic _Categorys = new CategorysBusinessLogic();
+
+        List<Categorys> _ListObjCategorys;
+        Products _ObjProducts;
+        Suppliers _ObjSuppliers;
         Label[] _laberError;
         string[] _dataComboBox;
         bool _trangThai;
-        int IDProduct;
-        int _ID_Suppliers = 1; // ID loại sản phẩm
+        int _ID_Created = Management.GetIDAccount(); // ID người tạo
+        int _ID_Suppliers; // ID nhà cung cấp
+        int _ID_Category; // ID loại sản phẩm
+
         public Form_QL_Thuoc_CRUD(int ID)
         {
             InitializeComponent();
-            IDProduct = ID;
-            _laberError = new Label[] { errorProductName, errorSupplier, errorCost, errorDiscount, errorDescribe, errorProductionDate, errorExpiryDate, errorPic };
+            _ListObjCategorys = _Categorys.GetAllObject();
+            _ObjProducts = _Product.GetObjectById(ID);
+            _ObjSuppliers = _Suppliers.GetObjectById(_ObjProducts.SupplierId);
+             _laberError = new Label[] { errorProductName, errorSupplier, errorCost, errorDiscount, errorDescribe, errorProductionDate, errorExpiryDate, errorPic, errorCategory };
             Management.ErrorHide(_laberError);
             _dataComboBox = new string[] { };
             _trangThai = false;
             LoaditemsComboBox();
+            LoadDataComboBoxCategoryTxt();
+            
             LoadInfo(ID);
         }
+
+
+        private void Form_QL_Thuoc_CRUD_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+
 
         //Load
         void LoadInfo(int id)
         {
             try
             {
-                Products obj = _Product.GetObjectById(id);
-                Suppliers suppliers = _Suppliers.GetObjectById(obj.SupplierId);
-                ComboBoxSupplier.Text = suppliers.Name;
-                txtProductName.Text = obj.Name;
-                txtCost.Text = obj.Price + "";
-                txtDiscount.Text = obj.Discount + "";
-                txtPrice.Text = Math.Round(obj.Price - ((obj.Price / 100) * obj.Discount), 0) + ".000 VND";
-                txtProductionDate.Value = obj.ProductionDate;
-                txtExpiryDate.Value = obj.ExpiryDate;
-                txtDescribe.Text = obj.Description;
+                _ObjProducts = _Product.GetObjectById(id);
+                _ObjSuppliers = _Suppliers.GetObjectById(_ObjProducts.SupplierId);
+                ComboBoxSupplier.Text = _ObjSuppliers.Name;
+                txtProductName.Text = _ObjProducts.Name;
+                txtCost.Text = _ObjProducts.Price + "";
+                txtDiscount.Text = _ObjProducts.Discount + "";
+                txtPrice.Text = Math.Round(_ObjProducts.Price - ((_ObjProducts.Price / 100) * _ObjProducts.Discount), 0) + ".000 VND";
+                txtProductionDate.Value = _ObjProducts.ProductionDate;
+                txtExpiryDate.Value = _ObjProducts.ExpiryDate;
+                txtDescribe.Text = _ObjProducts.Description;
+                foreach (var item in _ListObjCategorys)
+                {
+                    if (item.ID == _ObjProducts.CategoryId)
+                        ComboBoxCategoryTxt.Text = item.Name;
+                }
                 try
                 {
-                    picAnh.Image = System.Drawing.Image.FromFile(obj.Image);
+                    picAnh.Image = System.Drawing.Image.FromFile(_ObjProducts.Image);
                 }
                 catch (Exception)
                 {
@@ -57,6 +82,23 @@ namespace GUI.US_.From_CRUD
             {
  
             }
+        }
+        private void LoadDataComboBoxCategoryTxt()
+        {
+            _dataComboBox = new string[_ListObjCategorys.Count];
+            for (int i = 0; i < _ListObjCategorys.Count; i++)
+            {
+                _dataComboBox[i] = _ListObjCategorys[i].Name;
+            }
+
+
+            // Gán mảng dữ liệu cho ComboBox
+            ComboBoxCategoryTxt.Items.Clear();
+            if (_dataComboBox.Length > 0)
+            {
+                ComboBoxCategoryTxt.Items.AddRange(_dataComboBox);
+            }
+
         }
         private void LoaditemsComboBox()
         {
@@ -85,7 +127,7 @@ namespace GUI.US_.From_CRUD
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            _Product.Delete(IDProduct);
+            _Product.Delete(_ObjProducts.ID);
             Management.SetIDProduct(0);
             MessageBox.Show("Xóa thành công");
             this.Close ();
@@ -115,7 +157,18 @@ namespace GUI.US_.From_CRUD
             // Hiển thị giao diện thêm sản phẩm, thực hiện các logic cần thiết, và cập nhật cơ sở dữ liệu
             if (_trangThai == true)
             {
-               // làm nhiệm vụ của nút
+                _ObjProducts.Name = txtProductName.Text;                // Tên sản phẩm
+                _ObjProducts.Price = float.Parse(txtCost.Text);         // Giá tiền
+                _ObjProducts.Discount = float.Parse(txtDiscount.Text);  // Phần trăm giảm giá     
+                _ObjProducts.Description = txtDescribe.Text;            // Mô tả sản phẩm
+                _ObjProducts.ProductionDate = DateTime.Parse(txtProductionDate.Text);   // Ngày sản xuất
+                _ObjProducts.ExpiryDate = DateTime.Parse(txtExpiryDate.Text);           // Ngày hết hạn
+                _ObjProducts.SupplierId = _ID_Suppliers;                // ID nhà cung cấp
+                _ObjProducts.CategoryId = _ID_Category;                 // ID loại sản phẩm
+                _ObjProducts.Image = Management.SaveImage(picAnh, txtProductName.Text + _ID_Suppliers + _ID_Category + _ID_Created);   // Đường dẫn ảnh
+                _Product.Update(_ObjProducts.ID, _ObjProducts);
+                MessageBox.Show("Sửa thành công");
+                this.Close();
             }
             else
             {
@@ -201,7 +254,23 @@ namespace GUI.US_.From_CRUD
         }
 
         private void ComboBoxSupplier_SelectedValueChanged(object sender, EventArgs e)
-        { 
+        {
+            _ID_Suppliers = _Suppliers.GetID(ComboBoxSupplier.SelectedItem.ToString());
         }
+
+        private void ComboBoxCategoryTxt_SelectedValueChanged(object sender, EventArgs e)
+        {
+            foreach (var item in _ListObjCategorys)
+            {
+                if (item.Name == ComboBoxCategoryTxt.Text)
+                {
+                    _ID_Category = item.ID;
+                    Console.WriteLine(_ID_Category + " " + item.Name);
+                    break;
+                }
+            }
+        }
+
+       
     }
 }

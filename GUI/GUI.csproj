@@ -87,6 +87,12 @@
     <Compile Include="US_Interface\From_CRUD\Form_NVBH_Bill.Designer.cs">
       <DependentUpon>Form_NVBH_Bill.cs</DependentUpon>
     </Compile>
+    <Compile Include="US_Interface\From_CRUD\Form_QL_NhanVien_CRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US_Interface\From_CRUD\Form_QL_NhanVien_CRUD.Designer.cs">
+      <DependentUpon>Form_QL_NhanVien_CRUD.cs</DependentUpon>
+    </Compile>
     <Compile Include="US_Interface\UC_KhanhHang\FormKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -299,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="US_Interface\From_CRUD\Form_NVBH_Bill.resx">
       <DependentUpon>Form_NVBH_Bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US_Interface\From_CRUD\Form_QL_NhanVien_CRUD.resx">
+      <DependentUpon>Form_QL_NhanVien_CRUD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="US_Interface\UC_KhanhHang\FormKhachHang.resx">
       <DependentUpon>FormKhachHang.cs</DependentUpon>

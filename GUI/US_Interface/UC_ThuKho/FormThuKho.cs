@@ -24,14 +24,15 @@ namespace GUI.US_
 
         void UCManagement(UserControl uC)
         {
-            controlArray = new UserControl[] { uC_TK_ThuKho1,uC_TK_NhapKho1, uC_TK_XuatKho1 };
+            controlArray = new UserControl[] { uC_TK_ThuKho1, uC_TK_NhapKho1, uC_TK_XuatKho1, uC_Info_Employee1 };
             Management.UCArrayVisible(controlArray, uC);
         }
         void BtnTasbalClickManagement(Guna2GradientTileButton btn)
         {
-            btnArray = new Guna2GradientTileButton[] { btnTaskbarStocker, btnTaskbarEnterTtheWarehouse, btnTaskbarDischarge };
+            btnArray = new Guna2GradientTileButton[] { btnTaskbarStocker, btnTaskbarEnterTtheWarehouse, btnTaskbarDischarge, btnLogOut };
             Management.BtnTasbalClick(btnArray, Color.Transparent, btn, Color.DarkGray);
             btn.BringToFront();
+            btnLogOut.Visible = false;
         }
         #endregion
         
@@ -56,6 +57,18 @@ namespace GUI.US_
         {
             UCManagement(uC_TK_XuatKho1);
             BtnTasbalClickManagement(btnTaskbarDischarge);
+        }
+
+        private void btnTaskbarUser_Click(object sender, EventArgs e)
+        {
+            btnLogOut.Visible = true;
+            UCManagement(uC_Info_Employee1);
+            Management.BtnRefreshColerTransparentClick(btnArray, Color.Transparent);
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            Management.LogOut(this);
         }
     }
 }

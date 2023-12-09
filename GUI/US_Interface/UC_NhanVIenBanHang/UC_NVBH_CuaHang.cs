@@ -61,7 +61,9 @@ namespace GUI.US_
                 sl += item[1];
                 total += (Math.Round(obj.Price - ((obj.Price / 100) * obj.Discount), 0)) * item[1];
             }
+            txtQuantity.Text = sl + "";
             ltxtTotal.Text = total + ".000";
+
         }
         async Task RunContinuousFunction()
         {

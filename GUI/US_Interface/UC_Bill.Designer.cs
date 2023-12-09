@@ -675,7 +675,6 @@ namespace GUI.US_
             // 
             // flowLayoutPanelCustomer
             // 
-            this.flowLayoutPanelCustomer.Controls.Add(this.userControl51);
             this.flowLayoutPanelCustomer.Location = new System.Drawing.Point(25, 430);
             this.flowLayoutPanelCustomer.Margin = new System.Windows.Forms.Padding(5);
             this.flowLayoutPanelCustomer.Name = "flowLayoutPanelCustomer";
@@ -683,15 +682,7 @@ namespace GUI.US_
             this.flowLayoutPanelCustomer.TabIndex = 149;
             this.flowLayoutPanelCustomer.UseWaitCursor = true;
             // 
-            // userControl51
-            // 
-            this.userControl51.BackColor = System.Drawing.SystemColors.Info;
-            this.userControl51.Location = new System.Drawing.Point(3, 3);
-            this.userControl51.Name = "userControl51";
-            this.userControl51.Size = new System.Drawing.Size(524, 263);
-            this.userControl51.TabIndex = 0;
-            this.userControl51.UseWaitCursor = true;
-            // 
+           
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
@@ -809,7 +800,6 @@ namespace GUI.US_
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnSearch;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelCustomer;
-        private Form_NVBH_Bill userControl51;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;

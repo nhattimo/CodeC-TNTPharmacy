@@ -51,7 +51,11 @@ namespace DAL
             var objItem = _db.EMPLOYEES.SingleOrDefault(item => item.ID == objId);
             return objItem;
         }
-
+        public Employees GetProductByIdtk(int objId)
+        {
+            var objItem = _db.EMPLOYEES.SingleOrDefault(item => item.IDTK == objId);
+            return objItem;
+        }
         public List<Employees> GetList()
         {
             List<Employees> list = _db.EMPLOYEES.ToList();

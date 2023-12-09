@@ -8,8 +8,8 @@ namespace GUI.US_
 {
     public partial class UC_ItemInfoEmployees_ : UserControl
     {
-        public readonly EmployeesBusinessLogic _EmployeesBusinesLogiccs = new EmployeesBusinessLogic();
-
+        public readonly EmployeesBusinessLogic _EmployeesBusinesLogiccs = new EmployeesBusinessLogic(); 
+        public readonly AccountBusinesLogiccs _objectBusinesLogiccs = new AccountBusinesLogiccs();
         private int ID { get; set; }
         public UC_ItemInfoEmployees_(int id)
         {
@@ -21,7 +21,7 @@ namespace GUI.US_
         {
             Employees obj = _EmployeesBusinesLogiccs.GetObjectById(ID);
             txtNameStaff.Text = obj.Name;
-            txtPosition.Text = Management.GetNameRole(obj.ID);
+            txtPosition.Text = Management.GetNameRole(obj.IDTK);
             txtCCCD.Text = obj.CCCD;
             txtPhoneNumber.Text = obj.Phone;
             txtDateOfbirth.Text = obj.DateOfBirth + "";
@@ -47,9 +47,17 @@ namespace GUI.US_
             }
         }
 
-        private void PicAnh_MouseClick(object sender, MouseEventArgs e)
+        private void PicAnh_Click(object sender, System.EventArgs e)
         {
-            //Management.SetIDEmployess(ID);
+            // Nếu là vai trò quản lý
+            if (_objectBusinesLogiccs.GetRole(Management.GetIDAccount()) == 1)
+            {
+                Management.SetIDEmployess(ID);
+            }
+            else if (_objectBusinesLogiccs.GetRole(Management.GetIDAccount()) == 2)
+            {
+                
+            } 
         }
     }
 }

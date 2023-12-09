@@ -53,6 +53,11 @@ namespace DAL
             var objItem = _db.USERS.SingleOrDefault(item => item.ID == objId);
             return objItem;
         }
+        public Users GetProductByIdtk(int objId)
+        {
+            var objItem = _db.USERS.SingleOrDefault(item => item.IDTK == objId);
+            return objItem;
+        }
         public Users GetProductByPhone(string numberPhone)
         {
             var objItem = _db.USERS.SingleOrDefault(item => item.Phone == numberPhone);

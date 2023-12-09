@@ -1,9 +1,6 @@
 ﻿using DTO;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL
 {
@@ -53,6 +50,7 @@ namespace DAL
             var objItem = _db.ROLES.SingleOrDefault(item => item.ID == objId);
             return objItem;
         }
+        
 
         public List<Roles> GetList()
         {

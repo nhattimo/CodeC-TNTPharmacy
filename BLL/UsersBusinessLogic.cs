@@ -62,6 +62,14 @@ namespace BLL
             // Gọi phương thức GetProductById từ lớp DAL để lấy thông tin sản phẩm từ cơ sở dữ liệu
             return _objectDataAccess.GetProductById(idObj);
         }
+        public Users GetObjectByIdtk(int idObj)
+        {
+            // Kiểm tra logic kinh doanh trước khi lấy thông tin sản phẩm
+            // ...
+
+            // Gọi phương thức GetProductById từ lớp DAL để lấy thông tin sản phẩm từ cơ sở dữ liệu
+            return _objectDataAccess.GetProductByIdtk(idObj);
+        }
 
         public Users GetObjectByPhone(string numberPhone)
         {

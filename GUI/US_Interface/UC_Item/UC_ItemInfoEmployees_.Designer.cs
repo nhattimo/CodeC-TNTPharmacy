@@ -228,7 +228,7 @@
             this.PicAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PicAnh.TabIndex = 31;
             this.PicAnh.TabStop = false;
-            this.PicAnh.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PicAnh_MouseClick);
+            this.PicAnh.Click += new System.EventHandler(this.PicAnh_Click);
             // 
             // UC_ItemInfoEmployees_
             // 

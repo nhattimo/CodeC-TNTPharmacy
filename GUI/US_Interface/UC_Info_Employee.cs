@@ -11,6 +11,7 @@ namespace GUI.US_
     {
         private static readonly EmployeesBusinessLogic _Employee = new EmployeesBusinessLogic();
         private static readonly RolesBusinessLogic _Role = new RolesBusinessLogic();
+        private static readonly AccountBusinesLogiccs _Account = new AccountBusinesLogiccs();
         public UC_Info_Employee()
         {
             InitializeComponent();
@@ -21,62 +22,38 @@ namespace GUI.US_
             LoadInfoEmployee();
         }
 
-        private int GetIDAccount()
-        {
-            int a = 0;
-            string filePath = "data";
-
-            if (File.Exists(filePath))
-            {
-                using (FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.Read))
-                {
-                    using (BinaryReader br = new BinaryReader(fs))
-                    {
-                        a = br.ReadInt32();
-                    }
-                }
-            }
-            return a;
-        }
-        public bool ISCustomer()
-        {
-            if (GetIDAccount() == 0 || _Employee.GetObjectById(GetIDAccount()) == null)
-                return false;
-            return true;
-        }
         private void LoadInfoEmployee()
         {
-            if (ISCustomer())
+            Employees obj = _Employee.GetObjectByIdtk(Management.GetIDAccount());
+            Account ac = _Account.GetObjectById(obj.IDTK);
+            Roles rl = _Role.GetObjectById(ac.Role);
+            txtName.Text = obj.Name;
+            txtDateOfBirth.Text = obj.DateOfBirth + "";
+            txtSex.Text = obj.Sex;
+            txtPhone.Text = obj.Phone;
+            txtEmail.Text = obj.Email;
+            txtAddress.Text = obj.Address;
+            txtCCCD.Text = obj.CCCD;
+            txtStartedDay.Text = obj.StartedDay + "";
+            txtRole.Text = rl.Name;
+            // kiểm tra ảnh
+            if (File.Exists(obj.Image)) // Kiểm tra xem tệp hình ảnh có tồn tại hay không
             {
-                Employees obj = _Employee.GetObjectById(Management.GetIDAccount());
-                Roles rl = _Role.GetObjectById(Management.GetIDAccount());
-                txtName.Text = obj.Name;
-                txtDateOfBirth.Text = obj.DateOfBirth + "";
-                txtSex.Text = obj.Sex;
-                txtPhone.Text = obj.Phone;
-                txtEmail.Text = obj.Email;
-                txtAddress.Text = obj.Address;
-                txtCCCD.Text = obj.CCCD;
-                txtStartedDay.Text = obj.StartedDay + "";
-                txtRole.Text = rl.Name;
-                // kiểm tra ảnh
-                if (File.Exists(obj.Image)) // Kiểm tra xem tệp hình ảnh có tồn tại hay không
+                try
                 {
-                    try
-                    {
-                        picAnh.Image = Image.FromFile(obj.Image) ;
-                    }
-                    catch
-                    {
-                        picAnh.Image = null;
-                    }
+                    picAnh.Image = Image.FromFile(obj.Image) ;
                 }
-                else
+                catch
                 {
-                    // ảnh không tồn tại
                     picAnh.Image = null;
                 }
             }
+            else
+            {
+                // ảnh không tồn tại
+                picAnh.Image = null;
+            }
+           
         }
     }
 }

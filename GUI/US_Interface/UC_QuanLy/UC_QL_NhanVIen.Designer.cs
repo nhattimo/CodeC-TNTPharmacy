@@ -38,6 +38,13 @@
             this.btnAdd = new Guna.UI2.WinForms.Guna2GradientButton();
             this.errorNameAccount = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.errorSalary = new System.Windows.Forms.Label();
+            this.txtSalary = new Guna.UI2.WinForms.Guna2TextBox();
+            this.errorPhone = new System.Windows.Forms.Label();
+            this.errorRole = new System.Windows.Forms.Label();
+            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.ComboBoxRoleTxt = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2GradientTileButton6 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.PicAnh = new Guna.UI2.WinForms.Guna2PictureBox();
             this.z = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -65,7 +72,7 @@
             this.txtDateOfBirth = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtPhone = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.VScrollBar = new Guna.UI2.WinForms.Guna2VScrollBar();
@@ -74,9 +81,6 @@
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientTileButton10 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.flowLayoutPanelEmployee = new System.Windows.Forms.FlowLayoutPanel();
-            this.errorRole = new System.Windows.Forms.Label();
-            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.ComboBoxRoleTxt = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicAnh)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -97,7 +101,7 @@
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnDelete.Location = new System.Drawing.Point(91, 795);
+            this.btnDelete.Location = new System.Drawing.Point(91, 808);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(151, 57);
@@ -121,7 +125,7 @@
             this.btnUpdate.ForeColor = System.Drawing.Color.Black;
             this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
             this.btnUpdate.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnUpdate.Location = new System.Drawing.Point(247, 795);
+            this.btnUpdate.Location = new System.Drawing.Point(247, 808);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(151, 57);
@@ -165,9 +169,10 @@
             this.txtNameAccount.Location = new System.Drawing.Point(20, 121);
             this.txtNameAccount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNameAccount.Name = "txtNameAccount";
-            this.txtNameAccount.PasswordChar = '\0';
+            this.txtNameAccount.PasswordChar = '*';
             this.txtNameAccount.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtNameAccount.PlaceholderText = "VD: Abcd";
+            this.txtNameAccount.ReadOnly = true;
             this.txtNameAccount.SelectedText = "";
             this.txtNameAccount.Size = new System.Drawing.Size(293, 53);
             this.txtNameAccount.TabIndex = 106;
@@ -189,12 +194,12 @@
             this.btnAdd.ForeColor = System.Drawing.Color.Black;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnAdd.Location = new System.Drawing.Point(404, 795);
+            this.btnAdd.Location = new System.Drawing.Point(404, 808);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(208, 57);
             this.btnAdd.TabIndex = 5;
-            this.btnAdd.Text = "Thêm";
+            this.btnAdd.Text = "Thêm mới";
             this.btnAdd.UseWaitCursor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -215,6 +220,10 @@
             this.guna2Panel2.BorderColor = System.Drawing.Color.Gray;
             this.guna2Panel2.BorderRadius = 1;
             this.guna2Panel2.BorderThickness = 1;
+            this.guna2Panel2.Controls.Add(this.guna2HtmlLabel12);
+            this.guna2Panel2.Controls.Add(this.errorSalary);
+            this.guna2Panel2.Controls.Add(this.txtSalary);
+            this.guna2Panel2.Controls.Add(this.errorPhone);
             this.guna2Panel2.Controls.Add(this.errorRole);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel5);
             this.guna2Panel2.Controls.Add(this.ComboBoxRoleTxt);
@@ -245,7 +254,7 @@
             this.guna2Panel2.Controls.Add(this.txtDateOfBirth);
             this.guna2Panel2.Controls.Add(this.txtAddress);
             this.guna2Panel2.Controls.Add(this.txtEmail);
-            this.guna2Panel2.Controls.Add(this.guna2TextBox2);
+            this.guna2Panel2.Controls.Add(this.txtPhone);
             this.guna2Panel2.Controls.Add(this.txtPassword);
             this.guna2Panel2.Controls.Add(this.btnDelete);
             this.guna2Panel2.Controls.Add(this.btnUpdate);
@@ -259,6 +268,117 @@
             this.guna2Panel2.Size = new System.Drawing.Size(628, 878);
             this.guna2Panel2.TabIndex = 148;
             this.guna2Panel2.UseWaitCursor = true;
+            // 
+            // guna2HtmlLabel12
+            // 
+            this.guna2HtmlLabel12.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel12.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.guna2HtmlLabel12.Location = new System.Drawing.Point(404, 701);
+            this.guna2HtmlLabel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2HtmlLabel12.Name = "guna2HtmlLabel12";
+            this.guna2HtmlLabel12.Size = new System.Drawing.Size(54, 25);
+            this.guna2HtmlLabel12.TabIndex = 201;
+            this.guna2HtmlLabel12.Text = "Lương";
+            this.guna2HtmlLabel12.UseWaitCursor = true;
+            // 
+            // errorSalary
+            // 
+            this.errorSalary.AutoSize = true;
+            this.errorSalary.BackColor = System.Drawing.Color.Transparent;
+            this.errorSalary.ForeColor = System.Drawing.Color.Red;
+            this.errorSalary.Location = new System.Drawing.Point(410, 790);
+            this.errorSalary.Name = "errorSalary";
+            this.errorSalary.Size = new System.Drawing.Size(25, 16);
+            this.errorSalary.TabIndex = 199;
+            this.errorSalary.Text = "Lỗi";
+            this.errorSalary.UseWaitCursor = true;
+            // 
+            // txtSalary
+            // 
+            this.txtSalary.BackColor = System.Drawing.Color.Transparent;
+            this.txtSalary.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtSalary.BorderRadius = 5;
+            this.txtSalary.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.txtSalary.DefaultText = "";
+            this.txtSalary.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSalary.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSalary.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSalary.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSalary.FillColor = System.Drawing.Color.BlanchedAlmond;
+            this.txtSalary.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSalary.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSalary.ForeColor = System.Drawing.Color.Black;
+            this.txtSalary.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSalary.Location = new System.Drawing.Point(404, 732);
+            this.txtSalary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSalary.Name = "txtSalary";
+            this.txtSalary.PasswordChar = '\0';
+            this.txtSalary.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtSalary.PlaceholderText = "VD: Liên Chiểu -  Đà Nẵng - Việt Nam";
+            this.txtSalary.SelectedText = "";
+            this.txtSalary.Size = new System.Drawing.Size(208, 53);
+            this.txtSalary.TabIndex = 198;
+            this.txtSalary.UseWaitCursor = true;
+            this.txtSalary.Leave += new System.EventHandler(this.txtSalary_Leave);
+            // 
+            // errorPhone
+            // 
+            this.errorPhone.AutoSize = true;
+            this.errorPhone.BackColor = System.Drawing.Color.Transparent;
+            this.errorPhone.ForeColor = System.Drawing.Color.Red;
+            this.errorPhone.Location = new System.Drawing.Point(25, 380);
+            this.errorPhone.Name = "errorPhone";
+            this.errorPhone.Size = new System.Drawing.Size(25, 16);
+            this.errorPhone.TabIndex = 197;
+            this.errorPhone.Text = "Lỗi";
+            this.errorPhone.UseWaitCursor = true;
+            // 
+            // errorRole
+            // 
+            this.errorRole.AutoSize = true;
+            this.errorRole.BackColor = System.Drawing.Color.Transparent;
+            this.errorRole.ForeColor = System.Drawing.Color.Red;
+            this.errorRole.Location = new System.Drawing.Point(17, 790);
+            this.errorRole.Name = "errorRole";
+            this.errorRole.Size = new System.Drawing.Size(25, 16);
+            this.errorRole.TabIndex = 196;
+            this.errorRole.Text = "Lỗi";
+            this.errorRole.UseWaitCursor = true;
+            // 
+            // guna2HtmlLabel5
+            // 
+            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(20, 701);
+            this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(68, 25);
+            this.guna2HtmlLabel5.TabIndex = 195;
+            this.guna2HtmlLabel5.Text = "Chức vụ";
+            this.guna2HtmlLabel5.UseWaitCursor = true;
+            // 
+            // ComboBoxRoleTxt
+            // 
+            this.ComboBoxRoleTxt.BackColor = System.Drawing.Color.Transparent;
+            this.ComboBoxRoleTxt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ComboBoxRoleTxt.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ComboBoxRoleTxt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxRoleTxt.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ComboBoxRoleTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ComboBoxRoleTxt.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.ComboBoxRoleTxt.ForeColor = System.Drawing.Color.Black;
+            this.ComboBoxRoleTxt.ItemHeight = 30;
+            this.ComboBoxRoleTxt.Items.AddRange(new object[] {
+            "Ac",
+            "Non-Ac"});
+            this.ComboBoxRoleTxt.Location = new System.Drawing.Point(20, 736);
+            this.ComboBoxRoleTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ComboBoxRoleTxt.Name = "ComboBoxRoleTxt";
+            this.ComboBoxRoleTxt.Size = new System.Drawing.Size(359, 36);
+            this.ComboBoxRoleTxt.TabIndex = 194;
+            this.ComboBoxRoleTxt.UseWaitCursor = true;
+            this.ComboBoxRoleTxt.SelectedValueChanged += new System.EventHandler(this.ComboBoxRoleTxt_SelectedValueChanged);
+            this.ComboBoxRoleTxt.Leave += new System.EventHandler(this.ComboBoxRoleTxt_Leave);
             // 
             // guna2GradientTileButton6
             // 
@@ -291,7 +411,7 @@
             this.PicAnh.Location = new System.Drawing.Point(345, 222);
             this.PicAnh.Margin = new System.Windows.Forms.Padding(0);
             this.PicAnh.Name = "PicAnh";
-            this.PicAnh.Size = new System.Drawing.Size(267, 255);
+            this.PicAnh.Size = new System.Drawing.Size(267, 201);
             this.PicAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PicAnh.TabIndex = 178;
             this.PicAnh.TabStop = false;
@@ -479,10 +599,10 @@
             // radioButtonFemale
             // 
             this.radioButtonFemale.AutoSize = true;
-            this.radioButtonFemale.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.radioButtonFemale.BackColor = System.Drawing.Color.Transparent;
             this.radioButtonFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.radioButtonFemale.ForeColor = System.Drawing.Color.Black;
-            this.radioButtonFemale.Location = new System.Drawing.Point(212, 338);
+            this.radioButtonFemale.Location = new System.Drawing.Point(494, 439);
             this.radioButtonFemale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonFemale.Name = "radioButtonFemale";
             this.radioButtonFemale.Size = new System.Drawing.Size(51, 24);
@@ -495,10 +615,10 @@
             // radioButtonMale
             // 
             this.radioButtonMale.AutoSize = true;
-            this.radioButtonMale.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.radioButtonMale.BackColor = System.Drawing.Color.Transparent;
             this.radioButtonMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.radioButtonMale.ForeColor = System.Drawing.Color.Black;
-            this.radioButtonMale.Location = new System.Drawing.Point(67, 338);
+            this.radioButtonMale.Location = new System.Drawing.Point(380, 439);
             this.radioButtonMale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonMale.Name = "radioButtonMale";
             this.radioButtonMale.Size = new System.Drawing.Size(65, 24);
@@ -515,9 +635,9 @@
             this.guna2HtmlLabel4.Location = new System.Drawing.Point(20, 295);
             this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(69, 25);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(106, 25);
             this.guna2HtmlLabel4.TabIndex = 161;
-            this.guna2HtmlLabel4.Text = "Giới tính";
+            this.guna2HtmlLabel4.Text = "Số điện thoại";
             this.guna2HtmlLabel4.UseWaitCursor = true;
             // 
             // errorSex
@@ -525,7 +645,7 @@
             this.errorSex.AutoSize = true;
             this.errorSex.BackColor = System.Drawing.Color.Transparent;
             this.errorSex.ForeColor = System.Drawing.Color.Red;
-            this.errorSex.Location = new System.Drawing.Point(25, 380);
+            this.errorSex.Location = new System.Drawing.Point(320, 480);
             this.errorSex.Name = "errorSex";
             this.errorSex.Size = new System.Drawing.Size(25, 16);
             this.errorSex.TabIndex = 160;
@@ -683,33 +803,32 @@
             this.txtEmail.UseWaitCursor = true;
             this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
             // 
-            // guna2TextBox2
+            // txtPhone
             // 
-            this.guna2TextBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2TextBox2.BorderRadius = 5;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FillColor = System.Drawing.Color.BlanchedAlmond;
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox2.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Location = new System.Drawing.Point(20, 322);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.guna2TextBox2.PlaceholderText = "";
-            this.guna2TextBox2.ReadOnly = true;
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(293, 53);
-            this.guna2TextBox2.TabIndex = 148;
-            this.guna2TextBox2.UseWaitCursor = true;
+            this.txtPhone.BackColor = System.Drawing.Color.Transparent;
+            this.txtPhone.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPhone.BorderRadius = 5;
+            this.txtPhone.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.txtPhone.DefaultText = "";
+            this.txtPhone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPhone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPhone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhone.FillColor = System.Drawing.Color.BlanchedAlmond;
+            this.txtPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPhone.ForeColor = System.Drawing.Color.Black;
+            this.txtPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhone.Location = new System.Drawing.Point(20, 322);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.PasswordChar = '\0';
+            this.txtPhone.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtPhone.PlaceholderText = "";
+            this.txtPhone.SelectedText = "";
+            this.txtPhone.Size = new System.Drawing.Size(293, 53);
+            this.txtPhone.TabIndex = 148;
+            this.txtPhone.UseWaitCursor = true;
             // 
             // txtPassword
             // 
@@ -730,9 +849,10 @@
             this.txtPassword.Location = new System.Drawing.Point(320, 121);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '\0';
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtPassword.PlaceholderText = "VD: @Abcd123";
+            this.txtPassword.ReadOnly = true;
             this.txtPassword.SelectedText = "";
             this.txtPassword.Size = new System.Drawing.Size(293, 53);
             this.txtPassword.TabIndex = 147;
@@ -750,10 +870,10 @@
             this.guna2Panel1.Controls.Add(this.txtSearch);
             this.guna2Panel1.Controls.Add(this.guna2GradientTileButton10);
             this.guna2Panel1.Controls.Add(this.flowLayoutPanelEmployee);
-            this.guna2Panel1.Location = new System.Drawing.Point(644, 1);
+            this.guna2Panel1.Location = new System.Drawing.Point(634, 0);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1117, 885);
+            this.guna2Panel1.Size = new System.Drawing.Size(1112, 885);
             this.guna2Panel1.TabIndex = 149;
             this.guna2Panel1.UseWaitCursor = true;
             // 
@@ -761,8 +881,8 @@
             // 
             this.VScrollBar.InUpdate = false;
             this.VScrollBar.LargeChange = 10;
-            this.VScrollBar.Location = new System.Drawing.Point(1103, 90);
-            this.VScrollBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.VScrollBar.Location = new System.Drawing.Point(1102, 93);
+            this.VScrollBar.Margin = new System.Windows.Forms.Padding(4);
             this.VScrollBar.Name = "VScrollBar";
             this.VScrollBar.ScrollbarSize = 7;
             this.VScrollBar.Size = new System.Drawing.Size(7, 788);
@@ -783,7 +903,7 @@
             this.ComboBoxRoleChoose.Items.AddRange(new object[] {
             "Ac",
             "Non-Ac"});
-            this.ComboBoxRoleChoose.Location = new System.Drawing.Point(463, 25);
+            this.ComboBoxRoleChoose.Location = new System.Drawing.Point(447, 25);
             this.ComboBoxRoleChoose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ComboBoxRoleChoose.Name = "ComboBoxRoleChoose";
             this.ComboBoxRoleChoose.Size = new System.Drawing.Size(228, 36);
@@ -810,13 +930,14 @@
             this.btnSearch.HoverState.FillColor2 = System.Drawing.Color.Transparent;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
             this.btnSearch.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnSearch.Location = new System.Drawing.Point(1065, 25);
+            this.btnSearch.Location = new System.Drawing.Point(1049, 25);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(44, 44);
             this.btnSearch.TabIndex = 20;
             this.btnSearch.UseTransparentBackground = true;
             this.btnSearch.UseWaitCursor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click_1);
             // 
             // txtSearch
             // 
@@ -829,7 +950,7 @@
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Location = new System.Drawing.Point(713, 25);
+            this.txtSearch.Location = new System.Drawing.Point(697, 25);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
@@ -863,58 +984,11 @@
             // flowLayoutPanelEmployee
             // 
             this.flowLayoutPanelEmployee.Location = new System.Drawing.Point(5, 90);
-            this.flowLayoutPanelEmployee.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.flowLayoutPanelEmployee.Margin = new System.Windows.Forms.Padding(5);
             this.flowLayoutPanelEmployee.Name = "flowLayoutPanelEmployee";
             this.flowLayoutPanelEmployee.Size = new System.Drawing.Size(1088, 789);
             this.flowLayoutPanelEmployee.TabIndex = 17;
             this.flowLayoutPanelEmployee.UseWaitCursor = true;
-            // 
-            // errorRole
-            // 
-            this.errorRole.AutoSize = true;
-            this.errorRole.BackColor = System.Drawing.Color.Transparent;
-            this.errorRole.ForeColor = System.Drawing.Color.Red;
-            this.errorRole.Location = new System.Drawing.Point(18, 774);
-            this.errorRole.Name = "errorRole";
-            this.errorRole.Size = new System.Drawing.Size(25, 16);
-            this.errorRole.TabIndex = 196;
-            this.errorRole.Text = "Lỗi";
-            this.errorRole.UseWaitCursor = true;
-            // 
-            // guna2HtmlLabel5
-            // 
-            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(21, 707);
-            this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(85, 31);
-            this.guna2HtmlLabel5.TabIndex = 195;
-            this.guna2HtmlLabel5.Text = "Chức vụ";
-            this.guna2HtmlLabel5.UseWaitCursor = true;
-            // 
-            // ComboBoxRoleTxt
-            // 
-            this.ComboBoxRoleTxt.BackColor = System.Drawing.Color.Transparent;
-            this.ComboBoxRoleTxt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ComboBoxRoleTxt.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ComboBoxRoleTxt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ComboBoxRoleTxt.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ComboBoxRoleTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ComboBoxRoleTxt.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.ComboBoxRoleTxt.ForeColor = System.Drawing.Color.Black;
-            this.ComboBoxRoleTxt.ItemHeight = 30;
-            this.ComboBoxRoleTxt.Items.AddRange(new object[] {
-            "Ac",
-            "Non-Ac"});
-            this.ComboBoxRoleTxt.Location = new System.Drawing.Point(20, 736);
-            this.ComboBoxRoleTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ComboBoxRoleTxt.Name = "ComboBoxRoleTxt";
-            this.ComboBoxRoleTxt.Size = new System.Drawing.Size(589, 36);
-            this.ComboBoxRoleTxt.TabIndex = 194;
-            this.ComboBoxRoleTxt.UseWaitCursor = true;
-            this.ComboBoxRoleTxt.SelectedValueChanged += new System.EventHandler(this.ComboBoxRoleTxt_SelectedValueChanged);
-            this.ComboBoxRoleTxt.Leave += new System.EventHandler(this.ComboBoxRoleTxt_Leave);
             // 
             // UC_QL_NhanVIen
             // 
@@ -954,7 +1028,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtName;
         private System.Windows.Forms.RadioButton radioButtonFemale;
         private System.Windows.Forms.RadioButton radioButtonMale;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox txtPhone;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private System.Windows.Forms.Label errorEmail;
@@ -982,5 +1056,9 @@
         private System.Windows.Forms.Label errorRole;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2ComboBox ComboBoxRoleTxt;
+        private System.Windows.Forms.Label errorPhone;
+        private System.Windows.Forms.Label errorSalary;
+        private Guna.UI2.WinForms.Guna2TextBox txtSalary;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
     }
 }

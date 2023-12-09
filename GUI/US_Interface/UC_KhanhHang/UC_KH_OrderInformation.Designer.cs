@@ -57,6 +57,8 @@
             this.flowLayoutPanelIteamProduct = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2GradientTileButton6 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.txtQuantity = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -92,7 +94,7 @@
             this.VScrollBar.InUpdate = false;
             this.VScrollBar.LargeChange = 10;
             this.VScrollBar.Location = new System.Drawing.Point(600, 100);
-            this.VScrollBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.VScrollBar.Margin = new System.Windows.Forms.Padding(4);
             this.VScrollBar.Name = "VScrollBar";
             this.VScrollBar.ScrollbarSize = 13;
             this.VScrollBar.Size = new System.Drawing.Size(13, 610);
@@ -124,7 +126,7 @@
             this.txtAddress.Location = new System.Drawing.Point(780, 158);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(149, 21);
+            this.txtAddress.Size = new System.Drawing.Size(176, 25);
             this.txtAddress.TabIndex = 158;
             this.txtAddress.Text = "Lệ Thủy -  Quảng Bình ";
             this.txtAddress.UseWaitCursor = true;
@@ -136,7 +138,7 @@
             this.guna2HtmlLabel10.Location = new System.Drawing.Point(632, 158);
             this.guna2HtmlLabel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            this.guna2HtmlLabel10.Size = new System.Drawing.Size(53, 21);
+            this.guna2HtmlLabel10.Size = new System.Drawing.Size(61, 25);
             this.guna2HtmlLabel10.TabIndex = 157;
             this.guna2HtmlLabel10.Text = "Địa chỉ:";
             this.guna2HtmlLabel10.UseWaitCursor = true;
@@ -148,7 +150,7 @@
             this.txtPhone.Location = new System.Drawing.Point(780, 128);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(83, 21);
+            this.txtPhone.Size = new System.Drawing.Size(93, 25);
             this.txtPhone.TabIndex = 156;
             this.txtPhone.Text = "0857075999";
             this.txtPhone.UseWaitCursor = true;
@@ -160,7 +162,7 @@
             this.guna2HtmlLabel8.Location = new System.Drawing.Point(632, 128);
             this.guna2HtmlLabel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(95, 21);
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(111, 25);
             this.guna2HtmlLabel8.TabIndex = 155;
             this.guna2HtmlLabel8.Text = "Số điện thoại:";
             this.guna2HtmlLabel8.UseWaitCursor = true;
@@ -172,7 +174,7 @@
             this.txtNameCustomer.Location = new System.Drawing.Point(780, 100);
             this.txtNameCustomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNameCustomer.Name = "txtNameCustomer";
-            this.txtNameCustomer.Size = new System.Drawing.Size(98, 21);
+            this.txtNameCustomer.Size = new System.Drawing.Size(117, 25);
             this.txtNameCustomer.TabIndex = 154;
             this.txtNameCustomer.Text = "Nguyễn Văn A";
             this.txtNameCustomer.UseWaitCursor = true;
@@ -184,7 +186,7 @@
             this.guna2HtmlLabel5.Location = new System.Drawing.Point(632, 100);
             this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(88, 21);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(103, 25);
             this.guna2HtmlLabel5.TabIndex = 153;
             this.guna2HtmlLabel5.Text = "Người nhận:";
             this.guna2HtmlLabel5.UseWaitCursor = true;
@@ -215,7 +217,7 @@
             this.guna2HtmlLabel11.Location = new System.Drawing.Point(85, 34);
             this.guna2HtmlLabel11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-            this.guna2HtmlLabel11.Size = new System.Drawing.Size(49, 21);
+            this.guna2HtmlLabel11.Size = new System.Drawing.Size(59, 25);
             this.guna2HtmlLabel11.TabIndex = 140;
             this.guna2HtmlLabel11.Text = "Nhanh";
             this.guna2HtmlLabel11.UseWaitCursor = true;
@@ -263,7 +265,7 @@
             this.guna2HtmlLabel12.Location = new System.Drawing.Point(85, 64);
             this.guna2HtmlLabel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel12.Name = "guna2HtmlLabel12";
-            this.guna2HtmlLabel12.Size = new System.Drawing.Size(53, 21);
+            this.guna2HtmlLabel12.Size = new System.Drawing.Size(64, 25);
             this.guna2HtmlLabel12.TabIndex = 141;
             this.guna2HtmlLabel12.Text = "Hỏa tốc";
             this.guna2HtmlLabel12.UseWaitCursor = true;
@@ -294,7 +296,7 @@
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(85, 31);
             this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(182, 21);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(217, 25);
             this.guna2HtmlLabel2.TabIndex = 136;
             this.guna2HtmlLabel2.Text = "Thanh toán khi nhận hàng";
             this.guna2HtmlLabel2.UseWaitCursor = true;
@@ -342,7 +344,7 @@
             this.guna2HtmlLabel3.Location = new System.Drawing.Point(85, 60);
             this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(176, 21);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(210, 25);
             this.guna2HtmlLabel3.TabIndex = 137;
             this.guna2HtmlLabel3.Text = "Thanh toán qua tài khoản";
             this.guna2HtmlLabel3.UseWaitCursor = true;
@@ -351,6 +353,8 @@
             // 
             this.guna2CustomGradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel1.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel1.Controls.Add(this.txtQuantity);
+            this.guna2CustomGradientPanel1.Controls.Add(this.label1);
             this.guna2CustomGradientPanel1.Controls.Add(this.label4);
             this.guna2CustomGradientPanel1.Controls.Add(this.txtTotal);
             this.guna2CustomGradientPanel1.Controls.Add(this.label6);
@@ -373,7 +377,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(699, 46);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 24);
+            this.label4.Size = new System.Drawing.Size(73, 29);
             this.label4.TabIndex = 14;
             this.label4.Text = " VND";
             // 
@@ -385,7 +389,7 @@
             this.txtTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.txtTotal.Location = new System.Drawing.Point(549, 46);
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(82, 24);
+            this.txtTotal.Size = new System.Drawing.Size(104, 29);
             this.txtTotal.TabIndex = 13;
             this.txtTotal.Text = "500.000";
             // 
@@ -396,7 +400,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label6.Location = new System.Drawing.Point(33, 46);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 20);
+            this.label6.Size = new System.Drawing.Size(103, 25);
             this.label6.TabIndex = 12;
             this.label6.Text = "Tổng tiền";
             // 
@@ -454,6 +458,27 @@
             // 
             this.guna2Elipse1.TargetControl = this;
             // 
+            // txtQuantity
+            // 
+            this.txtQuantity.AutoSize = true;
+            this.txtQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtQuantity.ForeColor = System.Drawing.Color.Black;
+            this.txtQuantity.Location = new System.Drawing.Point(560, 15);
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Size = new System.Drawing.Size(27, 29);
+            this.txtQuantity.TabIndex = 16;
+            this.txtQuantity.Text = "2";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(33, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 25);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "SL";
+            // 
             // UC_KH_OrderInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -504,5 +529,7 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Button btnReturn;
         private Guna.UI2.WinForms.Guna2VScrollBar VScrollBar;
+        private System.Windows.Forms.Label txtQuantity;
+        private System.Windows.Forms.Label label1;
     }
 }

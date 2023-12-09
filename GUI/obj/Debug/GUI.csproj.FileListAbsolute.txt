@@ -222,3 +222,4 @@ D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_Ite
 D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_ItemInfoEmployees_.resources
 D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_Interface.From_CRUD.Form_NVBH_Bill.resources
 D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_ItemInfoCustomer.resources
+D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_Interface.From_CRUD.Form_QL_NhanVien_CRUD.resources

@@ -50,9 +50,11 @@ namespace GUI
 
         private void btnOther_Click(object sender, EventArgs e)
         {
+            this.Hide();
             FormDangNhap formDangNhap = new FormDangNhap(1);
             formDangNhap.ShowDialog();
-            this.Hide();
+            this.Close();
+            
         }
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)
