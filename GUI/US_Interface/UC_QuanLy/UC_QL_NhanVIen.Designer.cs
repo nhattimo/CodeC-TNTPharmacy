@@ -416,6 +416,7 @@
             this.PicAnh.TabIndex = 178;
             this.PicAnh.TabStop = false;
             this.PicAnh.UseWaitCursor = true;
+            this.PicAnh.Click += new System.EventHandler(this.PicAnh_Click);
             // 
             // z
             // 

@@ -85,7 +85,6 @@ namespace GUI.US_
             this.guna2CustomGradientPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewProducts)).BeginInit();
             this.guna2Panel2.SuspendLayout();
-            this.flowLayoutPanelCustomer.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
             this.guna2CustomGradientPanel5.SuspendLayout();
@@ -682,7 +681,6 @@ namespace GUI.US_
             this.flowLayoutPanelCustomer.TabIndex = 149;
             this.flowLayoutPanelCustomer.UseWaitCursor = true;
             // 
-           
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
@@ -737,6 +735,7 @@ namespace GUI.US_
             this.btnSearch.TabIndex = 134;
             this.btnSearch.UseTransparentBackground = true;
             this.btnSearch.UseWaitCursor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // guna2Elipse1
             // 
@@ -769,7 +768,6 @@ namespace GUI.US_
             this.guna2CustomGradientPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewProducts)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
-            this.flowLayoutPanelCustomer.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.guna2CustomGradientPanel2.ResumeLayout(false);

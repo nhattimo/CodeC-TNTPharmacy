@@ -289,7 +289,6 @@ namespace GUI.US_
 
         private void ComboBoxSupplier_Leave(object sender, EventArgs e)
         {
-            LoadDataComboBoxSupplier();
             Check(ComboBoxSupplier, errorSupplier);
         }
 

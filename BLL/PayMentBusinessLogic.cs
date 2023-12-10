@@ -11,11 +11,10 @@ namespace BLL
     public class PayMentBusinessLogic
     {
         // Sử dụng để tương tác với DAL (DataAccess)
-        private readonly PayMentDataAccess _objectDataAccess;
+        private readonly PayMentDataAccess _objectDataAccess =  new PayMentDataAccess();
 
-        public PayMentBusinessLogic(PayMentDataAccess productDataAccess)
+        public PayMentBusinessLogic()
         {
-            _objectDataAccess = productDataAccess;
         }
 
         public void Add(PayMent obj)

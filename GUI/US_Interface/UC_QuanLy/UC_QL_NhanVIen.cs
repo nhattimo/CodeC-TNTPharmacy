@@ -34,6 +34,7 @@ namespace GUI.US_
             _listObjAccount = _AccountBusinesLogiccs.GetAllObject();
             _listObjRoles = _RolesBusinesLogiccs.GetAllObject();
             _laberError = new Label[] { errorNameAccount, errorPassword, errorName, errorDateOfBirth, errorSex, errorEmail, errorCCCD, errorStartDay, errorAddress, errorRole, errorSalary, errorPhone };
+            Management.ErrorHide(_laberError);
             _trangThai = false;
             Management.ErrorHide(_laberError);
             LoadDataComboBoxRoleTxt();
@@ -145,7 +146,6 @@ namespace GUI.US_
                     }
                 }
                 
-
                 Management.AddItemsUC(flowLayoutPanelEmployee, listIteamEmployees);
             }
         }
@@ -185,70 +185,101 @@ namespace GUI.US_
                 ComboBoxRoleChoose.Items.AddRange(_dataComboBox);
             }
         }
+       
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Form_QL_NhanVien_CRUD form_QL_NhanVien_CRUD = new Form_QL_NhanVien_CRUD();
             form_QL_NhanVien_CRUD.ShowDialog();           
         }
+        
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            // check ko để trống
-            Management.Check(txtNameAccount, errorNameAccount);
-            Management.Check(txtPassword, errorPassword);
-            Management.Check(txtName, errorName);
-            Management.Check(txtDateOfBirth, errorDateOfBirth);
-            Management.Check(txtEmail, errorEmail);
-            Management.Check(txtCCCD, errorCCCD);
-            Management.Check(txtStartedDay, errorStartDay);
-            Management.Check(txtAddress, errorAddress);
-            Management.Check(ComboBoxRoleTxt, errorRole);
-            Management.Check(txtSalary, errorSalary);
-
-            foreach (var item in _laberError)
+            if (_objEmployees == null)
             {
-                if (item.Visible == true)
-                {
-                    _trangThai = false;
-                    break;
-                }
-                else
-                    _trangThai = true;
-            }
-            //
-            if (_trangThai)
-            {
-                _objEmployees = _EmployeesBusinesLogiccs.GetObjectById(Management.GetIDEmployess());
-                _objAccount = _AccountBusinesLogiccs.GetObjectById(_objEmployees.IDTK);
-                // tạo đối tượng nhân viên với dữ liệu nhập
-                Employees employees = new Employees(
-                    txtName.Text,                               // Tên 
-                    "Nam",                                      // Giới tính
-                    DateTime.Parse(txtDateOfBirth.Text.ToString()),  // Ngày sinh
-                    txtPhone.Text,                              // SĐT
-                    txtAddress.Text,                            // Địa chỉ
-                    txtEmail.Text,                              // Email
-                    Management.SaveImage(PicAnh, txtName.Text + txtPhone),                        // Đường dẫn ảnh
-                    txtSalary.Text,                             // Lương
-                    DateTime.Parse(txtStartedDay.Text.ToString()),// Ngày vào làm
-                    txtCCCD.Text,                               // Căn cước công dân
-                    _objEmployees.IDTK                                 // IDTK 
-                );
-                if (radioButtonFemale.Checked == true)
-                    employees.Sex = "Nữ";
-                // 
-
-                _EmployeesBusinesLogiccs.Update(_objEmployees.ID,employees);
-                MessageBox.Show("Sửa thành công");
+                MessageBox.Show("hãy chọn nhân viên muốn sửa");
             }
             else
             {
-                MessageBox.Show("Kiểm tra lại thông tin");
+                // check ko để trống
+                Management.Check(txtNameAccount, errorNameAccount);
+                Management.Check(txtPassword, errorPassword);
+                Management.Check(txtName, errorName);
+                Management.Check(txtDateOfBirth, errorDateOfBirth);
+                Management.Check(txtEmail, errorEmail);
+                Management.Check(txtCCCD, errorCCCD);
+                Management.Check(txtStartedDay, errorStartDay);
+                Management.Check(txtAddress, errorAddress);
+                Management.Check(ComboBoxRoleTxt, errorRole);
+                Management.Check(txtSalary, errorSalary);
+
+                foreach (var item in _laberError)
+                {
+                    if (item.Visible == true)
+                    {
+                        _trangThai = false;
+                        break;
+                    }
+                    else
+                        _trangThai = true;
+                }
+                //
+                if (_trangThai)
+                {
+                    _objEmployees = _EmployeesBusinesLogiccs.GetObjectById(Management.GetIDEmployess());
+                    if (_objEmployees == null)
+                    {
+                        MessageBox.Show("nhân viên không tồn tại");
+                    }
+                    else
+                    {
+                        _objEmployees.Name = txtName.Text;                               // Tên 
+                        _objEmployees.Sex = "Nam";                                      // Giới tính
+                        _objEmployees.DateOfBirth = DateTime.Parse(txtDateOfBirth.Text.ToString());  // Ngày sinh
+                        _objEmployees.Phone = txtPhone.Text;                             // SĐT
+                        _objEmployees.Address = txtAddress.Text;                           // Địa chỉ
+                        _objEmployees.Email = txtEmail.Text;                              // Email
+                        _objEmployees.Image = Management.SaveImage(PicAnh, txtName.Text + txtPhone).ToString();                        // Đường dẫn ảnh
+                        _objEmployees.Salary = float.Parse(txtSalary.Text);                             // Lương
+                        _objEmployees.StartedDay = DateTime.Parse(txtStartedDay.Text.ToString());// Ngày vào làm
+                        _objEmployees.CCCD = txtCCCD.Text;                              // Căn cước công dân   
+                        if (radioButtonFemale.Checked == true)
+                            _objEmployees.Sex = "Nữ";
+                        // 
+                        _EmployeesBusinesLogiccs.Update(_objEmployees.ID, _objEmployees);
+                        MessageBox.Show(_objEmployees.ID + "");
+                        MessageBox.Show("Sửa thành công");
+                        LoadDataEmployees();
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Kiểm tra lại thông tin");
+                }
             }
+            
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                if(_objEmployees == null)
+                {
+                    MessageBox.Show("hãy chọn nhân viên muốn xóa");
+                }
+                else
+                {
+                    _EmployeesBusinesLogiccs.Delete(_objEmployees.ID);
+                    LoadDataEmployees();
+                    MessageBox.Show("Xóa thành công");
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Mã đã không tồn tại");
+            }
+            
         }
 
         private void btnSearch_Click_1(object sender, EventArgs e)
@@ -375,6 +406,9 @@ namespace GUI.US_
             return foundEmployees;
         }
 
-        
+        private void PicAnh_Click(object sender, EventArgs e)
+        {
+            Management.SetImage(PicAnh, sender);
+        }
     }
 }

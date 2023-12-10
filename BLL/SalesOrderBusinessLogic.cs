@@ -11,11 +11,11 @@ namespace BLL
     public class SalesOrderBusinessLogic
     {
         // Sử dụng để tương tác với DAL (DataAccess)
-        private readonly SalesOrderDataAccess _objectDataAccess;
+        private readonly SalesOrderDataAccess _objectDataAccess =  new SalesOrderDataAccess();
 
-        public SalesOrderBusinessLogic(SalesOrderDataAccess productDataAccess)
+        public SalesOrderBusinessLogic()
         {
-            _objectDataAccess = productDataAccess;
+            
         }
 
         public void Add(SalesOrder obj)

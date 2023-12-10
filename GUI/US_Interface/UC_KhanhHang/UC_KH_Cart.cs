@@ -1,4 +1,5 @@
-﻿using Guna.UI2.WinForms.Helpers;
+﻿using GUI.US_Interface.From_CRUD;
+using Guna.UI2.WinForms.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,12 +22,12 @@ namespace GUI.US_
         private void UC_KH_Cart_Load(object sender, EventArgs e)
         {
             Management.ScrollBarFlowLayoutPanel(flowLayoutPanel, VScrollBar);
-            uC_KH_OrderInformation1.Visible = false;
         }
 
         private void btnShoppingOnline_Click(object sender, EventArgs e)
         {
-            uC_KH_OrderInformation1.Visible = true;
+            Form_KH_Bill form_KH_Bill = new Form_KH_Bill();
+            form_KH_Bill.ShowDialog();
         }
 
         

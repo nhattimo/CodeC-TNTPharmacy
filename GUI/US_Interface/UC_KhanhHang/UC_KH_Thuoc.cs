@@ -1,5 +1,6 @@
 ﻿using BLL;
 using DTO;
+using GUI.US_Interface.From_CRUD;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -23,7 +24,6 @@ namespace GUI.US_
         private void UC_KH_Thuoc_Load(object sender, EventArgs e)
         {
             //Management.AddItemsUC(flowLayoutPanelItemProducts, UCItemProduct);
-            uC_KH_OrderInformation1.Visible = false;
             Management.ScrollBarFlowLayoutPanel(flowLayoutPanelItemProducts, guna2VScrollBar1);
             Management.ScrollBarFlowLayoutPanel(flowLayoutPanelIteamProductSelected, guna2VScrollBar2);
             RunContinuousFunction();
@@ -114,17 +114,11 @@ namespace GUI.US_
        
         private void btnBuyNow_Click(object sender, EventArgs e)
         {
-            if (Management.ISCustomer())
-            {
-                uC_KH_OrderInformation1.Visible = true;
-                uC_KH_OrderInformation1.BringToFront();
-            }
-            else
-            {
-                FormLuaChonCuaKhachHang formLuaChonCuaKhachHang = new FormLuaChonCuaKhachHang();
-                formLuaChonCuaKhachHang.Show();
-                formLuaChonCuaKhachHang.SendToBack();
-            }
+           
+            Form_KH_Bill form_KH_Bill = new Form_KH_Bill();
+            form_KH_Bill.BringToFront();
+            form_KH_Bill.ShowDialog();
+          
         }
 
         private void btnAddToCart_Click(object sender, EventArgs e)

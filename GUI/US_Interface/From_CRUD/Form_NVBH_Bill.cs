@@ -62,6 +62,7 @@ namespace GUI.US_Interface.From_CRUD
             PanelCustomer.Visible = true;
             flowLayoutPanelCustomer.Visible = false;
         }
+       
         private void btnSearch_Click(object sender, EventArgs e)
         {
             // nếu có tài khoản thì show người dùng ra 

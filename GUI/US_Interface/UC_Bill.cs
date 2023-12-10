@@ -33,5 +33,10 @@ namespace GUI.US_
         {
             this.Visible = false;
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

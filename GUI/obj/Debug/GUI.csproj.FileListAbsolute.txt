@@ -191,7 +191,6 @@ D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.FormLu
 D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_Bill.resources
 D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_Info_Customer.resources
 D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_KH_Cart.resources
-D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_KH_OrderInformation.resources
 D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_KH_Thuoc.resources
 D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_NVBH_CuaHang.resources
 D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_NVBH_Order.resources
@@ -223,3 +222,5 @@ D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_Ite
 D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_Interface.From_CRUD.Form_NVBH_Bill.resources
 D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_ItemInfoCustomer.resources
 D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_Interface.From_CRUD.Form_QL_NhanVien_CRUD.resources
+D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_Interface.From_CRUD.Form_QL_KhachHang_CRUD.resources
+D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_Interface.From_CRUD.Form_KH_Bill.resources

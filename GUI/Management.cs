@@ -26,6 +26,8 @@ namespace GUI
 
         private static int IdIteamProduct = 0;
         private static int IdIteamEmployess = 0;
+        private static int IdIteamCustomer = 0;
+
         private static List<int[]> IDItemChooseProducts = new List<int[]> { };
 
         public static void ResestIDItemChooseProducts()
@@ -140,7 +142,20 @@ namespace GUI
                 flowLayoutPanel.Controls.Add(item);
             }
         }
+        public static void AddItemsUC(FlowLayoutPanel flowLayoutPanel, List<Users> listObj)
+        {
+            flowLayoutPanel.Controls.Clear();
+            UC_ItemInfoCustomer[] itemCustomer = new UC_ItemInfoCustomer[listObj.Count];
+            for (int i = 0; i < listObj.Count; i++)
+            {
+                itemCustomer[i] = new UC_ItemInfoCustomer(listObj[i].ID);
+            }
 
+            foreach (var item in itemCustomer)
+            {
+                flowLayoutPanel.Controls.Add(item);
+            }
+        }
         public static void AddItemsUC(FlowLayoutPanel flowLayoutPanel, List<UC_ItemChooseProducts> listObj)
         {
             flowLayoutPanel.Controls.Clear();
@@ -323,14 +338,18 @@ namespace GUI
         {
             IdIteamProduct = idProduct;
         }
+        public static void SetIDCustomer(int idCustomer)
+        {
+            IdIteamCustomer = idCustomer;
+        }
         public static void SetIDEmployess(int idEmployess)
         {
             IdIteamEmployess = idEmployess;
         }
-        public static void SetIDItemChooseProducts( int idProduct, int sl ,bool trangThaiAddorNo, int noiAdd)
+        public static void SetIDItemChooseProducts( int idProduct, int sl ,bool trangThaiAddorDelete, int noiAdd)
         {
             bool exist = false;
-            if (trangThaiAddorNo)
+            if (trangThaiAddorDelete)
             {
                 if(IDItemChooseProducts != null)
                 {
@@ -371,7 +390,10 @@ namespace GUI
                 }
             }
         }
-        
+        public static void SetIDItemChooseProductsNew()
+        {
+            IDItemChooseProducts.Clear();
+        }
 
         // Get
         public static string GetNameRole(int IDTK)
@@ -415,6 +437,10 @@ namespace GUI
         {
             return IdIteamProduct;
         }
+        public static int GetIDCustomer()
+        {
+            return IdIteamCustomer;
+        }
         public static int GetIDEmployess()
         {
             return IdIteamEmployess;
@@ -425,42 +451,7 @@ namespace GUI
         }
 
         // Load
-        public static void LoadInfoEmployee(PictureBox Image, System.Windows.Forms.Label Name, System.Windows.Forms.Label DateOfBirth, System.Windows.Forms.Label Sex, System.Windows.Forms.Label Phone, System.Windows.Forms.   Label Email, System.Windows.Forms.Label Address, System.Windows.Forms.Label CCCD, System.Windows.Forms.Label StartedDay, System.Windows.Forms.Label Role)
-        {
-            Employees obj = _Employee.GetObjectById(GetIDAccount());
-            Roles rl = _Role.GetObjectById(GetIDAccount());
-
-            Name.Text = obj.Name;
-            DateOfBirth.Text = obj.DateOfBirth + "";
-            Sex.Text = obj.Sex;
-            Phone.Text = obj.Phone;
-            Email.Text = obj.Email;
-            Address.Text = obj.Address;
-            CCCD.Text = obj.CCCD;
-            StartedDay.Text = obj.StartedDay + "";
-            Role.Text = rl.Name;
-            Image.ImageLocation = obj.Image;
-
-        }
-        public static void LoadInfoCustomer(PictureBox Image, System.Windows.Forms. Label Name, System.Windows.Forms.Label Sex, System.Windows.Forms.Label Phone, System.Windows.Forms.Label Email, System.Windows.Forms.Label Address)
-        {
-            if (ISCustomer())
-            {
-                Users obj = _User.GetObjectById(GetIDAccount());
-                Name.Text = obj.Name;
-                Sex.Text = obj.Sex;
-                Phone.Text = obj.Phone;
-                Email.Text = obj.Email;
-                Address.Text = obj.Address;
-                Image.ImageLocation = obj.Image;
-                MessageBox.Show("Đã có tài khoản");
-            }
-            else
-            {
-                MessageBox.Show("Chưa đăng nhập");
-            }
-            
-        }
+       
         public static void LogginForm(Form form, int IDTK)
         {
             switch (_Account.GetRole(IDTK)) // Lấy ID Role

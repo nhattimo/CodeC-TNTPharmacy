@@ -43,7 +43,6 @@
             this.btnShoppingOnline = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtQuantitySelected = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.uC_KH_OrderInformation1 = new GUI.US_.UC_KH_OrderInformation();
             this.VScrollBar = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.userControl321 = new GUI.US_.UserControl3();
@@ -63,7 +62,6 @@
             this.guna2Panel1.BorderRadius = 1;
             this.guna2Panel1.BorderThickness = 1;
             this.guna2Panel1.Controls.Add(this.VScrollBar);
-            this.guna2Panel1.Controls.Add(this.uC_KH_OrderInformation1);
             this.guna2Panel1.Controls.Add(this.guna2CustomGradientPanel1);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel2);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel1);
@@ -235,15 +233,7 @@
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1318, 105);
             this.guna2CustomGradientPanel1.TabIndex = 23;
-            // 
-            // uC_KH_OrderInformation1
-            // 
-            this.uC_KH_OrderInformation1.Location = new System.Drawing.Point(245, 18);
-            this.uC_KH_OrderInformation1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.uC_KH_OrderInformation1.Name = "uC_KH_OrderInformation1";
-            this.uC_KH_OrderInformation1.Size = new System.Drawing.Size(829, 691);
-            this.uC_KH_OrderInformation1.TabIndex = 24;
-            // 
+
             // VScrollBar
             // 
             this.VScrollBar.InUpdate = false;
@@ -305,7 +295,6 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2VScrollBar VScrollBar;
-        private UC_KH_OrderInformation uC_KH_OrderInformation1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private System.Windows.Forms.Label txtQuantitySelected;
         private Guna.UI2.WinForms.Guna2GradientButton btnShoppingOnline;

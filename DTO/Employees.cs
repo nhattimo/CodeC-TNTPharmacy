@@ -9,21 +9,7 @@ namespace DTO
     [Table("EMPLOYEES")]
     public class Employees
     {
-        public Employees(string name, string sex, DateTime dateOfBirth, string phone,
-            string address, string email, string img, string salary, DateTime time, string cccd, int idTK)
-        {
-            Name = name;
-            Sex = sex;
-            DateOfBirth = dateOfBirth;
-            Phone = phone;
-            Address = address;
-            Email = email;
-            Image = img;
-            Salary = float.Parse(salary);
-            StartedDay = time;
-            CCCD = cccd;
-            IDTK = idTK;
-        }
+       
         public Employees()
         { 
         }

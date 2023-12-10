@@ -18,7 +18,7 @@ namespace GUI.US_
 
         List<Suppliers> _listObjSuppliers;
 
-
+        int ID;
 
         Label[] _laberError;
         Suppliers _ObjSuppliers;
@@ -93,17 +93,63 @@ namespace GUI.US_
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            Management.Check(txtSupplierName, errorSupplierName);
+            Management.Check(txtAddress, errorAddress);
 
+            foreach (var item in _laberError)
+            {
+                if (item.Visible == true)
+                {
+                    _trangThai = false;
+                    break;
+                }
+                else
+                    _trangThai = true;
+            }
+
+            if (_trangThai)
+            {
+                _ObjSuppliers = _SupplierBusinesLogiccs.GetObjectById(ID);
+                try
+                {
+                    _ObjSuppliers.Name = txtSupplierName.Text;
+                    _ObjSuppliers.Address = txtAddress.Text;
+                    _SupplierBusinesLogiccs.Update(ID, _ObjSuppliers);
+                    ShowDataGridViewSupplier();
+                    MessageBox.Show("Sửa thành công");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Nhà cung cấp không còn tồn tại");
+                }
+                
+
+            }
+            else
+            {
+                MessageBox.Show("Sửa thất bại");
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            try
+            {
+                _SupplierBusinesLogiccs.Delete(ID);
+                ShowDataGridViewSupplier();
+                MessageBox.Show("Xóa thành công");
 
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Xóa thất bại");
+            }
+            
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-
+            FindProductsByKey(txtSupplierName.Text);
         }
 
         private void DataGridViewSupplier_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -121,6 +167,15 @@ namespace GUI.US_
                 {
                     txtSupplierName.Text = DataGridViewSupplier.Rows[e.RowIndex].Cells[0].Value.ToString();
                     txtAddress.Text = DataGridViewSupplier.Rows[e.RowIndex].Cells[1].Value.ToString();
+                    foreach (var item in _listObjSuppliers)
+                    {
+                        if(txtSupplierName.Text == item.Name && txtAddress.Text == item.Address)
+                        {
+                            ID = item.ID;
+                            break;
+                        }
+
+                    }
                 }
             }
             catch (Exception)

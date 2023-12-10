@@ -14,5 +14,6 @@ namespace DTO
         [Column(TypeName = "NVARCHAR")]
         [MaxLength(30)]
         public string NameMethod { get; set; }
+
     }
 }

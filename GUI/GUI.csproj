@@ -81,11 +81,23 @@
     <Compile Include="FormDieuKhienChucVu.Designer.cs">
       <DependentUpon>FormDieuKhienChucVu.cs</DependentUpon>
     </Compile>
+    <Compile Include="US_Interface\From_CRUD\Form_KH_Bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US_Interface\From_CRUD\Form_KH_Bill.Designer.cs">
+      <DependentUpon>Form_KH_Bill.cs</DependentUpon>
+    </Compile>
     <Compile Include="US_Interface\From_CRUD\Form_NVBH_Bill.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="US_Interface\From_CRUD\Form_NVBH_Bill.Designer.cs">
       <DependentUpon>Form_NVBH_Bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US_Interface\From_CRUD\Form_QL_KhachHang_CRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US_Interface\From_CRUD\Form_QL_KhachHang_CRUD.Designer.cs">
+      <DependentUpon>Form_QL_KhachHang_CRUD.cs</DependentUpon>
     </Compile>
     <Compile Include="US_Interface\From_CRUD\Form_QL_NhanVien_CRUD.cs">
       <SubType>Form</SubType>
@@ -155,12 +167,6 @@
     </Compile>
     <Compile Include="US_Interface\UC_KhanhHang\UC_KH_Cart.Designer.cs">
       <DependentUpon>UC_KH_Cart.cs</DependentUpon>
-    </Compile>
-    <Compile Include="US_Interface\UC_KhanhHang\UC_KH_OrderInformation.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="US_Interface\UC_KhanhHang\UC_KH_OrderInformation.Designer.cs">
-      <DependentUpon>UC_KH_OrderInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="US_Interface\UC_KhanhHang\UC_KH_Thuoc.cs">
       <SubType>UserControl</SubType>
@@ -303,8 +309,14 @@
     <EmbeddedResource Include="FormDieuKhienChucVu.resx">
       <DependentUpon>FormDieuKhienChucVu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="US_Interface\From_CRUD\Form_KH_Bill.resx">
+      <DependentUpon>Form_KH_Bill.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="US_Interface\From_CRUD\Form_NVBH_Bill.resx">
       <DependentUpon>Form_NVBH_Bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US_Interface\From_CRUD\Form_QL_KhachHang_CRUD.resx">
+      <DependentUpon>Form_QL_KhachHang_CRUD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="US_Interface\From_CRUD\Form_QL_NhanVien_CRUD.resx">
       <DependentUpon>Form_QL_NhanVien_CRUD.cs</DependentUpon>
@@ -347,9 +359,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="US_Interface\UC_KhanhHang\UC_KH_Cart.resx">
       <DependentUpon>UC_KH_Cart.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="US_Interface\UC_KhanhHang\UC_KH_OrderInformation.resx">
-      <DependentUpon>UC_KH_OrderInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="US_Interface\UC_KhanhHang\UC_KH_Thuoc.resx">
       <DependentUpon>UC_KH_Thuoc.cs</DependentUpon>

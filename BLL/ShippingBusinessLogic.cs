@@ -11,11 +11,11 @@ namespace BLL
     public class ShippingBusinessLogic
     {
         // Sử dụng để tương tác với DAL (DataAccess)
-        private readonly ShippingDataAccess _objectDataAccess;
+        private readonly ShippingDataAccess _objectDataAccess =  new ShippingDataAccess();
 
-        public ShippingBusinessLogic(ShippingDataAccess productDataAccess)
+        public ShippingBusinessLogic()
         {
-            _objectDataAccess = productDataAccess;
+            
         }
 
         public void Add(Shipping obj)

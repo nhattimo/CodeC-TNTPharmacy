@@ -20,8 +20,8 @@ namespace DTO
         public float SoldPrice { get; set; }
 
         // Tổng cộng
-        [Column(TypeName = "INT")]
-        public int TotalAmount { get; set; }
+        [Column(TypeName = "FLOAT")]
+        public float TotalAmount { get; set; }
 
         //ID sản phẩm khóa ngoại đến sản phẩm
         public int IDPruduct { get; set; }

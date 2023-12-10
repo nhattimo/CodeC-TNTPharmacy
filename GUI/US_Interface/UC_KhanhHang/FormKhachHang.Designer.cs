@@ -43,6 +43,8 @@
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.uC_KH_Cart1 = new GUI.US_.UC_KH_Cart();
             this.uC_KH_Thuoc1 = new GUI.US_.UC_KH_Thuoc();
+            this.uC_ItemInfoCustomer1 = new GUI.US_.UC_ItemInfoCustomer();
+            this.uC_Info_Customer1 = new GUI.US_.UC_Info_Customer();
             this.btnLogOut = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2Panel1.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
@@ -301,6 +303,22 @@
             this.uC_KH_Thuoc1.Size = new System.Drawing.Size(1765, 895);
             this.uC_KH_Thuoc1.TabIndex = 7;
             // 
+            // uC_ItemInfoCustomer1
+            // 
+            this.uC_ItemInfoCustomer1.BackColor = System.Drawing.SystemColors.Info;
+            this.uC_ItemInfoCustomer1.Location = new System.Drawing.Point(563, 13);
+            this.uC_ItemInfoCustomer1.Name = "uC_ItemInfoCustomer1";
+            this.uC_ItemInfoCustomer1.Size = new System.Drawing.Size(8, 8);
+            this.uC_ItemInfoCustomer1.TabIndex = 16;
+            // 
+            // uC_Info_Customer1
+            // 
+            this.uC_Info_Customer1.Location = new System.Drawing.Point(123, 116);
+            this.uC_Info_Customer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uC_Info_Customer1.Name = "uC_Info_Customer1";
+            this.uC_Info_Customer1.Size = new System.Drawing.Size(1765, 895);
+            this.uC_Info_Customer1.TabIndex = 17;
+            // 
             // btnLogOut
             // 
             this.btnLogOut.BackColor = System.Drawing.Color.Transparent;
@@ -320,11 +338,11 @@
             this.btnLogOut.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
             this.btnLogOut.ImageSize = new System.Drawing.Size(45, 45);
-            this.btnLogOut.Location = new System.Drawing.Point(1669, 882);
+            this.btnLogOut.Location = new System.Drawing.Point(1655, 827);
             this.btnLogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(171, 146);
-            this.btnLogOut.TabIndex = 13;
+            this.btnLogOut.TabIndex = 18;
             this.btnLogOut.Text = "Đăng xuất";
             this.btnLogOut.UseWaitCursor = true;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
@@ -335,6 +353,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1920, 1081);
             this.Controls.Add(this.btnLogOut);
+            this.Controls.Add(this.uC_Info_Customer1);
+            this.Controls.Add(this.uC_ItemInfoCustomer1);
             this.Controls.Add(this.uC_KH_Cart1);
             this.Controls.Add(this.uC_KH_Thuoc1);
             this.Controls.Add(this.guna2ShadowPanel1);
@@ -372,6 +392,8 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnInfo;
         private US_.UC_KH_Thuoc uC_KH_Thuoc1;
         private US_.UC_KH_Cart uC_KH_Cart1;
+        private US_.UC_ItemInfoCustomer uC_ItemInfoCustomer1;
+        private US_.UC_Info_Customer uC_Info_Customer1;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnLogOut;
     }
 }

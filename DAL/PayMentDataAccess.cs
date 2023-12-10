@@ -8,12 +8,11 @@ namespace DAL
     public class PayMentDataAccess
     {
         // Sử dụng để tương tác với cơ sở dữ liệu
-        private readonly AppPharmacyContext _db;
+        private readonly AppPharmacyContext _db = new AppPharmacyContext();
 
         // Phương thức tạo (constructor)
-        public PayMentDataAccess(AppPharmacyContext context)
+        public PayMentDataAccess()
         {
-            _db = context;
         }
 
         public void InsertDataAccess(PayMent obj)

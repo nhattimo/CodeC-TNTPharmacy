@@ -12,36 +12,45 @@ namespace GUI.US_
         private static readonly EmployeesBusinessLogic _Employee = new EmployeesBusinessLogic();
         private static readonly RolesBusinessLogic _Role = new RolesBusinessLogic();
         private static readonly AccountBusinesLogiccs _Account = new AccountBusinesLogiccs();
+
+        Employees _ObjEmployees;
+        Account _ObjAccount;
+        Roles _ObjRoles;
         public UC_Info_Employee()
         {
             InitializeComponent();
+
         }
 
         private void UC_QL_Info_Load(object sender, EventArgs e)
         {
-            LoadInfoEmployee();
+           //LoadInfoEmployee();
         }
 
         private void LoadInfoEmployee()
         {
-            Employees obj = _Employee.GetObjectByIdtk(Management.GetIDAccount());
-            Account ac = _Account.GetObjectById(obj.IDTK);
-            Roles rl = _Role.GetObjectById(ac.Role);
-            txtName.Text = obj.Name;
-            txtDateOfBirth.Text = obj.DateOfBirth + "";
-            txtSex.Text = obj.Sex;
-            txtPhone.Text = obj.Phone;
-            txtEmail.Text = obj.Email;
-            txtAddress.Text = obj.Address;
-            txtCCCD.Text = obj.CCCD;
-            txtStartedDay.Text = obj.StartedDay + "";
-            txtRole.Text = rl.Name;
+            _ObjEmployees = new Employees();
+            _ObjAccount = new Account();
+            _ObjRoles = new Roles();
+
+            _ObjEmployees = _Employee.GetObjectByIdtk(Management.GetIDAccount());
+            _ObjAccount = _Account.GetObjectById(_ObjEmployees.IDTK);
+            _ObjRoles = _Role.GetObjectById(_ObjAccount.Role);
+            txtName.Text = _ObjEmployees.Name;
+            txtDateOfBirth.Text = _ObjEmployees.DateOfBirth + "";
+            txtSex.Text = _ObjEmployees.Sex;
+            txtPhone.Text = _ObjEmployees.Phone;
+            txtEmail.Text = _ObjEmployees.Email;
+            txtAddress.Text = _ObjEmployees.Address;
+            txtCCCD.Text = _ObjEmployees.CCCD;
+            txtStartedDay.Text = _ObjEmployees.StartedDay + "";
+            txtRole.Text = _ObjRoles.Name;
             // kiểm tra ảnh
-            if (File.Exists(obj.Image)) // Kiểm tra xem tệp hình ảnh có tồn tại hay không
+            if (File.Exists(_ObjEmployees.Image)) // Kiểm tra xem tệp hình ảnh có tồn tại hay không
             {
                 try
                 {
-                    picAnh.Image = Image.FromFile(obj.Image) ;
+                    picAnh.Image = Image.FromFile(_ObjEmployees.Image) ;
                 }
                 catch
                 {

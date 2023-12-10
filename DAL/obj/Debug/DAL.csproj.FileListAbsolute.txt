@@ -54,10 +54,9 @@ D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DAL\bin\Debug\DTO.pdb
 D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DAL\bin\Debug\EntityFramework.xml
 D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DAL\bin\Debug\EntityFramework.SqlServer.xml
 D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
-D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DAL\obj\Debug\DAL.Migrations.Migration.resources
-D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
 D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DAL\obj\Debug\DAL.dll
 D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DAL\obj\Debug\DAL.pdb
-D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DAL\obj\Debug\DAL.Migrations.Migration1.resources
+D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DAL\obj\Debug\DAL.Migrations.Migration.resources
+D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DAL\obj\Debug\DAL.csproj.GenerateResource.cache

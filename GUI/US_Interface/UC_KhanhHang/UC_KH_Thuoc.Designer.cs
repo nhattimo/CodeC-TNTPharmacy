@@ -34,7 +34,10 @@
             this.guna2GradientTileButton6 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.flowLayoutPanelIteamProductSelected = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2VScrollBar2 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.panelPay = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.txtQuantity = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.ltxtTotal = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -42,10 +45,6 @@
             this.btnBuyNow = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
-            this.txtQuantity = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.guna2VScrollBar2 = new Guna.UI2.WinForms.Guna2VScrollBar();
-            this.uC_KH_OrderInformation1 = new GUI.US_.UC_KH_OrderInformation();
             this.guna2Panel2.SuspendLayout();
             this.panelPay.SuspendLayout();
             this.SuspendLayout();
@@ -98,6 +97,18 @@
             this.guna2Panel2.Size = new System.Drawing.Size(608, 868);
             this.guna2Panel2.TabIndex = 9;
             // 
+            // guna2VScrollBar2
+            // 
+            this.guna2VScrollBar2.InUpdate = false;
+            this.guna2VScrollBar2.LargeChange = 10;
+            this.guna2VScrollBar2.Location = new System.Drawing.Point(598, 101);
+            this.guna2VScrollBar2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2VScrollBar2.Name = "guna2VScrollBar2";
+            this.guna2VScrollBar2.ScrollbarSize = 10;
+            this.guna2VScrollBar2.Size = new System.Drawing.Size(10, 522);
+            this.guna2VScrollBar2.TabIndex = 30;
+            this.guna2VScrollBar2.UseWaitCursor = true;
+            // 
             // panelPay
             // 
             this.panelPay.BackColor = System.Drawing.Color.Transparent;
@@ -117,6 +128,27 @@
             this.panelPay.Name = "panelPay";
             this.panelPay.Size = new System.Drawing.Size(588, 197);
             this.panelPay.TabIndex = 13;
+            // 
+            // txtQuantity
+            // 
+            this.txtQuantity.AutoSize = true;
+            this.txtQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtQuantity.ForeColor = System.Drawing.Color.Black;
+            this.txtQuantity.Location = new System.Drawing.Point(491, 11);
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Size = new System.Drawing.Size(27, 29);
+            this.txtQuantity.TabIndex = 16;
+            this.txtQuantity.Text = "2";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(23, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 25);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "SL";
             // 
             // label4
             // 
@@ -213,52 +245,10 @@
             this.guna2VScrollBar1.TabIndex = 29;
             this.guna2VScrollBar1.UseWaitCursor = true;
             // 
-            // txtQuantity
-            // 
-            this.txtQuantity.AutoSize = true;
-            this.txtQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtQuantity.ForeColor = System.Drawing.Color.Black;
-            this.txtQuantity.Location = new System.Drawing.Point(491, 11);
-            this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(27, 29);
-            this.txtQuantity.TabIndex = 16;
-            this.txtQuantity.Text = "2";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(23, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 25);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "SL";
-            // 
-            // guna2VScrollBar2
-            // 
-            this.guna2VScrollBar2.InUpdate = false;
-            this.guna2VScrollBar2.LargeChange = 10;
-            this.guna2VScrollBar2.Location = new System.Drawing.Point(598, 101);
-            this.guna2VScrollBar2.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2VScrollBar2.Name = "guna2VScrollBar2";
-            this.guna2VScrollBar2.ScrollbarSize = 10;
-            this.guna2VScrollBar2.Size = new System.Drawing.Size(10, 522);
-            this.guna2VScrollBar2.TabIndex = 30;
-            this.guna2VScrollBar2.UseWaitCursor = true;
-            // 
-            // uC_KH_OrderInformation1
-            // 
-            this.uC_KH_OrderInformation1.Location = new System.Drawing.Point(414, 30);
-            this.uC_KH_OrderInformation1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.uC_KH_OrderInformation1.Name = "uC_KH_OrderInformation1";
-            this.uC_KH_OrderInformation1.Size = new System.Drawing.Size(1103, 856);
-            this.uC_KH_OrderInformation1.TabIndex = 30;
-            // 
             // UC_KH_Thuoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.uC_KH_OrderInformation1);
             this.Controls.Add(this.guna2VScrollBar1);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.flowLayoutPanelItemProducts);
@@ -288,6 +278,5 @@
         private System.Windows.Forms.Label txtQuantity;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar2;
-        private UC_KH_OrderInformation uC_KH_OrderInformation1;
     }
 }

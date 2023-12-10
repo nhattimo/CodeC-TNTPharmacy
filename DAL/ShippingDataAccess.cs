@@ -10,12 +10,11 @@ namespace DAL
     public class ShippingDataAccess
     {
         // Sử dụng để tương tác với cơ sở dữ liệu
-        private readonly AppPharmacyContext _db;
+        private readonly AppPharmacyContext _db = new AppPharmacyContext();
 
         // Phương thức tạo (constructor)
-        public ShippingDataAccess(AppPharmacyContext context)
+        public ShippingDataAccess()
         {
-            _db = context;
         }
 
         public void InsertDataAccess(Shipping obj)

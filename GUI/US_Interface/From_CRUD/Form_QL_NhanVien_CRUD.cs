@@ -2,6 +2,7 @@
 using DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Windows.Forms;
 
 namespace GUI.US_Interface.From_CRUD
@@ -61,7 +62,7 @@ namespace GUI.US_Interface.From_CRUD
             Management.Check(txtAddress, errorAddress);
             Management.Check(ComboBoxRoleTxt, errorRole);
             Management.Check(txtSalary, errorSalary);
-            Management.Check(picAnh, errorPic);
+            Management.Check(PicAnh, errorPic);
 
             foreach (var item in _laberError)
             {
@@ -94,26 +95,26 @@ namespace GUI.US_Interface.From_CRUD
                 Account account = new Account(txtNameAccount.Text, txtPassword.Text, _ID_RoleChoose);
                 _AccountBusinesLogiccs.Add(account);
 
-                // tạo đối tượng nhân viên với dữ liệu nhập
-                Employees employees = new Employees(
-                    txtName.Text,                               // Tên 
-                    "Nam",                                      // Giới tính
-                    DateTime.Parse(txtDateOfBirth.Text.ToString()),  // Ngày sinh
-                    txtPhone.Text,                              // SĐT
-                    txtAddress.Text,                            // Địa chỉ
-                    txtEmail.Text,                              // Email
-                    Management.SaveImage(picAnh, txtName.Text + txtPhone),  // Đường dẫn ảnh
-                    txtSalary.Text,                             // Lương
-                    DateTime.Parse(txtStartedDay.Text.ToString()),                                     // Ngày vào làm
-                    txtCCCD.Text,                               // Căn cước công dân
-                    account.ID                                  // IDTK 
-                );
+                _objEmployees = new Employees();
+                _objEmployees = _EmployeesBusinesLogiccs.GetObjectById(Management.GetIDEmployess());
+                _objEmployees.Name = txtName.Text;                               // Tên 
+                _objEmployees.Sex = "Nam";                                      // Giới tính
+                _objEmployees.DateOfBirth = DateTime.Parse(txtDateOfBirth.Text.ToString());  // Ngày sinh
+                _objEmployees.Phone = txtPhone.Text;                             // SĐT
+                _objEmployees.Address = txtAddress.Text;                           // Địa chỉ
+                _objEmployees.Email = txtEmail.Text;                              // Email
+                _objEmployees.Image = Management.SaveImage(PicAnh, txtName.Text + txtPhone);// Đường dẫn ảnh
+                _objEmployees.Salary = float.Parse(txtSalary.Text);                             // Lương
+                _objEmployees.StartedDay = DateTime.Parse(txtStartedDay.Text.ToString());// Ngày vào làm
+                _objEmployees.CCCD = txtCCCD.Text;                              // Căn cước công dân
+                _objEmployees.IDTK = account.ID ;                              // Căn cước công dân
+                                                                                // 
                 if (radioButtonFemale.Checked == true)
-                    employees.Sex = "Nữ";
+                    _objEmployees.Sex = "Nữ";
                 // 
+                _EmployeesBusinesLogiccs.Add(_objEmployees);
 
-                _EmployeesBusinesLogiccs.Add(employees);
-                MessageBox.Show("Add thành công");
+                MessageBox.Show("Thêm thành công");
                 this.Close();
             }
             else
@@ -126,50 +127,53 @@ namespace GUI.US_Interface.From_CRUD
         {
 
             _objEmployees = _EmployeesBusinesLogiccs.GetObjectById(Management.GetIDEmployess());
-            _objAccount = _AccountBusinesLogiccs.GetObjectById(Management.GetIDEmployess());
             if(_objEmployees != null)
             {
-                txtNameAccount.Text = "";
-                txtPassword.Text = "";
-                txtName.Text = _objEmployees.Name;
-                if (_objEmployees.Sex == "Nam" || _objEmployees.Sex == "nam")
-                    radioButtonMale.Checked = true;
-                else
-                    radioButtonFemale.Checked = true;
-                txtDateOfBirth.Value = _objEmployees.DateOfBirth;
-                txtPhone.Text = _objEmployees.Phone;
-                txtEmail.Text = _objEmployees.Email;
-                txtCCCD.Text = _objEmployees.CCCD;
-                txtStartedDay.Value = _objEmployees.StartedDay;
-                txtAddress.Text = _objEmployees.Address;
-                txtSalary.Text = _objEmployees.Salary + "";
-                foreach (var item in _listObjRoles)
+                _objAccount = _AccountBusinesLogiccs.GetObjectById(_objEmployees.IDTK);
+                if (_objEmployees != null)
                 {
-                    if (item.ID == _objAccount.Role)
+                    txtNameAccount.Text = "";
+                    txtPassword.Text = "";
+                    txtName.Text = _objEmployees.Name;
+                    if (_objEmployees.Sex == "Nam" || _objEmployees.Sex == "nam")
+                        radioButtonMale.Checked = true;
+                    else
+                        radioButtonFemale.Checked = true;
+                    txtDateOfBirth.Value = _objEmployees.DateOfBirth;
+                    txtPhone.Text = _objEmployees.Phone;
+                    txtEmail.Text = _objEmployees.Email;
+                    txtCCCD.Text = _objEmployees.CCCD;
+                    txtStartedDay.Value = _objEmployees.StartedDay;
+                    txtAddress.Text = _objEmployees.Address;
+                    txtSalary.Text = _objEmployees.Salary + "";
+                    foreach (var item in _listObjRoles)
                     {
-                        ComboBoxRoleTxt.Text = item.Name;
-                        break;
+                        if (item.ID == _objAccount.Role)
+                        {
+                            ComboBoxRoleTxt.Text = item.Name;
+                            break;
+                        }
                     }
-                }
-                _ID_Account = _objEmployees.IDTK;
-                foreach (var item in _listObjAccount)
-                {
-                    if (item.ID == _ID_Account)
+                    _ID_Account = _objEmployees.IDTK;
+                    foreach (var item in _listObjAccount)
                     {
-                        _ID_RoleChoose = item.Role;
+                        if (item.ID == _ID_Account)
+                        {
+                            _ID_RoleChoose = item.Role;
+                        }
                     }
-                }
 
-                try
-                {
-                    picAnh.Image = System.Drawing.Image.FromFile(_objEmployees.Image);
+                    try
+                    {
+                        PicAnh.Image = System.Drawing.Image.FromFile(_objEmployees.Image);
+                    }
+                    catch (Exception)
+                    {
+                        PicAnh.Image = null;
+                    }
+
                 }
-                catch (Exception)
-                {
-                    picAnh.Image = null;
-                }
-            }
-            
+            }  
         }
 
         private void LoadDataComboBoxRoleTxt()
@@ -224,16 +228,9 @@ namespace GUI.US_Interface.From_CRUD
             
         }
 
-        private void picAnh_Click(object sender, EventArgs e)
+        private void PicAnh_Click(object sender, EventArgs e)
         {
-            Management.SetImage(picAnh, sender);
+            Management.SetImage(PicAnh, sender);
         }
-
-        private void picAnh_MouseHover(object sender, EventArgs e)
-        {
-            Management.Check(picAnh, errorPic);
-        }
-
-        
     }
 }

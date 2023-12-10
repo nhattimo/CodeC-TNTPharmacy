@@ -11,7 +11,7 @@ namespace GUI.US_
 
         private void UC_Info_Customer_Load(object sender, System.EventArgs e)
         {
-            Management.LoadInfoCustomer(picAnh, txtName, txtSex, txtPhone, txtEmail, txtAddress);
+            //Management.LoadInfoCustomer(picAnh, txtName, txtSex, txtPhone, txtEmail, txtAddress);
         }     
     }
 }

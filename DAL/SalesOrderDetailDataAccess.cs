@@ -10,12 +10,11 @@ namespace DAL
     public class SalesOrderDetailDataAccess
     {
         // Sử dụng để tương tác với cơ sở dữ liệu
-        private readonly AppPharmacyContext _db;
+        private readonly AppPharmacyContext _db =  new AppPharmacyContext();
 
         // Phương thức tạo (constructor)
-        public SalesOrderDetailDataAccess(AppPharmacyContext context)
+        public SalesOrderDetailDataAccess()
         {
-            _db = context;
         }
 
         public void InsertDataAccess(SalesOrderDetail obj)

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace GUI
@@ -7,6 +8,7 @@ namespace GUI
     {
 
         /*
+         * Đang chờ xác nhận
          * Đang chuẩn bị hàng
         Đang chờ vận chuyển nhận hàng
         Đang giao hàng
@@ -15,6 +17,9 @@ namespace GUI
         Hủy đơn 
         Không nhận hàng
         */
+
+        List<string> statust = new List<string>() { "Đang chờ xác nhận", "Đang chuẩn bị hàng", "Đang chờ vận chuyển nhận hàng", "Đang giao hàng"};
+        string[] _dataComboBox;
         public UC_ItemOnlineOrders()
         {
             InitializeComponent();
@@ -24,6 +29,8 @@ namespace GUI
         {
             btnAccept.Text = "Nhận đơn";
             btnComplete.Visible = false;
+            LoadDataComboBoxStatust();
+
         }
 
 
@@ -40,7 +47,24 @@ namespace GUI
             btnAccept.Checked = false; 
             btnAccept.Enabled = false;
         }
+        private void LoadDataComboBoxStatust()
+        {
+            _dataComboBox = new string[statust.Count];
+            for (int i = 0; i < statust.Count; i++)
+            {
+                _dataComboBox[i] = statust[i];
+            }
 
-        
+
+            // Gán mảng dữ liệu cho ComboBox
+            txtStatus.Items.Clear();
+            if (_dataComboBox.Length > 0)
+            {
+                txtStatus.Items.AddRange(_dataComboBox);
+            }
+
+        }
+
+
     }
 }
