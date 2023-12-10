@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControl7));
             this.txtTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtQuantity = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.PictureBoxProduct = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -65,11 +66,15 @@
             // 
             // PictureBoxProduct
             // 
+            this.PictureBoxProduct.ErrorImage = ((System.Drawing.Image)(resources.GetObject("PictureBoxProduct.ErrorImage")));
+            this.PictureBoxProduct.FillColor = System.Drawing.Color.Transparent;
+            this.PictureBoxProduct.Image = ((System.Drawing.Image)(resources.GetObject("PictureBoxProduct.Image")));
             this.PictureBoxProduct.ImageRotate = 0F;
             this.PictureBoxProduct.Location = new System.Drawing.Point(15, 18);
             this.PictureBoxProduct.Margin = new System.Windows.Forms.Padding(0);
             this.PictureBoxProduct.Name = "PictureBoxProduct";
             this.PictureBoxProduct.Size = new System.Drawing.Size(233, 227);
+            this.PictureBoxProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureBoxProduct.TabIndex = 164;
             this.PictureBoxProduct.TabStop = false;
             // 

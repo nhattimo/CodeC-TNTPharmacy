@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Net.Mail;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 using Image = System.Drawing.Image;
 
@@ -35,8 +36,11 @@ namespace GUI
             IDItemChooseProducts = new List<int[]>();
         }
 
+        
 
-        // 1 số điều khiể giao diện
+
+
+// 1 số điều khiể giao diện
         public static void ScrollBarFlowLayoutPanel(FlowLayoutPanel flowLayoutPanel, Guna2VScrollBar vScrollBar)
         {
             PanelScrollHelper panelScrollHelper = new PanelScrollHelper(flowLayoutPanel, vScrollBar);
@@ -300,40 +304,65 @@ namespace GUI
         
         public static string SaveImage(PictureBox pictureBox, string txt)
         {
-            string fname = txt + ".jpg";
             // Đường dẫn đầy đủ đến thư mục mới
             string folderPath = @"D:\FolderImgProduct";
-            string pathString = "";
+            // Tạo một GUID mới
+            Guid newGuid = Guid.NewGuid();
+
+            // Chuyển GUID thành chuỗi
+            string guidString = newGuid.ToString();
+
+            string fname = txt + guidString+ ".jpg";
             try
             {
-                // Kiểm tra xem thư mục đã tồn tại hay chưa
                 if (!Directory.Exists(folderPath))
                 {
-                    // Nếu chưa tồn tại, tạo thư mục mới
                     Directory.CreateDirectory(folderPath);
+                }
+                
+                string pathString = Path.Combine(folderPath, fname);
 
-                    pathString = Path.Combine(folderPath, fname);
-                    if (pictureBox.Image != null)
-                        pictureBox.Image.Save(pathString);
-                    else
-                        pathString = "";
+                if (pictureBox.Image != null)
+                {
+                    if (File.Exists(pathString))
+                    {
+                        File.Delete(pathString);
+                        // Xem xét điều chỉnh thông báo dựa trên việc tệp đã bị xóa hay chưa.
+                        using (var image = new Bitmap(pictureBox.Image))
+                        {
+                            image.Save(pathString);
+                        }
+                        return pathString;
+                    }
+                    else {
+                        using (var image = new Bitmap(pictureBox.Image))
+                        {
+                            File.Delete(pathString);
+                            image.Save(pathString);
+                        }
+                        return pathString;
+                    }
+                    // Lưu hình ảnh và giải phóng tài nguyên
+
                 }
                 else
                 {
-                    pathString = Path.Combine(folderPath, fname);
-                    if (pictureBox.Image != null)
-                        pictureBox.Image.Save(pathString);
-                    else
-                        pathString = "";
+                    MessageBox.Show("Ảnh trống");
+                    return pathString;
                 }
-                return pathString;
             }
             catch (Exception ex)
             {
-                return ex.Message;
+                // Xem xét đăng nhập ngoại lệ hoặc thực hiện hành động thích hợp.
+                return "Lỗi: " + ex.Message;
             }
 
         }
+
+       
+
+
+
         public static void SetIDProduct(int idProduct)
         {
             IdIteamProduct = idProduct;
@@ -505,6 +534,7 @@ namespace GUI
                     break;
 
                 default:
+
 
                     break;
             }

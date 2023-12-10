@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using Guna.UI2.WinForms;
 using System.Threading.Tasks;
 using System.Linq;
-
+using System.Drawing;
 
 namespace GUI.US_
 {
@@ -78,6 +78,7 @@ namespace GUI.US_
                     // nếu mã = 0 có nghĩa là vừa sảy ra sự kiện cập nhật hoặc xóa 
                     if (Management.GetIDProduct() == 0)
                     {
+                        _ListObjProducts = _Product.GetAllObject();
                         Management.SetIDProduct(-1);
                         LoadDataIteamProduct();
                     }
@@ -179,6 +180,7 @@ namespace GUI.US_
             {
                 _ObjProducts = _Product.GetObjectById(Management.GetIDProduct());
                 _ObjSuppliers = _Suppliers.GetObjectById(_ObjProducts.SupplierId);
+
                 ComboBoxSupplier.Text = _ObjSuppliers.Name;
                 txtProductName.Text = _ObjProducts.Name;
                 txtCost.Text = _ObjProducts.Price + "";
@@ -193,11 +195,11 @@ namespace GUI.US_
                 }
                 try
                 {
-                    picAnh.Image = System.Drawing.Image.FromFile(_ObjProducts.Image);
+                    PicAnh.Image = Image.FromFile(_ObjProducts.Image);
                 }
                 catch (Exception)
                 {
-                    picAnh.Image = null;
+                    PicAnh.Image = null;
                 }
             }
             catch (Exception)
@@ -215,7 +217,7 @@ namespace GUI.US_
             Check(txtProductName, errorProductName);
             Check(txtCost, errorCost);
             Check(txtDiscount, errorDiscount);
-            Check(picAnh, errorPic);
+            Check(PicAnh, errorPic);
             Check(txtProductionDate, errorProductionDate);
             Check(txtExpiryDate, errorExpiryDate);
             Check(ComboBoxCategoryTxt, errorCategory);
@@ -242,7 +244,7 @@ namespace GUI.US_
                     float.Parse(txtDiscount.Text),  // Phần trăm giảm giá
                     0,                              // Số lượng
                     time,                           // Thời gian nhập sản phẩm
-                    Management.SaveImage(picAnh, txtProductName.Text + _ID_Suppliers + _ID_Category + _ID_Created),   // Đường dẫn ảnh
+                    Management.SaveImage(PicAnh, "" + _ObjProducts.ID + _ID_Suppliers + _ID_Category + _ID_Created),   // Đường dẫn ảnh
                     txtDescribe.Text,               // Mô tả sản phẩm
                     DateTime.Parse("10/10/2003"),   // Ngày sản xuất
                     DateTime.Parse("10/10/2003"),   // Ngày hết hạn
@@ -250,6 +252,7 @@ namespace GUI.US_
                     _ID_Category,                   // ID loại sản phẩm
                     _ID_Created                     // ID người tạo
                 );
+                MessageBox.Show(Management.SaveImage(PicAnh, "" + _ObjProducts.ID + _ID_Suppliers + _ID_Category + _ID_Created));
                 MessageBox.Show("Thêm thành công sản phẩm");
                 _Product.Add(products);
                 Management.AddItemsUC(flowLayoutPanelProducts, products);
@@ -339,9 +342,9 @@ namespace GUI.US_
             Check(txtDiscount, errorDiscount);
         }
 
-        private void picAnh_Click(object sender, EventArgs e)
+        private void PicAnh_Click_1(object sender, EventArgs e)
         {
-            Management.SetImage(picAnh, sender);
+            Management.SetImage(PicAnh, sender);
         }
 
         #region  check
@@ -439,6 +442,8 @@ namespace GUI.US_
             }
 
         }
+
+        
 
 
 

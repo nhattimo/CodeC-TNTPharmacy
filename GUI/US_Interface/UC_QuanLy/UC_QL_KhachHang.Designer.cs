@@ -52,10 +52,10 @@ namespace GUI.US_
             this.btnDelete = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnUpdate = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.PicAnh = new Guna.UI2.WinForms.Guna2PictureBox();
             this.errorPhone = new System.Windows.Forms.Label();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtPhone = new Guna.UI2.WinForms.Guna2TextBox();
-            this.picAnh = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GradientTileButton6 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnAdd = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -65,7 +65,7 @@ namespace GUI.US_
             this.guna2GradientTileButton10 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.flowLayoutPanelCustomers = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picAnh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicAnh)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -385,10 +385,10 @@ namespace GUI.US_
             this.guna2Panel2.BorderColor = System.Drawing.Color.Gray;
             this.guna2Panel2.BorderRadius = 1;
             this.guna2Panel2.BorderThickness = 1;
+            this.guna2Panel2.Controls.Add(this.PicAnh);
             this.guna2Panel2.Controls.Add(this.errorPhone);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel5);
             this.guna2Panel2.Controls.Add(this.txtPhone);
-            this.guna2Panel2.Controls.Add(this.picAnh);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel9);
             this.guna2Panel2.Controls.Add(this.errorAddress);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel8);
@@ -416,6 +416,23 @@ namespace GUI.US_
             this.guna2Panel2.Size = new System.Drawing.Size(628, 878);
             this.guna2Panel2.TabIndex = 150;
             this.guna2Panel2.UseWaitCursor = true;
+            // 
+            // PicAnh
+            // 
+            this.PicAnh.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.PicAnh.ErrorImage = ((System.Drawing.Image)(resources.GetObject("PicAnh.ErrorImage")));
+            this.PicAnh.Image = ((System.Drawing.Image)(resources.GetObject("PicAnh.Image")));
+            this.PicAnh.ImageLocation = "";
+            this.PicAnh.ImageRotate = 0F;
+            this.PicAnh.Location = new System.Drawing.Point(330, 153);
+            this.PicAnh.Margin = new System.Windows.Forms.Padding(0);
+            this.PicAnh.Name = "PicAnh";
+            this.PicAnh.Size = new System.Drawing.Size(280, 262);
+            this.PicAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PicAnh.TabIndex = 243;
+            this.PicAnh.TabStop = false;
+            this.PicAnh.UseWaitCursor = true;
+            this.PicAnh.Click += new System.EventHandler(this.PicAnh_Click);
             // 
             // errorPhone
             // 
@@ -467,17 +484,6 @@ namespace GUI.US_
             this.txtPhone.Size = new System.Drawing.Size(293, 53);
             this.txtPhone.TabIndex = 198;
             this.txtPhone.UseWaitCursor = true;
-            // 
-            // picAnh
-            // 
-            this.picAnh.ImageRotate = 0F;
-            this.picAnh.Location = new System.Drawing.Point(333, 155);
-            this.picAnh.Name = "picAnh";
-            this.picAnh.Size = new System.Drawing.Size(280, 255);
-            this.picAnh.TabIndex = 175;
-            this.picAnh.TabStop = false;
-            this.picAnh.UseWaitCursor = true;
-            this.picAnh.Click += new System.EventHandler(this.PictureBox_Click);
             // 
             // guna2GradientTileButton6
             // 
@@ -570,6 +576,7 @@ namespace GUI.US_
             this.btnSearch.TabIndex = 20;
             this.btnSearch.UseTransparentBackground = true;
             this.btnSearch.UseWaitCursor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click_1);
             // 
             // txtSearch
             // 
@@ -634,7 +641,7 @@ namespace GUI.US_
             this.Load += new System.EventHandler(this.UC_QL_KhachHang_Load);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picAnh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicAnh)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -664,7 +671,6 @@ namespace GUI.US_
         private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton6;
         private Guna.UI2.WinForms.Guna2GradientButton btnAdd;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2PictureBox picAnh;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnSearch;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
@@ -673,5 +679,6 @@ namespace GUI.US_
         private System.Windows.Forms.Label errorPhone;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2TextBox txtPhone;
+        private Guna.UI2.WinForms.Guna2PictureBox PicAnh;
     }
 }

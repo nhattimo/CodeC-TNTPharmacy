@@ -78,11 +78,11 @@ namespace GUI.US_
             txtAddress.Text = _ObjUsere.Address;
             try
             {
-                picAnh.Image = System.Drawing.Image.FromFile(_ObjUsere.Image);
+                PicAnh.Image = System.Drawing.Image.FromFile(_ObjUsere.Image);
             }
             catch (Exception)
             {
-                picAnh.Image = null;
+                PicAnh.Image = null;
             }
         }
 
@@ -155,13 +155,15 @@ namespace GUI.US_
                     }
                     else
                     {
+                        ;
                         _ObjUsere.Name = txtName.Text;                               // Tên 
                         _ObjUsere.Sex = "Nam";                                      // Giới tính
                         _ObjUsere.DateOfBirth = DateTime.Parse(txtDateOfBirth.Text.ToString());  // Ngày sinh
                         _ObjUsere.Phone = txtPhone.Text;                             // SĐT
                         _ObjUsere.Address = txtAddress.Text;                           // Địa chỉ
                         _ObjUsere.Email = txtEmail.Text;                              // Email
-                        _ObjUsere.Image = Management.SaveImage(picAnh, txtName.Text + txtPhone).ToString();                        
+                        MessageBox.Show(DateTime.Now.ToString());
+                        _ObjUsere.Image = Management.SaveImage(PicAnh, txtPhone.Text);                        
                         if (radioButtonFemale.Checked == true)
                             _ObjUsere.Sex = "Nữ";
                         // 
@@ -183,24 +185,13 @@ namespace GUI.US_
 
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+       
+
+        private void PicAnh_Click(object sender, EventArgs e)
         {
-            // Xử lý sự kiện khi người dùng nhấn nút Tìm kiếm
-            if (string.IsNullOrEmpty(txtSearch.Text) != true)
-            {
-                List<Users> _iteamListObjProducts = FindUserssByKey(txtSearch.Text);
-                Management.AddItemsUC(flowLayoutPanelCustomers, _iteamListObjProducts);
-            }
-            else
-            {
-                LoadDataIteamUses();
-            }
+            Management.SetImage(PicAnh, sender);
         }
 
-        private void PictureBox_Click(object sender, EventArgs e)
-        {
-            Management.SetImage(picAnh, sender);
-        }
         private List<Users> FindUserssByKey(string key)
         {
             List<Users> foundUsers = new List<Users>();
@@ -216,6 +207,20 @@ namespace GUI.US_
             }
 
             return foundUsers;
+        }
+
+        private void btnSearch_Click_1(object sender, EventArgs e)
+        {
+            // Xử lý sự kiện khi người dùng nhấn nút Tìm kiếm
+            if (string.IsNullOrEmpty(txtSearch.Text) != true)
+            {
+                List<Users> _iteamListObjProducts = FindUserssByKey(txtSearch.Text);
+                Management.AddItemsUC(flowLayoutPanelCustomers, _iteamListObjProducts);
+            }
+            else
+            {
+                LoadDataIteamUses();
+            }
         }
     }
 }

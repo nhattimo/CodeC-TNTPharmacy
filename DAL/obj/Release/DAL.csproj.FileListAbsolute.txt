@@ -1,0 +1,16 @@
+D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DAL\bin\Release\DAL.dll.config
+D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DAL\bin\Release\DAL.dll
+D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DAL\bin\Release\DAL.pdb
+D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DAL\bin\Release\DTO.dll
+D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DAL\bin\Release\EntityFramework.dll
+D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DAL\bin\Release\EntityFramework.SqlServer.dll
+D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DAL\bin\Release\DTO.pdb
+D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DAL\bin\Release\EntityFramework.xml
+D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DAL\bin\Release\EntityFramework.SqlServer.xml
+D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DAL\obj\Release\DAL.csproj.AssemblyReference.cache
+D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DAL\obj\Release\DAL.Migrations.Migration.resources
+D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DAL\obj\Release\DAL.csproj.GenerateResource.cache
+D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DAL\obj\Release\DAL.csproj.CoreCompileInputs.cache
+D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DAL\obj\Release\DAL.csproj.CopyComplete
+D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DAL\obj\Release\DAL.dll
+D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DAL\obj\Release\DAL.pdb

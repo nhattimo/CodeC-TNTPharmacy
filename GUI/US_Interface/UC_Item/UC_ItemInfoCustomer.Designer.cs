@@ -185,6 +185,7 @@
             // PicAnh
             // 
             this.PicAnh.Cursor = System.Windows.Forms.Cursors.Default;
+            this.PicAnh.ErrorImage = ((System.Drawing.Image)(resources.GetObject("PicAnh.ErrorImage")));
             this.PicAnh.Image = ((System.Drawing.Image)(resources.GetObject("PicAnh.Image")));
             this.PicAnh.ImageLocation = "";
             this.PicAnh.ImageRotate = 0F;

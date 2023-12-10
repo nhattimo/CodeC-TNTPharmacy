@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_QL_NhanVien_CRUD));
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.PicAnh = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.errorSalary = new System.Windows.Forms.Label();
             this.txtSalary = new Guna.UI2.WinForms.Guna2TextBox();
@@ -68,9 +69,7 @@
             this.txtNameAccount = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnReturn = new Guna.UI2.WinForms.Guna2Button();
-            this.errorPic = new System.Windows.Forms.Label();
             this.btnAdd = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.PicAnh = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicAnh)).BeginInit();
             this.SuspendLayout();
@@ -119,7 +118,6 @@
             this.guna2Panel2.Controls.Add(this.txtNameAccount);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel8);
             this.guna2Panel2.Controls.Add(this.btnReturn);
-            this.guna2Panel2.Controls.Add(this.errorPic);
             this.guna2Panel2.Controls.Add(this.btnAdd);
             this.guna2Panel2.Location = new System.Drawing.Point(14, 16);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -127,6 +125,23 @@
             this.guna2Panel2.Size = new System.Drawing.Size(1544, 708);
             this.guna2Panel2.TabIndex = 18;
             this.guna2Panel2.UseWaitCursor = true;
+            // 
+            // PicAnh
+            // 
+            this.PicAnh.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.PicAnh.ErrorImage = ((System.Drawing.Image)(resources.GetObject("PicAnh.ErrorImage")));
+            this.PicAnh.Image = ((System.Drawing.Image)(resources.GetObject("PicAnh.Image")));
+            this.PicAnh.ImageLocation = "";
+            this.PicAnh.ImageRotate = 0F;
+            this.PicAnh.Location = new System.Drawing.Point(48, 143);
+            this.PicAnh.Margin = new System.Windows.Forms.Padding(0);
+            this.PicAnh.Name = "PicAnh";
+            this.PicAnh.Size = new System.Drawing.Size(551, 390);
+            this.PicAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PicAnh.TabIndex = 240;
+            this.PicAnh.TabStop = false;
+            this.PicAnh.UseWaitCursor = true;
+            this.PicAnh.Click += new System.EventHandler(this.PicAnh_Click);
             // 
             // guna2HtmlLabel12
             // 
@@ -745,18 +760,6 @@
             this.btnReturn.UseWaitCursor = true;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
-            // errorPic
-            // 
-            this.errorPic.AutoSize = true;
-            this.errorPic.BackColor = System.Drawing.Color.Transparent;
-            this.errorPic.ForeColor = System.Drawing.Color.Red;
-            this.errorPic.Location = new System.Drawing.Point(81, 561);
-            this.errorPic.Name = "errorPic";
-            this.errorPic.Size = new System.Drawing.Size(25, 16);
-            this.errorPic.TabIndex = 176;
-            this.errorPic.Text = "Lỗi";
-            this.errorPic.UseWaitCursor = true;
-            // 
             // btnAdd
             // 
             this.btnAdd.BorderColor = System.Drawing.Color.BurlyWood;
@@ -781,21 +784,6 @@
             this.btnAdd.UseWaitCursor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // PicAnh
-            // 
-            this.PicAnh.Cursor = System.Windows.Forms.Cursors.Default;
-            this.PicAnh.Image = ((System.Drawing.Image)(resources.GetObject("PicAnh.Image")));
-            this.PicAnh.ImageLocation = "";
-            this.PicAnh.ImageRotate = 0F;
-            this.PicAnh.Location = new System.Drawing.Point(48, 143);
-            this.PicAnh.Margin = new System.Windows.Forms.Padding(0);
-            this.PicAnh.Name = "PicAnh";
-            this.PicAnh.Size = new System.Drawing.Size(551, 390);
-            this.PicAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PicAnh.TabIndex = 240;
-            this.PicAnh.TabStop = false;
-            this.PicAnh.Click += new System.EventHandler(this.PicAnh_Click);
-            // 
             // Form_QL_NhanVien_CRUD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -819,7 +807,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
         private Guna.UI2.WinForms.Guna2Button btnReturn;
-        private System.Windows.Forms.Label errorPic;
         private Guna.UI2.WinForms.Guna2GradientButton btnAdd;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
         private System.Windows.Forms.Label errorSalary;

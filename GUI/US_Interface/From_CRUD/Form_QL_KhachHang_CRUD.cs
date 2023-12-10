@@ -68,7 +68,8 @@ namespace GUI.US_Interface.From_CRUD
             Management.Check(txtDateOfBirth, errorDateOfBirth);
             Management.Check(txtEmail, errorEmail);
             Management.Check(txtAddress, errorAddress);
-          
+            Management.Check(radioButtonFemale,radioButtonMale, errorSex);
+
             // Xử lý sự kiện khi người dùng nhấn nút Thêm
             foreach (var item in _laberError){
                 if (item.Visible == true)
@@ -106,7 +107,8 @@ namespace GUI.US_Interface.From_CRUD
                     _ObjUsere.Phone = txtPhone.Text;                             // SĐT
                     _ObjUsere.Address = txtAddress.Text;                           // Địa chỉ
                     _ObjUsere.Email = txtEmail.Text;                              // Email
-                    _ObjUsere.Image = Management.SaveImage(PicAnh, txtName.Text + txtPhone).ToString();
+                    _ObjUsere.Image = Management.SaveImage(PicAnh, txtPhone.Text);
+                    MessageBox.Show(_ObjUsere.Image);
                     _ObjUsere.Point = "0";
                     _ObjUsere.IDTK = account.ID;
                     if (radioButtonFemale.Checked == true)
@@ -128,6 +130,11 @@ namespace GUI.US_Interface.From_CRUD
         private void btnReturn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void PicAnh_Click(object sender, EventArgs e)
+        {
+            Management.SetImage(PicAnh, sender);
         }
     }
 }

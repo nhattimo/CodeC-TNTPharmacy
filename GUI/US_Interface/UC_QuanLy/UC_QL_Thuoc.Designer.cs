@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_QL_Thuoc));
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.PicAnh = new Guna.UI2.WinForms.Guna2PictureBox();
             this.errorCategory = new System.Windows.Forms.Label();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.ComboBoxCategoryTxt = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -42,7 +43,6 @@
             this.txtProductionDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.txtExpiryDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.errorPic = new System.Windows.Forms.Label();
-            this.picAnh = new Guna.UI2.WinForms.Guna2PictureBox();
             this.errorSupplier = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -71,7 +71,7 @@
             this.flowLayoutPanelProducts = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picAnh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicAnh)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,6 +80,7 @@
             this.guna2Panel2.BorderColor = System.Drawing.Color.Gray;
             this.guna2Panel2.BorderRadius = 1;
             this.guna2Panel2.BorderThickness = 1;
+            this.guna2Panel2.Controls.Add(this.PicAnh);
             this.guna2Panel2.Controls.Add(this.errorCategory);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel9);
             this.guna2Panel2.Controls.Add(this.ComboBoxCategoryTxt);
@@ -91,7 +92,6 @@
             this.guna2Panel2.Controls.Add(this.txtProductionDate);
             this.guna2Panel2.Controls.Add(this.txtExpiryDate);
             this.guna2Panel2.Controls.Add(this.errorPic);
-            this.guna2Panel2.Controls.Add(this.picAnh);
             this.guna2Panel2.Controls.Add(this.errorSupplier);
             this.guna2Panel2.Controls.Add(this.label1);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel5);
@@ -117,6 +117,23 @@
             this.guna2Panel2.Size = new System.Drawing.Size(628, 878);
             this.guna2Panel2.TabIndex = 15;
             this.guna2Panel2.UseWaitCursor = true;
+            // 
+            // PicAnh
+            // 
+            this.PicAnh.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.PicAnh.ErrorImage = ((System.Drawing.Image)(resources.GetObject("PicAnh.ErrorImage")));
+            this.PicAnh.Image = ((System.Drawing.Image)(resources.GetObject("PicAnh.Image")));
+            this.PicAnh.ImageLocation = "";
+            this.PicAnh.ImageRotate = 0F;
+            this.PicAnh.Location = new System.Drawing.Point(327, 316);
+            this.PicAnh.Margin = new System.Windows.Forms.Padding(0);
+            this.PicAnh.Name = "PicAnh";
+            this.PicAnh.Size = new System.Drawing.Size(280, 262);
+            this.PicAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PicAnh.TabIndex = 242;
+            this.PicAnh.TabStop = false;
+            this.PicAnh.UseWaitCursor = true;
+            this.PicAnh.Click += new System.EventHandler(this.PicAnh_Click_1);
             // 
             // errorCategory
             // 
@@ -268,24 +285,12 @@
             this.errorPic.AutoSize = true;
             this.errorPic.BackColor = System.Drawing.Color.Transparent;
             this.errorPic.ForeColor = System.Drawing.Color.Red;
-            this.errorPic.Location = new System.Drawing.Point(323, 578);
+            this.errorPic.Location = new System.Drawing.Point(324, 602);
             this.errorPic.Name = "errorPic";
             this.errorPic.Size = new System.Drawing.Size(25, 16);
             this.errorPic.TabIndex = 176;
             this.errorPic.Text = "Lỗi";
             this.errorPic.UseWaitCursor = true;
-            // 
-            // picAnh
-            // 
-            this.picAnh.ImageRotate = 0F;
-            this.picAnh.Location = new System.Drawing.Point(327, 309);
-            this.picAnh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.picAnh.Name = "picAnh";
-            this.picAnh.Size = new System.Drawing.Size(267, 258);
-            this.picAnh.TabIndex = 175;
-            this.picAnh.TabStop = false;
-            this.picAnh.UseWaitCursor = true;
-            this.picAnh.Click += new System.EventHandler(this.picAnh_Click);
             // 
             // errorSupplier
             // 
@@ -758,7 +763,7 @@
             this.Load += new System.EventHandler(this.UC_QL_Thuoc_Load);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picAnh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicAnh)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -784,7 +789,6 @@
         private System.Windows.Forms.Label errorSupplier;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnSearch;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
-        private Guna.UI2.WinForms.Guna2PictureBox picAnh;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private System.Windows.Forms.Label errorDiscount;
@@ -806,5 +810,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox ComboBoxCategoryTxt;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
         private System.Windows.Forms.Label errorCategory;
+        private Guna.UI2.WinForms.Guna2PictureBox PicAnh;
     }
 }

@@ -28,22 +28,28 @@ namespace GUI.US_Interface.From_CRUD
         bool _trangThai;
         public Form_QL_NhanVien_CRUD()
         {
+            
             InitializeComponent();
             _listObjEmployees = _EmployeesBusinesLogiccs.GetAllObject();
             _listObjAccount = _AccountBusinesLogiccs.GetAllObject();
             _listObjRoles = _RolesBusinesLogiccs.GetAllObject();
+
             if (Management.GetIDEmployess() > 0)
             {
-                _objEmployees = _EmployeesBusinesLogiccs.GetObjectById(Management.GetIDEmployess());
-                _objAccount = _AccountBusinesLogiccs.GetObjectById(_objEmployees.IDTK);
-                _objRoles = _RolesBusinesLogiccs.GetObjectById(_objAccount.Role);
-                _ID_RoleChoose = _objRoles.ID;
+                if(_objEmployees != null)
+                {
+                    _objEmployees = _EmployeesBusinesLogiccs.GetObjectById(Management.GetIDEmployess());
+                    _objAccount = _AccountBusinesLogiccs.GetObjectById(_objEmployees.IDTK);
+                    _objRoles = _RolesBusinesLogiccs.GetObjectById(_objAccount.Role);
+                    _ID_RoleChoose = _objRoles.ID;
+                }
             }
-            _laberError = new Label[] { errorNameAccount, errorPassword, errorName, errorDateOfBirth, errorSex, errorEmail, errorCCCD, errorStartDay, errorAddress, errorRole, errorSalary, errorPhone, errorPic };
+            _laberError = new Label[] { errorNameAccount, errorPassword, errorName, errorDateOfBirth, errorSex, errorEmail, errorCCCD, errorStartDay, errorAddress, errorRole, errorSalary, errorPhone};
             Management.ErrorHide(_laberError);
             _trangThai = false;
 
         }
+        
         private void Form_QL_NhanVien_CRUD_Load(object sender, EventArgs e)
         {
             LoadDataComboBoxRoleTxt();
@@ -62,7 +68,7 @@ namespace GUI.US_Interface.From_CRUD
             Management.Check(txtAddress, errorAddress);
             Management.Check(ComboBoxRoleTxt, errorRole);
             Management.Check(txtSalary, errorSalary);
-            Management.Check(PicAnh, errorPic);
+            Management.Check(radioButtonMale,radioButtonFemale, errorSex);
 
             foreach (var item in _laberError)
             {
@@ -88,7 +94,7 @@ namespace GUI.US_Interface.From_CRUD
                     break;
                 }
             }
-          
+            
             if (_trangThai)
             {
                 // tạo tài khoản
@@ -96,14 +102,14 @@ namespace GUI.US_Interface.From_CRUD
                 _AccountBusinesLogiccs.Add(account);
 
                 _objEmployees = new Employees();
-                _objEmployees = _EmployeesBusinesLogiccs.GetObjectById(Management.GetIDEmployess());
                 _objEmployees.Name = txtName.Text;                               // Tên 
                 _objEmployees.Sex = "Nam";                                      // Giới tính
                 _objEmployees.DateOfBirth = DateTime.Parse(txtDateOfBirth.Text.ToString());  // Ngày sinh
                 _objEmployees.Phone = txtPhone.Text;                             // SĐT
                 _objEmployees.Address = txtAddress.Text;                           // Địa chỉ
-                _objEmployees.Email = txtEmail.Text;                              // Email
-                _objEmployees.Image = Management.SaveImage(PicAnh, txtName.Text + txtPhone);// Đường dẫn ảnh
+                _objEmployees.Email = txtEmail.Text;
+                _objEmployees.Image = Management.SaveImage(PicAnh, txtPhone.Text);// Đường dẫn ảnh
+                MessageBox.Show(_objEmployees.Image);
                 _objEmployees.Salary = float.Parse(txtSalary.Text);                             // Lương
                 _objEmployees.StartedDay = DateTime.Parse(txtStartedDay.Text.ToString());// Ngày vào làm
                 _objEmployees.CCCD = txtCCCD.Text;                              // Căn cước công dân

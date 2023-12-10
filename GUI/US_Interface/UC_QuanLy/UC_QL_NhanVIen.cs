@@ -3,6 +3,8 @@ using DTO;
 using GUI.US_Interface.From_CRUD;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -85,6 +87,17 @@ namespace GUI.US_
             txtStartedDay.Value = _objEmployees.StartedDay;
             txtAddress.Text = _objEmployees.Address;
             txtSalary.Text = _objEmployees.Salary + "";
+
+            try
+            {
+                PicAnh.Image = Image.FromFile(_objEmployees.Image);
+            }
+            catch (Exception)
+            {
+                PicAnh.Image = null;
+            }
+
+
             foreach (var item in _listObjRoles)
             {
                 if(item.ID == _objAccount.Role)
@@ -100,15 +113,8 @@ namespace GUI.US_
                     _ID_RoleChoose = item.Role;
                 }
             }
+
             
-            try
-            {
-                PicAnh.Image = System.Drawing.Image.FromFile(_objEmployees.Image);
-            }
-            catch (Exception)
-            {
-                PicAnh.Image = null;
-            }
         }
         
         private void LoadDataEmployees()
@@ -238,7 +244,7 @@ namespace GUI.US_
                         _objEmployees.Phone = txtPhone.Text;                             // SĐT
                         _objEmployees.Address = txtAddress.Text;                           // Địa chỉ
                         _objEmployees.Email = txtEmail.Text;                              // Email
-                        _objEmployees.Image = Management.SaveImage(PicAnh, txtName.Text + txtPhone).ToString();                        // Đường dẫn ảnh
+                        _objEmployees.Image = Management.SaveImage(PicAnh, txtPhone.Text);
                         _objEmployees.Salary = float.Parse(txtSalary.Text);                             // Lương
                         _objEmployees.StartedDay = DateTime.Parse(txtStartedDay.Text.ToString());// Ngày vào làm
                         _objEmployees.CCCD = txtCCCD.Text;                              // Căn cước công dân   
@@ -271,7 +277,9 @@ namespace GUI.US_
                 else
                 {
                     _EmployeesBusinesLogiccs.Delete(_objEmployees.ID);
+                    _AccountBusinesLogiccs.Delete(_objEmployees.IDTK);
                     LoadDataEmployees();
+
                     MessageBox.Show("Xóa thành công");
                 }
             }
@@ -406,7 +414,7 @@ namespace GUI.US_
             return foundEmployees;
         }
 
-        private void PicAnh_Click(object sender, EventArgs e)
+        private void PicAnh_Click_1(object sender, EventArgs e)
         {
             Management.SetImage(PicAnh, sender);
         }

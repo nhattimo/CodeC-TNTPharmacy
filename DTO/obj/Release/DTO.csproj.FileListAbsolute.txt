@@ -1,0 +1,6 @@
+D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DTO\bin\Release\DTO.dll
+D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DTO\bin\Release\DTO.pdb
+D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DTO\obj\Release\DTO.csproj.AssemblyReference.cache
+D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DTO\obj\Release\DTO.csproj.CoreCompileInputs.cache
+D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DTO\obj\Release\DTO.dll
+D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\DTO\obj\Release\DTO.pdb

@@ -71,7 +71,7 @@ namespace GUI.US_.From_CRUD
                 }
                 try
                 {
-                    picAnh.Image = System.Drawing.Image.FromFile(_ObjProducts.Image);
+                    PicAnh.Image = System.Drawing.Image.FromFile(_ObjProducts.Image);
                 }
                 catch (Exception)
                 {
@@ -139,7 +139,7 @@ namespace GUI.US_.From_CRUD
             Check(txtProductName, errorProductName);
             Check(txtCost, errorCost);
             Check(txtDiscount, errorDiscount);
-            Check(picAnh, errorPic);
+            Check(PicAnh, errorPic);
             Check(txtProductionDate, errorProductionDate);
             Check(txtExpiryDate, errorExpiryDate);
 
@@ -165,9 +165,12 @@ namespace GUI.US_.From_CRUD
                 _ObjProducts.ExpiryDate = DateTime.Parse(txtExpiryDate.Text);           // Ngày hết hạn
                 _ObjProducts.SupplierId = _ID_Suppliers;                // ID nhà cung cấp
                 _ObjProducts.CategoryId = _ID_Category;                 // ID loại sản phẩm
-                _ObjProducts.Image = Management.SaveImage(picAnh, txtProductName.Text + _ID_Suppliers + _ID_Category + _ID_Created);   // Đường dẫn ảnh
+                _ObjProducts.Image = Management.SaveImage(PicAnh, "" + _ObjProducts.ID + _ID_Suppliers +_ID_Category + _ID_Created);   // Đường dẫn ảnh
                 _Product.Update(_ObjProducts.ID, _ObjProducts);
+                MessageBox.Show(_ObjProducts.Image);
                 MessageBox.Show("Sửa thành công");
+
+                Management.SetIDProduct(0);
                 this.Close();
             }
             else
@@ -248,10 +251,6 @@ namespace GUI.US_.From_CRUD
                 Management.ErrorHide(error);
         }
 
-        private void picAnh_Click(object sender, EventArgs e)
-        {
-            Management.SetImage(picAnh, sender);
-        }
 
         private void ComboBoxSupplier_SelectedValueChanged(object sender, EventArgs e)
         {
@@ -271,6 +270,9 @@ namespace GUI.US_.From_CRUD
             }
         }
 
-       
+        private void PicAnh_Click(object sender, EventArgs e)
+        {
+            Management.SetImage(PicAnh, sender);
+        }
     }
 }

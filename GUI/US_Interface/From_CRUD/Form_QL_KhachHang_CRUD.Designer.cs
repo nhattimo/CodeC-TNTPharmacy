@@ -105,6 +105,7 @@
             // PicAnh
             // 
             this.PicAnh.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.PicAnh.ErrorImage = ((System.Drawing.Image)(resources.GetObject("PicAnh.ErrorImage")));
             this.PicAnh.Image = ((System.Drawing.Image)(resources.GetObject("PicAnh.Image")));
             this.PicAnh.ImageLocation = "";
             this.PicAnh.ImageRotate = 0F;
@@ -116,6 +117,7 @@
             this.PicAnh.TabIndex = 240;
             this.PicAnh.TabStop = false;
             this.PicAnh.UseWaitCursor = true;
+            this.PicAnh.Click += new System.EventHandler(this.PicAnh_Click);
             // 
             // errorPhone
             // 

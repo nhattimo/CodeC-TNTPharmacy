@@ -133,6 +133,7 @@
             // PictureBoxProduct
             // 
             this.PictureBoxProduct.Cursor = System.Windows.Forms.Cursors.Default;
+            this.PictureBoxProduct.ErrorImage = ((System.Drawing.Image)(resources.GetObject("PictureBoxProduct.ErrorImage")));
             this.PictureBoxProduct.Image = ((System.Drawing.Image)(resources.GetObject("PictureBoxProduct.Image")));
             this.PictureBoxProduct.ImageLocation = "";
             this.PictureBoxProduct.ImageRotate = 0F;

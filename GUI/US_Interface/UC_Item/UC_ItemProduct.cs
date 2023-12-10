@@ -102,7 +102,6 @@ namespace GUI.US_
         // nhấn btn chi tiết
         private void btnDetail_Click(object sender, EventArgs e)
         {
-
             if (_objectBusinesLogiccs.GetRole(Management.GetIDAccount()) == 1)
             {
                 Form_QL_Thuoc_CRUD form = new Form_QL_Thuoc_CRUD(ID);

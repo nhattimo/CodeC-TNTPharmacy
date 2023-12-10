@@ -28,6 +28,7 @@ namespace GUI.US_
             txtStartDate.Text = obj.StartedDay + "";
             txtSex.Text = obj.Sex;
             txtAddress.Text = obj.Address;
+
             // kiểm tra ảnh
             if (File.Exists(obj.Image)) // Kiểm tra xem tệp hình ảnh có tồn tại hay không
             {

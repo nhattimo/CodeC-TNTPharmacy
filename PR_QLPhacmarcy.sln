@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "DTO\DTO.csproj", "{9F03690D-9647-480B-BE41-582FC6879723}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{B1FC46C7-1C5A-40E8-9950-C50E32F6605E}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,8 +33,6 @@ Global
 		{9F03690D-9647-480B-BE41-582FC6879723}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F03690D-9647-480B-BE41-582FC6879723}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F03690D-9647-480B-BE41-582FC6879723}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B1FC46C7-1C5A-40E8-9950-C50E32F6605E}.Debug|Any CPU.ActiveCfg = Debug
-		{B1FC46C7-1C5A-40E8-9950-C50E32F6605E}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

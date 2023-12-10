@@ -38,6 +38,7 @@
             this.btnAdd = new Guna.UI2.WinForms.Guna2GradientButton();
             this.errorNameAccount = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.PicAnh = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.errorSalary = new System.Windows.Forms.Label();
             this.txtSalary = new Guna.UI2.WinForms.Guna2TextBox();
@@ -46,7 +47,6 @@
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.ComboBoxRoleTxt = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2GradientTileButton6 = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.PicAnh = new Guna.UI2.WinForms.Guna2PictureBox();
             this.z = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.errorStartDay = new System.Windows.Forms.Label();
             this.txtStartedDay = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -220,6 +220,7 @@
             this.guna2Panel2.BorderColor = System.Drawing.Color.Gray;
             this.guna2Panel2.BorderRadius = 1;
             this.guna2Panel2.BorderThickness = 1;
+            this.guna2Panel2.Controls.Add(this.PicAnh);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel12);
             this.guna2Panel2.Controls.Add(this.errorSalary);
             this.guna2Panel2.Controls.Add(this.txtSalary);
@@ -228,7 +229,6 @@
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel5);
             this.guna2Panel2.Controls.Add(this.ComboBoxRoleTxt);
             this.guna2Panel2.Controls.Add(this.guna2GradientTileButton6);
-            this.guna2Panel2.Controls.Add(this.PicAnh);
             this.guna2Panel2.Controls.Add(this.z);
             this.guna2Panel2.Controls.Add(this.errorStartDay);
             this.guna2Panel2.Controls.Add(this.txtStartedDay);
@@ -268,6 +268,23 @@
             this.guna2Panel2.Size = new System.Drawing.Size(628, 878);
             this.guna2Panel2.TabIndex = 148;
             this.guna2Panel2.UseWaitCursor = true;
+            // 
+            // PicAnh
+            // 
+            this.PicAnh.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.PicAnh.ErrorImage = ((System.Drawing.Image)(resources.GetObject("PicAnh.ErrorImage")));
+            this.PicAnh.Image = ((System.Drawing.Image)(resources.GetObject("PicAnh.Image")));
+            this.PicAnh.ImageLocation = "";
+            this.PicAnh.ImageRotate = 0F;
+            this.PicAnh.Location = new System.Drawing.Point(327, 225);
+            this.PicAnh.Margin = new System.Windows.Forms.Padding(0);
+            this.PicAnh.Name = "PicAnh";
+            this.PicAnh.Size = new System.Drawing.Size(276, 212);
+            this.PicAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PicAnh.TabIndex = 244;
+            this.PicAnh.TabStop = false;
+            this.PicAnh.UseWaitCursor = true;
+            this.PicAnh.Click += new System.EventHandler(this.PicAnh_Click_1);
             // 
             // guna2HtmlLabel12
             // 
@@ -400,23 +417,6 @@
             this.guna2GradientTileButton6.Text = "Nhân viên";
             this.guna2GradientTileButton6.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientTileButton6.UseWaitCursor = true;
-            // 
-            // PicAnh
-            // 
-            this.PicAnh.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.PicAnh.ErrorImage = ((System.Drawing.Image)(resources.GetObject("PicAnh.ErrorImage")));
-            this.PicAnh.Image = ((System.Drawing.Image)(resources.GetObject("PicAnh.Image")));
-            this.PicAnh.ImageLocation = "";
-            this.PicAnh.ImageRotate = 0F;
-            this.PicAnh.Location = new System.Drawing.Point(345, 222);
-            this.PicAnh.Margin = new System.Windows.Forms.Padding(0);
-            this.PicAnh.Name = "PicAnh";
-            this.PicAnh.Size = new System.Drawing.Size(267, 201);
-            this.PicAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PicAnh.TabIndex = 178;
-            this.PicAnh.TabStop = false;
-            this.PicAnh.UseWaitCursor = true;
-            this.PicAnh.Click += new System.EventHandler(this.PicAnh_Click);
             // 
             // z
             // 
@@ -1050,7 +1050,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel z;
         private System.Windows.Forms.Label errorStartDay;
         private Guna.UI2.WinForms.Guna2DateTimePicker txtStartedDay;
-        private Guna.UI2.WinForms.Guna2PictureBox PicAnh;
         private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton6;
         private Guna.UI2.WinForms.Guna2ComboBox ComboBoxRoleChoose;
         private Guna.UI2.WinForms.Guna2VScrollBar VScrollBar;
@@ -1061,5 +1060,6 @@
         private System.Windows.Forms.Label errorSalary;
         private Guna.UI2.WinForms.Guna2TextBox txtSalary;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
+        private Guna.UI2.WinForms.Guna2PictureBox PicAnh;
     }
 }

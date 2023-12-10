@@ -233,7 +233,7 @@ namespace GUI.US_
                 }
             }
             else
-            {
+            { 
                 ShowDataGridViewSupplier();
             }
         }
