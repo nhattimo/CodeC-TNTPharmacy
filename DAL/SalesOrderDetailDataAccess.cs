@@ -59,5 +59,14 @@ namespace DAL
             List<SalesOrderDetail> list = _db.SALES_ORDER_DETAIL.ToList();
             return list;
         }
+        public List<SalesOrderDetail> GetList(int objId)
+        {
+            // Lọc danh sách SALES_ORDER_DETAIL theo objId
+            List<SalesOrderDetail> list = _db.SALES_ORDER_DETAIL
+                .Where(detail => detail.IDSalesOrder == objId)
+                .ToList();
+
+            return list;
+        }
     }
 }

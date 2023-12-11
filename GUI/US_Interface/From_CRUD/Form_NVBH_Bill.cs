@@ -12,21 +12,32 @@ namespace GUI.US_Interface.From_CRUD
         private readonly EmployeesBusinessLogic _Employees = new EmployeesBusinessLogic();
         private readonly UsersBusinessLogic _Users = new UsersBusinessLogic();
         private readonly ProductBusinessLogic _Product = new ProductBusinessLogic();
+        private readonly BillOfflineDetailBusinessLogic _BillOfflineDetail = new BillOfflineDetailBusinessLogic();
+        private readonly BillOfflineBusinessLogic _BillOffline = new BillOfflineBusinessLogic();
+
+
 
         Users obj = new Users();
-        double total;
-        int SLTong;
+        BillOffline _ObjBillOffline;
+        BillOfflineDetail _ObjBillOfflineDetail;
+        Employees _ObjEmployees;
+        Products _ObjProducts;
+
+        float _Total;
+        int _SLTong;
         string Point;
+
         public Form_NVBH_Bill()
         {
             InitializeComponent();
         }
 
-        public Form_NVBH_Bill(double total, int sl )
+        public Form_NVBH_Bill(float total, int sl )
         {
             InitializeComponent();
-            this.total = total;
-            this.SLTong = sl;
+            _ObjEmployees = _Employees.GetObjectByIdtk(Management.GetIDAccount());
+            this._Total = total;
+            this._SLTong = sl;
             Point = "";
         }
 
@@ -102,19 +113,44 @@ namespace GUI.US_Interface.From_CRUD
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            Management.ResestIDItemChooseProducts();
             this.Close();
         }
 
         private void btnPaymentAndPrinting_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Thanh toán và in hóa đơn thành công");
-            Management.ResestIDItemChooseProducts();
+            //
+            DateTime time = DateTime.Now;
+            _ObjBillOffline =  new BillOffline();
+            _ObjBillOffline.CreatedDate = time;
+            _ObjBillOffline.TotalAmount = (int)_Total;
+            _ObjBillOffline.CreatedBy = _ObjEmployees.ID;
+            _ObjBillOffline.IDCustomer = null;
+            //
+
+            // nếu có tài khoản thì add tích điểm cho khác hàng
             if (RadioButtonHaveAccount.Checked)
             {
-                
+                _ObjBillOffline.IDCustomer = obj.ID;
                 obj.Point = (int.Parse(obj.Point) + int.Parse(Point)) + "";
                 _Users.Update(obj.ID, obj);
             }
+            _BillOffline.AddBillOffline(_ObjBillOffline);
+
+            foreach (var item in Management.GetIDItemChooseProducts())
+            {
+                _ObjProducts = _Product.GetObjectById(item[0]);
+                _ObjBillOfflineDetail = new BillOfflineDetail();
+                _ObjBillOfflineDetail.Quantity = item[1]; // số lượng
+                _ObjBillOfflineDetail.SoldPrice = (float)(Math.Round(_ObjProducts.Price - ((_ObjProducts.Price / 100) * _ObjProducts.Discount), 0)); // giá bán
+                _ObjBillOfflineDetail.TotalAmount = (int)(Math.Round(_ObjProducts.Price - ((_ObjProducts.Price / 100) * _ObjProducts.Discount), 0)) * item[1]; // tồng giá bán
+                _ObjBillOfflineDetail.IDPruduct = _ObjProducts.ID; // id sản phẩm
+                _ObjBillOfflineDetail.IDBill = _ObjBillOffline.ID;  // 
+                _BillOfflineDetail.Add(_ObjBillOfflineDetail);
+            }
+
+            MessageBox.Show("Thanh toán và in hóa đơn thành công");
+            Management.ResestIDItemChooseProducts();
             this.Close();
         }
 
@@ -149,7 +185,7 @@ namespace GUI.US_Interface.From_CRUD
             }
 
             // tổng tiền giá bán
-            txtTotal.Text = total + ".000";
+            txtTotal.Text = _Total + ".000";
 
             // Tổng tiền giá gốc
             txtCost.Text = cost  + ".000 VND";
@@ -158,7 +194,7 @@ namespace GUI.US_Interface.From_CRUD
             txtPriceDiscount.Text = "- " + priceDiscount + ".000 VND";
 
             // tổng số lượng mua
-            txtQuantity.Text = SLTong + "";
+            txtQuantity.Text = _SLTong + "";
 
             // tổng tiền cần trả
             txtPrice.Text = price + ".000 VND";
@@ -166,7 +202,7 @@ namespace GUI.US_Interface.From_CRUD
             // tổng tiền cần trả
             txtTotal.Text = price + ".000";
 
-            Point = Math.Round((price / 3 * SLTong + 1), 0) + "";
+            Point = Math.Round((price / 3 * _SLTong + 1), 0) + "";
             MessageBox.Show(Point);
         }
 
@@ -175,6 +211,11 @@ namespace GUI.US_Interface.From_CRUD
 
             txtNameCoustumer.Text = txtNameInput.Text;
             guna2Panel3.Visible = true;
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

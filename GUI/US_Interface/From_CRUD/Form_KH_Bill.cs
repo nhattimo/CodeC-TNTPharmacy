@@ -180,6 +180,7 @@ namespace GUI.US_Interface.From_CRUD
 
                 MessageBox.Show("Đặt hàng thành công");
                 Management.SetIDItemChooseProductsNew();
+                this.Close();
             }
             else
             {

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormKhachHang));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnShipping = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnCart = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnSetting = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnMedicines = new Guna.UI2.WinForms.Guna2GradientTileButton();
@@ -41,11 +42,12 @@
             this.guna2GradientTileButton7 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnSearch = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnLogOut = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.uC_KH_Shiping1 = new GUI.US_Interface.UC_KhanhHang.UC_KH_Shiping();
+            this.uC_Info_Customer1 = new GUI.US_.UC_Info_Customer();
+            this.uC_ItemInfoCustomer1 = new GUI.US_.UC_ItemInfoCustomer();
             this.uC_KH_Cart1 = new GUI.US_.UC_KH_Cart();
             this.uC_KH_Thuoc1 = new GUI.US_.UC_KH_Thuoc();
-            this.uC_ItemInfoCustomer1 = new GUI.US_.UC_ItemInfoCustomer();
-            this.uC_Info_Customer1 = new GUI.US_.UC_Info_Customer();
-            this.btnLogOut = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2Panel1.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -53,6 +55,7 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BorderColor = System.Drawing.Color.Black;
+            this.guna2Panel1.Controls.Add(this.btnShipping);
             this.guna2Panel1.Controls.Add(this.btnCart);
             this.guna2Panel1.Controls.Add(this.btnSetting);
             this.guna2Panel1.Controls.Add(this.btnMedicines);
@@ -64,6 +67,30 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(101, 1081);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // btnShipping
+            // 
+            this.btnShipping.BackColor = System.Drawing.Color.Transparent;
+            this.btnShipping.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnShipping.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnShipping.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnShipping.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnShipping.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnShipping.FillColor = System.Drawing.Color.Transparent;
+            this.btnShipping.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnShipping.FocusedColor = System.Drawing.Color.IndianRed;
+            this.btnShipping.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnShipping.ForeColor = System.Drawing.Color.Black;
+            this.btnShipping.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnShipping.Image = ((System.Drawing.Image)(resources.GetObject("btnShipping.Image")));
+            this.btnShipping.ImageSize = new System.Drawing.Size(45, 45);
+            this.btnShipping.Location = new System.Drawing.Point(0, 453);
+            this.btnShipping.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnShipping.Name = "btnShipping";
+            this.btnShipping.Size = new System.Drawing.Size(96, 135);
+            this.btnShipping.TabIndex = 12;
+            this.btnShipping.Text = "Giỏ hàng";
+            this.btnShipping.Click += new System.EventHandler(this.btnShipping_Click);
             // 
             // btnCart
             // 
@@ -287,38 +314,6 @@
             this.txtSearch.Size = new System.Drawing.Size(477, 53);
             this.txtSearch.TabIndex = 0;
             // 
-            // uC_KH_Cart1
-            // 
-            this.uC_KH_Cart1.Location = new System.Drawing.Point(127, 158);
-            this.uC_KH_Cart1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.uC_KH_Cart1.Name = "uC_KH_Cart1";
-            this.uC_KH_Cart1.Size = new System.Drawing.Size(1765, 895);
-            this.uC_KH_Cart1.TabIndex = 8;
-            // 
-            // uC_KH_Thuoc1
-            // 
-            this.uC_KH_Thuoc1.Location = new System.Drawing.Point(127, 158);
-            this.uC_KH_Thuoc1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.uC_KH_Thuoc1.Name = "uC_KH_Thuoc1";
-            this.uC_KH_Thuoc1.Size = new System.Drawing.Size(1765, 895);
-            this.uC_KH_Thuoc1.TabIndex = 7;
-            // 
-            // uC_ItemInfoCustomer1
-            // 
-            this.uC_ItemInfoCustomer1.BackColor = System.Drawing.SystemColors.Info;
-            this.uC_ItemInfoCustomer1.Location = new System.Drawing.Point(563, 13);
-            this.uC_ItemInfoCustomer1.Name = "uC_ItemInfoCustomer1";
-            this.uC_ItemInfoCustomer1.Size = new System.Drawing.Size(8, 8);
-            this.uC_ItemInfoCustomer1.TabIndex = 16;
-            // 
-            // uC_Info_Customer1
-            // 
-            this.uC_Info_Customer1.Location = new System.Drawing.Point(123, 116);
-            this.uC_Info_Customer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.uC_Info_Customer1.Name = "uC_Info_Customer1";
-            this.uC_Info_Customer1.Size = new System.Drawing.Size(1765, 895);
-            this.uC_Info_Customer1.TabIndex = 17;
-            // 
             // btnLogOut
             // 
             this.btnLogOut.BackColor = System.Drawing.Color.Transparent;
@@ -347,11 +342,51 @@
             this.btnLogOut.UseWaitCursor = true;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
+            // uC_KH_Shiping1
+            // 
+            this.uC_KH_Shiping1.Location = new System.Drawing.Point(119, 157);
+            this.uC_KH_Shiping1.Name = "uC_KH_Shiping1";
+            this.uC_KH_Shiping1.Size = new System.Drawing.Size(1769, 912);
+            this.uC_KH_Shiping1.TabIndex = 19;
+            // 
+            // uC_Info_Customer1
+            // 
+            this.uC_Info_Customer1.Location = new System.Drawing.Point(123, 116);
+            this.uC_Info_Customer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uC_Info_Customer1.Name = "uC_Info_Customer1";
+            this.uC_Info_Customer1.Size = new System.Drawing.Size(1765, 895);
+            this.uC_Info_Customer1.TabIndex = 17;
+            // 
+            // uC_ItemInfoCustomer1
+            // 
+            this.uC_ItemInfoCustomer1.BackColor = System.Drawing.SystemColors.Info;
+            this.uC_ItemInfoCustomer1.Location = new System.Drawing.Point(563, 13);
+            this.uC_ItemInfoCustomer1.Name = "uC_ItemInfoCustomer1";
+            this.uC_ItemInfoCustomer1.Size = new System.Drawing.Size(8, 8);
+            this.uC_ItemInfoCustomer1.TabIndex = 16;
+            // 
+            // uC_KH_Cart1
+            // 
+            this.uC_KH_Cart1.Location = new System.Drawing.Point(127, 158);
+            this.uC_KH_Cart1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.uC_KH_Cart1.Name = "uC_KH_Cart1";
+            this.uC_KH_Cart1.Size = new System.Drawing.Size(1765, 895);
+            this.uC_KH_Cart1.TabIndex = 8;
+            // 
+            // uC_KH_Thuoc1
+            // 
+            this.uC_KH_Thuoc1.Location = new System.Drawing.Point(127, 158);
+            this.uC_KH_Thuoc1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.uC_KH_Thuoc1.Name = "uC_KH_Thuoc1";
+            this.uC_KH_Thuoc1.Size = new System.Drawing.Size(1765, 895);
+            this.uC_KH_Thuoc1.TabIndex = 7;
+            // 
             // FormKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1920, 1081);
+            this.Controls.Add(this.uC_KH_Shiping1);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.uC_Info_Customer1);
             this.Controls.Add(this.uC_ItemInfoCustomer1);
@@ -395,5 +430,7 @@
         private US_.UC_ItemInfoCustomer uC_ItemInfoCustomer1;
         private US_.UC_Info_Customer uC_Info_Customer1;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnLogOut;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btnShipping;
+        private US_Interface.UC_KhanhHang.UC_KH_Shiping uC_KH_Shiping1;
     }
 }

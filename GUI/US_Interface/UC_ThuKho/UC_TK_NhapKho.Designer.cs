@@ -33,9 +33,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.userControl71 = new GUI.US_.UserControl7();
             this.btnDelete = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnUpdate = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -56,10 +58,12 @@
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btnSearch = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2DataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Panel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel2
@@ -84,34 +88,24 @@
             this.guna2Panel2.Controls.Add(this.txtIDProduct);
             this.guna2Panel2.Controls.Add(this.guna2GradientTileButton6);
             this.guna2Panel2.Controls.Add(this.btnAdd);
-            this.guna2Panel2.Location = new System.Drawing.Point(14, 13);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel2.Location = new System.Drawing.Point(19, 16);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(471, 775);
+            this.guna2Panel2.Size = new System.Drawing.Size(628, 954);
             this.guna2Panel2.TabIndex = 16;
             this.guna2Panel2.UseWaitCursor = true;
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel1.Controls.Add(this.userControl71);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(16, 398);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(21, 490);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(440, 251);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(587, 309);
             this.flowLayoutPanel1.TabIndex = 147;
             this.flowLayoutPanel1.UseWaitCursor = true;
             // 
-            // userControl71
-            // 
-            this.userControl71.BackColor = System.Drawing.SystemColors.Info;
-            this.userControl71.Location = new System.Drawing.Point(2, 2);
-            this.userControl71.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.userControl71.Name = "userControl71";
-            this.userControl71.Size = new System.Drawing.Size(435, 214);
-            this.userControl71.TabIndex = 0;
-            this.userControl71.UseWaitCursor = true;
-            // 
+           
             // btnDelete
             // 
             this.btnDelete.BorderColor = System.Drawing.Color.BurlyWood;
@@ -127,10 +121,10 @@
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnDelete.Location = new System.Drawing.Point(64, 713);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Location = new System.Drawing.Point(85, 878);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(113, 46);
+            this.btnDelete.Size = new System.Drawing.Size(151, 57);
             this.btnDelete.TabIndex = 146;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseWaitCursor = true;
@@ -151,10 +145,10 @@
             this.btnUpdate.ForeColor = System.Drawing.Color.Black;
             this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
             this.btnUpdate.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnUpdate.Location = new System.Drawing.Point(182, 713);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdate.Location = new System.Drawing.Point(243, 878);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(113, 46);
+            this.btnUpdate.Size = new System.Drawing.Size(151, 57);
             this.btnUpdate.TabIndex = 145;
             this.btnUpdate.Text = "Sửa ";
             this.btnUpdate.UseWaitCursor = true;
@@ -164,8 +158,8 @@
             // 
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(16, 281);
-            this.guna2HtmlLabel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(21, 346);
+            this.guna2HtmlLabel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(48, 25);
             this.guna2HtmlLabel6.TabIndex = 139;
@@ -177,8 +171,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(358, 225);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(477, 277);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 29);
             this.label3.TabIndex = 137;
@@ -189,8 +182,8 @@
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(16, 189);
-            this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(21, 233);
+            this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(29, 25);
             this.guna2HtmlLabel4.TabIndex = 133;
@@ -201,8 +194,8 @@
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(364, 103);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(485, 127);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(72, 25);
             this.guna2HtmlLabel2.TabIndex = 131;
@@ -213,8 +206,8 @@
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(16, 103);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(21, 127);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(105, 25);
             this.guna2HtmlLabel1.TabIndex = 130;
@@ -228,10 +221,10 @@
             this.txtQuantity.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.txtQuantity.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtQuantity.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtQuantity.Location = new System.Drawing.Point(358, 129);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtQuantity.Location = new System.Drawing.Point(477, 159);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(98, 43);
+            this.txtQuantity.Size = new System.Drawing.Size(131, 53);
             this.txtQuantity.TabIndex = 128;
             this.txtQuantity.UseWaitCursor = true;
             // 
@@ -240,10 +233,9 @@
             this.errorDescribe.AutoSize = true;
             this.errorDescribe.BackColor = System.Drawing.Color.Transparent;
             this.errorDescribe.ForeColor = System.Drawing.Color.Red;
-            this.errorDescribe.Location = new System.Drawing.Point(20, 350);
-            this.errorDescribe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.errorDescribe.Location = new System.Drawing.Point(27, 431);
             this.errorDescribe.Name = "errorDescribe";
-            this.errorDescribe.Size = new System.Drawing.Size(24, 15);
+            this.errorDescribe.Size = new System.Drawing.Size(25, 16);
             this.errorDescribe.TabIndex = 117;
             this.errorDescribe.Text = "Lỗi";
             this.errorDescribe.UseWaitCursor = true;
@@ -253,10 +245,9 @@
             this.errorCost.AutoSize = true;
             this.errorCost.BackColor = System.Drawing.Color.Transparent;
             this.errorCost.ForeColor = System.Drawing.Color.Red;
-            this.errorCost.Location = new System.Drawing.Point(20, 262);
-            this.errorCost.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.errorCost.Location = new System.Drawing.Point(27, 322);
             this.errorCost.Name = "errorCost";
-            this.errorCost.Size = new System.Drawing.Size(24, 15);
+            this.errorCost.Size = new System.Drawing.Size(25, 16);
             this.errorCost.TabIndex = 114;
             this.errorCost.Text = "Lỗi";
             this.errorCost.UseWaitCursor = true;
@@ -277,14 +268,14 @@
             this.txtDescribe.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDescribe.ForeColor = System.Drawing.Color.Black;
             this.txtDescribe.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDescribe.Location = new System.Drawing.Point(16, 304);
-            this.txtDescribe.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtDescribe.Location = new System.Drawing.Point(21, 374);
+            this.txtDescribe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDescribe.Name = "txtDescribe";
             this.txtDescribe.PasswordChar = '\0';
             this.txtDescribe.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtDescribe.PlaceholderText = "VD: Abcd";
             this.txtDescribe.SelectedText = "";
-            this.txtDescribe.Size = new System.Drawing.Size(440, 43);
+            this.txtDescribe.Size = new System.Drawing.Size(587, 53);
             this.txtDescribe.TabIndex = 112;
             this.txtDescribe.UseWaitCursor = true;
             // 
@@ -293,10 +284,9 @@
             this.errorIDProduct.AutoSize = true;
             this.errorIDProduct.BackColor = System.Drawing.Color.Transparent;
             this.errorIDProduct.ForeColor = System.Drawing.Color.Red;
-            this.errorIDProduct.Location = new System.Drawing.Point(20, 173);
-            this.errorIDProduct.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.errorIDProduct.Location = new System.Drawing.Point(27, 213);
             this.errorIDProduct.Name = "errorIDProduct";
-            this.errorIDProduct.Size = new System.Drawing.Size(24, 15);
+            this.errorIDProduct.Size = new System.Drawing.Size(25, 16);
             this.errorIDProduct.TabIndex = 108;
             this.errorIDProduct.Text = "Lỗi";
             this.errorIDProduct.UseWaitCursor = true;
@@ -317,14 +307,14 @@
             this.txtCost.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCost.ForeColor = System.Drawing.Color.Black;
             this.txtCost.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCost.Location = new System.Drawing.Point(16, 215);
-            this.txtCost.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtCost.Location = new System.Drawing.Point(21, 265);
+            this.txtCost.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCost.Name = "txtCost";
             this.txtCost.PasswordChar = '\0';
             this.txtCost.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtCost.PlaceholderText = "VD: 300.000";
             this.txtCost.SelectedText = "";
-            this.txtCost.Size = new System.Drawing.Size(338, 43);
+            this.txtCost.Size = new System.Drawing.Size(451, 53);
             this.txtCost.TabIndex = 107;
             this.txtCost.UseWaitCursor = true;
             // 
@@ -344,14 +334,15 @@
             this.txtIDProduct.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtIDProduct.ForeColor = System.Drawing.Color.Black;
             this.txtIDProduct.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIDProduct.Location = new System.Drawing.Point(16, 129);
-            this.txtIDProduct.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtIDProduct.Location = new System.Drawing.Point(21, 159);
+            this.txtIDProduct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtIDProduct.Name = "txtIDProduct";
             this.txtIDProduct.PasswordChar = '\0';
             this.txtIDProduct.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtIDProduct.PlaceholderText = "VD: Abcd";
+            this.txtIDProduct.ReadOnly = true;
             this.txtIDProduct.SelectedText = "";
-            this.txtIDProduct.Size = new System.Drawing.Size(338, 43);
+            this.txtIDProduct.Size = new System.Drawing.Size(451, 53);
             this.txtIDProduct.TabIndex = 106;
             this.txtIDProduct.UseWaitCursor = true;
             // 
@@ -367,10 +358,10 @@
             this.guna2GradientTileButton6.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.guna2GradientTileButton6.Font = new System.Drawing.Font("Segoe UI Semibold", 20.2F, System.Drawing.FontStyle.Bold);
             this.guna2GradientTileButton6.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientTileButton6.Location = new System.Drawing.Point(2, 7);
-            this.guna2GradientTileButton6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2GradientTileButton6.Location = new System.Drawing.Point(3, 9);
+            this.guna2GradientTileButton6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2GradientTileButton6.Name = "guna2GradientTileButton6";
-            this.guna2GradientTileButton6.Size = new System.Drawing.Size(466, 70);
+            this.guna2GradientTileButton6.Size = new System.Drawing.Size(621, 86);
             this.guna2GradientTileButton6.TabIndex = 10;
             this.guna2GradientTileButton6.Text = "Nhập sản phẩm";
             this.guna2GradientTileButton6.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -391,10 +382,10 @@
             this.btnAdd.ForeColor = System.Drawing.Color.Black;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnAdd.Location = new System.Drawing.Point(300, 713);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Location = new System.Drawing.Point(400, 878);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(156, 46);
+            this.btnAdd.Size = new System.Drawing.Size(208, 57);
             this.btnAdd.TabIndex = 5;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseWaitCursor = true;
@@ -427,13 +418,13 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(509, 69);
-            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(679, 85);
+            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
             this.guna2DataGridView1.RowTemplate.Height = 24;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(775, 723);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(1033, 329);
             this.guna2DataGridView1.TabIndex = 17;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -456,6 +447,7 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 24;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.guna2DataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellClick);
             // 
             // btnSearch
             // 
@@ -476,10 +468,10 @@
             this.btnSearch.HoverState.FillColor2 = System.Drawing.Color.Transparent;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
             this.btnSearch.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnSearch.Location = new System.Drawing.Point(1238, 17);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Location = new System.Drawing.Point(1651, 21);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(46, 43);
+            this.btnSearch.Size = new System.Drawing.Size(61, 53);
             this.btnSearch.TabIndex = 168;
             this.btnSearch.UseTransparentBackground = true;
             this.btnSearch.UseWaitCursor = true;
@@ -496,33 +488,88 @@
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Location = new System.Drawing.Point(987, 17);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtSearch.Location = new System.Drawing.Point(1316, 21);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "Tìm kiếm sản phẩm";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(297, 43);
+            this.txtSearch.Size = new System.Drawing.Size(396, 53);
             this.txtSearch.TabIndex = 167;
             this.txtSearch.UseWaitCursor = true;
             // 
+            // guna2DataGridView2
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.guna2DataGridView2.ColumnHeadersHeight = 4;
+            this.guna2DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle3;
+            this.guna2DataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView2.Location = new System.Drawing.Point(679, 485);
+            this.guna2DataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2DataGridView2.Name = "guna2DataGridView2";
+            this.guna2DataGridView2.RowHeadersVisible = false;
+            this.guna2DataGridView2.RowHeadersWidth = 51;
+            this.guna2DataGridView2.RowTemplate.Height = 24;
+            this.guna2DataGridView2.Size = new System.Drawing.Size(1033, 485);
+            this.guna2DataGridView2.TabIndex = 169;
+            this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView2.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView2.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView2.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView2.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.guna2DataGridView2.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.guna2DataGridView2.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.guna2DataGridView2.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.guna2DataGridView2.ThemeStyle.HeaderStyle.Height = 4;
+            this.guna2DataGridView2.ThemeStyle.ReadOnly = false;
+            this.guna2DataGridView2.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView2.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.guna2DataGridView2.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.guna2DataGridView2.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.guna2DataGridView2.ThemeStyle.RowsStyle.Height = 24;
+            this.guna2DataGridView2.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView2.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
             // UC_TK_NhapKho
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.guna2DataGridView2);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.guna2DataGridView1);
             this.Controls.Add(this.guna2Panel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_TK_NhapKho";
-            this.Size = new System.Drawing.Size(1301, 812);
+            this.Size = new System.Drawing.Size(1735, 999);
             this.Load += new System.EventHandler(this.UC_TK_NhapKho_Load);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -552,5 +599,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private UserControl7 userControl71;
+        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView2;
     }
 }

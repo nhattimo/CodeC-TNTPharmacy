@@ -118,7 +118,7 @@ namespace GUI.US_
         // btn thanh toán
         private void btnPay_Click(object sender, EventArgs e)
         {
-            Form_NVBH_Bill form_NVBH_Bill = new Form_NVBH_Bill(total, sl);
+            Form_NVBH_Bill form_NVBH_Bill = new Form_NVBH_Bill((float)total, sl);
             form_NVBH_Bill.ShowDialog();
         }
 

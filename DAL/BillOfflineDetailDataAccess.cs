@@ -10,12 +10,11 @@ namespace DAL
     public class BillOfflineDetailDataAccess
     {
         // Sử dụng để tương tác với cơ sở dữ liệu
-        private readonly AppPharmacyContext _db;
+        private readonly AppPharmacyContext _db =  new AppPharmacyContext();
 
         // Phương thức tạo (constructor)
-        public BillOfflineDetailDataAccess(AppPharmacyContext context)
+        public BillOfflineDetailDataAccess()
         {
-            _db = context;
         }
 
         public void InsertDataAccess(BillOfflineDetail obj)

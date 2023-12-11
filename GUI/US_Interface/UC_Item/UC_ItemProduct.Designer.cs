@@ -41,9 +41,11 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtPercent = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.IconPercent = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxProduct)).BeginInit();
             this.IconPercent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2CustomGradientPanel1
@@ -174,12 +176,28 @@
             this.IconPercent.Size = new System.Drawing.Size(85, 49);
             this.IconPercent.TabIndex = 17;
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.guna2PictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.ErrorImage")));
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageLocation = "";
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(9, 43);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(233, 193);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 18;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // UC_ItemProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.IconPercent);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.txtPrice);
@@ -198,6 +216,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxProduct)).EndInit();
             this.IconPercent.ResumeLayout(false);
             this.IconPercent.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,5 +234,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel txtPercent;
         private Guna.UI2.WinForms.Guna2Panel IconPercent;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }

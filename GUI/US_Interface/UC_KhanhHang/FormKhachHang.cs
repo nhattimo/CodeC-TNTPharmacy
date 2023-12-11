@@ -47,13 +47,13 @@ namespace GUI
 
         void UCManagement(UserControl uC)
         {
-            controlArray = new UserControl[] { uC_KH_Thuoc1, uC_KH_Cart1, uC_Info_Customer1 };
+            controlArray = new UserControl[] { uC_KH_Thuoc1, uC_KH_Cart1, uC_Info_Customer1, uC_KH_Shiping1 };
             Management.UCArrayVisible(controlArray, uC);
         }
         void BtnTasbalClickManagement(Guna2GradientTileButton btn)
         {
             btnLogOut.Visible = false;
-            btnArray = new Guna2GradientTileButton[] { btnMedicines, btnCart };
+            btnArray = new Guna2GradientTileButton[] { btnMedicines, btnCart ,btnShipping };
             Management.BtnTasbalClick(btnArray, Color.Transparent, btn, Color.DarkGray);
             btn.BringToFront();
 
@@ -74,6 +74,12 @@ namespace GUI
             BtnTasbalClickManagement(btnCart);
         }
 
+        private void btnShipping_Click(object sender, EventArgs e)
+        {
+            UCManagement(uC_KH_Shiping1);
+            BtnTasbalClickManagement(btnShipping);
+        }
+
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -91,5 +97,6 @@ namespace GUI
         {
             Management.LogOut(this);
         }
+
     }
 }

@@ -45,6 +45,7 @@
             this.uC_Info_Employee1 = new GUI.US_.UC_Info_Employee();
             this.uC_NVBH_Order1 = new GUI.US_.UC_NVBH_Order();
             this.uC_NVBH_CuaHang1 = new GUI.US_.UC_NVBH_CuaHang();
+            this.uC_QL_KhachHang1 = new GUI.US_.UC_QL_KhachHang();
             this.guna2Panel1.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -198,6 +199,7 @@
             this.btnTasbalCustomer.Size = new System.Drawing.Size(96, 135);
             this.btnTasbalCustomer.TabIndex = 2;
             this.btnTasbalCustomer.Text = "Khách hàng";
+            this.btnTasbalCustomer.Click += new System.EventHandler(this.btnTasbalCustomer_Click);
             // 
             // btnTasbalShop
             // 
@@ -335,11 +337,20 @@
             this.uC_NVBH_CuaHang1.Size = new System.Drawing.Size(1765, 895);
             this.uC_NVBH_CuaHang1.TabIndex = 25;
             // 
+            // uC_QL_KhachHang1
+            // 
+            this.uC_QL_KhachHang1.Location = new System.Drawing.Point(127, 150);
+            this.uC_QL_KhachHang1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.uC_QL_KhachHang1.Name = "uC_QL_KhachHang1";
+            this.uC_QL_KhachHang1.Size = new System.Drawing.Size(1765, 895);
+            this.uC_QL_KhachHang1.TabIndex = 28;
+            // 
             // FormNhanVienBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1920, 1081);
+            this.Controls.Add(this.uC_QL_KhachHang1);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.uC_Info_Employee1);
             this.Controls.Add(this.uC_NVBH_Order1);
@@ -379,5 +390,6 @@
         private US_.UC_NVBH_Order uC_NVBH_Order1;
         private US_.UC_Info_Employee uC_Info_Employee1;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnLogOut;
+        private US_.UC_QL_KhachHang uC_QL_KhachHang1;
     }
 }

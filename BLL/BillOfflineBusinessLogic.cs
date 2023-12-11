@@ -10,11 +10,11 @@ namespace BLL
 {
     public class BillOfflineBusinessLogic
     {
-        private readonly BillOfflineDataAccess _objectDataAccess;
+        private readonly BillOfflineDataAccess _objectDataAccess =  new BillOfflineDataAccess();
 
-        public BillOfflineBusinessLogic(BillOfflineDataAccess objectDataAccess)
+        public BillOfflineBusinessLogic()
         {
-            _objectDataAccess = objectDataAccess;
+            
         }
 
         public void AddBillOffline(BillOffline obj)

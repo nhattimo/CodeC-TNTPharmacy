@@ -11,11 +11,11 @@ namespace BLL
     public class BillOfflineDetailBusinessLogic
     {
         // Sử dụng để tương tác với DAL (DataAccess)
-        private readonly BillOfflineDetailDataAccess _objectDataAccess;
+        private readonly BillOfflineDetailDataAccess _objectDataAccess =  new BillOfflineDetailDataAccess();
 
-        public BillOfflineDetailBusinessLogic(BillOfflineDetailDataAccess productDataAccess)
+        public BillOfflineDetailBusinessLogic()
         {
-            _objectDataAccess = productDataAccess;
+            
         }
 
         public void Add(BillOfflineDetail obj)

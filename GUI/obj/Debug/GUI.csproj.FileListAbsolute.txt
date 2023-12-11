@@ -224,3 +224,5 @@ D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_.UC_Ite
 D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_Interface.From_CRUD.Form_QL_NhanVien_CRUD.resources
 D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_Interface.From_CRUD.Form_QL_KhachHang_CRUD.resources
 D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_Interface.From_CRUD.Form_KH_Bill.resources
+D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_Interface.UC_KhanhHang.UC_KH_Shiping.resources
+D:\CODE\Dự án 1\CodeC-TNTPharmacy\PR_QLPhacmarcy\GUI\obj\Debug\GUI.US_Interface.UC_Item.UC_KH_ItemOnlineOrder.resources

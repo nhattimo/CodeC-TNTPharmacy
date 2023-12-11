@@ -10,12 +10,11 @@ namespace DAL
     public class WareHousingDetailsDataAccess
     {
         // Sử dụng để tương tác với cơ sở dữ liệu
-        private readonly AppPharmacyContext _db;
+        private readonly AppPharmacyContext _db = new AppPharmacyContext();
 
         // Phương thức tạo (constructor)
-        public WareHousingDetailsDataAccess(AppPharmacyContext context)
+        public WareHousingDetailsDataAccess()
         {
-            _db = context;
         }
 
         public void InsertDataAccess(WareHousingDetails obj)

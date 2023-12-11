@@ -11,11 +11,10 @@ namespace BLL
     public class WareHousingBusinessLogic
     {
         // Sử dụng để tương tác với DAL (DataAccess)
-        private readonly WareHousingDataAccess _objectDataAccess;
+        private readonly WareHousingDataAccess _objectDataAccess =  new WareHousingDataAccess();
 
-        public WareHousingBusinessLogic(WareHousingDataAccess productDataAccess)
+        public WareHousingBusinessLogic()
         {
-            _objectDataAccess = productDataAccess;
         }
 
         public void Add(WareHousing obj)

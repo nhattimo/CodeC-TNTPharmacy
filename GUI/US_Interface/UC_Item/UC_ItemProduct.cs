@@ -33,7 +33,14 @@ namespace GUI.US_
         {
 
             InitializeComponent();
+            guna2PictureBox1.Visible = false;
             Products obj = _ProductBusinesLogiccs.GetObjectById(id);
+            if(obj.Quantity <= 0)
+            {
+                PictureBoxProduct.Visible = false;
+                guna2PictureBox1.Visible = true;
+            }
+
             ID = obj.ID;
             Price = obj.Price;
             NameProduct = obj.Name;

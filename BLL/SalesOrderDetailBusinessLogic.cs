@@ -70,5 +70,13 @@ namespace BLL
             // Gọi phương thức GetList từ lớp DAL để lấy danh sách sản phẩm từ cơ sở dữ liệu
             return _objectDataAccess.GetList();
         }
+        public List<SalesOrderDetail> GetAllObjectByID(int idObj)
+        {
+            // Kiểm tra logic kinh doanh trước khi lấy danh sách sản phẩm
+            // ...
+
+            // Gọi phương thức GetList từ lớp DAL để lấy danh sách sản phẩm từ cơ sở dữ liệu
+            return _objectDataAccess.GetList(idObj);
+        }
     }
 }

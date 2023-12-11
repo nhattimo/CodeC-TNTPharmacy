@@ -1,6 +1,7 @@
 ﻿using BLL;
 using DTO;
 using GUI.US_;
+using GUI.US_Interface.UC_Item;
 using Guna.UI2.WinForms;
 using Guna.UI2.WinForms.Helpers;
 using System;
@@ -8,7 +9,6 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Net.Mail;
-using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 using Image = System.Drawing.Image;
 
@@ -28,6 +28,8 @@ namespace GUI
         private static int IdIteamProduct = 0;
         private static int IdIteamEmployess = 0;
         private static int IdIteamCustomer = 0;
+
+        private static int StatustOrder = 0;
 
         private static List<int[]> IDItemChooseProducts = new List<int[]> { };
 
@@ -172,6 +174,32 @@ namespace GUI
         {
             UC_ItemInfoEmployees_ itemProduct = new UC_ItemInfoEmployees_(obj.ID);
             flowLayoutPanel.Controls.Add(itemProduct);
+        }
+        public static void AddItemsUC(FlowLayoutPanel flowLayoutPanel, List<SalesOrder> listObj)
+        {
+            flowLayoutPanel.Controls.Clear();
+            UC_ItemOnlineOrders[] itemProduct = new UC_ItemOnlineOrders[listObj.Count];
+            for (int i = 0; i < listObj.Count; i++)
+            {
+                itemProduct[i] = new UC_ItemOnlineOrders(listObj[i].ID);
+            }
+            foreach (var item in itemProduct)
+            {
+                flowLayoutPanel.Controls.Add(item);
+            }
+        }
+        public static void AddItemsUCKH(FlowLayoutPanel flowLayoutPanel, List<SalesOrder> listObj)
+        {
+            flowLayoutPanel.Controls.Clear();
+            UC_KH_ItemOnlineOrder[] itemProduct = new UC_KH_ItemOnlineOrder[listObj.Count];
+            for (int i = 0; i < listObj.Count; i++)
+            {
+                itemProduct[i] = new UC_KH_ItemOnlineOrder(listObj[i].ID);
+            }
+            foreach (var item in itemProduct)
+            {
+                flowLayoutPanel.Controls.Add(item);
+            }
         }
         public static void AddItemsUC(FlowLayoutPanel flowLayoutPanel, List<Employees> listObj)
         {
@@ -359,8 +387,11 @@ namespace GUI
 
         }
 
-       
 
+        public static void SetStatusOrder(int idProduct)
+        {
+            StatustOrder = idProduct;
+        }
 
 
         public static void SetIDProduct(int idProduct)
@@ -459,7 +490,7 @@ namespace GUI
         }
         public static string GetNameCustomerAccount()
         {
-            Users obj = _User.GetObjectById(GetIDAccount());
+            Users obj = _User.GetObjectByIdtk(GetIDAccount());
             return obj.Name;
         }
         public static int GetIDProduct()
@@ -473,6 +504,10 @@ namespace GUI
         public static int GetIDEmployess()
         {
             return IdIteamEmployess;
+        }
+        public static int GetStatusOrder()
+        {
+            return StatustOrder;
         }
         public static List<int[]> GetIDItemChooseProducts()
         {
